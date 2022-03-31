@@ -1,0 +1,53 @@
+/*===================================================
+
+Directory:
+
+I.) Primary
+    I-A.) 288 C Pantone Blue (Dark Blue)
+        A.) Hex = #002d73
+        B.) RGBA = rgba(0,45,115,1);
+        C.) RGB = rgb(0,45,115)
+
+    I-B.) Pantone Process Blue
+        A.) Hex = #0082CA
+        B.) RGBA = rgba(0,130,202,1);
+        C.) RGB = rgb(0,130,202)
+
+II.) Secondary
+    // Purple-Pastel
+    II-A.) rgb(107,105,135);
+    II-B.) rgb(157,156,179); // Grey Purple
+    II-C.) rgb(203,203,215); // Grey
+
+    //  Aqua-Teal Green
+    II-D.) rgb(10,190,194); Teal
+    II-E.) rgb(152,190,191); Seafoam Green
+    II-F.) rgb(200,216,215);
+
+    // Blue Variations
+    II-G.) rgb(10,42,118); Dark Navy Blue
+    II-H.)  rgb(20,140,176); Dark Aqua Blue
+    II-I.)  rgb(0,176,240); Pretty Blue
+
+III.) Dark Earth Tones
+    III-A.) rgb(64,64,64);
+    III-B.) rgb(123,123,123);
+    III-C.) rgb(174,174,174);
+======================================================*/
+
+:root {
+    --defaultBlueHEX: #002d73;
+    --defaultBlueRGBA: rgba(0,45,115,1);
+    --defaultBlueRBA: rgb(0,45,115);
+
+    --processBlueHEX: #0082CA;
+    --processBlueRGBA:rgba(0,130,202,1);
+    --processBlueRGB: rgb(0,130,202);
+
+    --blockTitle:rgb(157,156,179);
+    --linkColorDefault:rgb(64,64,64);
+    --secondaryOption:rgb(107,105,135);
+    --white: #fff;
+    --fallback: #002d73;
+
+}

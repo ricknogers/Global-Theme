@@ -1,0 +1,13 @@
+{
+  "redefinable-internals": [
+    "is_file",
+    "is_dir",
+    "function_exists",
+    "file_exists",
+    "get_headers",
+    "file_get_contents",
+    "time",
+    "printf",
+    "class_exists"
+  ]
+}

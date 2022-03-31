@@ -1,0 +1,23 @@
+{
+  "name" : "PDA Download Link Statistics",
+  "slug" : "pda-stats",
+  "download_url" : "https://s3-ap-southeast-1.amazonaws.com/bwps.gold.plugins/wp-pda-stats/wp-pda-stats.zip",
+  "version" : "1.3.1",
+  "author" : "BWPS",
+  "requires" : "4.7",
+  "tested" : "5.5",
+  "last_updated" : "2020-02-03 16:17:00",
+  "sections" : {
+    "description" : "Display relevant statistics of all your private download links.",
+    "changelog" : "<p><strong>version 1.2.0</strong></p><p> - Track PCP passwords</p><p> - Export passwords to CSV</p><p><strong>version 1.1.0</strong></p><p> - Track information of password protect entire site</p><p> - Track information of password CPT</p><p> - Check if PDA v2 or v3 is activated and license is valid before adding submenu</p><p> - Remove yme-plugin-update-checker lib</p><p> - Group by Files under Users' Protected Files Access</p><p> - Duplicate queries </p>"
+  },
+  "rating" : 90,
+  "num_ratings" : 239,
+  "downloaded" : 32123,
+  "active_installs" : 18792,
+  "banners" : {
+    "low" : "https://s3-ap-southeast-1.amazonaws.com/assets.preventdirectaccess/addons/pda-stats.png",
+    "high" : "https://s3-ap-southeast-1.amazonaws.com/assets.preventdirectaccess/addons/pda-stats.png"
+  },
+  "author_homepage" : "https://preventdirectaccess.com/extensions/protect-wordpress-videos/"
+}

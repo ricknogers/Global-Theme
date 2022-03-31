@@ -1,0 +1,973 @@
+# Prevent Direct Access Gold
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Prevent Direct Access Gold v1.0.0\n"
+"Report-Msgid-Bugs-To: BWPS Name <translations@ymese.com>\n"
+"POT-Creation-Date: 2020-03-02 12:59+0700\n"
+"PO-Revision-Date: \n"
+"Language-Team: BWPS <translations@ymese.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.1.1\n"
+"Last-Translator: \n"
+"Language: en\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: client\n"
+"X-Poedit-SearchPathExcluded-1: bin\n"
+"X-Poedit-SearchPathExcluded-2: tests\n"
+"X-Poedit-SearchPathExcluded-3: vendor\n"
+"X-Poedit-SearchPathExcluded-4: yme-plugin-update-checker\n"
+"X-Poedit-SearchPathExcluded-5: yme-wp-plugins-sdk\n"
+"X-Poedit-SearchPathExcluded-6: public\n"
+"X-Poedit-SearchPathExcluded-7: .*\n"
+"X-Poedit-SearchPathExcluded-8: js\n"
+
+#: admin/class-prevent-direct-access-gold-admin.php:255
+#: admin/class-prevent-direct-access-gold-admin.php:1055
+msgid "Settings"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:286
+#: includes/class-prevent-direct-access-gold-status.php:23
+msgid "Status"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:295
+#: includes/class-prevent-direct-access-gold-affiliate.php:9
+msgid "Invite & Earn"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:416
+msgid "Please enter your license key that you’ve"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:417
+msgid "received after purchasing our plugin under"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:419
+msgid "tab. Otherwise, the plugin's premium features are not activated."
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:428
+msgid "You are using WP REST API which is deprecated."
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:429
+msgid "Please update to"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:430
+msgid "WordPress REST API (Version 2)"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:453
+msgid ""
+"You're using an outdated version of PHP which is not compatible with our "
+"plugin. Please upgrade to PHP version 5.5 or greater."
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:455
+msgid ""
+"Outdated PHP or MySQL versions may also expose your site to security "
+"vulnerabilities."
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:465
+msgid "We’re handling "
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:781
+msgid "Protect files"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:782
+msgid "Unprotect files"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:1056
+msgid "Extensions"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:1674
+msgid "You are "
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:1676
+msgid "using Plain Permalink"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:1677
+msgid " which our plugin doesn't support."
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:1750
+msgid "Enter license key"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:1751
+msgid "or make sure"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:1752
+msgid "your license is valid"
+msgstr ""
+
+#: admin/class-prevent-direct-access-gold-admin.php:1753
+msgid "for automatic updates"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-add-media.php:58
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:8
+msgid "Protect this file"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-add-media.php:104
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:17
+msgid "Use default setting"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-add-media.php:108
+#: includes/class-prevent-direct-access-gold-constants.php:131
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:19
+#: includes/views/view-prevent-direct-access-gold-file-access-permission.php:9
+msgid "Admin users"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-add-media.php:112
+#: includes/class-prevent-direct-access-gold-constants.php:134
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:21
+#: includes/views/view-prevent-direct-access-gold-file-access-permission.php:10
+msgid "The file's author"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-add-media.php:116
+#: includes/class-prevent-direct-access-gold-constants.php:137
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:23
+#: includes/views/view-prevent-direct-access-gold-file-access-permission.php:11
+msgid "Logged-in users"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-add-media.php:120
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:25
+#: includes/views/view-prevent-direct-access-gold-file-access-permission.php:12
+msgid "No user roles"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-add-media.php:124
+#: includes/class-prevent-direct-access-gold-constants.php:140
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:27
+#: includes/views/view-prevent-direct-access-gold-file-access-permission.php:13
+msgid "Anyone"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-add-media.php:128
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:30
+#: includes/views/view-prevent-direct-access-gold-file-access-permission.php:14
+msgid "Choose custom roles"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-add-media.php:132
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:33
+msgid "Choose custom memberships"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-add-media.php:141
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:15
+msgid "File Access Permission"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-constants.php:128
+msgid "Default"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-file-handler.php:51
+#, php-format
+msgid "The post with ID: %d is not an attachment post type."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-file-handler.php:65
+#, php-format
+msgid ""
+"The new path provided: %s is absolute. The new path must be a path relative "
+"to the WP uploads directory."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-file-handler.php:99
+#, php-format
+msgid "There was an error making or verifying the directory at: %s"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-file-handler.php:290
+#, php-format
+msgid "The file: %s does not exist"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-file-handler.php:315
+#, php-format
+msgid "Directory %s is not existed."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-file-handler.php:339
+#, php-format
+msgid "Rename failed when trying to move file from: %1$s, to: %2$s"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-function.php:650
+#, php-format
+msgid "%s."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-repository.php:366
+#: includes/public/class-prevent-direct-access-gold-private-link-service.php:85
+msgid "This file is already protected. Please reload your page."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-repository.php:375
+#, php-format
+msgid "Can not move the files %s to protected folder."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-services.php:139
+msgid "Malformed data error"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-services.php:153
+#, php-format
+msgid "Cannot found the post : %d"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-services.php:167
+#: includes/class-prevent-direct-access-gold-services.php:280
+#, php-format
+msgid "This url : %s already existed!"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-services.php:273
+#, php-format
+msgid "Cannot found the post : %s"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-setting-widgets.php:66
+msgid "FILE PROTECTION"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-setting-widgets.php:80
+msgid "PRIVATE DOWNLOAD LINKS"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-setting-widgets.php:94
+msgid "OTHER SECURITY OPTIONS"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-setting-widgets.php:95
+msgid "Only work on Apache servers"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-setting-widgets.php:111
+msgid "ADVANCED OPTIONS"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:50
+#: includes/class-prevent-direct-access-gold-settings.php:114
+#: includes/class-prevent-direct-access-gold-settings.php:124
+msgid "License"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:56
+#: includes/class-prevent-direct-access-gold-settings.php:62
+msgid "Migrate to version 3.0"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:67
+msgid "General"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:69
+msgid "IP Restriction"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:74
+msgid "Folder Protection"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:79
+msgid "Magic Links"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:84
+msgid "Forms & ACF"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:89
+msgid "Memberships"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:94
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:99
+msgid "Community"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:104
+#: includes/class-prevent-direct-access-gold-settings.php:122
+msgid "Helpers"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:112
+msgid "FAQ"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-settings.php:116
+msgid "Quick Walkthrough"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:42
+msgid "System status"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:44
+msgid "Tools"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:46
+msgid "Logs"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:82
+msgid "WordPress Environment"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:87
+msgid "Home URL"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:92
+msgid "Site URL"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:97
+#: includes/class-prevent-direct-access-gold-status.php:416
+msgid "Version"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:102
+msgid "Wordpress Version"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:107
+msgid "WordPress Multisite"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:112
+msgid "WordPress Memory Limit"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:125
+msgid "WordPress Debug Mode"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:136
+msgid "WordPress Cron"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:147
+msgid "Language"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:152
+msgid "External object cache"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:167
+msgid "Server Environment"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:172
+msgid "Server info"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:177
+msgid "PHP Version"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:183
+msgid "PHP Post Max Size"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:188
+msgid "PHP Time Limit"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:193
+msgid "PHP Max Input Vars"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:198
+msgid "cURL Version"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:203
+msgid "SUHOSIN Installed"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:210
+msgid "MySQL Version"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:215
+msgid "Max Upload Size"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:220
+msgid "Default Timezone is UTC"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:225
+#, php-format
+msgid "Default timezone is %s - it should be UTC"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:233
+msgid "fsockopen/cURL"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:240
+msgid ""
+"Your server does not have fsockopen or cURL enabled - PayPal IPN and other "
+"scripts which communicate with other servers will not work. Contact your "
+"hosting provider."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:246
+msgid "DOMDocument"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:253
+#, php-format
+msgid ""
+"Your server does not have the %s class enabled - HTML/Multipart emails, and "
+"also some extensions, will not work without DOMDocument."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:259
+msgid "GZip"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:266
+#, php-format
+msgid ""
+"Your server does not support the %s function - this is required to use the "
+"GeoIP database from MaxMind."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:272
+msgid "Multibyte String"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:279
+#, php-format
+msgid ""
+"Your server does not support the %s functions - this is required for better "
+"character encoding. Some fallbacks will be used instead for it."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:285
+msgid "Remote Post"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:292
+#: includes/class-prevent-direct-access-gold-status.php:305
+#, php-format
+msgid "%s failed. Contact your hosting provider."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:298
+msgid "Remote Get"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:311
+msgid "PDA Log Directory Writable"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:318
+#, php-format
+msgid "Please change the write permission to directory %s"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:330
+msgid "Database"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:335
+msgid "Database Version"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:342
+msgid "Database prefix"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:347
+msgid "Total Database Size"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:352
+msgid "Database Data Size"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:357
+msgid "Database Index Size"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:374
+msgid "Security"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:379
+msgid "Secure connection (HTTPS)"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:385
+#, php-format
+msgid ""
+"Your site is not using HTTPS. <a href=\"%s\" target=\"_blank\">Learn more "
+"about HTTPS and SSL Certificates</a>."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:390
+msgid "Hide errors from visitors"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:396
+msgid "Error messages should not be shown to visitors."
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:406
+msgid "Theme"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:411
+msgid "Name"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:421
+msgid "Author URL"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:426
+msgid "Child theme"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:433
+#, php-format
+msgid ""
+"If you are modifying Prevent Direct Access Gold on a parent theme that you "
+"did not build personally we recommend using a child theme. See: <a href=\"%s"
+"\" target=\"_blank\">How to create a child theme</a>"
+msgstr ""
+
+#: includes/class-prevent-direct-access-gold-status.php:480
+msgid "&raquo;"
+msgstr ""
+
+#: includes/class-prevent-direct-access-handle-file-request.php:476
+msgid ""
+"403. Forbidden.<br/>You cannot directly access files of this type in this "
+"directory on this server. Please contact the website administrator."
+msgstr ""
+
+#: includes/cronjob-handlers/class-prevent-direct-access-cronjob-handler.php:159
+msgid "Quarterly"
+msgstr ""
+
+#: includes/cronjob-handlers/class-prevent-direct-access-cronjob-handler.php:164
+msgid "Yearly"
+msgstr ""
+
+#: includes/cronjob-handlers/class-prevent-direct-access-cronjob-handler.php:169
+msgid "Monthly"
+msgstr ""
+
+#: includes/views/column/view-prevent-direct-access-gold-column.php:29
+msgid "Configure file protection"
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-apache.php:4
+#, php-format
+msgid ""
+"<strong>within your WordPress rewrite block</strong>, which usually starts "
+"with %s and ends with %s, and <strong>just below</strong> the line reading %s"
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-apache.php:7
+msgid "<strong>above</strong> any other rewrite rules in the file."
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-apache.php:9
+#, php-format
+msgid ""
+"PDA Gold works best with %s enabled, so it is strongly recommended that you "
+"%s! If, however, you really <i>really</i> want to use ugly permalinks, "
+"then..."
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-apache.php:9
+msgid "Pretty Permalinks"
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-apache.php:9
+msgid "enable them"
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-apache.php:16
+msgid ""
+"Please note that even though our \"Prevent Direct Access Rewrite Rules\" is "
+"inserted correctly and our plugin is working properly, you might <a "
+"href='https://preventdirectaccess.com/docs/what-happens-when-enabling-debug-"
+"logs/#rewrite-rules'>come across these error messages</a> if other rules are "
+"inserted wrongly."
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-apache.php:20
+msgid "Add the following rules to your "
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-apache.php:22
+msgid ""
+"Update our rewrite rules on your WordPress Multisite Network <a href="
+"\"https://preventdirectaccess.com/docs/how-to-protect-your-media-files-on-"
+"wordpress-multisite/\" target=\"_blank\" rel=\"noopener noreferrer\">as per "
+"this instruction</a>"
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-rules-form.php:11
+#, php-format
+msgid "the site's %s file is not writable"
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-rules-form.php:24
+#: includes/views/view-prevent-direct-access-gold-guides-for-multisite.php:12
+#, php-format
+msgid ""
+"Please install <a target=\"_blank\" rel=\"noopener\" href=\"%s\">PDA "
+"Multisite extentsion</a> for our file protection to work properly."
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-rules-form.php:33
+msgid ""
+"Once done, please click on the button below to check if the rewrite rules "
+"are inserted correctly"
+msgstr ""
+
+#: includes/views/helpers-tab/view-prevent-direct-access-gold-rules-form.php:47
+msgid "Use Raw URLs"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:10
+msgid "Unprotect this file"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-attchment-protection.php:12
+msgid "Protect this attachment's files with PDA."
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-auto-create-private-link.php:21
+msgid "Generate Download Link Once Protected"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-auto-create-private-link.php:22
+msgid "Automatically create a new Download Link once the file is protected"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-auto-protect-new-file-upload.php:24
+msgid "Auto-protect New File Uploads"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-auto-protect-new-file-upload.php:25
+msgid "Automatically protect all new file uploads"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-auto-protect-new-file-upload.php:38
+msgid "Protect new file uploads by these user roles only"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-block-access-info-file.php:14
+msgid "Block Access to Sensitive Files"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-block-access-info-file.php:15
+msgid ""
+"Block access to readme.html, license.txt, and wp-config-sample.php files"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-disable-directory-listing.php:14
+msgid "Disable Directory Listing"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-disable-directory-listing.php:15
+msgid "Disable directory browsing of all folders and subdirectories"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-enable-remote-log.php:21
+msgid "Enable Debug Logs"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-enable-remote-log.php:22
+msgid ""
+"Log (fatal) errors of your entire website which speeds up the "
+"troubleshooting process when problems occur"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-file-access-permission.php:5
+msgid "Set File Access Permission"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-file-access-permission.php:6
+msgid ""
+"Select user roles who can access protected files through their file URLs"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-file-access-permission.php:20
+msgid "Grant access to these user roles only"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-force-download.php:21
+msgid "Force Downloads"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-force-download.php:22
+msgid ""
+"Force downloads instead of redirecting to protected files when clicking "
+"Download Links"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-grant-protection-roles.php:5
+msgid "File Protection Control"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-grant-protection-roles.php:6
+msgid "Select user roles who "
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-grant-protection-roles.php:7
+msgid "can protect or unprotect your media files"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-grant-protection-roles.php:7
+msgid ". Default: admins (always included), authors and editors."
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-guides-for-multisite.php:2
+msgid "Multisite - Site Rules"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-guides-for-multisite.php:8
+msgid "Please update these rules on your main .htaccess file as per our"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-guides-for-multisite.php:9
+msgid "instructions"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-guides-for-multisite.php:37
+msgid "Auto-activate license on new sites"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-guides-for-multisite.php:38
+msgid "Automatically activate main site's license on new subsites"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-hide-wordpress-version.php:14
+msgid "Hide WordPress Version"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-hide-wordpress-version.php:15
+msgid ""
+"Remove WordPress generator meta tag showing its version and sensitive "
+"information"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-ip-block-tab.php:2
+msgid "Restrict access to private download links"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-ip-block-tab.php:5
+msgid ""
+"Blacklist these IP addresses: stop the following IP addresses from accessing "
+"private download links"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-ip-block-tab.php:7
+msgid ""
+"Use the asterisk (*) for wildcard matching. E.g: 7.7.7.* will match IP from "
+"7.7.7.0 to 7.7.7.255"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-ip-block-tab.php:10
+#: includes/views/view-prevent-direct-access-gold-ip-block-tab.php:12
+msgid "Save changes"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-license-tab.php:34
+msgid "(Refresh license)"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-license-tab.php:52
+msgid "Expiry date"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-license-tab.php:62
+msgid "Purchased addons"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-license-tab.php:83
+msgid "Activate Now"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-like-plugin-column.php:2
+msgid "Like our Gold version?"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-like-plugin-column.php:4
+msgid ""
+"If you like <b>Prevent Direct Access Gold version</b>, please give us <span "
+"class=\"pda-star dashicons dashicons-star-filled\"></span> to motivate the "
+"team to work harder, add more powerful features and support you even "
+"better :) </br> A huge thanks in advance!"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-like-plugin-column.php:7
+msgid "Let's do it"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-no-access-page.php:12
+msgid "Customize \"No Access\" Page"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-prevent-hotlinking.php:14
+msgid "Prevent Image Hotlinking"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-prevent-hotlinking.php:15
+msgid ""
+"Prevent other people from stealing and using your images or files without "
+"permission"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-private-url-prefix.php:5
+msgid "Change Download Link Prefix"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-private-url-prefix.php:6
+msgid "Your Download Links will be: "
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-private-url-prefix.php:6
+msgid "your-custom-filename"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-private-url-prefix.php:8
+msgid ""
+"Please enter a valid prefix which should contain lowercase English letters "
+"(a-z), numbers (0-9), dash (-) and underscore (_) only."
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-remove-license-and-all-data.php:18
+msgid "Remove Data Upon Uninstall"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-remove-license-and-all-data.php:19
+msgid ""
+"Remove your license and ALL related data upon uninstall. Your license may "
+"not be used on this website again or elsewhere anymore."
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-replace-content-options.php:21
+msgid "Search & Replace"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-replace-content-options.php:22
+msgid ""
+"Search and auto-replace new protected files whose URLs are already embedded "
+"in content"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-replace-content-options.php:33
+msgid "Apply to these pages or posts only"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-replace-content-options.php:40
+msgid "(no title)"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-status-log-content.php:58
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-status-log-viewer.php:20
+msgid "Download log"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-status-log-viewer.php:32
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-status-log-viewer.php:40
+msgid "View"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-status-log-viewer.php:49
+msgid "There are currently no logs to view."
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-subscribe-form.php:7
+msgid ""
+"Be the first to get our latest updates and probably 1-year Gold license for "
+"free."
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-subscribe-form.php:17
+msgid "Please enter your valid email."
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-subscribe-form.php:22
+msgid "Get Lucky"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-subscribe-form.php:29
+#: includes/views/view-prevent-direct-access-gold-subscribe-form.php:40
+msgid ""
+"Congrats! You've subscribed to our newsletter and now stand a chance to win "
+"our 1-year Gold license for free."
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-subscribe-form.php:30
+#: includes/views/view-prevent-direct-access-gold-subscribe-form.php:41
+msgid "Stay tuned for our updates :)"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-use-redirect-url.php:44
+msgid "Keep Raw URLs"
+msgstr ""
+
+#: includes/views/view-prevent-direct-access-gold-use-redirect-url.php:46
+msgid ""
+"Use Raw URLs for both <a rel=\"noopener noreferrer\" target=\"_blank\" href="
+"\"https://preventdirectaccess.com/pda-gold-glossary/\">protected and private "
+"download links</a>. Enable this option ONLY if you are using Wordpress.com "
+"or other servers that don’t allow rewrite rules modification."
+msgstr ""

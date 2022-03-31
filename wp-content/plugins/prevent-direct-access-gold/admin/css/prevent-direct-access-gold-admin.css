@@ -1,0 +1,218 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.pda-migratebutton {
+    text-align: center;
+    padding-top: 15px;
+}
+.pda-migratetext {
+    font-size: 14px;
+    margin-top: 0.2rem;
+}
+
+
+.pda_form {
+    height: 370px;
+    overflow-y: auto;
+    margin-top: 20px; }
+.pda_form input[type=text], .pda_form input[type=number], .pda_form select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 100%; }
+.pda_form .btn {
+    margin-right: 5px;
+    margin-bottom: 35px; }
+.pda_form .error {
+    color: red; }
+.pda_form .actions {
+    margin-top: 10px; }
+
+.react-tagsinput {
+    padding-right: 5px; }
+
+/* hide text "Required fields are marked *"*/
+.media-types.media-types-required-info {
+    display: none;
+}
+
+/*.compat-field-location .label{*/
+    /*max-width: 70px;*/
+/*}*/
+
+/*.wrapper_checkbox {*/
+    /*margin-left: 34%;*/
+/*}*/
+/*td.field label {*/
+    /*padding-top: 5px;*/
+/*}*/
+/*.compat-item .field {*/
+    /*width: 67%;*/
+/*}*/
+
+.pda_wrapper_table {
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    /*border-left: 1px solid #ccc;*/
+    /*border-right: 1px solid #ccc;*/
+}
+
+.pda_wrapper_table .dashicons, .pda_wrapper_table .dashicons-before::before {
+    font-size: 17px ;
+}
+
+.pda-v3-gold-tooltip {
+    color: #A7A7A7;
+}
+
+table.pda_wrapper_table td:first-of-type {
+    width: 350px;
+    padding: 10px;
+}
+
+table.pda_wrapper_table td:nth-of-type(2) {
+    width: 30px;
+}
+
+
+table.pda_wrapper_table tr {
+    background: white;
+}
+table.pda_wrapper_table thead .title_talbe {
+    background: #efebf1;
+}
+table.pda_wrapper_table tr:nth-child( 2n ) {
+    background: #f9f9f9;
+}
+table.pda_wrapper_table {
+    background: #efebf1;
+}
+table.pda_wrapper_table thead tr th {
+    text-align: left;
+    padding-left: 10px;
+}
+
+table.pda_wrapper_table {
+    margin-top: 10px;
+}
+.pda_wrapper_table .dashicons-yes-color {
+    color: #7ad03a;
+}
+/*.error-soapclient {*/
+    /*color: #a00;*/
+/*}*/
+.pda_wrapper_table .dashicons-warning-error {
+    color: #a00;
+}
+
+.pda-wrap-htaccess {
+    width: 99%;
+    padding: 10px;
+    background: #efebf1;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 3px gray;
+    margin-top: 10px;
+}
+
+.pda-wrap-text-htaccess {
+    width: 100%;
+    min-height: 400px;
+    color: #106AC2;
+    line-height: 1.25em;
+    font-family: Monospace,Mono;
+}
+
+.pda-wrap-htaccess .save-htaccess {
+    margin-top: 10px;
+}
+
+#pda-log-viewer-select {
+    padding: 15px 0 8px;
+    line-height: 28px;
+}
+
+#pda-log-viewer {
+    background: #000000;
+    border: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    padding: 5px 0px 5px 20px;
+    /*color: white;*/
+}
+
+#pda-log-viewer {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+}
+#pda-log-viewer pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.pda-version {
+    background: #397BBF;
+    font-size: 0.9rem;
+    color: white;
+    padding: 0.1rem 0.4rem 0.15rem;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 1.5;
+    vertical-align: top;
+    margin-left: 0.3rem;
+}
+
+.pda-affiliate-program-setting {
+    display: inline-block;
+}
+.pda-gold-v3-tools .protection-status {
+    margin-left: 0rem;
+    margin-right: 0.5rem;
+}
+
+.pda-gold-v3-tools .pda-unprotected {
+    background: #D6D6D6;
+}
+
+.pda-gold-v3-tools .pda_gold_btn {
+    cursor: pointer;
+}
+
+.pda-gold-v3-tools input[type=checkbox]:disabled,
+.pda-gold-v3-tools input[type=checkbox].disabled,
+.pda-gold-v3-tools input[type=checkbox].disabled:checked:before,
+.pda-gold-v3-tools input[type=checkbox]:disabled:checked:before {
+    opacity: 1;
+    margin: 0;
+}
+
+
+/*.compat-item .field {*/
+    /*width: 99%;*/
+/*}*/
+
+/*.field .selection .select2-selection {*/
+    /*!*margin-left: 5px;*!*/
+    /*width: 200px;*/
+/*}*/
+
+/*.select2-container {*/
+    /*z-index: 160000;*/
+/*}*/
+
+/*.select2-container .select2-dropdown {*/
+    /*width: 200px;*/
+/*}*/
+
+/*.select2-container .select2-results {*/
+    /*width: 100%;*/
+/*}*/

@@ -1,0 +1,144 @@
+/*===================================================
+
+Directory:
+0.) Font Family
+I.) Links
+II.) Buttons
+III.)
+IV.)
+V.)
+VI.)
+VII.)
+IX.)
+======================================================*/
+/*===================================================
+    0.) Font Family
+======================================================*/
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--fontFamilyPrimary);
+    font-weight: 700;
+}
+
+a,  li,  li a,  p, span, b, em, button, nav {
+    font-family: var(--fontFamilyPrimary);
+    font-size: 16px;
+}
+#content h3{
+}
+/*===================================================
+    I.) Links
+======================================================*/
+a{
+    text-decoration: none !important;
+}
+/*===================================================
+    II.) Buttons
+======================================================*/
+button, .btn, .btn-default, .btn-small{
+    text-decoration: none !important;
+}
+:root{
+    --fontFamilySecondary:adobe-garamond-pro, serif;
+    --fontFamilyPrimary:'Source Sans Pro',  sans-serif;
+}
+/*===================================================
+    Headings in Body WYSIWYG h2,h3,h4,h5,h6
+======================================================*/
+.subs-content h2, .subs-content h3{
+    margin: 2% 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #002d73;
+    position: relative;
+    display: block;
+    padding: 5px 0;
+    /* border-bottom: 1px dotted #e4e4e4; */
+    /* padding: 0 0 0 0px; */
+}
+.subs-content h2:before, .subs-content h3:before{
+    /* display: block; */
+    /* left: 0; */
+    /* top: 45px; */
+    /* position: relative; */
+    /* width: 30%; */
+    height: 2px;
+    content: "";
+    background-color: #002d73;
+}
+.subs-content h4:before, .subs-content h5:before, .subs-content h6:before{
+    display: block;
+    left: 0;
+    top: 35px;
+    position: relative;
+    width: 30%;
+    height: 2px;
+    content: "";
+    background-color: #002d73;
+}
+.subs-content h4, .subs-content h5, .subs-content h6{
+    margin: 2% 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #002d73;
+    position: relative;
+    display: block;
+    padding: 5px 0;
+    border-bottom: 1px dotted #e4e4e4;
+    /* padding: 0 0 0 0px; */
+}
+.flexible-layout ul{
+    line-height: 1.5em;
+    margin: 5px 0 15px;
+}
+.flexible-layout li {
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 20px;
+    text-align: justify;
+}
+.flexible-layout li::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom-color: var(--processBlueHEX, #0082CA);
+}
+.flexible-layout  li::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: var(--processBlueHEX);
+}
+.flexible-layout hr {
+    border: 0;
+    height: 1px;
+    width: 10%;
+    position: relative;
+    margin: 30px auto;
+}
+.flexible-layout hr.center-diamond {
+    background-color: var( --processBlueHEX, #002d73);
+    /* margin: 2% auto; */
+}
+.flexible-layout hr.center-diamond:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var( --processBlueHEX, #002d73);
+    display: inline-block;
+    border: none;
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    margin: 0 0 0 -3px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
