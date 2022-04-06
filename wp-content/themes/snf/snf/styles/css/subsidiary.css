@@ -1,0 +1,417 @@
+/*===================================================
+    Directory:
+    0.) Accordion
+    I.) Split Layout Alternating
+    II.) Subsidiary Card
+    III.) WYSIWYG
+    IV.) Certifications
+
+======================================================*/
+.subs-flexible-wrapper{
+    padding:0;
+}
+
+
+/*===================================================
+    II.) Subsidiary Card
+======================================================*/
+
+/*===================================================
+    III.) WYSIWYG
+======================================================*/
+
+
+
+
+/*===================================================
+    IV.) Certifications
+======================================================*/
+
+@media(min-width:768px){
+    .subs-content h2{
+        /* color:#0082CA; */
+        /* text-transform: uppercase; */
+        /* padding: 1% 0; */
+        /* font-weight: 300 !important; */
+    }
+    .layout-title{
+        color:#0082CA;
+        text-transform: uppercase;
+        padding: 1% 0;
+        font-weight: 300 !important;
+    }
+    h2.layout-title::after{
+        content"";
+        position:absolute;
+        left:0;
+        top:0;
+        width:2px;
+        height:15px;
+        color:#0082CA;
+    }
+    /*===================================================
+    0.) Accordion
+    ======================================================*/
+    #accordion button, #accordion button:hover, #accordion button:focus{
+        text-decoration: none;
+    }
+    .subsid-accordion{
+        /* margin: 0 1%; */
+        /* padding: 0 !important; */
+    }
+    .subsid-accordion .card{
+        margin:1% 0;
+        border: none;
+    }
+    .subsid-accordion .card-header{
+        box-shadow: none !important;
+        border-bottom: solid 1px #ccc !important;
+        padding: .95rem .45rem;
+    }
+    .subsid-accordion h5{
+        font-weight: 400;
+    }
+    /* Horizontal line */
+    .subsid-accordion .collapsible-link::before {
+        content: '';
+        width: 14px;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 1rem;
+        display: block;
+        transition: all 0.3s;
+    }
+    /* Vertical line */
+    .subsid-accordion .collapsible-link::after {
+        content: '';
+        width: 2px;
+        height: 14px;
+        background: #333;
+        position: absolute;
+        top: calc(50% - 7px);
+        right: calc(1rem + 6px);
+        display: block;
+        transition: all 0.3s;
+    }
+    .subsid-accordion .collapsible-link[aria-expanded='true']::after {
+        transform: rotate(90deg) translateX(-1px);
+    }
+    .subsid-accordion .collapsible-link[aria-expanded='true']::before {
+        transform: rotate(180deg);
+    }
+    /*===================================================
+        IV.) Certifications
+    ======================================================*/
+    .certification-row{
+        margin-top: 5%
+    }
+    .certification-row .card{
+        border-top: solid 2px #002d73;
+    }
+    .certification-row .certificate-link img{
+        height:45px;
+        width:45px;
+    }
+    .certification-row h3{
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #0082CA;
+        margin: 0;
+        /* display: flex; */
+        /* justify-content: center; */
+    }
+    /*===================================================
+    I.) Split Layout Alternating
+    ======================================================*/
+    .split-container{
+        position:relative;
+        padding: 2% 0;
+    }
+    .layered-bg-behind{
+        position:relative;
+        /* width: 100%; */
+        height: 100%;
+        /* margin-left: 0 !important; */
+        /* margin-right: 0 !important; */
+    }
+    .layered-bg-behind::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transform: skew(15deg) translateX(-50%);
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(120deg,#002d73,#0082CA);
+        opacity: .7;
+    }
+    .layered-bg-behind::before {
+        transform: skew(-15deg) translateX(-50%);
+        transform: unset;
+    }
+    .layered-bg-behind.right::before{
+        content: "";
+        position: absolute;
+        top: -3%;
+        right: 0;
+        left: unset;
+        transform: skew(-15deg) translateX(50%) !important;
+        width: 150%;
+        height: 112%;
+        background-image: linear-gradient(120deg,#002d73,#0082CA);
+        opacity: .7;
+    }
+    .layered-bg-behind {
+    }
+    .layered-bg-behind > * {
+        z-index: 100;
+    }
+    .split-imagery{
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        z-index:1;
+        min-height: 40vh;
+    }
+    .split-content{
+        background-color: rgba(255,255,255,.8);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .split-content h2, .split-content p{/* row-gap: 15px; *//* grid-template-columns: 100px 50px 100px; *//* grid-template-rows: 80px auto 80px; *//* column-gap: 10px; */}
+    .split-content h2{
+        color:rgba(0,130,202,1);
+        margin: 1% 0;
+        font-weight: 100;
+        display:block;
+        row-gap: 15px;
+    }
+    .split-content .split-link img{
+        height: 45px;
+    }
+    .global-overflow{
+        /* overflow-x: hidden !important; */
+    }
+
+}
+@media(max-width:767px){
+    layout-title{
+        color:#0082CA;
+        text-transform: uppercase;
+        padding: 1% 0;
+        font-weight: 300;
+    }
+    h2.layout-title::after{
+        content"";
+        position:absolute;
+        left:0;
+        top:0;
+        width:2px;
+        height:15px;
+        color:#0082CA;
+    }
+    /*===================================================
+    0.) Accordion
+    ======================================================*/
+    #accordion button, #accordion button:hover, #accordion button:focus{
+        text-decoration: none;
+    }
+    .subsid-accordion{
+    }
+    .subsid-accordion .card{
+        margin:1% 0;
+    }
+    .subsid-accordion .card-header{
+        background-color:rgb(203,203,215) !important;
+    }
+    .subsid-accordion h5{
+        font-weight: 400;
+    }
+    /* Horizontal line */
+    .subsid-accordion .collapsible-link::before {
+        content: '';
+        width: 14px;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 1rem;
+        display: block;
+        transition: all 0.3s;
+    }
+    /* Vertical line */
+    .subsid-accordion .collapsible-link::after {
+        content: '';
+        width: 2px;
+        height: 14px;
+        background: #333;
+        position: absolute;
+        top: calc(50% - 7px);
+        right: calc(1rem + 6px);
+        display: block;
+        transition: all 0.3s;
+    }
+    .subsid-accordion .collapsible-link[aria-expanded='true']::after {
+        transform: rotate(90deg) translateX(-1px);
+    }
+    .subsid-accordion .collapsible-link[aria-expanded='true']::before {
+        transform: rotate(180deg);
+    }
+    /*===================================================
+        IV.) Certifications
+    ======================================================*/
+    .certification-row{
+        margin-top: 5%
+    }
+    .certification-row .card{
+        border-top: solid 2px #002d73;
+    }
+    .certification-row .certificate-link img{
+        height:45px;
+        width:45px;
+    }
+    .certification-row h3{
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #0082CA;
+        margin: 0;
+        /* display: flex; */
+        /* justify-content: center; */
+    }
+    /*===================================================
+    I.) Split Layout Alternating
+    ======================================================*/
+    .split-container{
+        position:relative;
+        padding: 2% 0;
+    }
+    .layered-bg-behind{
+        position:relative;
+        /* width: 100%; */
+        height: 100%;
+        /* margin-left: 0 !important; */
+        /* margin-right: 0 !important; */
+    }
+    .layered-bg-behind::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transform: skew(15deg) translateX(-50%);
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(120deg,#002d73,#0082CA);
+        opacity: .7;
+    }
+    .layered-bg-behind::before {
+        transform: skew(-15deg) translateX(-50%);
+        transform: unset;
+    }
+    .layered-bg-behind.right::before{
+        content: "";
+        position: absolute;
+        top: -3%;
+        right: 0;
+        left: unset;
+        transform: skew(-15deg) translateX(50%) !important;
+        width: 150%;
+        height: 112%;
+        background-image: linear-gradient(120deg,#002d73,#0082CA);
+        opacity: .7;
+    }
+    .layered-bg-behind {
+    }
+    .layered-bg-behind > * {
+        z-index: 100;
+    }
+    .split-imagery{
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        z-index:1;
+        min-height: 40vh;
+    }
+    .split-content{
+        background-color: rgba(255,255,255,.8);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .split-content h2, .split-content p{/* row-gap: 15px; *//* grid-template-columns: 100px 50px 100px; *//* grid-template-rows: 80px auto 80px; *//* column-gap: 10px; */}
+    .split-content h2{
+        color:rgba(0,130,202,1);
+        margin: 1% 0;
+        font-weight: 100;
+        display:block;
+        row-gap: 15px;
+    }
+    .split-content .split-link img{
+        height: 45px;
+    }
+    .global-overflow{
+        overflow-x: hidden !important;
+    }
+}
+
+section.video-cta{
+    margin: 30px 20px 100px;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    position: relative;
+
+    border-bottom: none;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+[data-parallax], [data-video], .jarallax {
+    position: relative;
+    z-index: 0;
+}
+section.video-cta::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #191919;
+    border-radius: inherit;
+}
+section.video-cta::before {
+    opacity: .5;
+}
+#jarallax-container-3 {
+    clip: rect(0 1863px 450.65625px 0);
+    clip: rect(0, 1863px, 450.65625px, 0);
+}
+.vimeo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+.vimeo-container iframe {
+    width: 100vw;
+    height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+    min-height: 100vh;
+    min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.video-cta .section-header{
+    z-index: 25;
+}
