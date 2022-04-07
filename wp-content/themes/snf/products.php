@@ -168,7 +168,7 @@ get_header(); ?>
                                                             </a>
                                                         </div>
                                                         <div class="col prod_button_redirect">
-                                                            <a href="<?php echo home_url('/');?>sds-request" class="" >
+                                                            <a href="<?php echo home_url('/');?>sds-request/?tradename=<?php the_field('trade_name');?> <?php the_field('product_range');?>&industry=<?php echo $term->name;  ?>" class="" >
                                                                 <button type="button" class="btn btn-outline-secondary" style="background-color:#0082CA; color:#FFF;border:none; ">
                                                                     <span>Request SDS</span> <i class="bi bi-chevron-right"></i>
                                                                 </button>

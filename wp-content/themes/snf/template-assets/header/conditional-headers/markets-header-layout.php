@@ -9,18 +9,9 @@
                 <?php if($icon):?>
                     <div class="col inner-banner-image" style="background-image:url('<?php echo $icon['url']; ?>');">
                         <div class=" breadcrumbs-container ">
-                            <?php  $term_array = array();
-                            $term_list = wp_get_post_terms($post->ID, 'markets', array(
-                                    "fields" => "all",
-                                    'orderby' => 'parent',
-                                    'order' => 'ASC'
-                                )
-                            );
-                            foreach($term_list as $term_single) {
-                                $term_array[] = $term_single->name ; //do something here
-                            }
-                            ?>
-                            <?php foreach($term_list as $term) :?>
+	                        <!-- Functions Checks Page to see if there are any markets terms selected for page // returns $term_list -->
+                           
+                            <?php foreach($terms as $term) :?>
                                 <div class="card shadow " >
                                     <div class="card-body shadow-sm snf-breadcrumbs ">
                                         <div class="col  crumbs">

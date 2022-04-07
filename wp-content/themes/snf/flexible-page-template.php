@@ -7,11 +7,7 @@
 get_header();?>
 <div class="container global-overflow">
     <div class="row">
-        <?php if(get_field('secondary_title')):?>
-            <div class="col-sm-12">
-                <?php the_field( 'secondary_title' ); ?>
-            </div>
-        <?php endif;?>
+
         <?php if(is_page('contact')):?>
             <div class="col-sm-9 col-xs-12 flexible-layout">
                 <?php $counter = 0;  // check if the flexible content field has rows of data ?>
@@ -36,6 +32,10 @@ get_header();?>
                         <?php elseif ( get_row_layout() == 'wysiwyg_layout' ) : ?>
 
                             <?php get_template_part('template-assets/modules/wysiwyg');?>
+
+		                <?php elseif ( get_row_layout() == 'continous_horizontal_slide' ) : ?>
+
+			                <?php get_template_part('template-assets/modules/horizontal-scroll');?>
 
                         <?php elseif ( get_row_layout() == 'contact_bar' ) : ?>
 
@@ -74,6 +74,10 @@ get_header();?>
                         <?php elseif ( get_row_layout() == 'wysiwyg_layout' ) : ?>
 
                             <?php get_template_part('template-assets/modules/wysiwyg');?>
+
+		                <?php elseif ( get_row_layout() == 'continous_horizontal_slide' ) : ?>
+
+			                <?php get_template_part('template-assets/modules/horizontal-scroll');?>
 
                         <?php elseif ( get_row_layout() == 'contact_bar' ) : ?>
 

@@ -4,24 +4,13 @@
             <h4 class="card-title"><?php the_title(); ?></h4>
         </div>
         <p class="card-text text-black-50 lead"><?php echo custom_field_excerpt();; ?></p>
-        <?php if(is_archive()):?>
-        <?php else:?>
+        <?php if(!is_archive()):?>
             <p class="text-muted"><?php echo get_the_date('j M, Y');?></p>
         <?php endif;?>
 
         <div class="tag-cloud">
             <section>
-                <i class="fa fa-tags" aria-hidden="true"></i>
-                <?php   // Get terms for post
-                $terms = get_the_terms( $post->ID , 'country' );
-                // Loop over each item since it's an array
-                foreach ( $terms as $term ) {?>
-                    <?php $termlinks = get_term_link($term);?>
-                    <a href="<?php echo $termlinks ;?>" class="badge badge-tag country">
-                        <?php echo $term->name;?>
-                    </a>
-                <?php }
-                ?>
+
                 <?php   // Get terms for post
                 $terms = get_the_terms( $post->ID , 'snf-communication-types' );
                 // Loop over each item since it's an array

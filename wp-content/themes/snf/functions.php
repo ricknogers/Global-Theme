@@ -72,6 +72,8 @@ function snf_group_add_styles()
     wp_enqueue_style('font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 'screen');
     wp_enqueue_style('snf-adobe-garamond-pro', 'https://use.typekit.net/fws0qwx.css');
     wp_enqueue_style('snf-source-sans-pro', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+
     /**
      * Conditional Market Style Sheet
      */
@@ -148,6 +150,7 @@ function snf_group_add_scripts() {
     wp_enqueue_script( 'snf-app-js-defer', get_template_directory_uri() . '/scripts/js/app.js', array('jquery'), 'custom', true );
     wp_enqueue_script('snf-front-page-js',get_template_directory_uri() . '/scripts/js/front-page.js', array('jquery'), 'custom', true);
     wp_enqueue_script('snf-flexible-scripts-js',get_template_directory_uri() . '/scripts/js/flexible.js', array(), false, true );
+
     if(is_post_type_archive('timeline')){
         wp_enqueue_style('timeline-page-style', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'); // standard way of adding style sheets in WP.
 
@@ -438,7 +441,73 @@ function form_submit_button( $button, $form ) {
     return "<div class='snf-link-wrapper gform_button ' id='gform_submit_button_{$form['id']}'><div class='snf-link'><span class='product-list-link'>Submit</span></div></div>";
 }
 
+/**
+ *  Test *
+ */
+ 
+function snf_check_page_market_tax(){
+	global $post;
+	$term_array = array();
+	$term_list = wp_get_post_terms($post->ID, 'markets', array(
+	        "fields" => "all",
+	        'orderby' => 'parent',
+	        'order' => 'ASC'
+	    )
+	);
 
+		
+		foreach ( $term_list as $term_single ) {
+			$term_array[] = $term_single->name; //do something here
+		}
+		return $term_array;
+
+
+	                                                 
+}
+
+/**
+ * Get taxonomies terms links.
+ *
+ * @see get_object_taxonomies()
+ */
+function wpdocs_custom_taxonomies_terms_links() {
+    // Get post by post ID.
+    if ( ! $post = get_post() ) {
+        return '';
+    }
+ 
+    // Get post type by post.
+    $post_type = $post->post_type;
+ 
+    // Get post type taxonomies.
+    $taxonomies = get_object_taxonomies( $post_type, 'markets' );
+ 
+    $out = array();
+ 
+    foreach ( $taxonomies as $taxonomy_slug => $taxonomy ){
+ 
+        // Get the terms related to post.
+        $terms = get_the_terms( $post->ID, $taxonomy_slug );
+ 
+        if ( ! empty( $terms ) ) {?>
+    <?php  $out[] = "<div class='card-header heading'>"; ?>
+            <?php foreach ( $terms as $term ):?>
+              <?php  $out[] = sprintf( '<a href="%1$s"><h4 class="display-5">'.  $term->name .'</h4></a>',
+                    esc_url( get_term_link( $term->slug, $taxonomy_slug ) ),
+                    esc_html( $term->name )
+                );?>
+                 
+                        
+                  
+            <?php endforeach;?>
+             <?php  $out[] = "</div>";
+        }
+    }
+    return implode( '', $out );
+}
+
+
+remove_action('welcome_panel', 'wp_welcome_panel');
 
 /**
  * Customizer additions.

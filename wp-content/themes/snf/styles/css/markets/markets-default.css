@@ -26,11 +26,11 @@ IX.)
     border:0 #f2f2f2 solid;
     border-bottom-width:1px;
     background-color: unset;
-    padding: .75rem .65rem;
+    padding: .75rem 0rem;
 }
 .right-side-sidebar .sidebar li a{
     color: #212529;
-}
+    font-size: .85rem;}
 /* collapsed sidebar styles */
 @media screen and (max-width: 767px) {
     .row-offcanvas {
@@ -123,10 +123,14 @@ IX.)
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
 }
-.left-side-sidebar,  .right-side-sidebar {
+.left-side-sidebar {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+.right-side-sidebar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0;padding-right: 0;}
 
 .right-side-sidebar .sidebar-widget h4{
     font-size: 26px;
@@ -152,22 +156,22 @@ IX.)
     background-color: #002d73;
 }
 .sidebar-widget{
-    padding-bottom: 50px;
-}
+    padding-bottom: 20px;
+    border-radius: 4px;}
 .sidebar-market-contact{
     background-size:cover;
     background-position:center;
-    height: 225px;
+    height: 135px;
     position:relative;
     z-index:-1;
-}
+    display: flex;border-radius: 4px;justify-content: center;align-items: center;}
 .sidebar-market-contact .sidebar-overlay{
     position: absolute;
     top:0;
-    opacity: .54;
+    opacity: .64;
     left:0;
     height:100%;
-    width: 100%;
+    border-radius: 4px;width: 100%;
     padding:1.75rem;
 }
 .sidebar-market-contact .markets-contact-content{
@@ -175,9 +179,16 @@ IX.)
     position:relative;
     color:#fff;
     display: block;
-    top: 30px;
-    align-items: center;
-    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;text-align: center;}
+.sidebar-market-contact .markets-contact-content h3{
+    text-shadow: 1px 1px #000;font-size: 1.15rem;
+    font-weight: 800;letter-spacing: .1rem;}
+.sidebar-market-contact .markets-contact-content a{
+    font-weight:800;
+    border:solid 2px;
 }
 /*===================================================
 SDG Sidebar
@@ -236,141 +247,133 @@ Cards
 ======================================================*/
 
 /*===================================================
-
+    Market Slider
 ======================================================*/
-.repeater-slider .card{
-
-}
-.repeater-slider .carousel-item{
-    z-index: 2;
-    /* padding: 25px; */
-    margin: 0;
-}
-.repeater-slider .carousel-item h3{
-    color:#fff;
-    font-size:30px;
-}
-.repeater-slider .carousel-item > .row{
-    margin: 0;
-}
-.repeater-slider .title{
-    color: #fff;
-    text-align: center;
-}
-.repeater-slider .title h3{ /* text-shadow: 0px 3px 3px rgba(0,0,0,0.2); */
-}
-.repeater-slider .btn-next{
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    width: 100px;
-    border-radius: 20px;
-    background-color: #316e99;
-    color: #fff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    z-index: 3;
-}
-.repeater-slider input{
-    background-color: transparent !important;
-}
-/*-- vertical bootstrap slider --*/
-.repeater-slider .carousel .carousel-item-next.carousel-item-left,
-.repeater-slider .carousel .carousel-item-prev.carousel-item-right {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-.repeater-slider .carousel .carousel-item-next,
-.repeater-slider .carousel .active.carousel-item-right {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100% 0);
-}
-.repeater-slider .carousel .carousel-item-prev,
-.repeater-slider .carousel .active.carousel-item-left {
-    -webkit-transform: translate3d(0,-100%, 0);
-    transform: translate3d(0,-100%, 0);
-}
-/*-- vertical carousel indicators --*/
-.repeater-slider .carousel-indicators{
-    /* display: inline-block; */
-    /* position: relative; */
-    /* top: 0; */
-    /* bottom: 0; */
-    /* margin: 0; */
-    /* justify-content: center; */
-    /* right: unset; */
-    /* left: 0; */
-    /* width: 100%; */
-    /* -webkit-transform: rotate(90deg); */
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    /* transform: rotate(90deg); */
-}
-.repeater-slider .carousel-indicators li{
-    display: block;
-    margin-bottom: 0px;
-    border-radius: 0;
-    /* width: 10px; */
-    /* height: 10px; */
-    background: #BDBDBD;
-    transition: all ease 0.6s;
-}
-.repeater-slider .carousel-indicators li:before, .repeater-slider .carousel-indicators li:after {
-    content:unset;
-}
-/* Media Querys */
-/* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-    .repeater-slider .bgTitle{
-        height: 30%;
-        /* border-top-left-radius: 15px; */
-        /* border-top-right-radius: 15px; */
-        width: 100%;
-        top: 0;
-    }
-    .repeater-slider .content{
-        padding: 15px;
-    }
-}
-/* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-}
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-    .repeater-slider .bgTitle{
-        height: 100%;
-        /* margin: 15px; */
-        border-radius: 15px 15px 0px 0px;
-        /* border-top-right-radius: 0px; */
+
+    /* show 3 items */
+    #markets_carousel .carousel-inner .active,
+    #markets_carousel .carousel-inner .active + .carousel-item,
+    #markets_carousel .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+
+    #markets_carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    #markets_carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    #markets_carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+
+    #markets_carousel .carousel-inner .carousel-item-next,
+    #markets_carousel .carousel-inner .carousel-item-prev {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+
+    #markets_carousel .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.333%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* left or forward direction */
+    #markets_carousel .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    #markets_carousel .carousel-item-next.carousel-item-left + .carousel-item,
+    #markets_carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    #markets_carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    /* farthest right hidden item must be abso position for animations */
+    #markets_carousel .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* right or prev direction */
+    #markets_carousel .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    #markets_carousel .carousel-item-prev.carousel-item-right + .carousel-item,
+    #markets_carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    #markets_carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
     }
 }
-/* Extra large devices (large desktops, 1200px and up)*/
+
+.carousel-inner .carousel-item {
+    margin-right: inherit;
+}
+#markets_carousel .card-body h2{
+    font-size:1.15rem;
+}
+#markets_carousel .carousel-inner{
+    background-color:#fff;
+position: relative;}
+#markets_carousel .carousel-control-prev, #markets_carousel .carousel-control-next{
+    position: relative;background-color: transparent;
+    opacity: 1;width: unset;display: inline-flex;justify-content: space-evenly;align-items: center;}
+#markets_carousel .carousel-control-prev{
+    /* left: -10%; */
+/* top: 100%; */}
+#markets_carousel .carousel-control-prev svg, #markets_carousel .carousel-control-next svg{
+    color:black;
+    font-size:1.35rem;
+}
+#markets_carousel .carousel-control-next{
+    right:-15%;
+}
+#markets_carousel .carousel-control-next-icon{
+    background-color:#002d73;
+    width: 50px;font-size: 25px;}
+#markets_carousel .carousel-control-prev-icon{
+    background-color:#002d73;;
+    width: 50px;font-size: 25px;
+}
+
+.carousel-indicators.communication_indicators{
+
+    margin: 0;background-color: #000;padding: 15px 0;position: relative;}
+
+#markets_carousel .card-img-top {
+    object-fit: cover;
+}
+/* Responsive design for image heights */
+@media (min-width: 576px) {
+    #markets_carousel .card-img-top {
+        height: 50vw;
+    }
+}
+
+@media (min-width: 768px) {
+    #markets_carousel .card-img-top {
+        height: 30vw;
+    }
+}
+
+@media (min-width: 992px) {
+    #markets_carousel .card-img-top {
+        height: 20vw;
+    }
+}
+
 @media (min-width: 1200px) {
+    #markets_carousel .card-img-top {
+        height: 15vw;
+    }
 }
-.cardslider-image{
-    padding:0;
-}
-#carouselExampleIndicators{
-    margin:1% 0 5% 0;
-    /* border-radius: 15px; */
-}
-.controllers-slider{
-    position: relative;
-    /* background: rgba(0,0,0,.5); */
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    box-shadow: 0 4px 21px -12px rgb(0 0 0 / 66%);
-    align-items: center;
-    padding: 3px 0;
-}
-.controllers-slider .directionals, .controllers-slider .carousel-indicators{
-    width:50%;
-    /* height: 100%; */
-    margin: 0;
-    display: flex;
-    z-index: 11;
-}
+.carousel-inner .active.right { left: 25%; }
 /*===================================================
     Contact Bar
 ======================================================*/
@@ -431,17 +434,21 @@ section.contact-bar  {
 .flexible-card .card-tag{
 }
 .second-tier-nav ul li{
-    border: none;
+    display: inline-flex;
     /* font-size: 22px; */
-    padding: .75rem;
-    margin: 0;
-    text-transform: uppercase;
+
+    /* margin: 0; */
+    /* text-transform: uppercase; */
     /* justify-content: center; */
     /* align-items: center; */
-    background: transparent;
-    position: relative;
-    display: flex;
-    line-height: 1.2;
+    /* background: transparent; */
+    /* position: relative; */
+    /* display: flex; */
+    /* line-height: 1.2; */
+}
+.second-tier-nav ul li ul li{
+    display:block;
+    padding: 7px .5rem;
 }
 .shrink.second-tier-nav ul li{
     border: none;
@@ -472,7 +479,7 @@ section.contact-bar  {
 .second-tier-nav ul li.active{
     position: relative;
     padding: .75rem;
-    background: transparent;
+    background-color: black;
     /* padding-right: 5%; */
     border-radius: 0 !important;
 }
@@ -511,7 +518,7 @@ section.contact-bar  {
     left:0;
     min-width:220px;
     background-color: #fff;
-    z-index: 5;
+    width: 100%;padding: 0 .85rem;z-index: 5;
     box-shadow: 0px 1px 2px #999;
 }
 .second-tier-nav ul li ul.children{
@@ -521,4 +528,17 @@ section.contact-bar  {
     position:relative;
     z-index: 5;
     /* overflow-x:hidden; */
+}
+.bg_image_card{
+	background-size:cover;
+	background-position: center;
+	height: 200px;
+}
+#markets_carousel .card-body h4{
+    font-weight:300;
+    color:#002d73;
+}
+#markets_carousel{
+    position:relative;
+    width:100%;
 }

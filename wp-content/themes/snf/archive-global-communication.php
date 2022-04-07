@@ -9,10 +9,7 @@ get_header(); ?>
 <div class="container">
     <div class="row">
         <div id="primary" class="content-area col-md-9 col-sm-12 ">
-            <?php
-            global $query_string;
-            query_posts( $query_string . '&posts_per_page=-1' );
-            ?>
+        
             <?php if(have_posts()):?>
                 <div class="article-list">
                     <?php while ( have_posts() ) : the_post(); ?>

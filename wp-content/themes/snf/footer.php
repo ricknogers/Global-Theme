@@ -30,6 +30,8 @@
                 <?php else:?>
                 <?php endif;?>
             </section>
+
+
             <footer id="footer" class="site-footer d-flex justify-content-center" role="contentinfo">
                 <div class="container footerStopScroll">
                     <div class="row">

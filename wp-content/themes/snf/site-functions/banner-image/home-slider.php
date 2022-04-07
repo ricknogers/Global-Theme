@@ -17,7 +17,8 @@ function bn_slides_management()
             'excerpt',
             'publicize'.
             'tag',
-            'thumbnail'
+            'thumbnail',
+            'revisions'
         ),
         'labels'    =>  array(
             'name'              =>'Hero',

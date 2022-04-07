@@ -31,7 +31,7 @@
                         <div class="market-icon-container h-100" style="background:<?php echo $marketColorSelection ;?>">
                             <div class="market-title"  style="background-image: url(<?php echo $cat_image['url'];?>)">
                                 <div class="card-container">
-                                    <h3 class="card-title"><?php echo $term_single->name ?></h3>
+                                    <p class="lead"><?php echo $term_single->description; ?></p>
                                 </div>
                             </div>
                         </div>

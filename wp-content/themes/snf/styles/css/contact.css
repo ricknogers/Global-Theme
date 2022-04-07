@@ -11,3 +11,22 @@ VI.) Forms
 VII.) Terms and Usage
 IX.) News
 ======================================================*/
+.output{
+    display: none;
+}
+.country_name{
+	color:#002d73;
+	font-weight: 800;
+	font-size: 1.15rem;
+}
+.output .country_list_elements li{
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+padding: .55rem 1.05rem;}
+.output .country_list_elements li i{
+	padding:4px;
+}
+.output .country_list_elements li p.lead{
+	margin:0;
+}

@@ -6,7 +6,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <a href="<?php echo home_url('/');?>" class="navbar-brand">
-                    <img src="<?php bloginfo('template_directory'); ?>/resources/images/logos/SNF_Responsible_Chemistry_Logo_DarkBlue_V1.svg" alt="SNF Logo" class="img-fluid mx-auto d-block">
+                    <img src="<?php bloginfo('template_directory'); ?>/resources/images/logos/SNF-Water-Science-Dark-blue-SVG.svg" alt="SNF Logo" class="img-fluid mx-auto d-block">
+
                 </a>
                 <h5 class="modal-title">Select Location</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

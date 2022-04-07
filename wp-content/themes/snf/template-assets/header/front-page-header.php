@@ -43,10 +43,11 @@
                                 </div><!--header-content-->
                             </div>
                             <div class="title-bar">
-                            </div>
-                            <div class="title-bar-text">
+	                            <div class="title-bar-text">
                                 <h2 class="skinnyTitle"><?php echo get_option('corporate_tag_line') ;?></h2>
                             </div>
+                            </div>
+                            
                         </div> <!-- .card__content -->
                     </div><!-- .card__img -->
                 </section> <!-- .card -->

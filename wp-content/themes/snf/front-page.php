@@ -180,98 +180,67 @@ get_header(); ?>
 
 <!-- News SECTION -->
 <div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="newsEvents">
-                <div class="col-sm-12 homeNewsWrapper">
-                    <div class="newsTitleWrapper">
-                        <h2 class="homeNewsSectionTitle">News & Events</h2>
-                    </div>
-                    <?php
-                    $args = array(
-                        'post_type' =>  'global-communication',
-                        'posts_per_page' => 4,
-                        'order' => 'ASC',
-                        'orderby' => 'DATE',
-                    );
-                    $query = new WP_Query( $args );?>
-                    <section class="slide-wrapper">
-                        <div class="containerSlider">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-                                    <?php
-                                    $args = array(
-                                        'post_type' =>  'global-communication',
-                                        'posts_per_page' => 4,
-                                        'order' => 'ASC',
-                                        'orderby' => 'DATE',
-                                    );
-                                    $query = new WP_Query( $args );?>
-                                    <?php if($query->have_posts()) : ?>
-                                        <?php $counter = 0;?>
-                                        <?php while($query->have_posts()) : $query->the_post() ?>
-                                            <div class="carousel-item <?php if ($counter === 0):?> active <?php endif;?>">
-                                                <div class="fill row" >
-                                                    <div class="fillContent col-lg-6 col-sm-12">
-                                                        <h2><?php the_title();?></h2>
-                                                        <?php if(get_field('news_url_change')):?>
-                                                            <div class="snf-link-wrapper ">
-                                                                <div class="snf-link">
-                                                                    <a href="<?php the_field('news_url_change');?>" class="product-list-link">Read More</a>
-                                                                </div>
-                                                            </div>
-                                                        <?php else:?>
-                                                             <div class="snf-link-wrapper ">
-                                                                <div class="snf-link">
-                                                                    <a href="<?php the_permalink();?>" class="product-list-link">Read More</a>
-                                                                </div>
-                                                            </div>
-                                                        <?php endif;?>
-                                                    </div>
-                                                    <?php if(has_post_thumbnail()):?>
-                                                        <div class="fillImage col-lg-6 col-sm-12" style="background-image: url(<?php echo the_post_thumbnail_url("full") ;?>);">
-                                                            <span class="news-type">
-                                                                <?php  the_category(); ?>
-                                                            </span>
-                                                        </div>
-                                                    <?php else:?>
-                                                        <div class="fillImage col-lg-6 col-sm-12" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/news/news_fallback_<?php echo rand(1, 4); ?>.jpg);">
-                                                            <span class="news-type">
-                                                                <?php  the_category(); ?>
-                                                            </span>
-                                                        </div>
-                                                    <?php endif;?>
-                                                </div>
-                                            </div>
-                                            <?php $counter++; ?>
-                                        <?php endwhile; wp_reset_postdata(); ?>
+    <div class=" newsTitleWrapper">
+        <h2 class="homeNewsSectionTitle">News & Events</h2>
+    </div>
+    <div class="row ">
+        <div id="news_carousel" class="carousel slide w-100 mt-3 " data-ride="carousel">
+            <?php
+                $counter = 0;
+                $args = array(
+                    'post_type' =>  'global-communication',
+                    'posts_per_page' => 6,
+                    'order' => 'ASC',
+                    'orderby' => 'DATE',
+                );
+                $query = new WP_Query( $args );
+            ?>
+            <div class="carousel-inner row  w-100 mx-auto " role="listbox">
+                <?php if($query->have_posts()) :  $i = 0; // add this counter?>
+                    <?php  while($query->have_posts()) : $query->the_post() ;?>
+                        <div class="carousel-item col-md-4  <?php if ($query->current_post == 0):?> active <?php endif;?>">
+                            <div class=" card h-100">
+                                <?php the_post_thumbnail('full', array('class' => ' card-img-top', 'alt' => 'slide ' .  $counter . ' ')); ?>
+                                <div class="card-body">
+                                    <h2 class="display-4"><?php the_title();?></h2>
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    <?php if(get_field('news_url_change')):?>
+                                        <a href="<?php the_field('news_url_change');?>" class="btn btn-block btn-outline-primary btn-rounded">Read More</a>
+                                    <?php else:?>
+                                        <a class="btn btn-outline-primary btn-rounded btn-block" href="<?php the_permalink();?>">Read More</a>
                                     <?php endif;?>
                                 </div>
-                                <div class="col-sm-12">
-                                    <ol class="carousel-indicators">
-                                        <?php if ( $query->have_posts() ) : ?>
-                                            <?php $counter = 0;?>
-                                            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-                                                <!-- Indicators -->
-                                                <li data-target="#myCarousel" data-slide-to="<?php echo $counter ?>" class=" <?php if ($counter === 0):?> active <?php endif;?>"></li>
-                                                <?php $counter++; ?>
-                                            <?php endwhile;  ?>
-                                        <?php endif; wp_reset_postdata();?>
-                                    </ol>
-                                </div>
-                            </div>
-                    </section>
-                    <div class="col-sm-12 text-center mt-5 pb-3">
-                         <div class="snf-link-wrapper ">
-                            <div class="snf-link">
-                                <a  href="<?php echo home_url( '/' ); ?>news" class="product-list-link">View All News Articles</a>
-                            </div>
+                            </div><!--card-->
                         </div>
-                    </div>
+                    <?php $i++;?>
+                    <?php endwhile; wp_reset_postdata(); ?>
+                <?php endif;?>
+            </div><!--carousel-inner-->
+            <a class="left carousel-control-prev" href="#news_carousel" role="button" data-slide="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control-next " href="#news_carousel" role="button" data-slide="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+                <span class="sr-only">Next</span>
+            </a>
+        </div><!--col-->
+    </div>
+    <div class="row ">
+        <div class="col-sm-12 text-center mt-5 pb-3">
+            <div class="snf-link-wrapper ">
+                <div class="snf-link">
+                    <a  href="<?php echo home_url( '/' ); ?>news" class="product-list-link">View All News Articles</a>
                 </div>
             </div>
         </div>
-    </div>
-</div><!--container-->
+    </div><!--row-->
+</div>
+
+
 <?php get_footer(); ?>

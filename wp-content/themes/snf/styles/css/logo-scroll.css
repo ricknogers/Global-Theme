@@ -1,0 +1,36 @@
+.slider-scroll {/* margin: auto; *//* overflow: visible; */height: 100%;/* min-height: 50vh; */}
+.slider-scroll ul {
+    display: flex;
+    padding: 0;
+    animation: cambio 35s infinite linear;
+}
+.slider-scroll ul li:before{
+    content:"";
+    display:none;
+    list-style: none !important;
+}
+.slider-scroll ul li:after{
+    display:none;
+}
+.slider-scroll li {
+    margin: 0 25px;
+    list-style: none;
+}
+.slider-scroll img {
+    max-width: fit-content !important;
+    /* height: auto !important; */
+}
+@keyframes cambio {
+    from {margin-left: 0%}
+    to {margin-left: -100%}
+}
+.scroll-container{
+    /* height:250px; */
+    /* position:relative; */
+}
+.logo-box{
+    overflow-x:hidden;
+    /* height: 100%; */
+    /* min-height: 500px; */
+}
+.logo-box img{height: 130px;}

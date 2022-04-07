@@ -10,17 +10,7 @@
         <?php endif;?>
         <div class="tag-cloud">
             <section>
-                <i class="fa fa-tags" aria-hidden="true"></i>
-                <?php   // Get terms for post
-                $terms = get_the_terms( $post->ID , 'country' );
-                // Loop over each item since it's an array
-                foreach ( $terms as $term ) {?>
-                    <?php $termlinks = get_term_link($term);?>
-                    <a href="<?php echo $termlinks ;?>" class="badge badge-tag country">
-                        <?php echo $term->name;?>
-                    </a>
-                <?php }
-                ?>
+
                 <?php   // Get terms for post
                 $terms = get_the_terms( $post->ID , 'snf-communication-types' );
                 // Loop over each item since it's an array
