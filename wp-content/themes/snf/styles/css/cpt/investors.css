@@ -7,176 +7,182 @@
 /*===================================================
     I.) Investor Login / Form & Sign Up
 ======================================================*/
-.login-reg-panel{
-    position: relative;
-    top: 0;
-    /* transform: translateY(-50%); */
-    text-align:center;
+.login-block {
+    /* background: #DE6262; */
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to bottom, #FFB88C, #DE6262); */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* float: left; */
     width: 100%;
-    right:0;
-    left:0;
-    margin:auto;
-    min-height: 100vh;
-    background-color: #002d73;
-    height: 100%;
+    padding: 20px 0;
 }
-.investorSectionTitle{
-    /* padding:0 !important; */
+
+.banner-sec {
+    background: url(https://static.pexels.com/photos/33972/pexels-photo.jpg) no-repeat left bottom;
+    background-size: cover;
+    min-height: 500px;
+    border-radius: 0 10px 10px 0;
+    padding: 0;
 }
-.white-panel{
-    background-color: rgba(255,255, 255, 1);
-    height: 100%;
-    position:absolute;
-    top: 0;
-    width: 60%;
-    /* right:calc(50% - 50px); */
-    transition:.3s ease-in-out;
-    z-index:0;
-    box-shadow: 0 0 15px 9px #00000096;
+
+
+
+.carousel-inner {
+    border-radius: 0 10px 10px 0;
 }
-.login-reg-panel input[type="radio"]{
-    position:relative;
-    display:none;
+
+.carousel-caption {
+    text-align: left;
+    left: 5%;
 }
-.login-reg-panel{
-    color:#B8B8B8;
+
+.login-sec {
+    padding: 50px 30px;
+    position: relative;
 }
-.login-reg-panel #label-login,
-.login-reg-panel #label-register{
-    border: 1px solid #fff;
-    padding:5px 5px;
-    width:150px;
-    display:block;
-    text-align:center;
-    border-radius:10px;
-    cursor:pointer;
+
+.login-sec .copy-text {
+    position: absolute;
+    width: 80%;
+    bottom: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.login-sec .copy-text i {
+    color: #FEB58A;
+}
+
+.login-sec .copy-text a {
+    color: #E36262;
+}
+
+.login-sec h2 {
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 30px;
+    color: #DE6262;
+}
+
+.login-sec h2:after {
+    content: " ";
+    width: 100px;
+    height: 5px;
+    background: #FEB58A;
+    display: block;
+    margin-top: 20px;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.btn-login {
+    background: #DE6262;
+    color: #fff;
+    font-weight: 600;
+}
+
+.banner-text {
+    width: 70%;
+    position: absolute;
+    bottom: 40px;
+    padding-left: 20px;
+}
+
+.banner-text h2 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.banner-text h2:after {
+    content: " ";
+    width: 100px;
+    height: 5px;
+    background: #FFF;
+    display: block;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.banner-text p {
+    color: #fff;
+}
+.register-right{
+    background: #f8f9fa;
+    border-top-left-radius: 3%;
+    border-bottom-left-radius: 3% 3%;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+.btnRegister{
+    float: right;
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+.register .nav-tabs{
+    margin-top: 3%;
+    border: none;
+    background: rgb(20,140,176);
+    border-radius: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;align-items: center;}
+.register .nav-tabs .nav-link{
+    /* padding: 2%; */
+    /* height: 34px; */
     font-weight: 600;
     color: #fff;
-    font-size: 18px;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
 }
-.login-info-box{
-    width: 40%;
-    padding:0 50px;
-    top:20%;
-    left:0;
-    position:absolute;
-    text-align:left;
-}
-.login-info-box h2{
-    color:#fff;
-}
-.register-info-box{
-    width: 40%;
-    padding:0 50px;
-    top:20%;
-    right:0;
-    position:absolute;
-    text-align:left;
-}
-.register-info-box h2{
-    color:#fff;
-    line-height:100%;
-}
-.register-info-box a{
-    color:#fff;
-}
-.register-info-box p{
-    color:#fff;
-}
-.right-log{right: 0 !important;}
-.login-show, .register-show{
-    z-index: 1;
-    display:none;
-    opacity:0;
-    transition:0.3s ease-in-out;
-    color:#242424;
-    text-align:left;
-    padding: 5px 20px;
-}
-.show-log-panel{
-    display:block;
-    opacity:0.9;
-}
-.login-show input[type="text"], .login-show input[type="password"]{
-    width: 100%;
-    display: block;
-    margin:20px 0;
-    padding: 15px;
-    border: 1px solid #b5b5b5;
-    outline: none;
-}
-.login-show input[type="button"] {
-    max-width: 150px;
-    width: 100%;
-    background: #444444;
-    color: #f9f9f9;
+.register .nav-tabs .nav-link:hover{
     border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    float:right;
-    cursor:pointer;
 }
-.page-template-investors .login-show a{
-    display:inline-block;
-    padding:10px 0;
-}
-.register-show input[type="text"], .register-show input[type="password"]{
-    width: 100%;
-    display: block;
-    margin:20px 0;
-    padding: 15px;
-    border: 1px solid #b5b5b5;
-    outline: none;
-}
-.page-template-investors .register-show input[type="button"] {
-    max-width: 150px;
-    width: 100%;
-    background: #444444;
-    color: #f9f9f9;
-    border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    float:right;
-    cursor:pointer;
-}
-.page-template-investors .credit {
-    position:absolute;
-    bottom:10px;
-    left:10px;
-    color: #3B3B25;
-    margin: 0;
-    padding: 0;
-    font-family: 'Source Sans Pro',  sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    z-index: 99;
-}
+.register .nav-tabs .nav-link.active{
+    /* width: 100px; */
+    color: rgb(20,140,176);
+    border: 2px solid rgb(20,140,176);
+    border-bottom-left-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;}
 
-
-#investorHighlight{
-    background-color: #002d73;
-    color: #fff;
-}
-#prHighlight{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border: solid 1px #fff;
-}
-#frHighlight{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border: solid 1px #fff;
-}
-#investorHighlight h3{
-    color:#fff;
-    font-size: 20px;
-    margin: 1% 0;
+a#login-tab {}
+.register-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
 }
 /*===================================================
 
@@ -548,13 +554,13 @@
         margin: 1%;
     }
     .investor-overlay{
-        position: absolute;
+        position: relative;
         height: 100%;
         width: 100%;
         left: 0;
         background-color: #000;
-        opacity: .75;
-    }
+        opacity: .9;
+        padding: 1.6rem;border-radius: 4px;}
     .investor-update{
 
         position: relative;
@@ -563,7 +569,7 @@
 
         color: #fff;
 
-        top: 130px;
+        padding: 0;
 
     }
     .investor-support{
@@ -854,13 +860,7 @@
 js-(before|after)
 
 ***/
-.white-panel.right-log {
-    position: relative;
-    float: right;
-}
-.login-reg-panel {
-    float: left;
-}
+
 @media(max-width:974px){
     div.banner-inner-investor {
         height:50px;

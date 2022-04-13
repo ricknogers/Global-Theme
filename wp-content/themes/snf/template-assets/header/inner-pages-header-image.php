@@ -1,52 +1,52 @@
-<?php if ( is_page_template('market-sites/market-home.php') || is_page_template('market-sites/market-inner-template.php')) :?>
+<div class="container">
 
-    <?php get_template_part('template-assets/header/conditional-headers/markets-header-layout');?>
+	<?php if(get_field('page_header_type') == 'default'):?>
 
-<?php else:?>
-    <div class="container">
-        <?php if(is_page('investors')):?>
+		<?php get_template_part('template-assets/header/user-selection/default-selection');?>
+           <?php if(is_search()):?>
+			<?php get_template_part('template-assets/header/user-selection/search-header');?>
+		<?php endif;?>
+	<?php endif;?>
 
-            <?php get_template_part('template-assets/header/conditional-headers/investor-header');?>
+	<?php if(get_field('page_header_type') == 'single'):?>
 
-        <?php endif;?>
-        <?php if(has_post_thumbnail() && !( is_search() || is_archive()  || is_page('investors'))):?>
+		<?php get_template_part('template-assets/header/user-selection/single-selection');?>
 
-            <?php if(  is_page_template('subsidiary-landing.php')):?>
+	<?php endif;?>
 
-                <?php get_template_part('template-assets/header/conditional-headers/subsidiary-header');?>
+	<?php if(get_field('page_header_type') == 'optimized'):?>
 
-            <?php else:?>
+		<?php get_template_part('template-assets/header/user-selection/optimized-selection');?>
 
-                <?php get_template_part('template-assets/header/conditional-headers/default-header');?>
+	<?php endif;?>
 
-            <?php endif;?>
-        <?php else:?>
-            <?php if(is_404()):?>
+	<?php if(get_field('page_header_type') == 'sustainability'):?>
 
-                <?php get_template_part('template-assets/header/conditional-headers/404-header');?>
+		<?php get_template_part('template-assets/header/user-selection/sustainability-selection');?>
 
-            <?php endif;?>
+	<?php endif;?>
 
-            <?php if(is_search()):?>
+	<?php if(get_field('page_header_type') == 'industry-header'):?>
 
-                <?php get_template_part('template-assets/header/conditional-headers/search-header');?>
+		<?php get_template_part('template-assets/header/user-selection/industry-selection');?>
 
-            <?php endif;?>
+	<?php endif;?>
 
-            <?php if(is_archive() || is_category() ):?>
+	<?php if(get_field('page_header_type') == 'country'):?>
 
-                <?php get_template_part('template-assets/header/conditional-headers/archive-headers');?>
+		<?php get_template_part('template-assets/header/user-selection/country-selection');?>
 
-            <?php endif;?>
+	<?php endif;?>
+	<?php if(get_field('page_header_type') == 'investor'):?>
 
-            <?php if(is_singular( array( 'global-communication', 'products', 'marketing-material' ) )):?>
+		<?php get_template_part('template-assets/header/user-selection/investor-selection');?>
 
-                <?php get_template_part('template-assets/header/conditional-headers/single-header');?>
+	<?php endif;?>
 
-            <?php endif;?>
 
-         
 
-        <?php endif;?>
-    </div><!--container-fluid-->
-<?php endif;?>
+
+
+</div>
+
+

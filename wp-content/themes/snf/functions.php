@@ -67,11 +67,14 @@ function snf_group_add_styles()
 {
     wp_enqueue_style( 'snf-group-style', get_stylesheet_uri() );
 //    wp_enqueue_style( 'snf-global-general-style',  get_template_directory_uri() . '/styles/css/global.scss');
-    wp_enqueue_style('boot-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css');
+    wp_enqueue_style('boot-css', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css');
     wp_enqueue_style('Flag Icons', 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css');
     wp_enqueue_style('font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 'screen');
     wp_enqueue_style('snf-adobe-garamond-pro', 'https://use.typekit.net/fws0qwx.css');
     wp_enqueue_style('snf-source-sans-pro', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+    wp_enqueue_style('snf-esg-lightbox', 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css');
+
+
     /**
      * Conditional Market Style Sheet
      */
@@ -147,17 +150,23 @@ function snf_group_add_scripts() {
     wp_enqueue_script('snf-contact-form-slide-out-js', get_template_directory_uri() . '/scripts/js/contact-form-slide-out.js', array('jquery'), 'custom', true);
     wp_enqueue_script( 'snf-app-js-defer', get_template_directory_uri() . '/scripts/js/app.js', array('jquery'), 'custom', true );
     wp_enqueue_script('snf-front-page-js',get_template_directory_uri() . '/scripts/js/front-page.js', array('jquery'), 'custom', true);
+
     wp_enqueue_script('snf-flexible-scripts-js',get_template_directory_uri() . '/scripts/js/flexible.js', array(), false, true );
+
+
+
     if(is_post_type_archive('timeline')){
         wp_enqueue_style('timeline-page-style', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'); // standard way of adding style sheets in WP.
 
     }
 
     // Bootstrap JS CDN
-    wp_enqueue_script( 'slim-jquery','https://code.jquery.com/jquery-3.3.1.min.js', true);
+    wp_enqueue_script( 'slim-jquery','https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', true);
     wp_enqueue_script( 'boot-pooper-js','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', true);
-    wp_enqueue_script( 'boot-js','https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), true);
+    wp_enqueue_script( 'boot-js','https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js', array('jquery'), true);
     wp_enqueue_script('jquery-ui', 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('jquery'), true);
+    wp_enqueue_script('snf-lightbox-scripts-js','https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js', array(), '', true  );
+
 }
 add_action( 'wp_enqueue_scripts', 'snf_group_add_scripts' );
 
@@ -437,6 +446,81 @@ add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
 function form_submit_button( $button, $form ) {
     return "<div class='snf-link-wrapper gform_button ' id='gform_submit_button_{$form['id']}'><div class='snf-link'><span class='product-list-link'>Submit</span></div></div>";
 }
+
+/**
+ *  Test *
+ */
+ 
+function snf_check_page_market_tax(){
+	global $post;
+	$term_array = array();
+	$term_list = wp_get_post_terms($post->ID, 'markets', array(
+	        "fields" => "all",
+	        'orderby' => 'parent',
+	        'order' => 'ASC'
+	    )
+	);
+
+		
+		foreach ( $term_list as $term_single ) {
+			$term_array[] = $term_single->name; //do something here
+		}
+		return $term_array;
+
+
+	                                                 
+}
+
+/**
+ * Check Market Pages and Retrives the market selected on the Backend of WP
+ */
+function wpdocs_custom_taxonomies_terms_links() {
+    // Get post by post ID.
+    if ( ! $post = get_post() ) {
+        return '';
+    }
+    // Get post type by post.
+    $post_type = $post->post_type;
+    // Get post type taxonomies.
+    $taxonomies = get_object_taxonomies( $post_type, 'markets' );
+    $out = array();
+    foreach ( $taxonomies as $taxonomy_slug => $taxonomy ){
+        // Get the terms related to post.
+        $terms = get_the_terms( $post->ID, $taxonomy_slug );
+        if ( ! empty( $terms ) ) {?>
+    <?php  $out[] = "<div class='card-header heading'>"; ?>
+            <?php foreach ( $terms as $term ):?>
+              <?php  $out[] = sprintf( '<a href="%1$s"><h4 class="display-5">'.  $term->name .'</h4></a>',
+                    esc_url( get_term_link( $term->slug, $taxonomy_slug ) ),
+                    esc_html( $term->name )
+                );?>
+            <?php endforeach;?>
+             <?php  $out[] = "</div>";
+        }
+    }
+    return implode( '', $out );
+}
+
+/**
+ * On WP Dashboard this Removes the Welcome Quick Edit Modal
+ */
+remove_action('welcome_panel', 'wp_welcome_panel');
+
+/**
+ * Adds Categories on Pages for ACF Selection Sake
+ */
+function myplugin_settings() {
+
+    // Add category metabox to page
+    register_taxonomy_for_object_type('category', 'page');
+}
+/**
+ * Add to the admin_init hook of your theme functions.php file
+ */
+
+add_action( 'init', 'myplugin_settings' );
+
+
 
 
 

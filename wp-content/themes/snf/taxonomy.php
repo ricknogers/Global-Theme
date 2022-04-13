@@ -9,12 +9,7 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div id="primary" class="content-area col-md-9 col-sm-12 ">
-                <?php
-                $number_of_series = count(get_terms('country'));
-                $offset = ( $page - 1 ) * $per_page;
-                global $query_string;
-                query_posts( $query_string . '&posts_per_page=15' );
-                ?>
+
                 <?php if(have_posts()):?>
                     <div class="article-list">
                         <?php while ( have_posts() ) : the_post(); ?>

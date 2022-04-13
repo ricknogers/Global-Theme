@@ -6,8 +6,7 @@
         <div class="row">
             <div id="primary" class="content-area col-md-9 col-sm-12 ">
                 <?php
-                global $query_string;
-                query_posts( $query_string . '&posts_per_page=9' );
+              
                 ?>
 
                 <?php if(have_posts()):?>

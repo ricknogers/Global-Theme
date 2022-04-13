@@ -12,9 +12,7 @@ get_header();?>
             <!---Different Header Rendered -->
             <div class="row">
                 <div class="col ">
-                    <div class="section-identifier one-title">
-                        <h1><?php the_title();?></h1>
-                    </div>
+			        <?php the_content();?>
                 </div><!-- pageTitleOverlay-->
             </div>
             <div class="row">

@@ -1,29 +1,27 @@
-<?php if(has_post_thumbnail()):?>
+<div class="" id="banner_elements">
+<?php if(has_post_thumbnail() ):?>
     <div class="row">
-        <div class="col inner-banner-image default" style="background-image: url(<?php echo the_post_thumbnail_url("full") ;?>)"></div>
-    </div>
-<?php else:?>
-    <div class="row">
-        <div class="col page-header theme-bg-dark py-5 text-center position-relative">
-            <div class="page-header-shapes-right "></div>
-            <div class="page-header-shapes-left"></div>
-            <div class="row">
-                <div class="col page-header-title" >
-                    <h1><?php the_title(); ?></h1>
-                </div>
-            </div>
+        <div class="col inner-banner-image default" style="background-image: url(<?php echo the_post_thumbnail_url("full") ;?>)">
+	        <?php if ( get_field( 'does_this_page_need_to_display_esg_report' ) == 1 ) : ?>
+                <?php $esg_pdf_link = get_option('snf_esg_update_link');?>
+                <?php $esg_title = get_option('snf_esg_link_title');?>
+                <?php if ( $esg_pdf_link ) : ?>
+                    <div class="sustain_highlight_box">
+                        <div class="esg-overlay">
+                            <div class="esg-content">
+                                <a href="<?php echo $esg_pdf_link;?>"> <?php echo $esg_title; ?></a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+	        <?php endif; ?>
         </div>
-    </div><!--row-->
-<?php endif;?>
-<div class="row mb-2">
-    <div class="col breadcrumbs-container ">
-        <div class="card shadow p-1">
-            <div class="card-body shadow-sm snf-breadcrumbs ">
-                <div class="col second-tier-nav crumbs">
-					<?php  if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
-                </div>
+    </div>
+    <?php get_template_part('/template-assets/header/conditional-headers/page-title-no-banner');?>
 
-            </div><!--card-body shadow-sm snf-breadcrumbs-->
-        </div><!--card shadow-->
-    </div><!--breadcrumbs-container-->
-</div><!--row-->
+<?php else:?>
+    
+	<?php get_template_part('/template-assets/header/breadcrumbs-page-title');?>
+<?php endif;?>
+
+</div><!--banner_elements-->

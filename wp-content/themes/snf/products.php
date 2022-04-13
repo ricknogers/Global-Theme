@@ -7,6 +7,55 @@
 
 get_header(); ?>
     <div class="container  ">
+	    <div class="row">
+		    	1st select market
+	    </div>
+		<div class="row ">
+	
+			<?php
+				
+				
+				
+                    $terms = get_terms('markets' );
+                    if ( ! is_wp_error( $terms ) && ! empty( $terms ) ) {?>
+
+                        <?php foreach ($terms as $term) : ?>
+                        	<?php if ($term->parent != 0):?>
+								<?php $termLink = get_field('page_url', 'category_'.$term->term_id); ?>
+								<?php  $url = get_term_link($term->slug, 'markets');?>
+								<?php $cat_image = get_field('hero_image', 'category_'.$term->term_id); ?>
+
+	                            <div class="col-md-3 col-sm-12 mb-3 mt-3" id="<?php the_ID(); ?>">
+		                            <div class="card h-100">
+		                                 <a href="<?php echo get_term_link($term->slug, 'markets');?>">
+		                                    <div class="market_background" style="background-image: url('<?php echo $cat_image['url']; ?>')">
+			                                    <div class="product_market_selection overlay"></div>
+			                                     <section class="card-body ">
+				                                   
+				                                        <h3 style="text-align: center"><?php echo $term->name?></h3>
+				                                    
+				
+				                                </section>
+		                                    </div>
+		                                </a>
+		                               
+		                            </div>
+	                            </div>
+	                        <?php endif;?>
+
+                       <?php endforeach;?>
+
+                    <?php }
+                    ?>
+
+
+	
+				
+        </div>
+        <div class="row mt-5 mb-5 text-center">
+	        <h2><b>TWO DIFFERENT FILTERING LAYOUT OPTIONS / WORKING OUT BUGS AND FILTERING</b></h2>
+	        
+        </div>
         <div class="row ">
             <div class="col-md-3 col-xs-12 card card-filter shadow-sm" >
                 <form class="card-body " >
@@ -161,18 +210,22 @@ get_header(); ?>
                                                     </div>
                                                     <div class="row product-contact border-top pt-3">
                                                         <div class="col prod_button_redirect">
-                                                            <a href="<?php echo home_url('/');?>contact" class="" >
+                                                            <a href="<?php echo home_url('/');?>contact/?contact_sales=" class="" >
                                                                 <button type="button" class="btn btn-outline-primary" style="background-color:rgb(107,105,135); color:#fff; border:none;">
                                                                     <span>Contact Sales</span> <i class="bi bi-chevron-right"></i>
                                                                 </button>
                                                             </a>
                                                         </div>
                                                         <div class="col prod_button_redirect">
-                                                            <a href="<?php echo home_url('/');?>sds-request" class="" >
-                                                                <button type="button" class="btn btn-outline-secondary" style="background-color:#0082CA; color:#FFF;border:none; ">
-                                                                    <span>Request SDS</span> <i class="bi bi-chevron-right"></i>
-                                                                </button>
-                                                            </a>
+	                                                        <?php $terms = get_the_terms(get_the_ID(), 'markets');?>
+
+                                                            <?php foreach($terms as $term) :?>
+                                                                <a href="<?php echo home_url('/');?>sds-request/?tradename=<?php the_field('trade_name');?> <?php the_field('product_range');?>&industry=<?php echo $term->name;  ?>" class="" >
+                                                                    <button type="button" class="btn btn-outline-secondary" style="background-color:#0082CA; color:#FFF;border:none; ">
+                                                                        <span>Request SDS</span> <i class="bi bi-chevron-right"></i>
+                                                                    </button>
+                                                                </a>
+		                                                    <?php endforeach;?>
                                                         </div>
                                                     </div>
                                                 </div><!--card-body-->
@@ -196,8 +249,8 @@ get_header(); ?>
                         <?php else:?>
                             <p>Sorry, there are no posts to display</p>
                         <?php endif; ?>
+                </div>
                 </div><!--card-deck-->
-            </div>
-        </div>
+</div>
     </div>
 <?php get_footer(); ?>

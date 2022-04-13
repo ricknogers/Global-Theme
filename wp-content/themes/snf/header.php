@@ -19,7 +19,7 @@
 <title> <?php wp_title( '' )   ?></title>
     <meta name="google-site-verification" content="kZJWqTUOOX2VlJRCdWXCu8HIO0LMwoTxZgC-PVCBbLE" />
     <?php wp_head(); ?>
-    <?php if((has_term('', 'markets') || has_term('','country') )  && !((is_page(array('news','contact','group-products'))) || is_archive() || is_single())):?>
+    <?php if((has_term('', 'markets') || has_term('','country') )  && !((is_page(array('news','group-products'))) || is_archive() || is_single())):?>
         <?php $class="taxonomy d-flex flex-column min-vh-100  ";?>
     <?php else:?>
 	    <?php $class=" page-option d-flex flex-column min-vh-100  ";?>
@@ -136,11 +136,12 @@
                         </div><!--scroll-logo country-logo-->
                     </div>
                 </div><!--logo-navigation-container-->
-                
             </div><!--snf-country-menu-->
         </div><!--container-->
     </section>
-	<?php get_template_part( 'template-assets/header/taxonomy-nav'); ?>
+	<?php if(has_term('','markets') || has_term('','country')):?>
+	    <?php get_template_part( 'template-assets/header/taxonomy-nav'); ?>
+    <?php endif;?>
 </div><!--transition-navbar-->
 
 <?php if(is_front_page()):?>

@@ -20,10 +20,10 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
      */
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         if($depth==0){
-            $output .= "<ul role=\"menu\" class=\"dropdown-menu multi-column columns-2\">\n";
+            $output .= "<ul role=\"menu\" class=\"dropdown-menu \">\n";
         }
         else{
-            $output .= "<ul role=\"menu\" class=\"multi-column-dropdown\">\n";
+            $output .= "<ul role=\"menu\" class=\"dropdown-menu multi-column-dropdown\">\n";
         }
     }
     /**

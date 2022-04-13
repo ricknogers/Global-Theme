@@ -17,7 +17,7 @@
                         </a>
                     </h5>
                 </div><!--card-header-->
-                <div id="collapse_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>" class="collapse" aria-labelledby="heading_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>" data-parent="#accordion_<?php echo $Acc_ID; ?>">
+                <div id="collapse_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>" class="collapse shadow-sm" aria-labelledby="heading_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>" data-parent="#accordion_<?php echo $Acc_ID; ?>">
                     <div class="card-body">
                         <?php echo $content; ?>
                     </div><!--card-body-->
@@ -45,7 +45,7 @@
                                         </a>
                                     </h5>
                                 </div><!--card-header-->
-                                <div id="collapse_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>" class="collapse" aria-labelledby="heading_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>" data-parent="#accordion_<?php echo $Acc_ID; ?>">
+                                <div id="collapse_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>" class="collapse shadow-sm" aria-labelledby="heading_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>" data-parent="#accordion_<?php echo $Acc_ID; ?>">
                                     <div class="card-body">
                                         <?php echo $content; ?>
                                     </div><!--card-body-->

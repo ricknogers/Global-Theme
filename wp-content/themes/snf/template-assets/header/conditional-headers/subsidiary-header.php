@@ -1,3 +1,4 @@
+<?php if(has_post_thumbnail()):?>
 <div class="row">
     <div class="col inner-banner-image default" style="background-image: url(<?php echo the_post_thumbnail_url("full") ;?>)">
         <div class=" breadcrumbs-container ">
@@ -24,3 +25,7 @@
         <?php endif; ?>
     </div><!-- pageTitleOverlay-->
 </div>
+<?php else:?>
+    	<?php get_template_part('/template-assets/header/breadcrumbs-page-title');?>
+
+<?php endif;?>

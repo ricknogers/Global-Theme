@@ -47,6 +47,7 @@ IX.) News
 @import "styles/css/contact.css";
 @import "styles/css/gravity-overwrite.css";
 @import "styles/css/filter-sidebar.css";
+@import "styles/css/logo-scroll.css";
 
 
 /*===================================================
@@ -72,7 +73,9 @@ IX.) News
 @import "styles/css/markets/industrial.css";
 @import "styles/css/markets/textiles.css";
 @import "styles/css/markets/dredging.css";
-
+@import "styles/css/markets/construction.css";
+@import "styles/css/markets/equipment.css";
+@import "styles/css/markets/mining.css";
 
 
 /*===================================================

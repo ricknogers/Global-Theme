@@ -341,7 +341,7 @@ IX.) News
     position: relative;
     color: #002d73;
     font-size: 1.45rem;
-    font-weight: 700;
+    font-weight: 600;
     padding-right: 50px;
     margin-bottom: 0;
     display: inline-block;
@@ -356,3 +356,25 @@ IX.) News
     height: 1px;
     background-color: #bbbbbb;
 }
+
+.cta_card_slider{}
+.cta_card_slider .card-body p{
+    text-align:left;
+    font-size:.90rem;
+}
+
+
+.subs-content a[data-toggle="lightbox"] img:hover {
+    background-color:#000;
+
+
+}
+
+.horizontal_card_img{
+    background-position: center;
+    background-size: cover;
+    /* height: 250px; */
+    object-fit: cover;
+    position: relative;
+
+    min-width: 35%;}

@@ -2,7 +2,7 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package Childers YMCA
+ * @package SNF Group 
  */
 
 get_header(); ?>

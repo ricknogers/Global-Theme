@@ -10,15 +10,16 @@ get_header();?>
                         'post_type' =>  'timeline',
                         'post_status' => 'publish',
                         'posts_per_page' => -1,
-                        'orderby'=>'publish_date',
-                        'order' => 'ASC'
+                        'meta_key'			=> 'timeline_year',
+                        'orderby'			=> 'meta_value',
+                        'order'				=> 'ASC'
                     );
                     $query = new WP_Query( $args );
                     ?>
-                    <?php if ( $query->have_posts() ) : ?>
+                    <?php $count = 0; if ( $query->have_posts() ) : ?>
                         <div class="swiper-wrapper">
                             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-                                <div class="swiper-slide" style="background-image: url(<?php echo the_post_thumbnail_url("full") ;?>)" data-year="<?php the_field('timeline_year');?>">
+                                <div class="swiper-slide" style="background-image: url(<?php echo the_post_thumbnail_url("full") ;?>)" data-year="<?php echo $count++?>">
                                     <div class="swiper-slide-content"><span class="timeline-year"><?php the_field('timeline_year');?></span>
                                         <?php if(get_field('title_of_event')):?>
                                             <h4 class="timeline-title"><?php the_field('title_of_event');?></h4>
@@ -43,7 +44,7 @@ get_header();?>
             $(document).ready(function(){
                 var timelineSwiper = new Swiper ('.timeline .swiper-container', {
                     direction: 'vertical',
-                    loop: false,
+                    loop: true,
                     speed: 1600,
                     pagination: '.swiper-pagination',
                     paginationBulletRender: function (swiper, index, className) {

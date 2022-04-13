@@ -4,12 +4,13 @@
 ======================================================*/
 body{
     /* overflow-x:hidden !important; */
-    /* padding-top: 56px; */}
+    margin-top: 15px !important;
+}
 .grecaptcha-badge{
     display:none !important;
 }
 #content p{
-    font-size: 18px;
+    font-size: 1.0rem;
     font-family: 'Source Sans Pro',  sans-serif;
     text-align: justify;
 }
@@ -87,7 +88,7 @@ Custom media queries
     position: relative;
     padding: 0 0 0 20px;
     text-align: justify;
-}
+font-size: 1rem;}
 .subs-flexible-wrapper li::before {
     content: "";
     position: absolute;
@@ -141,6 +142,7 @@ Common Classes
     .site-content img.alignright,
     .site-content .wp-caption.alignright {
         margin: 0 0 24px 24px;
+        border-radius: 4px;
     }
     .site-content .wp-caption-text {
         font-size: 14px;
@@ -215,7 +217,7 @@ Common Classes
         font-weight: 500;
         text-transform:uppercase;
         color: #0082CA;
-    }
+    font-size: 2.15rem;}
     .section-identifier.one-title h2:before, .section-identifier.one-title h1:before {
         display: block;
         left: 0;
@@ -457,7 +459,7 @@ Common Classes
 ======================================================*/
 .flexible-card{
 }
-.flexible-card .card-img-top {width: 100%;padding: 3rem;}
+.flexible-card .card-img-top {width: 100%;padding: 2rem;}
 .flexible-card .traditional-card{
     background-size: cover;
     background-position: center;

@@ -31,7 +31,7 @@
     .subs-content h2{
         /* color:#0082CA; */
         /* text-transform: uppercase; */
-        /* padding: 1% 0; */
+        font-size: 1.45rem;
         /* font-weight: 300 !important; */
     }
     .layout-title{
@@ -69,7 +69,7 @@
         padding: .95rem .45rem;
     }
     .subsid-accordion h5{
-        font-weight: 400;
+        /* font-weight: 400; */
     }
     /* Horizontal line */
     .subsid-accordion .collapsible-link::before {
@@ -196,6 +196,9 @@
     .global-overflow{
         /* overflow-x: hidden !important; */
     }
+    .subsid-accordion a.subsididary-collapse{
+        font-weight:600 !important;
+    }
 
 }
 @media(max-width:767px){
@@ -222,6 +225,7 @@
     }
     .subsid-accordion{
     }
+
     .subsid-accordion .card{
         margin:1% 0;
     }
