@@ -15,44 +15,44 @@ III.) Remy & Executives
 }
 @media(min-width:992px){
     .introduction .introduction-title h2 {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 300;
-    position: relative;
-    display: grid;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: 27px 0;
-    grid-gap: 20px;
-    align-items: center;
-    font-size: 2.05rem;
-    color: #002d73;
-    margin: 1.5% 0;
-    font-weight: 300;
-    font-family: 'Source Sans Pro', sans-serif;
-}
+        text-align: center;
+        font-size: 30px;
+        font-weight: 300;
+        position: relative;
+        display: grid;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+        font-size: 2.05rem;
+        color: #002d73;
+        margin: 1.5% 0;
+        font-weight: 300;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
 
-.introduction .introduction-title h2:before {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid #002d73;
-    border-top: 1px solid #002d73;
-    height: 5px;
-    background-color: #fff;
+    .introduction .introduction-title h2:before {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #002d73;
+        border-top: 1px solid #002d73;
+        height: 5px;
+        background-color: #fff;
 
-}
-.introduction .introduction-title h2:after {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid #002d73;
-    border-top: 1px solid #002d73;
-    height: 5px;
-    background-color: #fff;
-}
+    }
+    .introduction .introduction-title h2:after {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #002d73;
+        border-top: 1px solid #002d73;
+        height: 5px;
+        background-color: #fff;
+    }
 }
 @media(max-width:991px){
-    
+
 }
 
 
@@ -759,17 +759,16 @@ III.) Remy & Executives
 /*===================================================
     Market Infinity Scroll
 ======================================================*/
-.infinity_industry_loop {margin: auto;overflow: visible;height: 100%;min-height: 50vh;}
+.infinity_industry_loop {margin: auto;overflow: visible;height: 100%;/* min-height: 50vh; */}
 .infinity_industry_loop ul {
     display: flex;
     padding: 0;
-    animation: cambio 35s infinite linear;
+    animation: floatText 25s infinite linear;
 }
-.infinity_industry_loop ul:hover {
-    animation: none;
+.infinity_industry_loop ul:hover{
+    animation-play-state: paused;
 }
 .infinity_industry_loop ul li:before{
-    content:"";
     display:none;
     list-style: none !important;
 }
@@ -779,14 +778,24 @@ III.) Remy & Executives
 .infinity_industry_loop li {
     margin: 0 45px;
     list-style: none;
+
+
 }
 .infinity_industry_loop img {
     max-width: fit-content !important;
     /* height: auto !important; */
 }
+
+white-space: nowrap;
+animation: floatText 25s infinite linear;
 @keyframes cambio {
     from {margin-left: 0%}
     to {margin-left: -100%}
+}
+@keyframes floatText {
+    to {
+        transform: translateX(-100%);
+    }
 }
 .scroll-container{
     /* height:250px; */

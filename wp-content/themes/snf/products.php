@@ -210,7 +210,7 @@ get_header(); ?>
                                                     </div>
                                                     <div class="row product-contact border-top pt-3">
                                                         <div class="col prod_button_redirect">
-                                                            <a href="<?php echo home_url('/');?>contact/?contact_sales=" class="" >
+                                                            <a href="<?php echo home_url('/');?>contact/" class="" >
                                                                 <button type="button" class="btn btn-outline-primary" style="background-color:rgb(107,105,135); color:#fff; border:none;">
                                                                     <span>Contact Sales</span> <i class="bi bi-chevron-right"></i>
                                                                 </button>

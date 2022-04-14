@@ -23,7 +23,6 @@ get_header(); ?>
 				}
 				?>
 
-
             </div>
             <div class="col-md-12 col-sm-12 contact-info-container">
                 <h2>Contact Information</h2>

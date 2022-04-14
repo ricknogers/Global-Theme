@@ -2,11 +2,18 @@
 <div class="container">
     <div class="row singleContent ">
         <div class="col-md-9 col-sm-12">
-	        <div class="tag-cloud">
+	
 	           
 		        <div class="row mt-3 mb-3">
 			        <div class="col-sm-12">
-				        <?php the_field( 'content' ); ?>
+				        <?php 
+							if ( have_posts() ) : 
+							    while ( have_posts() ) : the_post(); ?>
+							        <?php the_content(  ); ?>
+							    <?php endwhile; 
+							endif; 
+							?>
+				        
 				        <?php if ( get_field( 'file' ) ) : ?>
 				            <a class="btn btn-info mr-2" href="<?php the_field( 'file' ); ?>">Download File</a>
 				        <?php endif; ?>
@@ -40,8 +47,7 @@
 			        </section>
 				    
 		        </div>
-		        
-	        </div><!--tag-cloud-->
+		   
         </div>
 		<div class="col-md-3 col-sm-12 articlesSideBar border-left">
             <aside class=" list-group newsSideBar">
@@ -73,7 +79,8 @@
                 <section class="sidebar-widget">
 					<h3 class="sidebarTitle">Categories</h3>
 					<div class="col-xs-12 card-body">
-	             		<i class="fa fa-tags" aria-hidden="true"></i>
+					<div class="tag-cloud">
+						<i class="fa fa-tags" aria-hidden="true"></i>
 				                <?php   // Get terms for post
 		                $terms = get_the_terms( $post->ID , 'snf-communication-types' );
 		                // Loop over each item since it's an array
@@ -94,7 +101,9 @@
 		                    </a>
 		                <?php }
 		                ?>
-	            </section>
+
+			        </div><!--tag-cloud-->
+	             			            </section>
                 
             </aside><!--newsSideBar-->
     	</div><!--articlesSideBar-->

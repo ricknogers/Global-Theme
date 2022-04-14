@@ -2,9 +2,11 @@
 
 	<?php if(get_field('page_header_type') == 'default'):?>
 
-		<?php get_template_part('template-assets/header/user-selection/default-selection');?>
-           <?php if(is_search()):?>
+        <?php if(is_search()):?>
 			<?php get_template_part('template-assets/header/user-selection/search-header');?>
+		<?php else:?>
+			<?php get_template_part('template-assets/header/user-selection/default-selection');?>
+
 		<?php endif;?>
 	<?php endif;?>
 

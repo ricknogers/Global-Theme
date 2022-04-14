@@ -180,9 +180,15 @@ get_header(); ?>
 
 <!-- News SECTION -->
 <div class="container">
-    <div class=" newsTitleWrapper">
-        <h2 class="homeNewsSectionTitle">News & Events</h2>
+    <div class="row mt-3 mb-3">
+        <div class="col-sm-12 news-title-seperation">
+            <section class="news_title_container">
+                <div class="heading "><h4 class="display-3">News & Events</h4></div>
+            </section>
+
+        </div>
     </div>
+
     <div class="row ">
         <div id="news_carousel" class="carousel slide w-100 mt-3 " data-ride="carousel">
             <?php

@@ -109,5 +109,38 @@ hr.newsBlue{
     /* height: 35vh; */
     position: relative;/* height: 100%; */display: flex;justify-content: center;align-items: center;/* height: 100%; */}
 .communication-feed .media .media-body h5{
-    font-size: 27px;
+    font-size: 1.90rem;
+    font-weight: 400;color: #002d73;}
+
+.news-title-seperation {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0;padding-right: 0;}
+
+.news-title-seperation .news_title_container h4{
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #002d73
 }
+.news-title-seperation .news_title_container .heading{
+    display: block;
+    margin-bottom: 25px;
+    border-bottom: 1px dotted #e4e4e4;
+    background-color: transparent;
+    padding: 0;
+}
+
+.news-title-seperation .news_title_container  h4:before{
+    display: block;
+    left: 0;
+    top: 47px;
+    position: relative;
+    width: 30%;
+    height: 2px;
+    content: "";
+    background-color: #002d73;
+}
+.news_title_container{
+    padding-bottom: 20px;
+    border-radius: 4px;}

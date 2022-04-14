@@ -10,14 +10,14 @@
                     <?php $terms = get_terms( array(
                         'taxonomy' => 'country',
                         'hide_empty' => true,
-                        'orderby' => 'menu_order',
-                        'order' => 'ASC',
+                        'orderby' => 'name',
+                        'order' => 'DESC',
                     ) );
                     if ( $terms ) : ?>
                         <select name="location_category" id="location_category" class="form-control">
                             <option value="">Choose a region</option>
-	                        <?php foreach( get_terms( 'country', array( 'hide_empty' => true, 'depth'=> 1, 'parent' => 0 ) ) as $parent_term ) :?>
-	                            <?php foreach( get_terms( 'country', array( 'orderby' => 'menu_order', 'order' => 'ASC','hide_empty' => true, 'parent' => $parent_term->term_id ) ) as $child_term ) :?>
+	                        <?php foreach( get_terms( 'country', array(  'hide_empty' => true, 'depth'=> 1, 'parent' => 0 ) ) as $parent_term ) :?>
+	                            <?php foreach( get_terms( 'country', array( 'hide_empty' => true, 'parent' => $parent_term->term_id ) ) as $child_term ) :?>
                                     <option class="country-select " value="<?php echo $child_term->slug; ?>" id="term-id-<?php echo $child_term->term_id; ?>"><?php echo $child_term->name; ?></option>
                                 <?php endforeach; ?>
 	                        <?php endforeach; ?>
