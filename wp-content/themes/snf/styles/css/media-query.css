@@ -26,12 +26,85 @@ IX.) News
     }
     aside.newsSideBar ul li {
         list-style: none;
+        border: none;
+        border-bottom:solid 1px #cecece;
     }
+    aside.newsSideBar ul li a{
+        color:#212529;
+    }
+    .single .page-header h1{
+        font-weight:600;
+        font-size: 1.5rem;/* color:#002d73; */
+    }
+
     aside.newsSideBar h4.recentPosts {
         font-size: 16px;
     }
     .singleContent{
         margin: 2% 0;
+    }
+    sidebar-widget ul li {
+        border:none !important;
+
+    }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+/*  No media query since this is the default in Bootstrap
+
+/*  Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px){
+    .page-template-products #content p{
+        font-size: 1rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align:unset;
+    }
+    #content p{
+        font-size: 1.0rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align: justify;
+    }
+
+}
+
+/*  Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px){
+    .page-template-products #content p{
+        font-size: 1rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align:unset;
+    }
+    #content p{
+        font-size: 1.0rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align: justify;
+    }
+}
+
+/*  Large devices (desktops, 992px and up)*/
+@media (min-width: 992px){
+    .page-template-products #content p{
+        font-size: 1rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align:unset;
+    }
+    #content p{
+        font-size: 1.05rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align: justify;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px){
+    .page-template-products #content p{
+        font-size: 1rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align:unset;
+    }
+    #content p{
+        font-size: 1rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align: justify;
     }
 }
 @media(max-width:767px){

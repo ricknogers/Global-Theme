@@ -5,6 +5,21 @@
     .wp-block-columns{
         margin:0
     }
+    .footer-social-row{
+        margin:1.5rem 0;
+    }
+    .footer-social-row ul{
+        display:inline-flex;
+        justify-content: space-between;
+        width:100%;
+    }
+    .footer-social-row ul li{
+        padding:15px 0;
+    }
+    .footer-social-row ul li a{
+        color:#fff;
+        font-weight:700;
+    }
     #footer h2.widgettitle{
         text-transform:uppercase;
         color:#fff;

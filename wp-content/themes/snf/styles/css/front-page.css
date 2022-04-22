@@ -13,96 +13,91 @@ III.) Remy & Executives
 .introduction{
     margin:15px 0;
 }
-.introduction .introduction-title h2 {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 300;
-    position: relative;
-    display: grid;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: 27px 0;
-    grid-gap: 20px;
-    align-items: center;
-    font-size: 2.05rem;
-    color: #002d73;
-    margin: 1.5% 0;
-    font-weight: 300;
-    font-family: 'Source Sans Pro', sans-serif;
+@media(min-width:992px){
+    .introduction .introduction-title h2 {
+        text-align: center;
+        font-weight: 300;
+        position: relative;
+        display: grid;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+        font-size: 2.05rem;
+        color: #002d73;
+        margin: 1.5% 0;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    .introduction .introduction-title h2:before {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #002d73;
+        border-top: 1px solid #002d73;
+        height: 5px;
+        background-color: #fff;
+    }
+    .introduction .introduction-title h2:after {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #002d73;
+        border-top: 1px solid #002d73;
+        height: 5px;
+        background-color: #fff;
+    }
+}
+@media(max-width:991px){
+
 }
 
-.introduction .introduction-title h2:before {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid #002d73;
-    border-top: 1px solid #002d73;
-    height: 5px;
-    background-color: #fff;
-
-}
-.introduction .introduction-title h2:after {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid #002d73;
-    border-top: 1px solid #002d73;
-    height: 5px;
-    background-color: #fff;
-}
 
 
 /*===================================================
 
 ======================================================*/
 
-.service-34 {
+.hp_cta {
     font-family: "Montserrat", sans-serif;
     color: #8d97ad;
     font-weight: 300;
 }
-
-.service-34 h1, .service-34 h2, .service-34 h3, .service-34 h4, .service-34 h5, .service-34 h6 {
+.hp_cta h1, .hp_cta h2, .hp_cta h3, .hp_cta h4, .hp_cta h5, .hp_cta h6 {
     color: #3e4555;
 }
-
-.service-34 .bg-light {
+.hp_cta .bg-light {
     background-color: #f4f8fa !important;
 }
-
-.service-34 .text-muted {
+.hp_cta .text-muted {
     color: #8d97ad !important;
 }
-
-.service-34 .badge {
+.hp_cta .badge {
     line-height: 14px;
 }
-
-.service-34 .badge-info {
+.hp_cta .badge-info {
     background: #188ef4;
 }
-
-.service-34 .op-8 {
+.hp_cta .op-8 {
     opacity: 0.8;
 }
-
-.service-34 .card.card-shadow {
+.hp_cta .card.card-shadow {
     -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
     box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
 }
 
-.service-34.wrap-service34-box {
+.hp_cta.wrap-cta-box {
     overflow: hidden;
     position: relative;
 }
 
-.service-34.wrap-service34-box .left-image {
+.hp_cta.wrap-cta-box .left-image {
     position: absolute;
     left: -15px;
     text-align: left;
     top: 0px;
 }
 
-.service-34 .btn-success-gradiant {
+.hp_cta .btn-success-gradiant {
     background: #2cdd9b;
     background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
     background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
@@ -113,13 +108,13 @@ III.) Remy & Executives
     color: #ffffff;
 }
 
-.service-34 .btn-md {
+.hp_cta .btn-md {
     padding: 15px 45px;
     font-size: 16px;
 }
 
 @media (max-width: 1023px) {
-    .service-34.wrap-service34-box .left-image {
+    .hp_cta.wrap-cta-box .left-image {
         position: relative;
         top: -90px;
     }
@@ -362,7 +357,7 @@ III.) Remy & Executives
 ======================================================*/
 .highlight-section{
     position:relative;
-    padding:120px 0px;
+    padding: 2% 0px;
 }
 .highlight-section .content-column{
     position:relative;
@@ -391,12 +386,18 @@ III.) Remy & Executives
     font-weight:700;
     margin-bottom:50px;
 }
+.home .highlight-section .image-column{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;}
 .highlight-section .image-column{
     position:relative;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    padding: 4rem;}
 .highlight-section .image-column .inner-column{
     position:relative;
     padding: 20px 20px 0px 0px;
@@ -432,7 +433,7 @@ III.) Remy & Executives
     position:relative;
     width:100%;
     border-radius: 4px;display:block;
-}
+    max-height: 40vh;}
 .highlight-section .image-column .inner-column .image .overlay-box{
     position:absolute;
     left:40px;
@@ -494,7 +495,7 @@ III.) Remy & Executives
 }
 .sec-title {
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 .sec-title .title {
     position: relative;
@@ -745,7 +746,59 @@ III.) Remy & Executives
 
 @media (min-width: 1200px) {
     #news_carousel .card-img-top {
-        height: 15vw;
+        height: 9vw;
     }
 }
 .carousel-inner .active.right { left: 25%; }
+
+/*===================================================
+    Market Infinity Scroll
+======================================================*/
+.infinity_industry_loop {margin: auto;overflow: visible;height: 100%;/* min-height: 50vh; */}
+.infinity_industry_loop ul {
+    display: flex;
+    padding: 0;
+    animation: floatText 25s infinite linear;
+}
+.infinity_industry_loop ul:hover{
+    animation-play-state: paused;
+}
+.infinity_industry_loop ul li:before{
+    display:none;
+    list-style: none !important;
+}
+.infinity_industry_loop ul li:after{
+    display:none;
+}
+.infinity_industry_loop li {
+    margin: 0 45px;
+    list-style: none;
+
+
+}
+.infinity_industry_loop img {
+    max-width: fit-content !important;
+    /* height: auto !important; */
+}
+@keyframes cambio {
+    from {margin-left: 0%}
+    to {margin-left: -100%}
+}
+@keyframes floatText {
+    to {
+        transform: translateX(-100%);
+    }
+}
+.scroll-container{
+    /* height:250px; */
+    /* position:relative; */
+}
+.market_box{
+    overflow-x:hidden;
+    /* height: 100%; */
+    /* min-height: 500px; */
+}
+.market_box img{height: 190px;}
+.industry_loop_container{
+    display:none;
+}

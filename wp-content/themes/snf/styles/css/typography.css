@@ -45,47 +45,20 @@ button, .btn, .btn-default, .btn-small{
     Headings in Body WYSIWYG h2,h3,h4,h5,h6
 ======================================================*/
 .subs-content h2, .subs-content h3{
-    margin: 2% 0;
-    font-weight: 300;
-    text-transform: uppercase;
+    margin: 1% 0;
+
+    /* text-transform: uppercase; */
     color: #002d73;
     position: relative;
     display: block;
-    padding: 5px 0;
+    /* padding: 2px 0; */
     /* border-bottom: 1px dotted #e4e4e4; */
     /* padding: 0 0 0 0px; */
 }
-.subs-content h2:before, .subs-content h3:before{
-    /* display: block; */
-    /* left: 0; */
-    /* top: 45px; */
-    /* position: relative; */
-    /* width: 30%; */
-    height: 2px;
-    content: "";
-    background-color: #002d73;
+.subs-content h3{
+    font-size:1.35rem;
 }
-.subs-content h4:before, .subs-content h5:before, .subs-content h6:before{
-    display: block;
-    left: 0;
-    top: 35px;
-    position: relative;
-    width: 30%;
-    height: 2px;
-    content: "";
-    background-color: #002d73;
-}
-.subs-content h4, .subs-content h5, .subs-content h6{
-    margin: 2% 0;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #002d73;
-    position: relative;
-    display: block;
-    padding: 5px 0;
-    border-bottom: 1px dotted #e4e4e4;
-    /* padding: 0 0 0 0px; */
-}
+
 .flexible-layout ul{
     line-height: 1.5em;
     margin: 5px 0 15px;

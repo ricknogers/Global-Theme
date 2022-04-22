@@ -63,7 +63,7 @@ function snf_markets_og_nav($depth) {
             'menu_class' => 'nav navbar-nav',
             'theme_location' => 'snf_markets_og_nav', /* where in the theme it's assigned */
             'container' => 'nav', /* container class */
-            'container_class' => 'list-group-items',
+            'container_class' => 'market_nav_elements',
             'container_id' => 'og-market-menu',
             'fallback_cb' => 'wp_bootstrap_main_nav_fallback', /* menu fallback */
             'depth' => "{$depth}",  //suppress lower levels for now

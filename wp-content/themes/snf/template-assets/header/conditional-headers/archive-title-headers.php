@@ -15,6 +15,10 @@
         <h1 class="archive_title h2">
             <span><?php _e("Daily Archives:", "snf_subsidiary"); ?></span> <?php the_time('l, F j, Y'); ?>
         </h1>
+    <?php }elseif (is_day()) { ?>
+        <h1 class="archive_title h2">
+            <span><?php _e("Daily Archives:", "snf_subsidiary"); ?></span> <?php the_time('l, F j, Y'); ?>
+        </h1>
     <?php } elseif (is_month()) { ?>
         <h1 class="archive_title h2">
             <span><?php _e("Monthly Archives:", "snf_subsidiary"); ?></span> <?php the_time('F Y'); ?>
@@ -23,45 +27,32 @@
         <h1 class="archive_title h2">
             <span><?php _e("Yearly Archives:", "snf_subsidiary"); ?></span> <?php the_time('Y'); ?>
         </h1>
-    <?php } elseif (is_post_type_archive('timeline')  ) { ?>
+    <?php } elseif (is_post_type_archive('global-communication')) { ?>
         <h1 class="archive_title h2">
-            <?php echo post_type_archive_title(); ?>
-        </h1>
-    <?php } elseif (is_post_type_archive()) { ?>
-        <h1 class="archive_title h2">
-            <?php echo post_type_archive_title(); ?> : Archives
+            <?php echo post_type_archive_title(); ?> : Archives=
         </h1>
 
     <?php } elseif (is_tax( 'markets', '' ) ) { ?>
-        <h1 class="archive_title h2">
+        <h1 class="archive_title h2 markets">
             <?php
             $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
             echo $term->name; ?>
         </h1>
     <?php } elseif (is_tax( 'snf-communication-types', '' ) ) { ?>
-        <h1 class="archive_title h2">
+        <h1 class="archive_title h2 comm_types">
             <?php
             $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
-            echo $term->name; ?> : Archives
-        </h1>
-    <?php } elseif ('marketing-material' == get_post_type()) { ?>
-        <h1 class="archive_title h2">
-            <?php post_type_archive_title(); ?> : Archives
+            echo $term->name; ?> : Archives+
         </h1>
     <?php } elseif (is_tax( 'country', '' ) ) { ?>
-        <h1 class="archive_title h2">
+        <h1 class="archive_title h2 country">
             <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );?>
             SNF <?php echo $term->name;?>
         </h1>
     <?php } elseif ( is_tax( 'investors', '' ) ) { ?>
-        <h1 class="archive_title h2">
+        <h1 class="archive_title h2 investor">
             <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-            echo $term->name;?> : Archives
+            echo $term->name;?> : Archives!
         </h1>
-    <?php }else{?>
-        <h1 class="archive_title h2">
-            <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );?>
-            <?php echo post_type_archive_title();?> : Archives
-        </h1>
-    <?php  } ?>
+        <?php }?>
 </div>

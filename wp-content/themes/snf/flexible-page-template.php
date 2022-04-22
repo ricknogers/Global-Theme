@@ -7,9 +7,8 @@
 get_header();?>
 <div class="container global-overflow">
     <div class="row">
-
         <?php if(is_page('contact')):?>
-            <div class="col-sm-9 col-xs-12 flexible-layout">
+            <div class="col-sm-8 col-xs-12 flexible-layout">
                 <?php $counter = 0;  // check if the flexible content field has rows of data ?>
                 <?php if ( have_rows( 'flexible_content' ) ): ?>
                     <?php while ( have_rows( 'flexible_content' ) ) : the_row(); ?>
@@ -47,7 +46,7 @@ get_header();?>
                     <?php // No layouts found ?>
                 <?php endif; ?>
             </div>
-            <div class="col-sm-3 col-xs-12 contact-sidebar">
+            <div class="col-sm-4 col-xs-12 contact-sidebar">
                   <?php get_sidebar('contact');?>
             </div>
         <?php else: ?>
@@ -95,4 +94,5 @@ get_header();?>
 <?php if(is_page('contact')):?>
     <?php // get_template_part('template-assets/conditional-features/contact-svg-map');?>
 <?php endif; ?>
+
 <?php get_footer();?>

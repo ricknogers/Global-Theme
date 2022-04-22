@@ -1,52 +1,63 @@
-<?php if ( is_page_template('market-sites/market-home.php') || is_page_template('market-sites/market-inner-template.php')) :?>
+<div class="container">
+	<?php if(is_search() &&  $wp_query->found_posts):?>
 
-    <?php get_template_part('template-assets/header/conditional-headers/markets-header-layout');?>
+		<?php get_template_part('template-assets/header/user-selection/search-header');?>
 
-<?php else:?>
-    <div class="container">
-        <?php if(is_page('investors')):?>
+	<?php endif;?>
+	<?php if(is_404()):?>
 
-            <?php get_template_part('template-assets/header/conditional-headers/investor-header');?>
+		<?php get_template_part('template-assets/header/user-selection/404-header');?>
 
-        <?php endif;?>
-        <?php if(has_post_thumbnail() && !( is_search() || is_archive()  || is_page('investors'))):?>
-
-            <?php if(  is_page_template('subsidiary-landing.php')):?>
-
-                <?php get_template_part('template-assets/header/conditional-headers/subsidiary-header');?>
-
-            <?php else:?>
-
-                <?php get_template_part('template-assets/header/conditional-headers/default-header');?>
-
-            <?php endif;?>
-        <?php else:?>
-            <?php if(is_404()):?>
-
-                <?php get_template_part('template-assets/header/conditional-headers/404-header');?>
-
-            <?php endif;?>
-
-            <?php if(is_search()):?>
-
-                <?php get_template_part('template-assets/header/conditional-headers/search-header');?>
-
-            <?php endif;?>
-
-            <?php if(is_archive() || is_category() ):?>
-
-                <?php get_template_part('template-assets/header/conditional-headers/archive-headers');?>
-
-            <?php endif;?>
-
-            <?php if(is_singular( array( 'global-communication', 'products', 'marketing-material' ) )):?>
-
-                <?php get_template_part('template-assets/header/conditional-headers/single-header');?>
-
-            <?php endif;?>
-
-         
-
-        <?php endif;?>
-    </div><!--container-fluid-->
-<?php endif;?>
+	<?php endif;?>
+	<?php $checkHeader = get_field('page_header_type'); ;?>
+	<?php if(is_page() || !empty($checkHeader)):?>
+		<?php if(get_field('page_header_type') === 'default'):?>
+	
+			<?php get_template_part('template-assets/header/user-selection/default-selection');?>
+	
+		<?php endif;?>
+		
+	
+		
+	
+		<?php if(get_field('page_header_type') === 'optimized'):?>
+	
+			<?php get_template_part('template-assets/header/user-selection/optimized-selection');?>
+	
+		<?php endif;?>
+	
+		<?php if(get_field('page_header_type') === 'sustainability'):?>
+	
+			<?php get_template_part('template-assets/header/user-selection/sustainability-selection');?>
+	
+		<?php endif;?>
+	
+		<?php if(get_field('page_header_type') === 'industry-header'):?>
+	
+			<?php get_template_part('template-assets/header/user-selection/industry-selection');?>
+	
+		<?php endif;?>
+	
+		<?php if(get_field('page_header_type') === 'country'):?>
+	
+			<?php get_template_part('template-assets/header/user-selection/country-selection');?>
+	
+		<?php endif;?>
+		<?php if(get_field('page_header_type') === 'investor'):?>
+	
+			<?php get_template_part('template-assets/header/user-selection/investor-selection');?>
+	
+		<?php endif;?>
+		<?php if(get_field('page_header_type') === 'single'):?>
+	
+			<?php get_template_part('template-assets/header/user-selection/single-selection');?>
+	
+		<?php endif;?>
+		<?php if(get_field('page_header_type') === 'archive'):?>
+	
+			<?php get_template_part('template-assets/header/user-selection/archive-headers');?>
+	
+		<?php endif;?>
+		
+	<?php endif;?>
+</div>

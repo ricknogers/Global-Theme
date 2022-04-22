@@ -3,6 +3,7 @@
         <div class="archive-header">
             <h4 class="card-title"><?php the_title(); ?></h4>
         </div>
+        
         <p class="card-text text-black-50 lead"><?php echo custom_field_excerpt();; ?></p>
         <?php if(!is_archive()):?>
             <p class="text-muted"><?php echo get_the_date('j M, Y');?></p>
@@ -23,6 +24,17 @@
                 ?>
                 <?php   // Get terms for post
                 $terms = get_the_terms( $post->ID , 'markets' );
+                // Loop over each item since it's an array
+                foreach ( $terms as $term ) {?>
+                    <?php $termlinks = get_term_link($term);?>
+                    <a href="<?php echo $termlinks ;?>" class="badge badge-tag markets">
+                        <?php echo $term->name;?>
+                    </a>
+                <?php }
+                ?>
+                
+                <?php   // Get terms for post
+                $terms = get_the_terms( $post->ID , 'product-applications' );
                 // Loop over each item since it's an array
                 foreach ( $terms as $term ) {?>
                     <?php $termlinks = get_term_link($term);?>

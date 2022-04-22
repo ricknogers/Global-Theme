@@ -238,6 +238,9 @@ SDG Sidebar
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+.photos figure{
+    position:relative;
+}
 /*===================================================
 Cards
 ======================================================*/
@@ -314,25 +317,25 @@ Cards
 
 .carousel-inner .carousel-item {
     margin-right: inherit;
-}
+    /* padding: 0; */}
 #markets_carousel .card-body h2{
     font-size:1.15rem;
 }
 #markets_carousel .carousel-inner{
     background-color:#fff;
-position: relative;}
+    position: relative;}
 #markets_carousel .carousel-control-prev, #markets_carousel .carousel-control-next{
     position: relative;background-color: transparent;
     opacity: 1;width: unset;display: inline-flex;justify-content: space-evenly;align-items: center;}
 #markets_carousel .carousel-control-prev{
     /* left: -10%; */
-/* top: 100%; */}
+    /* top: 100%; */}
 #markets_carousel .carousel-control-prev svg, #markets_carousel .carousel-control-next svg{
     color:black;
     font-size:1.35rem;
 }
 #markets_carousel .carousel-control-next{
-    right:-15%;
+    /* right:-15%; */
 }
 #markets_carousel .carousel-control-next-icon{
     background-color:#002d73;
@@ -434,7 +437,7 @@ section.contact-bar  {
 .flexible-card .card-tag{
 }
 .second-tier-nav ul li{
-    display: inline-flex;
+    display: inline-block;
     /* font-size: 22px; */
 
     /* margin: 0; */
@@ -442,9 +445,9 @@ section.contact-bar  {
     /* justify-content: center; */
     /* align-items: center; */
     /* background: transparent; */
-    /* position: relative; */
-    /* display: flex; */
-    /* line-height: 1.2; */
+    position: relative;
+    /* width: auto; */
+    line-height: 1.2;
 }
 .second-tier-nav ul li ul li{
     display:block;
@@ -479,9 +482,9 @@ section.contact-bar  {
 .second-tier-nav ul li.active{
     position: relative;
     padding: .75rem;
-    background-color: black;
+    /* background-color: black; */
     /* padding-right: 5%; */
-    border-radius: 0 !important;
+    /* border-radius: 0 !important; */
 }
 .shrink.second-tier-nav ul li.active{
     position: relative;
@@ -505,9 +508,9 @@ section.contact-bar  {
     left: 0%;
     top: 0;
     height: 100%;
-    content:"";
-    clip-path: polygon(0 0, 79% 0, 87% 100%, 0% 100%);
-    width: 7vw;
+    /* content:""; */
+    /* clip-path: polygon(0 0, 79% 0, 87% 100%, 0% 100%); */
+    /* width: 7vw; */
     /* background: rgb(249,176,0); */
     /* margin-right: 5%; */
 }
@@ -530,9 +533,9 @@ section.contact-bar  {
     /* overflow-x:hidden; */
 }
 .bg_image_card{
-	background-size:cover;
-	background-position: center;
-	height: 200px;
+    background-size:cover;
+    background-position: center;
+    height: 200px;
 }
 #markets_carousel .card-body h4{
     font-weight:300;
@@ -541,4 +544,4 @@ section.contact-bar  {
 #markets_carousel{
     position:relative;
     width:100%;
-}
+    padding: 0;}

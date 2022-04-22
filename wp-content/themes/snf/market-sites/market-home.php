@@ -11,11 +11,10 @@ get_header();?>
            <!---Different Header Rendered -->
             <div class="row">
                 <div class="col ">
-                    <div class="section-identifier one-title">
-                        <h1><?php the_title();?></h1>
-                    </div>
+                  <?php the_content();?>
                 </div><!-- pageTitleOverlay-->
             </div>
+
 	        <div class="row">
 	            <div class="col-sm-12 flexible-layout">
                     <?php $counter = 0;  // check if the flexible content field has rows of data ?>
@@ -56,8 +55,6 @@ get_header();?>
         <div class="col-md-3 col-sm-12 right-side-sidebar">
             <?php get_sidebar('');?>
         </div>
-
-
     </div>
 </div>
 <?php get_footer();?>

@@ -6,7 +6,7 @@ function my_general_section()
 {
     add_settings_section(
         'my_settings_section', // Section ID
-        'Country Specific Information', // Country Specific Information
+        'Group Global Settings', // Country Specific Information
         'snf_global_callback', // Callback
         'general' // What Page?  This makes the section show up on the General Settings Page
     );
@@ -71,7 +71,39 @@ function my_general_section()
             'secondary_tag_line' // Should match Option ID
         )
     );
-
+	add_settings_field( // Option 3
+		'snf_esg_update_link', // Option ID | Country URL
+		'SNF ESG Document Link ', // Label
+		'my_textbox_callback', // !important - This is where the args go!
+		'general', // Page it will be displayed (General Settings)
+		'my_settings_section', // Name of our section
+		array( // The $args
+			'snf_esg_update_link' // Should match Option ID
+		)
+	);
+	add_settings_field( // Option 3
+		'snf_esg_link_title', // Option ID | Country URL
+		'SNF ESG Title ', // Label
+		'my_textbox_callback', // !important - This is where the args go!
+		'general', // Page it will be displayed (General Settings)
+		'my_settings_section', // Name of our section
+		array( // The $args
+			'snf_esg_link_title' // Should match Option ID
+		)
+	);
+	add_settings_field( // Option 3
+		'snf_code_of_conduct', // Option ID | Country URL
+		'Code of Conduct Link', // Label
+		'my_textbox_callback', // !important - This is where the args go!
+		'general', // Page it will be displayed (General Settings)
+		'my_settings_section', // Name of our section
+		array( // The $args
+			'snf_code_of_conduct' // Should match Option ID
+		)
+	);
+	register_setting('general', 'snf_code_of_conduct', 'esc_attr');
+	register_setting('general', 'snf_esg_link_title', 'esc_attr');
+	register_setting('general', 'snf_esg_update_link', 'esc_attr');
     register_setting('general', 'default_contact_email_address', 'esc_attr');
     register_setting('general', 'corporate_tag_line', 'esc_attr');
     register_setting('general', 'linkedin_url', 'esc_attr');

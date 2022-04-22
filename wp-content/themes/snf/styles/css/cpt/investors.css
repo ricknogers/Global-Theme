@@ -7,176 +7,183 @@
 /*===================================================
     I.) Investor Login / Form & Sign Up
 ======================================================*/
-.login-reg-panel{
+.login-block {
+    /* background: #f3f1eb; */
+}
+
+.investors_slideshow .banner-sec {
+    /* background: url(https://static.pexels.com/photos/33972/pexels-photo.jpg) no-repeat left bottom; */
+    background-size: cover;
+    min-height: 500px;
+    /* border-radius: 0 10px 10px 0; */
+    padding: 0 !important;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.investor_advancement .investor_core_values .card{
+    border-radius: 0 !important;
+}
+.investor_advancement .investor_core_values .card h5{
+    text-align:center;
+    font-weight:600;
+    font-size:1.75rem
+}
+.investors_slideshow .carousel-inner {
+    border-radius: 0 10px 10px 0;
+}
+.investors_slideshow .carousel-caption {
+    text-align: left;
+    left: 5%;
+}
+.login-sec {
+    padding: 10px 30px;
     position: relative;
-    top: 0;
-    /* transform: translateY(-50%); */
-    text-align:center;
-    width: 100%;
-    right:0;
-    left:0;
-    margin:auto;
-    min-height: 100vh;
-    background-color: #002d73;
-    height: 100%;
 }
-.investorSectionTitle{
-    /* padding:0 !important; */
+.login-sec .copy-text {
+    position: absolute;
+    width: 80%;
+    bottom: 20px;
+    font-size: 13px;
+    text-align: center;
 }
-.white-panel{
-    background-color: rgba(255,255, 255, 1);
-    height: 100%;
-    position:absolute;
-    top: 0;
-    width: 60%;
-    /* right:calc(50% - 50px); */
-    transition:.3s ease-in-out;
-    z-index:0;
-    box-shadow: 0 0 15px 9px #00000096;
+.login-sec .copy-text i {
+    color: #FEB58A;
 }
-.login-reg-panel input[type="radio"]{
-    position:relative;
-    display:none;
+.login-sec .copy-text a {
+    color: #E36262;
 }
-.login-reg-panel{
-    color:#B8B8B8;
+.login-sec h2 {
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 30px;
+    color: #DE6262;
 }
-.login-reg-panel #label-login,
-.login-reg-panel #label-register{
-    border: 1px solid #fff;
-    padding:5px 5px;
-    width:150px;
-    display:block;
-    text-align:center;
-    border-radius:10px;
-    cursor:pointer;
+.login-sec h2:after {
+    content: " ";
+    width: 100px;
+    height: 5px;
+    background: #FEB58A;
+    display: block;
+    margin-top: 20px;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto
+}
+.btn-login {
+    background: #DE6262;
+    color: #fff;
     font-weight: 600;
+}
+.banner-text {
+    width: 70%;
+    position: absolute;
+    bottom: 40px;
+    padding-left: 20px;
+}
+.banner-text h2 {
     color: #fff;
-    font-size: 18px;
+    font-weight: 600;
 }
-.login-info-box{
-    width: 40%;
-    padding:0 50px;
-    top:20%;
-    left:0;
-    position:absolute;
-    text-align:left;
-}
-.login-info-box h2{
-    color:#fff;
-}
-.register-info-box{
-    width: 40%;
-    padding:0 50px;
-    top:20%;
-    right:0;
-    position:absolute;
-    text-align:left;
-}
-.register-info-box h2{
-    color:#fff;
-    line-height:100%;
-}
-.register-info-box a{
-    color:#fff;
-}
-.register-info-box p{
-    color:#fff;
-}
-.right-log{right: 0 !important;}
-.login-show, .register-show{
-    z-index: 1;
-    display:none;
-    opacity:0;
-    transition:0.3s ease-in-out;
-    color:#242424;
-    text-align:left;
-    padding: 5px 20px;
-}
-.show-log-panel{
-    display:block;
-    opacity:0.9;
-}
-.login-show input[type="text"], .login-show input[type="password"]{
-    width: 100%;
+.banner-text h2:after {
+    content: " ";
+    width: 100px;
+    height: 5px;
+    background: #FFF;
     display: block;
-    margin:20px 0;
-    padding: 15px;
-    border: 1px solid #b5b5b5;
-    outline: none;
+    margin-top: 20px;
+    border-radius: 3px;
 }
-.login-show input[type="button"] {
-    max-width: 150px;
-    width: 100%;
-    background: #444444;
-    color: #f9f9f9;
+.banner-text p {
+    color: #fff;
+}
+.register-right{
+    background: #f3f1eb;
+    /* border-top-left-radius: 3%; */
+    /* border-bottom-left-radius: 3% 3%; */
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+.btnRegister{
+    float: right;
+    margin-top: 10%;
     border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    float:right;
-    cursor:pointer;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
 }
-.page-template-investors .login-show a{
-    display:inline-block;
-    padding:10px 0;
-}
-.register-show input[type="text"], .register-show input[type="password"]{
-    width: 100%;
-    display: block;
-    margin:20px 0;
-    padding: 15px;
-    border: 1px solid #b5b5b5;
-    outline: none;
-}
-.page-template-investors .register-show input[type="button"] {
-    max-width: 150px;
-    width: 100%;
-    background: #444444;
-    color: #f9f9f9;
+.register .nav-tabs{
+    /* margin-top: 3%; */
     border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    float:right;
-    cursor:pointer;
-}
-.page-template-investors .credit {
-    position:absolute;
-    bottom:10px;
-    left:10px;
-    color: #3B3B25;
-    margin: 0;
-    padding: 0;
-    font-family: 'Source Sans Pro',  sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    z-index: 99;
-}
 
-
-#investorHighlight{
+    border-radius: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;align-items: center;
+}
+.register .nav-tabs .nav-link{
+    font-weight: 200;
+    color: #fff;
+    border-radius: 0;
     background-color: #002d73;
-    color: #fff;
+    border: 0;}
+.register .nav-tabs .nav-link:hover{
+    border: none;
 }
-#prHighlight{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border: solid 1px #fff;
+.register .nav-tabs .nav-items{
+    position:relative;
+    overflow-x:hidden;
 }
-#frHighlight{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border: solid 1px #fff;
+.register .nav-tabs .nav-link.active{
+    width: 100%;color: #002d73;
+    background-color: #f3f1eb;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;border-bottom: 0;position: relative;font-weight: 700;
 }
-#investorHighlight h3{
-    color:#fff;
-    font-size: 20px;
-    margin: 1% 0;
+.register .nav-tabs .nav-link.active:before{
+    content: "\f229";
+    position: relative;
+    bottom: -25px;
+    right: 0;
+    font-family: bootstrap-icons !important;
+    display: inline-flex;
+    justify-content: center;
+
+    align-items: center;}
+
+a#login-tab {}
+.register-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
 }
 /*===================================================
 
@@ -186,12 +193,9 @@
 .bs-calltoaction{
 }
 .bs-calltoaction > .row{
-    /* display:table; */
-    /* width: calc(100% + 30px); */
 }
 .bs-calltoaction > .row > [class^="col-"],
 .bs-calltoaction > .row > [class*=" col-"]{
-
 }
 .page-template-investors .cta-contents{
     padding-top: 10px;
@@ -219,34 +223,18 @@
 ======================================================*/
 @media(min-width:768px){
     .investor-gradient{
-        /* position:relative; */
-        /* overflow:hidden; */
-        /* height: 20vh; */
     }
     .investor-info{
         background-color:transparent;
         border: none !important;
     }
     .investor-gradient .date{
-
-        text-transform: uppercase;
-
-        z-index: 1;
-
+        text-transform: uppercase;\
+    z-index: 1;
         position: relative;
-
         left: -10px;
-
-        /* background-color:var(--defaultBlueHEX); */
-
         padding: .75rem 1.25rem;
-
-        /* color:var(--defaultBlueHEX, #002d73); */
-
-        /* border-radius:0px 4px 4px 0; */
-
         text-transform:uppercase;
-
     }
     .investor-gradient .date:before{
         content: "";
@@ -274,7 +262,6 @@
         font-size: 12px;
     }
     .most-recent-inv-docs{
-
     }
     .investorCard{
         margin:15px 0;
@@ -289,7 +276,6 @@
         color:#fff !important;
     }
     .most-recent-inv-docs .investor-info{
-
     }
     .yearly-title{
         background-color:var(--fallback);
@@ -306,7 +292,6 @@
         margin:1% 0;
     }
     .investorsThumbnailcontainer{
-        /* background-color: #002d73; */
         color: #fff;
         position: relative;
         height: 25vh;
@@ -364,7 +349,6 @@
     .investorCategoryListings li.media{
         display: inline-flex;
         padding: 0;
-        /* justify-content: space-evenly; */
         align-items: center;
         height: 125px;
         /* width: 100%; */
@@ -372,9 +356,6 @@
     .investorCategoryTitle{
         position: relative;
         padding: 0 !important;
-        /* display: inline-flex; */
-        /* justify-content: space-between; */
-        /* align-items: center; */
         background: #002d73;
         border-bottom: solid 1px #002d73;
     }
@@ -413,11 +394,7 @@
     .taxonomy-card{
         position:relative;
         width: 100%;
-        /* margin: 15px 0; */
-        /* height: 13vh; */
-        /* min-height: 150px; */
         padding: 10px 15px;
-        /* align-items: center; */
         color: #002d73;
         display: inline-grid;
     }
@@ -427,11 +404,7 @@
         align-items:start;
     }
     .taxonomy-card-date{
-        /* display:flex; */
-        /* justify-content: space-between; */
-        /* align-items:baseline; */
         height: 100%;
-        /* bottom: 0; */
     }
     .taxonomy-list-elements ul{
         margin:0;
@@ -470,7 +443,6 @@
         background-color: transparent;
     }
     .catLable button{
-
     }
     .catLable button.none {
         border: none;
@@ -524,7 +496,6 @@
         overflow: hidden;
         text-align: center;
         align-items: center;
-        /* padding:2% 0; */
     }
     .investorTitleContainer  .innerTitleContainer h1{
         color: var(--secondaryOption, rgb(107,105,135));
@@ -537,7 +508,6 @@
         font-family:var(--fontFamilyPrimary);
     }
     .catLable ul li.list-group-item .catCount{
-
     }
     ul.catLable  li.list-group-item .catCount span{
         color:var(--white,#fff);
@@ -548,32 +518,25 @@
         margin: 1%;
     }
     .investor-overlay{
-        position: absolute;
+        position: relative;
         height: 100%;
         width: 100%;
         left: 0;
         background-color: #000;
-        opacity: .75;
-    }
+        opacity: .9;
+        padding: 1.6rem;border-radius: 4px;}
     .investor-update{
-
         position: relative;
-
         z-index: 4;
-
         color: #fff;
-
-        top: 130px;
-
+        padding: 0;
     }
     .investor-support{
-
     }
     .investor-support ul{
         padding: 0;
     }
     .investor-support ul li{
-
     }
     /*Profile card 2*/
     .investor-support .profile-card-2 .card-img-block{
@@ -629,7 +592,6 @@
 }
 @media(max-width:767px){
     .investorYearDescription{
-
     }
     .investorCategoryListings ul{
         margin-bottom:0;
@@ -749,11 +711,7 @@
         align-items:start;
     }
     .taxonomy-card-date{
-        /* display:flex; */
-        /* justify-content: space-between; */
-        /* align-items:baseline; */
         height: 100%;
-        /* bottom: 0; */
     }
     .taxonomy-list-elements ul{
         margin:0;
@@ -765,9 +723,6 @@
     .recentInvestors .card{
         z-index:11;
         background-color: transparent;
-        /* display: flex; */
-        /* justify-content: center; */
-        /* align-items: center; */
     }
     .dateContainer{
         display: block;
@@ -854,13 +809,7 @@
 js-(before|after)
 
 ***/
-.white-panel.right-log {
-    position: relative;
-    float: right;
-}
-.login-reg-panel {
-    float: left;
-}
+
 @media(max-width:974px){
     div.banner-inner-investor {
         height:50px;
@@ -891,3 +840,252 @@ js-(before|after)
     overflow: hidden;
     /* border: none; */
 }
+
+.single-chart {
+    justify-content: space-around;
+}
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+.circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+}
+.aos-animate .circle-39 {
+    animation: progress-39 3s ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+.aos-animate .circle-28 {
+    animation: progress-28 3s ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+.aos-animate .circle-11 {
+    animation: progress-11 3s ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+.aos-animate .circle-7 {
+    animation: progress-7 3s ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+.aos-animate .circle-6 {
+    animation: progress-6 3s ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+.aos-animate .circle-2 {
+    animation: progress-2 3s ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes progress-39 {
+    0% {
+        stroke-dasharray: 0,  100;
+    }
+    100% {
+        stroke-dasharray: 39,  100;
+    }
+}@keyframes progress-28 {
+     0% {
+         stroke-dasharray: 0,  100;
+     }
+     100% {
+         stroke-dasharray: 28,  100;
+     }
+ }@keyframes progress-11 {
+      0% {
+          stroke-dasharray: 0,  100;
+      }
+      100% {
+          stroke-dasharray: 11,  100;
+      }
+  }@keyframes progress-7 {
+       0% {
+           stroke-dasharray: 0,  100;
+       }
+       100% {
+           stroke-dasharray: 7,  100;
+       }
+   }@keyframes progress-6 {
+        0% {
+            stroke-dasharray: 0,  100;
+        }
+        100% {
+            stroke-dasharray: 6,  100;
+        }
+    }@keyframes progress-2 {
+         0% {
+             stroke-dasharray: 0,  100;
+         }
+         100% {
+             stroke-dasharray: 2,  100;
+         }
+     }.circular-chart.blue .circle {
+          stroke: #002d73;
+      }
+.circular-chart.blue2 .circle {
+    stroke: rgba(0,  45,  115,  .9);
+}
+.circular-chart.blue3 .circle {
+    stroke: rgba(0,  45,  115,  .8);
+}
+.circular-chart.blue4 .circle {
+    stroke: rgba(0,  45,  115,  .7);
+}
+.circular-chart.blue5 .circle {
+    stroke: rgba(0,  45,  115,  .6);
+}
+.circular-chart.blue6 .circle {
+    stroke: rgba(0,  45,  115,  .5);
+}
+.circular-chart.blue7 .circle {
+    stroke: rgba(0,  45,  115,  .4);
+}
+.percentage {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: .5em;
+    text-anchor: middle;
+}
+.chartTitle {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: .2em;
+    text-anchor: middle;
+}
+.keyFigureBreak {
+    border-top: solid 8px #002d73;
+}
+@media (min-width:992px) {
+    .seven-cols .col-lg-1,
+    .seven-cols .col-md-1, .seven-cols .col-sm-1 {
+        width: 14.285714285714285714285714285714%;
+        max-width: 14.285714285714285714285714285714% !important;
+        flex: none !important;
+    }
+}@media (min-width:1200px) {
+    .seven-cols .col-lg-1,
+    .seven-cols .col-md-1, .seven-cols .col-sm-1 {
+        width: 14.285714285714285714285714285714%;
+        max-width: 14.285714285714285714285714285714% !important;
+        flex: none !important;
+    }
+}
+
+.inv-title-seperation {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0;padding-right: 0;}
+
+.inv-title-seperation .inv_title_container h4{
+    font-size: 26px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #002d73
+}
+.inv-title-seperation .inv_title_container .heading{
+    display: block;
+    margin-bottom: 25px;
+    border-bottom: 1px dotted #e4e4e4;
+    background-color: transparent;
+    padding: 0;
+}
+.inv-title-seperation .inv_title_container  h4:before{
+    display: block;
+    left: 0;
+    top: 40px;
+    position: relative;
+    width: 30%;
+    height: 2px;
+    content: "";
+    background-color: #002d73;
+}
+.inv_title_container{
+    padding-bottom: 20px;
+    border-radius: 4px;}
+
+/*ZoomIn Hover-Mask Effect*/
+.hover-mask a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.hover-mask img {
+    width: 100%;
+    height: auto;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.hover-mask:hover img {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.hover-mask a h2 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 20% 20px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.hover-mask:hover a h2 {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+.hover-mask i.ligthbox {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    color: #fff;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.hover-mask:hover i.ligthbox {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=1)";
+    filter: alpha(opacity=1);
+    opacity: 1;
+    display: flex;justify-content: center;align-items: center;}

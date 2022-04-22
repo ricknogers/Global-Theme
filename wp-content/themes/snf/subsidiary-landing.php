@@ -68,7 +68,10 @@ get_header(); ?>
                                                 <?php endif; ?>
                                             </div><!--split-content-->
                                             <?php if ( get_sub_field( 'image' ) ) : ?>
-                                                <div class="col split-imagery " style="background-image: url(<?php the_sub_field('image')?>)"></div><!--split-imagery-->
+                                                <div class="col split-imagery " style="background-image: url(<?php the_sub_field('image')?>)">
+                                                    
+
+                                                </div><!--split-imagery-->
                                             <?php endif ?>
                                         </div><!--layered-bg-behind-->
                                     </div><!--split-container-->
@@ -114,7 +117,6 @@ get_header(); ?>
                             </div>
                         <?php endif;?>
                     <?php elseif ( get_row_layout() == 'contact_bar' ) : ?>
-
                         <?php get_template_part('template-assets/modules/contact-bar');?>
                     <?php endif; ?>
                 <?php endwhile; ?>

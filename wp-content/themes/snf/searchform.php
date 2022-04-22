@@ -1,4 +1,4 @@
-<div class="container">
+
     <form role="form" id="form-buscar" action="<?php echo home_url( '/' ); ?>">
         <div class="form-group">
             <div class="input-group">
@@ -11,4 +11,4 @@
             </div>
         </div>
     </form>
-</div>
+

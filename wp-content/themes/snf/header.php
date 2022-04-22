@@ -67,11 +67,11 @@
 
 <div class="transition-navbar rounded">
 	<section class="navigation-block ">
-        <div class="" id="desktopNavigation">
-            <div class=" snf-global-menu subsidiary-menu ">
-                <div class=" logo-navigation-container">
+        <div class="shadow-sm" id="desktopNavigation">
+            <div class="snf-global-menu subsidiary-menu ">
+                <div class="logo-navigation-container">
                     <div class="nav-element-responsive logo-options">
-                        <div class=" desktop-logo country-logo  navbar-brand-centered">
+                        <div class="desktop-logo country-logo  navbar-brand-centered">
                             <a class="" href="<?php echo home_url( '/' ); ?>">
                                 <?php include( locate_template( 'resources/images/logos/start-logo.php', false, false ) );?>
                             </a>
@@ -136,11 +136,12 @@
                         </div><!--scroll-logo country-logo-->
                     </div>
                 </div><!--logo-navigation-container-->
-                
             </div><!--snf-country-menu-->
         </div><!--container-->
     </section>
-	<?php get_template_part( 'template-assets/header/taxonomy-nav'); ?>
+	<?php if(has_term('','markets') || has_term('','country')):?>
+	    <?php get_template_part( 'template-assets/header/taxonomy-nav'); ?>
+    <?php endif;?>
 </div><!--transition-navbar-->
 
 <?php if(is_front_page()):?>

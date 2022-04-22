@@ -30,13 +30,17 @@
                                 <?php while ( have_rows( 'sdg' ,$term->taxonomy . '_' . $term->term_id) ) : the_row(); ?>
                                     <?php $sdg_Icon = get_sub_field('icon', $term->taxonomy . '_' . $term->term_id);?>
                                     <?php $sdgTitle = get_sub_field('title', $term->taxonomy . '_' . $term->term_id );?>
-                                    <div class="item ">
-                                        <a href="<?php echo get_sub_field('icon', $term->taxonomy . '_' . $term->term_id) ?>" data-lightbox="<?php echo $term->slug;?>">
+                                    <div class="item hover-mask">
+
+
+                                        <a class="hover_icon" href="<?php echo get_sub_field('icon', $term->taxonomy . '_' . $term->term_id) ?>" data-toggle="lightbox" data-max-width="600"  data-type="image">
                                             <figure class="figure">
                                                 <img  src="<?php echo get_sub_field('icon', $term->taxonomy . '_' . $term->term_id) ?>" style="" alt="<?php echo $sdgTitle;?>" class="img-fluid mb-1 mr-1 img-fluidrounded " />
-                                                <figcaption class="figure-caption"><?php echo $sdgTitle;?></figcaption>
+                                                <h2><i class="ligthbox fa fa-search-plus" aria-hidden="true"></i></h2>
+
                                             </figure>
                                         </a>
+                                        <figcaption class="figure-caption"><?php echo $sdgTitle;?></figcaption>
                                     </div>
                                 <?php endwhile; ?>
                             </div>

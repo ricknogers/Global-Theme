@@ -109,5 +109,118 @@ hr.newsBlue{
     /* height: 35vh; */
     position: relative;/* height: 100%; */display: flex;justify-content: center;align-items: center;/* height: 100%; */}
 .communication-feed .media .media-body h5{
-    font-size: 27px;
+    font-size: 1.90rem;
+    font-weight: 400;color: #002d73;}
+
+.news-title-seperation {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0;padding-right: 0;}
+
+.news-title-seperation .news_title_container h4{
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #002d73
+}
+.news-title-seperation .news_title_container .heading{
+    display: block;
+    /* margin-bottom: 25px; */
+    border-bottom: 1px dotted #e4e4e4;
+    background-color: transparent;
+    padding: 0;
+}
+
+.news-title-seperation .news_title_container  h4:before{
+    display: block;
+    left: 0;
+    top: 47px;
+    position: relative;
+    width: 30%;
+    height: 2px;
+    content: "";
+    background-color: #002d73;
+}
+.news_title_container{
+    /* padding-bottom: 20px; */
+    border-radius: 4px;}
+/* Share buttons CSS code designed by www.jonakyblog.com */
+.share-buttons {
+    font-size: 0.5rem;
+    font-weight: bold;
+    line-height: 0.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    display: block;
+    /* flex-flow: row wrap; */
+    /* justify-content: center; */
+    /* align-content: center; */
+}
+
+.share-buttons li {
+    height: auto;
+    /* flex: 0 1 auto; */
+    /* width: calc(16.6% - 2px); */
+    margin: 6px 0;
+}
+
+.share-buttons li:last-child {
+    /* width: 16.6%; */
+    /* margin-right: 0; */
+}
+
+.share-buttons svg {
+    fill: #fff;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.share-buttons a {
+    display: block;
+    padding: 8px 8px 8px;
+    text-align: left;
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+.share-buttons a:hover {
+    opacity: 0.8;
+}
+
+
+.share-buttons li a {
+    border-radius: 6px 0 0 6px;
+}
+
+.share-buttons li:last-child a {
+    /* border-radius: 0 6px 6px 0; */
+}
+
+.share-twitter {
+    background: #1da1f2;
+}
+
+.share-facebook {
+    background: #3b5998;
+}
+
+.share-whatsapp {
+    background-color:#3fbb50;
+}
+.share-linkedin {
+    background-color:#0077b5;
+}
+.share-email {
+    background-color:#888;
+}
+
+.share-pinterest    {
+    background: #b5071a;
 }

@@ -7,7 +7,13 @@
 
 ======================================================*/
 
-.products-grouping{}
+.products-grouping .product-tag h4.panel-title{
+    padding: 7px 0;sv
+display: flex;justify-content: center;align-items: center;}
+.products-grouping .product-tag h4.panel-title a{
+    font-size: 15px;
+
+}
 .products-grouping .card-body{
     /* padding:0; */
 }
@@ -25,20 +31,20 @@
     border:none;
 }
 .products-grouping .product-identifier{
-    /* justify-content: space-evenly; */
+    /* justify-content: space-around; */
     /* align-items: center; */
-    /* display: flex; */
+    display: flex;
     width: 100%;
 }
 .products-grouping .product-title, .products-grouping .market-badge{
-    display: inline-flex;
-    justify-content: flex-start;
+    /* display: inline-flex; */
+    justify-content: space-evenly;
     align-items: center;
-}
+    width: 100%;}
 .products-grouping .product-title h3{
     margin: 0;
     font-weight: 600;
-    font-size: 1.45rem;
+    font-size: 1.35rem;
     color: rgb(10,42,118);
 }
 .products-grouping  .product-accordion{
@@ -70,18 +76,18 @@
     position:relative;
 }
 .products-grouping .card-footer .panel-title{
-    margin: 0;
-}
+    margin: 0px 0;
+    /* padding: 10px 0; */}
 .products-grouping .card-footer .panel-title.prod-cat{
     border-bottom:solid 1px #cecece;
-}
+    padding: 10px 0;}
 .products-grouping  .product-tag .lead.depth_1{
     font-weight:600;
 }
 .products-grouping .card-footer .panel-title.prod-cat a{
     color:#0082CA;
     font-weight:700;
-}
+    width: 100%;display: block;}
 .products-grouping .card-footer .panel-title a{
     text-align:left;
 }
@@ -97,4 +103,40 @@
     display:flex;
     justify-content:center;
     align-items:center;
+}
+.market_background{
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: block;}
+.market_background ul li{
+    display:flex;
+    align-items:center;
+    list-style: none;}
+.product_market_selection.overlay{
+    position: absolute;
+    background-color: #f3f1eb;
+    height: 100%;
+    width:100%;
+    left: 0;top: 0;z-index: 3;display: block;
+}
+.market_background .card-body{
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    z-index: 6;
+
+    /* height: 100%; *//* width: 100%; */}
+.market_background .card-body h3{
+    color:#fff;
+    z-index: 6;
+}
+.app-useage h3{
+    color: rgb(10,42,118);
+
+}
+.tax-markets img{
+    height:50px;
 }

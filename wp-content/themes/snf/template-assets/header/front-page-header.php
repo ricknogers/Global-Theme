@@ -29,7 +29,7 @@
                                         <div class="hero_content_relative">
                                             <h1> <?php echo get_option('company_name') ;?></h1>
                                             <?php if(get_field('banner_excerpt')):?>
-                                                <p><?php the_field('banner_excerpt');?></p>
+                                                <?php the_field('banner_excerpt');?>
                                             <?php endif;?>
                                             <?php if(get_field('banner_button_text')):?>
                                                 <div class="snf-link-wrapper ">
@@ -42,13 +42,12 @@
                                     </section>
                                 </div><!--header-content-->
                             </div>
-                            <div class="title-bar">
-	                            <div class="title-bar-text">
+                        </div> <!-- .card__content -->
+                        <div class="title-bar">
+                            <div class="title-bar-text">
                                 <h2 class="skinnyTitle"><?php echo get_option('corporate_tag_line') ;?></h2>
                             </div>
-                            </div>
-                            
-                        </div> <!-- .card__content -->
+                        </div>
                     </div><!-- .card__img -->
                 </section> <!-- .card -->
             </div> <!-- .wrapper -->

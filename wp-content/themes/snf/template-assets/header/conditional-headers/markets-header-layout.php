@@ -24,7 +24,7 @@
                     </div>
                 <?php else:?>
                     <?php if(has_post_thumbnail()):?>
-                        <div class="col inner-banner-image default ddd" style="background-image: url(<?php echo the_post_thumbnail_url("full") ;?>)"></div>
+                        <div class="col inner-banner-image default " style="background-image: url(<?php echo the_post_thumbnail_url("full") ;?>)"></div>
                     <?php else:?>
                         <div class="col inner-banner-image  " style="background-image:url(<?php bloginfo('template_directory'); ?>/resources/images/default-banner/fallback-innerpage-banner_<?php echo rand(1, 6); ?>.jpg);"></div>
                     <?php endif;?>

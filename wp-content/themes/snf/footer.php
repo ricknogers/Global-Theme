@@ -36,10 +36,21 @@
                 <div class="container footerStopScroll">
                     <div class="row">
                         <div class="col-sm-12 footer-social-row">
-                            <?php if ( is_active_sidebar( 'social-widget' ) ) :
-                                dynamic_sidebar( 'social-widget' );
-                            else:
-                            endif; ?>
+                            <ul class="list-group list-group-horizontal">
+	                            <?php $esg_pdf_link = get_option('snf_esg_update_link');?>
+	                            <?php $esg_title = get_option('snf_esg_link_title');?>
+	                            <?php if ( $esg_pdf_link ) : ?>
+                                    <li class="list-group-item  bg-transparent">
+                                        <a target="_blank" href="<?php echo $esg_pdf_link;?>"> Environmental & Social Responsibility Report</a>
+                                    </li>
+	                            <?php endif; ?>
+                                <li class="list-group-item  bg-transparent">
+	                                <?php  $code_conduct = get_option('snf_code_of_conduct') ;?>
+                                    <a target="_blank" href="<?php echo $code_conduct;?>"> Code of Conduct</a>
+
+                                </li>
+
+                            </ul>
                         </div>
                         <div class="col-sm-12 footer-top-row">
                             <?php if ( is_active_sidebar( 'bottom-footer-widget' ) ) :
@@ -60,20 +71,29 @@
                     </div>
                 </div><!--/container-->
             </footer><!-- #colophon -->
+            <?php if(is_front_page()):?>
+            <script  src=https://app.termly.io/embed.min.js data-auto-block="on" data-website-uuid="b8dae01b-f7ee-446f-abc2-8547bb006b4d"></script>
+            <?php endif;?>
         <?php wp_footer(); ?>
-        <?php if(is_page_template('market-sites/market-home.php')):?>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-<!--            <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
 
-
-        <?php endif;?>
         <?php if(is_post_type_archive('timeline')):?>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
         <?php endif;?>
         <?php if(is_page('contact')):?>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
         <?php endif;?>
+
+<script>
+    (function($, window){
+
+
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+
+    })(jQuery, window);
+</script>
 
 </body>
 </html>

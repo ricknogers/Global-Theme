@@ -12,7 +12,7 @@ VII.) Terms and Usage
 IX.) News
 ======================================================*/
 .output{
-    display: none;
+	display: none;
 }
 .country_name{
 	color:#002d73;
@@ -23,10 +23,37 @@ IX.) News
 	display: inline-flex;
 	justify-content: space-around;
 	align-items: center;
-padding: .55rem 1.05rem;}
+	padding: .95rem .05rem;}
 .output .country_list_elements li i{
 	padding:4px;
-}
+	/* color: #212529; */}
 .output .country_list_elements li p.lead{
 	margin:0;
+	font-size: .95rem !important;color: #212529;}
+.sidebar .card-body{
+	padding: 1.25rem .75rem;
 }
+.sidebar .card-body select#location_category option.country-select{
+	width: calc(100% - 20px);
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+	list-style-type: none;
+	text-align: left;
+	cursor: pointer;
+	/* line-height: 1; */
+	/* padding: 10px; */
+	border-top: 1px solid #cfd7dc;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	letter-spacing: .5px;color: #0d2a40;}
+.sidebar .card-body select#location_category{
+	width: 100%;
+	border-top: none;
+	/* padding: 3px 0 12px; */
+	max-height: 316px;
+	overflow: hidden;
+	border: solid 1px rgb(107,105,135);
+	/* background: rgb(107,105,135); */
+	z-index: 2;
+	color: rgb(107,105,135);text-transform: uppercase;}
