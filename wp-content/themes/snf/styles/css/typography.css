@@ -90,17 +90,27 @@ button, .btn, .btn-default, .btn-small{
     border-top-color: var(--processBlueHEX);
 }
 .flexible-layout hr {
+
+}
+.newsSidebarWrapper hr.center-diamond {
+    background-color: var( --processBlueHEX, #002d73);
+    border: 0;
+    height: 1px;
+    width: unset;
+    position: relative;
+    margin: 30px auto;
+    /* margin: 2% auto; */
+}
+hr.center-diamond {
+    background-color: var( --processBlueHEX, #002d73);
     border: 0;
     height: 1px;
     width: 10%;
     position: relative;
     margin: 30px auto;
-}
-.flexible-layout hr.center-diamond {
-    background-color: var( --processBlueHEX, #002d73);
     /* margin: 2% auto; */
 }
-.flexible-layout hr.center-diamond:before {
+hr.center-diamond:before {
     content: "";
     width: 15px;
     height: 15px;

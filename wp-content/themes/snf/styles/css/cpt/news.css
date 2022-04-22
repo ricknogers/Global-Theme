@@ -20,15 +20,14 @@
     font-size: 19px;
 }
 .newsSidebarWrapper section {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 .newsSidebarWrapper section h2 {
     font-size: 18px;
-    background-color: #002d73;
-    color: #fff;
-    padding: 10px;
-    margin-bottom: 0;
-}
+    color: #002d73;
+    padding: 0;
+    font-size: 1.45rem;margin: 1rem 0;
+    /* border-top: 1px solid #eee; *//* padding-top: 5px; */}
 .newsCategoryList{
     padding: 0 !important;
 }
@@ -41,9 +40,8 @@ hr.newsBlue{
     position: unset;
 }
 .singleContent{
-
 }
----------------------*/
+
 .blog-grid {
     box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
     border-radius: 5px;
@@ -91,8 +89,6 @@ hr.newsBlue{
 .blog-grid .blog-info .btn-bar {
     margin-top: 20px;
 }
-
-
 .newsCategoryWrapper .media img{
     width:120px;
     /* display: flex; *//* justify-content: center; *//* align-items: center; */}
@@ -115,8 +111,8 @@ hr.newsBlue{
 .news-title-seperation {
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 0;padding-right: 0;}
-
+    padding-left: 0;padding-right: 0;
+}
 .news-title-seperation .news_title_container h4{
     font-size: 32px;
     font-weight: 700;
@@ -130,7 +126,6 @@ hr.newsBlue{
     background-color: transparent;
     padding: 0;
 }
-
 .news-title-seperation .news_title_container  h4:before{
     display: block;
     left: 0;
@@ -158,30 +153,21 @@ hr.newsBlue{
     list-style-type: none;
     padding: 0;
     display: block;
-    /* flex-flow: row wrap; */
-    /* justify-content: center; */
-    /* align-content: center; */
 }
-
 .share-buttons li {
     height: auto;
     /* flex: 0 1 auto; */
     /* width: calc(16.6% - 2px); */
     margin: 6px 0;
 }
-
 .share-buttons li:last-child {
-    /* width: 16.6%; */
-    /* margin-right: 0; */
 }
-
 .share-buttons svg {
     fill: #fff;
     margin-right: 5px;
     width: 16px;
     height: 16px;
 }
-
 .share-buttons a {
     display: block;
     padding: 8px 8px 8px;
@@ -189,28 +175,21 @@ hr.newsBlue{
     text-decoration: none !important;
     color: #fff !important;
 }
-
 .share-buttons a:hover {
     opacity: 0.8;
 }
-
-
 .share-buttons li a {
     border-radius: 6px 0 0 6px;
 }
-
 .share-buttons li:last-child a {
     /* border-radius: 0 6px 6px 0; */
 }
-
 .share-twitter {
     background: #1da1f2;
 }
-
 .share-facebook {
     background: #3b5998;
 }
-
 .share-whatsapp {
     background-color:#3fbb50;
 }

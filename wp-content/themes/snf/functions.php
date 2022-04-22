@@ -526,6 +526,8 @@ function my_share_buttons() {
     include( locate_template( 'site-functions/post-types/news/share-buttons-template.php', false, false ) );
 
 }
+
+
 /**
  * Customizer additions.
  */

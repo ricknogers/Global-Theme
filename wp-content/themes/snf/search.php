@@ -17,7 +17,7 @@ get_header(); ?>
                        // $total = $wp_query->found_posts + $wp_query->found_terms;
                         // $wp_query->max_num_pages = ceil( $total / $wp_query->terms_per_page );
                         ;?>
-                        <?php if (  in_array( get_post_type(), array( 'timeline','post', 'global-communication','marketing-material', 'products', 'page',  ) ) )  { ?>
+                        <?php if (  in_array( get_post_type(), array( 'post', 'global-communication','marketing-material', 'products', 'page',  ) ) )  { ?>
                             <?php get_template_part('template-assets/search/search-results-cpt-card');?>
                         <?php } ?>
                         <?php if ( is_tax( array('snf-communication-types', 'country','markets','product-applications') ) )  { ?>

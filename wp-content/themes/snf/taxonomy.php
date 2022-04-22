@@ -22,7 +22,11 @@ get_header(); ?>
                             ?>
                         <?php endwhile; ?>
                     </div>
-                    <?php echo bootstrap_pagination(); ?>
+                    <div class="row">
+                        <div class=" col-sm-12 pagination-wrapper">
+			                <?php echo bootstrap_pagination(); ?>
+                        </div>
+                    </div>
                     <?php else : ?>
                 <?php endif; wp_reset_query(); ?>
             </div><!-- #primary -->

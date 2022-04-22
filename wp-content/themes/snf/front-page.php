@@ -16,7 +16,7 @@ get_header(); ?>
 </div>
 <!-- SECTION -->
 <div class="oval-overlay executive-highlight">
-    <section class="geometric-overlay bg-img" style="background-image:url(<?php bloginfo('template_directory'); ?>/resources/images/shutterstock_327901652-min.jpg); min-height:500px">
+    <section class="geometric-overlay bg-img" style="background-image:url(<?php bloginfo('template_directory'); ?>/resources/images/shutterstock_327901652-min.jpg); ">
         <div class="container p-5 d-flex h-100 ">
             <div class="row align-items-center overview-wrapper">
                 <div class="col-md-8 overview">

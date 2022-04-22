@@ -1,12 +1,12 @@
 /*===================================================
 
 ======================================================*/
-.archive-content{
+.archive-content .archive-header{
 
-}
+    box-shadow: 0 .125rem 0rem rgba(0,0,0,.075)!important;}
 .archive-content .archive-header .card-title{
-    font-weight:300;
-    color: rgb(64,64,64);
+    font-weight: 500;
+    color: #002d73;
     font-size: 27px;
     /* line-height: 2.75rem; */
     letter-spacing: -.03125rem;
@@ -46,4 +46,25 @@
 }
 .country-contact .card-title{
     margin:0;
+}
+.taxonomy-template-prd-display .product_terms{
+    display:flex;
+    /* justify-content:center; */
+    align-items:center;
+    /* height:100%; */
+}
+.taxonomy-template-prd-display .product_terms h4{
+    font-size:1.15rem;
+}
+.taxonomy-template-prd-display .card-footer .product-contact{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.archiveSideBar .sya_date{
+    display:block;
+    font-weight:700;
+    border-bottom:solid 1px #cecece;
 }

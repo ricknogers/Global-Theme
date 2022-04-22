@@ -11,46 +11,44 @@ get_header(); ?>
 		    	1st select market
 	    </div>
 		<div class="row ">
-	
 			<?php
-				
-				
-				
-                    $terms = get_terms('markets' );
-                    if ( ! is_wp_error( $terms ) && ! empty( $terms ) ) {?>
+            $terms = get_terms('markets' );
+            if ( ! is_wp_error( $terms ) && ! empty( $terms ) ) {?>
 
-                        <?php foreach ($terms as $term) : ?>
-                        	<?php if ($term->parent != 0):?>
-								<?php $termLink = get_field('page_url', 'category_'.$term->term_id); ?>
-								<?php  $url = get_term_link($term->slug, 'markets');?>
-								<?php $cat_image = get_field('hero_image', 'category_'.$term->term_id); ?>
+                <?php foreach ($terms as $term) : ?>
+                    <?php if ($term->parent != 0):?>
+                        <?php $termLink = get_field('page_url', 'category_'.$term->term_id); ?>
+                        <?php  $url = get_term_link($term->slug, 'markets');?>
+                        <?php $cat_image = get_field('hero_image', 'category_'.$term->term_id); ?>
 
-	                            <div class="col-md-3 col-sm-12 mb-3 mt-3" id="<?php the_ID(); ?>">
-		                            <div class="card h-100">
-		                                 <a href="<?php echo get_term_link($term->slug, 'markets');?>">
-		                                    <div class="market_background" style="background-image: url('<?php echo $cat_image['url']; ?>')">
-			                                    <div class="product_market_selection overlay"></div>
-			                                     <section class="card-body ">
-				                                   
-				                                        <h3 style="text-align: center"><?php echo $term->name?></h3>
-				                                    
-				
-				                                </section>
-		                                    </div>
-		                                </a>
-		                               
-		                            </div>
-	                            </div>
-	                        <?php endif;?>
-
-                       <?php endforeach;?>
-
-                    <?php }
-                    ?>
-
-
-	
-				
+                        <div class="col-md-4 col-sm-12 mb-3 mt-3 user_market_selection" id="<?php the_ID(); ?>">
+                            <div class="card h-100">
+                                 <a href="<?php echo get_term_link($term->slug, 'markets');?>">
+                                     <div class="card-header bg-transparent">
+                                         <h2 ><?php echo $term->name?></h2>
+                                     </div>
+                                     <div class="market_background" style="background-image: url('<?php echo $cat_image['url']; ?>')">
+                                         <div class="product_market_selection overlay"></div>
+                                         <section class="card-body ">
+                                        </section>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <h3>Explore this Market  </h3>
+                                        <svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g>
+                                                <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                                <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                                <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endif;?>
+               <?php endforeach;?>
+            <?php }
+            ?>
         </div>
         <div class="row mt-5 mb-5 text-center">
 	        <h2><b>TWO DIFFERENT FILTERING LAYOUT OPTIONS / WORKING OUT BUGS AND FILTERING</b></h2>

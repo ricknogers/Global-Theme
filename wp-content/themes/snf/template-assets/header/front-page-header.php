@@ -20,6 +20,17 @@
                                 /*clip-path: polygon(0% 0%, 75% 0%, 100% 0, 91% 100%, 0% 100%);*/
                             }
                         }
+                        @media (max-width: 991px){
+                            .card__img{
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                position: relative;
+                                padding:0;
+                                background-image:url("<?php echo the_post_thumbnail_url("full") ;?>");
+                                /*clip-path: polygon(0% 0%, 75% 0%, 100% 0, 91% 100%, 0% 100%);*/
+                            }
+                        }
                     </style>
                     <div class="card__img col-lg-12 col-sm-12 ripple-container" id=" ">
                         <div class="card__content " >

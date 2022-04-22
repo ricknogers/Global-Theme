@@ -1,64 +1,150 @@
-<div class="card mb-3 mt-3 shadow p-1  bg-transparent">
-    <div class="card-body archive-content ">
-        <div class="archive-header">
-            <h4 class="card-title"><?php the_title(); ?></h4>
-        </div>
-        
-        <p class="card-text text-black-50 lead"><?php echo custom_field_excerpt();; ?></p>
-        <?php if(!is_archive()):?>
-            <p class="text-muted"><?php echo get_the_date('j M, Y');?></p>
-        <?php endif;?>
+<div class="col-md-6 col-sm-6 col-xs-12 mb-2 mt-2  ">
+    <div class="card h-100 shadow-sm product-card">
+        <div class="card-header bg-transparent product-identifier">
+            <div class="col col-xs-12 product-title ">
+				<?php if(get_field('trade_name')):?>
+                    <h3><?php the_field('trade_name'); ?> <?php if(get_field('product_range')):?> <?php the_field('product_range');?> <?php endif;?></h3>
+				<?php else:?>
+                    <h3><?php  echo get_the_title(); ?> </h3>
+				<?php endif;?>
+            </div>
+            <div class="col col-xs-12 market-badge ">
+				<?php   // Get terms for post
+				$terms = get_the_terms( $post->ID , 'markets' );
+				// Loop over each item since it's an array
+				foreach ( $terms as $term ) {?>
+					<?php $marketColor = get_field('color_scheme', 'category_'.$term->term_id); ?>
+					<?php $marketRedirect = get_field('page_url', 'category_'.$term->term_id); ?>
+					<?php $termlinks = get_term_link($term);?>
+					<?php if($marketRedirect){?>
+                        <a class="badge badge-primary bg-transparent markets" style="border:solid 1px <?php echo $marketColor;?>; color:<?php echo $marketColor;?>" href="<?php echo $marketRedirect ;?>">
+							<?php echo $term->name;?>
+                        </a>
+					<?php }else{?>
+                        <a class="badge badge-primary bg-transparent markets" style="border:solid 1px <?php echo $marketColor;?>; color:<?php echo $marketColor;?>" href="<?php echo $termlinks ['url'] ;?>">
+							<?php echo $term->name;?>
+                        </a>
+					<?php }?>
+				<?php }
+				?>
+            </div><!--market-badge-->
+        </div><!--card-header-->
+        <div class="card-body">
+			<?php if(get_field('descriptionuses')):?>
+                <div class="col">
+                    <p class="lead"><?php the_field('descriptionuses');?></p>
+                </div>
+			<?php endif;?>
+        </div><!--card-body description-->
+        <div class="card-footer bg-transparent ">
+			<?php $accord_count = 0; $Acc_ID = uniqid();  $row_count = 0; $accord_count++;?>
+            <h4 class=" panel-title ">
+                <a class="lead product-accordion btn btn-block" data-toggle="collapse" href="#collapseProduct_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    More Product Information
+                </a>
+            </h4>
+            <div class="collapse" id="collapseProduct_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>">
+                <div class="card-body">
+                    <div class="col-xs-12  product-tag mb-2 ">
+                        <h4 class=" panel-title prod-cat">
+                            <a class="lead product-misc-cat" data-toggle="collapse" href="#categoryProduct_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>_cat" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Category / Type
+                            </a>
+                        </h4>
+                        <div class="collapse" id="categoryProduct_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>_cat">
+							<?php  $term_array = array();
+							$term_list = wp_get_post_terms($post->ID, 'products-category', array(
+									"fields" => "all",
+									'orderby' => 'parent',
+									'order' => 'ASC'
+								)
+							);
+							foreach($term_list as $term_single) {
+								$term_array[] = $term_single->name ; //do something here
+							}
+							?>
+                            <div class="card-body px-2">
+								<?php foreach($term_list as $term) :?>
+                                    <p class="lead"><?php echo $term->name;  ?></p>
+								<?php endforeach;?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-xs-12  product-tag mb-2">
+                        <h4 class=" panel-title prod-cat">
+                            <a class="lead product-misc-cat " data-toggle="collapse" href="#applicationProduct_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>_app" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Applications / Uses
+                            </a>
+                        </h4>
+                        <div class="collapse" id="applicationProduct_<?php echo get_row_index(); ?>_<?php echo $Acc_ID; ?>_app">
+							<?php  $term_array = array();
+							$term_list = wp_get_post_terms($post->ID, 'product-applications', array(
+									"fields" => "all",
+									'orderby' => 'parent',
+									'order' => 'ASC'
+								)
+							);
+							foreach($term_list as $term_single) {
+								$term_array[] = $term_single->name ; //do something here
+							}
+							?>
+                            <div class="card-body px-2">
+								<?php foreach($term_list as $term) :?>
+                                    <p class="lead depth_<?php echo  $accord_count++;?>"><?php echo $term->name;  ?></p>
+								<?php endforeach;?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row product-contact  pt-3">
+                        <div class=" col-xs-12  product-detail-cont mb-2">
+							<?php if(get_field('inci_name')):?>
+                                <div class="col d-block">
+                                    <b>INCI NAME:</b>
+                                </div>
+                                <div class="col">
+                                    <p class="lead"><?php the_field('inci_name');?></p>
+                                </div>
+							<?php endif;?>
+							<?php if(get_field('%_active')):?>
+                                <div class="col d-block">
+                                    <b>% Active:</b>
+                                </div>
+                                <div class="col d-block">
+                                    <p class="lead"><?php the_field('%_active');?></p>
+                                </div>
+							<?php endif;?>
+							<?php if(get_field('recommnded_dosage_&_ph_range')):?>
+                                <div class="col d-block">
+                                    <b>Recommended Dosage & PH Range:</b>
+                                </div>
+                                <div class="col">
+                                    <p class="lead"><?php the_field('recommnded_dosage_&_ph_range');?></p>
+                                </div>
+							<?php endif;?>
+                        </div>
+                    </div>
+                    <div class="row product-contact border-top pt-3">
+                        <div class="col prod_button_redirect">
+                            <a href="<?php echo home_url('/');?>contact/?contact_sales=" class="" >
+                                <button type="button" class="btn btn-outline-primary" style="background-color:rgb(107,105,135); color:#fff; border:none;">
+                                    <span>Contact Sales</span> <i class="bi bi-chevron-right"></i>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="col prod_button_redirect">
+							<?php $terms = get_the_terms(get_the_ID(), 'markets');?>
 
-        <div class="tag-cloud">
-            <section>
-
-                <?php   // Get terms for post
-                $terms = get_the_terms( $post->ID , 'snf-communication-types' );
-                // Loop over each item since it's an array
-                foreach ( $terms as $term ) {?>
-                    <?php $termlinks = get_term_link($term);?>
-                    <a href="<?php echo $termlinks ;?>" class="badge badge-tag comm-types">
-                        <?php echo $term->name;?>
-                    </a>
-                <?php }
-                ?>
-                <?php   // Get terms for post
-                $terms = get_the_terms( $post->ID , 'markets' );
-                // Loop over each item since it's an array
-                foreach ( $terms as $term ) {?>
-                    <?php $termlinks = get_term_link($term);?>
-                    <a href="<?php echo $termlinks ;?>" class="badge badge-tag markets">
-                        <?php echo $term->name;?>
-                    </a>
-                <?php }
-                ?>
-                
-                <?php   // Get terms for post
-                $terms = get_the_terms( $post->ID , 'product-applications' );
-                // Loop over each item since it's an array
-                foreach ( $terms as $term ) {?>
-                    <?php $termlinks = get_term_link($term);?>
-                    <a href="<?php echo $termlinks ;?>" class="badge badge-tag markets">
-                        <?php echo $term->name;?>
-                    </a>
-                <?php }
-                ?>
-            </section>
-        </div>
-    </div>
-    <div class="card-footer bg-transparent border-top border-dark text-muted">
-        <?php if ( get_field( 'file' ) ) : ?>
-            <a class="card-link mr-2" href="<?php the_field( 'file' ); ?>"><i class="bi bi-filetype-pdf"></i>Download File</a>
-        <?php endif; ?>
-        <?php $url_redirect = get_field( 'url_redirect' ); ?>
-        <?php if ( $url_redirect ) : ?>
-
-            <a class="card-link" href="<?php echo esc_url( $url_redirect ); ?>">Learn More</a>
-        <?php else:?>
-            <a class="card-link" href="<?php the_permalink();?>">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                </svg></a>
-        <?php endif; ?>
-
+							<?php foreach($terms as $term) :?>
+                                <a href="<?php echo home_url('/');?>sds-request/?tradename=<?php the_field('trade_name');?> <?php the_field('product_range');?>&industry=<?php echo $term->name;  ?>" class="" >
+                                    <button type="button" class="btn btn-outline-secondary" style="background-color:#0082CA; color:#FFF;border:none; ">
+                                        <span>Request SDS</span> <i class="bi bi-chevron-right"></i>
+                                    </button>
+                                </a>
+							<?php endforeach;?>
+                        </div>
+                    </div>
+                </div><!--card-body-->
+            </div>
+        </div><!--card-footer-->
     </div>
 </div>
