@@ -10,23 +10,11 @@ get_header();?>
     <div class="row">
         <div class="col-md-3 col-xs-12 card card-filter" style="height: 100%;">
 	        <form class="card-body" >
-
-					<?php echo do_shortcode('[fe_widget id="80404"]'); ?>
-
+                <?php echo do_shortcode('[fe_widget id="80404"]'); ?>
 	        </form>
             <div class="row">
                 <div class="col-md-12 col-xs-12 newsSidebarWrapper">
-                    <hr class="center-diamond">
-
-                    <div class="col">
-                        <section class="topLevelSidebar">
-                            <h2 class="font-weight-bold">Archives</h2>
-                            <div class="col-sm-12 archiveSideBar">
-	                            <?php simpleYearlyArchive('yearly','','', 'global-communication');?>
-
-                            </div><!--news category list-->
-                        </section>
-                    </div><!--latestNews-->
+                   
                     <hr class="center-diamond">
                     <div class="col newsSidebarCategories">
                         <section class="topLevelSidebar">

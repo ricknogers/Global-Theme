@@ -53,7 +53,7 @@ display: flex;justify-content: center;align-items: center;}
 }
 .products-grouping .product-identifier{
     /* justify-content: space-around; */
-    /* align-items: center; */
+    align-items: center;
     display: flex;
     width: 100%;
 }
@@ -126,8 +126,17 @@ display: flex;justify-content: center;align-items: center;}
 }
 .product-contact .prod_button_redirect{
     display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.product-contact .prod_button_redirect button  a{
+    display:flex;
     justify-content:center;
     align-items:center;
+}
+.product-contact .prod_button_redirect button  span{
+    font-size: small;
+    /* font-size:14px; */
 }
 .market_background{
     height: 200px;
@@ -227,4 +236,7 @@ single-products .product_terms{
     display:flex;
     align-items:center;
     width:100%;
+}
+.product-card{
+    border-bottom: solid 4px rgb(10,42,118) !important;
 }

@@ -7,7 +7,6 @@
                         <div class="text-center">
                             <h2><?php the_sub_field( 'title' ); ?></h2>
                         </div>
-                        <hr>
                         <div class="text-center">
                             <?php $contact_link = get_sub_field( 'contact_link' ); ?>
                             <?php if ( $contact_link ) : ?>
@@ -17,20 +16,19 @@
                                     <a class="btn btn-outline-light text-white" href="<?php echo esc_url( $contact_link) ; ?>">Contact Us</a>
                                 <?php endif;?>
                             <?php endif; ?>
-                        </div>
+                        </div><!--text-center-->
                     </header>
-                </div>
-            </div>
-        </section>
+                </div><!--contact_bg_bar-->
+            </div><!--container-->
+        </section><!--contact-bar-->
     <?php else:?>
-        <section class="contact-bar bg-fixed text-white bg-dark" >
+        <section class="contact-bar bg-fixed text-white bg-dark">
             <div class="container p-0">
-                <div class="contact_bg_bar"  style="background-image: url(<?php bloginfo('template_directory'); ?>/resources/images/CraterLakeHeroImage-scaled.jpg)">
+                <div class="contact_bg_bar" style="background-image: url(<?php bloginfo('template_directory'); ?>/resources/images/CraterLakeHeroImage-scaled.jpg)">
                     <header class="section-header">
                         <div class="text-center">
                             <h2><?php the_sub_field( 'title' ); ?></h2>
-                        </div>
-                        <hr>
+                        </div><!--text-center-->
                         <div class="text-center">
                             <?php $contact_link = get_sub_field( 'contact_link' ); ?>
                             <?php if ( $contact_link ) : ?>
@@ -40,11 +38,11 @@
                                     <a class="btn btn-outline-light text-white" href="<?php echo esc_url( $contact_link) ; ?>">Contact Us</a>
                                 <?php endif;?>
                             <?php endif; ?>
-                        </div>
+                        </div><!--text-center-->
                     </header>
-                </div>
-            </div>
-        </section>
+                </div><!--contact_bg_bar-->
+            </div><!--container-->
+        </section><!--contact-bar-->
     <?php endif ?>
 <?php else : ?>
     <?php // echo 'false'; ?>

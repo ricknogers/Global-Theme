@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col page-header theme-bg-dark py-5 text-center position- optimized-selection mt-3 mb-3">
+    <div class="col page-header theme-bg-dark py-5 text-center position- optimized-selection mt-3 ">
         <div class="page-header-shapes-right "></div>
         <div class="page-header-shapes-left"></div>
         <div class="row">
@@ -21,7 +21,7 @@
         <div class="card shadow p-1">
             <div class="card-body shadow-sm snf-breadcrumbs ">
                 <div class="col  crumbs">
-					<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+					<?php //if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
                 </div>
 
             </div><!--card-body shadow-sm snf-breadcrumbs-->

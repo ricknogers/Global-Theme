@@ -14,7 +14,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/x-icon" href="/facicon-2.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <title> <?php wp_title( '' )   ?></title>
     <meta name="google-site-verification" content="kZJWqTUOOX2VlJRCdWXCu8HIO0LMwoTxZgC-PVCBbLE" />
@@ -26,7 +26,9 @@
     <?php endif;?>
 </head>
 <body <?php body_class($class); ?>>
-<?php get_template_part('template-parts/header-notification')?>
+<?php get_template_part('template-assets/notifications/header-notification')?>
+
+
 <header id="header" class="site-header " role="banner">
     <div class="globalTopBar container-fluid">
         <div class="row desktopTopBar">
@@ -67,7 +69,7 @@
 
 <div class="transition-navbar rounded">
 	<section class="navigation-block ">
-        <div class="shadow-sm" id="desktopNavigation">
+        <div class="" id="desktopNavigation">
             <div class="snf-global-menu subsidiary-menu ">
                 <div class="logo-navigation-container">
                     <div class="nav-element-responsive logo-options">
@@ -136,7 +138,36 @@
                         </div><!--scroll-logo country-logo-->
                     </div>
                 </div><!--logo-navigation-container-->
-            </div><!--snf-country-menu-->
+                <div class=" searchbardiv" id="mobilesearch">
+                    <form role="search" method="get" id="searchform"  >
+                        <div class="input-group">
+                            <input type="text" id="searchbox" class="form-control" name="s" id="s">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default"  id="searchsubmit"  type="submit">
+                                    <strong>Search</strong>
+                                </button>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <button type="button" class="buttonsearchmobile" id="buttonsearchmobile">
+                    <i class="fa fa-search openclosesearch"></i><i class="fa fa-search-minus openclosesearch" style="display:none" aria-hidden="true"></i>
+                </button>
+            </div><!-- /.container-fluid -->
+            <script>
+                jQuery(document).ready(function($){
+                    $('#buttonsearchmobile').click(function(){
+                        $('#mobilesearch').slideToggle( "fast",function(){
+                            $( '#content' ).toggleClass( "moremargin" );
+                        } );
+                        $('#searchbox').focus()
+                        $('.openclosesearch').toggle();
+                    });
+                });
+            </script>
+
         </div><!--container-->
     </section>
 	<?php if(has_term('','markets') || has_term('','country')):?>

@@ -15,21 +15,22 @@
 			        <div class="text-center col-sm-12 mb-3 mt-3">
 			            <a class="btn btn-sm btn-outline-primary" href="<?php echo home_url('/');?>news">Back to All News</a>
 			        </div>
-			        <section class="contact-bar col-sm-12 bg-fixed text-white bg-dark" style="background-image: url(<?php bloginfo('template_directory'); ?>/resources/images/CraterLakeHeroImage-scaled.jpg)">
-			
-			            <div class="section-header">
-			                <div class="site-cta-container">
-			                    <div class="text-center">
-			                        <h2>Contact SNF Today!</h2>
-			                    </div>
-			                    <hr>
-			                    <div class="text-center">
-			                        <a class="btn btn-outline-light text-white" href="<?php echo home_url('/') ; ?>contact">Lets Work Together</a>
-			                    </div>
+			        <section class="contact-bar bg-fixed text-white bg-dark" >
+			            <div class="container p-0">
+			                <div class="contact_bg_bar"  style="background-image: url(<?php bloginfo('template_directory'); ?>/resources/images/CraterLakeHeroImage-scaled.jpg)">
+			                    <header class="section-header">
+			                        <div class="text-center">
+			                             <h2>Contact SNF Today!</h2>
+			                        </div>
+			                        <hr class="diamond">
+			                        <div class="text-center">
+				                        <a class="btn btn-outline-light text-white" href="<?php echo home_url('/') ; ?>contact">Lets Work Together</a>
+				                    </div>
+			                    </header>
 			                </div>
 			            </div>
-			
 			        </section>
+			        
 				    
 		        </div>
 		        

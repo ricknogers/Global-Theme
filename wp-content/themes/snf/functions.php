@@ -255,7 +255,7 @@ require_once('site-functions/misc/strip-break-tag-from-wysiwyg.php');
 /**
  *  RankMath Breadcrumbs Hook
  */
-require_once('site-functions/breadcrumbs/breadcrumbs-function.php');
+//require_once('site-functions/breadcrumbs/breadcrumbs-function.php');
 
 /**
  *  Dynamic Menu : Nav-Walker
@@ -526,6 +526,8 @@ function my_share_buttons() {
     include( locate_template( 'site-functions/post-types/news/share-buttons-template.php', false, false ) );
 
 }
+
+
 
 
 /**
