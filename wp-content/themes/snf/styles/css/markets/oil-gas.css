@@ -70,8 +70,8 @@ IX.)
     /* letter-spacing: 2px; */
     /* font-weight: 300; */
     /* z-index: 4; */
-    /* text-align: center; */
-}
+    width: auto;
+    top: 8%;}
 .subsidiary-children-pages ul li span:before{
     content:"\F229";
     position: absolute;

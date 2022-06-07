@@ -32,11 +32,10 @@
                                     <?php $sdgTitle = get_sub_field('title', $term->taxonomy . '_' . $term->term_id );?>
                                     <div class="item hover-mask">
                                         <a class="hover_icon" href="<?php echo get_sub_field('icon', $term->taxonomy . '_' . $term->term_id) ?>" data-toggle="lightbox" data-max-width="600"  data-type="image">
-                                            <figure class="figure">
-                                                <img  src="<?php echo get_sub_field('icon', $term->taxonomy . '_' . $term->term_id) ?>" style="" alt="<?php echo $sdgTitle;?>" class="img-fluid mb-1 mr-1 img-fluidrounded " />
+                                            <figure class="figure translation-block">
+                                                <img  src="<?php echo get_sub_field('icon', $term->taxonomy . '_' . $term->term_id) ?>" style="" alt="<?php echo $sdgTitle;?>" class="  img-fluid mb-1 mr-1 img-fluidrounded " />
                                                 <h2><i class="ligthbox fa fa-search-plus" aria-hidden="true"></i></h2>
                                                 <figcaption class="figure-caption"><?php echo $sdgTitle;?></figcaption>
-
                                             </figure>
                                         </a>
                                     </div>
@@ -74,18 +73,6 @@
                 <?php endforeach; ?>
             </div>
         </section>
-<!--        <section class="sidebar-widget sidebar-search">-->
-<!--            <div class="heading mb-3"><h4 class="display-5">Search</h4></div>-->
-<!--            <div class="form-group col-xs-12">-->
-<!--                --><?php //$search_terms = htmlspecialchars( $_GET["s"] ); ?>
-<!--                <form role="form" action="--><?php //bloginfo('siteurl'); ?><!--/" id="searchform" method="get">-->
-<!--                    <div class="inner-addon right-addon">-->
-<!--                        <i class="glyphicon glyphicon-search"></i>-->
-<!--                        <input type="text" class="form-control"   name="s" id="s" name="s" placeholder="Search"--><?php //if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?><!-- />-->
-<!--                    </div>-->
-<!--                </form>-->
-<!--            </div>-->
-<!--        </section>-->
     </aside>
 <?php else:?>
     <aside class="sidebar ">

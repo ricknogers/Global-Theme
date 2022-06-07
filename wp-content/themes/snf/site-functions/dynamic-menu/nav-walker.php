@@ -43,12 +43,13 @@ function snf_markets_municipal_nav($depth) {
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
     wp_nav_menu(
         array(
-            'menu' => 'snf_markets_municipal_nav',  /* menu name */
-            'container' => 'nav', /* container class */
-            'container_class' => 'list-group-items',
+	        'theme_location' => 'snf_markets_municipal_nav',
+            'container' => 'div', /* container class */
+            'container_class' => 'market_nav_elements  navbar-collapse',
+            'menu_class'      => 'navbar-nav mr-auto',
             'container_id' => 'municipal-market-menu',
-            'fallback_cb' => 'wp_bootstrap_main_nav_fallback', /* menu fallback */
-            'depth' => "{$depth}",  //suppress lower levels for now
+            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+            'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
             'walker' => new WP_Bootstrap_Mega_Navwalker()
         )
     );
@@ -78,7 +79,7 @@ function snf_markets_pc_nav($depth) {
 	        'container_id' => 'pc-market-menu',
 	        'menu_class'      => 'navbar-nav mr-auto',
 	        'container' => 'div', /* container class */
-	        'container_class' => 'market_nav_elements  navbar-collapse',
+	        'container_class' => 'market_nav_elements   navbar-collapse',
 	        'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
 	        'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
             'walker' => new WP_Bootstrap_Mega_Navwalker()

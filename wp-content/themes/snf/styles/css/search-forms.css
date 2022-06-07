@@ -120,13 +120,24 @@ IX.) News
     }
     .shrink .searchbardiv{
         top: 12%;
-
         /* position: relative; */width: 100%;height: 100%;/* height: 100%; *//* padding: 0; */}
     .searchbardiv{
         display: block;
         position: fixed;
         background: #0082CA;
-        top: 14%;
+        top: 12%;
+        right: 0px;
+        z-index: 1001;
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        margin: 0px;
+    }
+    .fixed-top .searchbardiv{
+        display: block;
+        position: fixed;
+        background: #0082CA;
+        top: 7%;
         right: 0px;
         z-index: 1001;
         width: 100%;
@@ -166,7 +177,7 @@ IX.) News
     }
     #searchbox {
         box-shadow: none;
-        padding: 8px 14px;
+        padding: 3px 8px;
     }
     #searchbox:hover {
         box-shadow: none;
@@ -206,5 +217,4 @@ IX.) News
     .navbar-toggle.collapsed .bottom-bar {
         transform: rotate(0);
     }
-
 }
