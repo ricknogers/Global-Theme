@@ -1,0 +1,94 @@
+/*===================================================
+    Name: Oil-Gas Styles
+======================================================*/
+
+/*===================================================
+
+Directory:
+0.)
+I.)
+II.)
+III.)
+IV.)
+V.)
+VI.)
+VII.)
+IX.)
+
+
+======================================================*/
+
+.carousel-control-prev, .carousel-control-next{
+    /* position: relative; */
+    /* padding: 0 15px; */
+    /* color: rgb(249,176,0); */
+    /* font-size: 25px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.repeater-slider .carousel-indicators li.active{
+    background: rgb(249,176,0);
+    /* width: 20px; */
+    /* border-radius: 25px; */
+}
+.carousel-control-prev, .carousel-control-next{
+    position: relative;
+    /* padding: 0 15px; */
+    color: rgb(249,176,0);
+    background-color: rgb(249,176,0);
+    border: none;
+    display: inline-block;
+    /* width: 100%; */
+}
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover{
+    color: rgb(249,176,0);
+}
+.repeater-slider .bgTitle{
+    background-color:rgb(249,176,0);
+    position: absolute;
+    z-index: 1;
+}
+.fillImage .design-overlay{
+    position: absolute;
+    height: auto;
+    padding: 5px 1rem;
+    width: 75%;
+    background-color:rgb(249,176,0);
+    clip-path: polygon(0 0, 100% 0%, 89% 100%, 0 100%);
+    opacity: .9;
+}
+.fillImage .design-overlay h2{
+    color:#fff;
+    padding: 0;
+    font-size: 20px;
+    margin:0;
+    text-transform:uppercase;
+    text-shadow: 0px 1px 1px #000;
+    letter-spacing: 1px;
+}
+.subsidiary-children-pages ul li a {
+    font-size: 14px;
+    /* letter-spacing: 2px; */
+    font-weight: 400;
+    z-index: 4;
+    text-align: center;
+}
+.subsidiary-children-pages ul li span:before{
+    content:"\F229";
+    position: absolute;
+    right: 5%;
+    color: #002d73;
+    top:0;
+    font-family: bootstrap-icons !important;
+}
+
+
+.second-tier-nav ul li.active{
+}
+
+.shrink.second-tier-nav ul li.active h3{
+    color:#002d73;
+    z-index: 7;
+    font-weight: 600;
+    text-align: center;
+}

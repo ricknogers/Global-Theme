@@ -1,0 +1,39 @@
+/*===================================================
+
+Directory:
+0.) Site Wide Classes
+I.) Generic Inner Pages
+II.) Footer
+III.) Search Results
+IV.) Media Page
+V.) Careers
+VI.) Forms
+VII.) Terms and Usage
+IX.) News
+======================================================*/
+@media(min-width:768px){
+
+    .content-area{
+        margin:10px 0;
+    }
+    aside.newsSideBar h3.sidebarTitle {
+        border-bottom: solid 2px #002d73;
+        color: #002d73;
+        font-size: 1.5rem;
+    }
+    aside.newsSideBar ul {
+        padding: 0;
+    }
+    aside.newsSideBar ul li {
+        list-style: none;
+    }
+    aside.newsSideBar h4.recentPosts {
+        font-size: 16px;
+    }
+    .singleContent{
+        margin: 2% 0;
+    }
+}
+@media(max-width:767px){
+
+}

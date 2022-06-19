@@ -1,0 +1,100 @@
+/*===================================================
+    Directory:
+    0.) Products Listing
+    I.) Category
+    II.) Market Card
+    III.) Filter
+
+======================================================*/
+
+.products-grouping{}
+.products-grouping .card-body{
+    /* padding:0; */
+}
+.products-grouping .card-body .list-group-item{
+    border:none !important;
+}
+.products-grouping .card-body .list-group-item.active{
+    background-color:transparent !important;
+    color:#002d73;
+    text-transform:uppercase;
+    font-weight: 700;
+}
+.products-grouping #filtered_lists .list-group-item.active{
+    background-color: rgba(0, 45, 115, 1);
+    border:none;
+}
+.products-grouping .product-identifier{
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+    /* display: flex; */
+    width: 100%;
+}
+.products-grouping .product-title, .products-grouping .market-badge{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.products-grouping .product-title h3{
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.45rem;
+    color: rgb(10,42,118);
+}
+.products-grouping  .product-accordion{
+    background-color: rgba(0, 45, 115, 1);
+    color:#fff;
+    font-weight: 600;
+    border-radius: 0 0 4px 4px;
+}
+.products-grouping .card-footer .panel-title > a[aria-expanded="false"]:before{
+    content:"\F64D";
+    font-family: bootstrap-icons !important;
+    float:right;
+    font-size:1.15rem;
+}
+.products-grouping .card-footer .panel-title > a[aria-expanded="true"]:before {
+    content:"\F63B";
+    font-family: bootstrap-icons !important;
+    float:right;
+    font-size:1.15rem;
+}
+.products-grouping  .product-accordion:hover{
+    color:#fff;
+}
+.products-grouping  .product-accordion:focus{
+    box-shadow: none;
+}
+.products-grouping .card-footer{
+    padding:0;
+    position:relative;
+}
+.products-grouping .card-footer .panel-title{
+    margin: 0;
+}
+.products-grouping .card-footer .panel-title.prod-cat{
+    border-bottom:solid 1px #cecece;
+}
+.products-grouping  .product-tag .lead.depth_1{
+    font-weight:600;
+}
+.products-grouping .card-footer .panel-title.prod-cat a{
+    color:#0082CA;
+    font-weight:700;
+}
+.products-grouping .card-footer .panel-title a{
+    text-align:left;
+}
+.products-grouping .product-tag span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.products-grouping .product-card{
+    position:relative;
+}
+.product-contact .prod_button_redirect{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}

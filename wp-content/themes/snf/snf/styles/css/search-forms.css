@@ -1,0 +1,65 @@
+/*===================================================
+
+Directory:
+0.) Site Wide Classes
+I.) Generic Inner Pages
+II.) Footer
+III.) Search Results
+IV.) Media Page
+V.) Careers
+VI.) Forms
+VII.) Terms and Usage
+IX.) News
+======================================================*/
+.subsidiaryTopBar .desktopTopBar .itemsRight ul li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 44;
+    top: -10px;
+    right: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.6);
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+.overlay-content {
+    position: relative;
+    top: 46%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+}
+.overlay input[type=text] {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: white;
+}
+.overlay button {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    background: #002d73;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+.overlay button i {
+    color: #fff;
+}
