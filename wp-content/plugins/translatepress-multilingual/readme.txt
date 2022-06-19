@@ -3,9 +3,9 @@ Contributors: cozmoslabs, razvan.mo, madalin.ungureanu, sareiodata, cristophor
 Donate link: https://www.translatepress.com/
 Tags: translate, translation, multilingual, automatic translation, bilingual, front-end translation, google translate, language
 Requires at least: 3.1.0
-Tested up to: 5.9.2
+Tested up to: 6.0
 Requires PHP: 5.6.20
-Stable tag: 2.2.3
+Stable tag: 2.2.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -140,6 +140,40 @@ For more information please check out our [documentation](https://translatepress
 
 
 == Changelog ==
+= 2.2.9 =
+* Fix: compatibility issue between translation interface and Thrive Architect
+* Fix: make sure processed links are stripped of extra tags
+* Fix: a potential error in the url converter
+
+= 2.2.8 =
+* Fixed truncated archive urls on front page on translated pages
+* Fixed bug with language switcher not working properly for posts with translated slugs when using Advanced option to Exclude Paths From Translation
+* Fixed canonical of archive links sometimes not having translated slugs in url
+* Fixed FAQ schema not being fully translated
+* Fixed trp_hreflang hook parameters
+
+= 2.2.7 =
+* Added compatibility for WooCommerce PDF Catalog plugin
+* Fixed edge case causing SQL errors due to case sensitivity on table names
+* Fixed hreflang code for Belarusian
+* Fixed Gujarati flag
+
+= 2.2.6 =
+* Improved automatic translation usage by skipping detection of icalendar strings
+* Unsupported languages are now checked automatically when saving Automatic Translation tab settings
+* Added new filters that allow changing the custom tables names from external scripts
+
+= 2.2.5 =
+* Fixed span tag appearing in WooCommerce Orders in WP Dashboard
+* Fixed warnings from The Event Calendar about SQL commands
+* Fixed errors appearing in logs when using custom integration code
+
+= 2.2.4 =
+* Prevent automatic translation of names and addresses in WooCommerce emails
+* Added external function for devs to easily create custom language switchers: trp_custom_language_switcher
+* Fixed issue with not including hreflang tags for some languages when Advanced option to Remove hreflang with Country Locale is used
+* Fixed warning related to using custom language flags
+
 = 2.2.3 =
 * Fixed XSS security vulnerability
 * Fixed sitemap containing urls with language slugs linking to paths excluded from translation

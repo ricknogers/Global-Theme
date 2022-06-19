@@ -22,6 +22,21 @@ class TRP_IN_SP_Option_Based_Strings {
         return apply_filters( 'trp_to_translate_' . $type . '_slugs_array', $return, $type, $include_labels );
     }
 
+    /**
+     * Slugs for product-category, product-tag and product might have been edited in the Permalinks section of admin and we want to return their new values.
+     * @return array
+     */
+    public function get_woocommerce_actual_slugs(){
+        $woo_product_slugs  = $this->get_public_slugs('post_types', false, apply_filters('trp_get_woocommerce_cpt', array('product')));
+        $woo_tax_slugs      = $this->get_public_slugs('taxonomies', false, apply_filters('trp_get_woocommerce_taxonomies', array('product_cat', 'product_tag')));
+        $slugs              = array_merge( $woo_product_slugs, $woo_tax_slugs );
+        $return             = array();
+        foreach ( $slugs as $slug ){
+            $return[] = trim($slug, '/\\');
+        }
+        return $return;
+    }
+
     public function get_strings_for_option_based_slug( $type, $option_name, $all_slugs ) {
         $trp                = TRP_Translate_Press::get_trp_instance();
         $string_translation = $trp->get_component( 'string_translation' );

@@ -9,9 +9,9 @@
 
     <td>
         <p>
-            <label><?php echo esc_html__( 'Disable Right Click', 'prevent-direct-access' ) ?>
+            <label><?php echo esc_html__( 'Disable Copy and Right Click', 'prevent-direct-access' ) ?>
             </label>
-            <?php echo esc_html__( 'Enable this option to disable right-click on all your web pages.', 'prevent-direct-access' ) ?>
+            <?php echo _e( 'Disable text selection and right-click to <a target="_blank" rel="noopener noreferrer" href="https://preventdirectaccess.com/docs/settings/?utm_source=user-website&utm_medium=settings-other-security&utm_campaign=pda-lite#prevent-copy-content">prevent content theft</a> on all your web pages.', 'prevent-direct-access' ) ?>
         </p>
     </td>
 </tr>

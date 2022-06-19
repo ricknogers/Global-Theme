@@ -1,97 +1,152 @@
 <section class="login-block shadow-sm">
-    <div class="container login-container register">
+    <div class=" login-container register">
         <div class="row">
-            <div class="col-md-6 login-sec">
-                <div class=" register-right white ">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-	                            <li class="nav-item">
-                                    <a class="nav-link active" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="true">Register</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="false">Login</a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="col page-header theme-bg-dark py-5 text-center position- optimized-selection mt-3 ">
+                <div class="page-header-shapes-right "></div>
+                <div class="page-header-shapes-left"></div>
+                <div class="row">
+                    <div class="col page-header-title" >
+                        <h1><?php the_title();?></h1>
                     </div>
-                    <div class="row full-height justify-content-center">
-                        <div class="col-sm-12">
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="register" role="tabpanel" aria-labelledby="register-tab">
-                                   <h3  class="register-heading">Investor Registration</h3>
-                                    <div class="row register-form">
-                                        <div class="col-md-12">
-                                            <p>Please complete the fields below to request access to Investor Center documents</p>
-                                            <hr class="diamond">
-                                            <?php gravity_form( 1, false, false, false, '', false ); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade show" id="login" role="tabpanel" aria-labelledby="login-tab">
-	                                 <h3 class="register-heading">Login</h3>
-                                    <div class="row register-form">
-                                        <div class="col-md-12">
-                                            <div class="investor-login-form">
-		                                        <?php
-		                                        $args = array(
-			                                        'redirect' => home_url('/investors/'),
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col breadcrumbs-container optimized-selection">
+                <div class="card shadow p-1">
+                    <div class="card-body shadow-sm snf-breadcrumbs ">
+                        <div class="col  crumbs">
+						    <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+                        </div>
 
-		                                        )
-		                                        ;?>
-                                                <?php wp_login_form($args);?>
-                                            </div>
-                                        </div>
+                    </div><!--card-body shadow-sm snf-breadcrumbs-->
+                </div><!--card shadow-->
+            </div><!--breadcrumbs-container-->
+        </div><!--row-->
+        <div class="row  mb-4 mt-4  h-100">
+            <div class="col-sm-12 text-center mb-5">
+                <h3 class="display-4" style="font-size:1.7rem;">   Interested in becoming an investor with us?</h3>
+            </div>
+            <div class="col-md-6 col-sm-12 investor_core_values  inv_reg_form">
+                <section class="text-center">
+                    <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#investorRegistrationForm">
+                        Become an Investor
+                    </button>
+                </section>
+                <div class="modal left fade" id="investorRegistrationForm" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3  class="register-heading"></h3>
+                                <div class="row register-form">
+                                    <div class="col-md-12">
+                                        <p>Please complete the fields below to request access to Investor Center documents</p>
+                                        <hr class="diamond">
+                                        <?php gravity_form( 1, false, false, false, '', false ); ?>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 banner-sec investors_slideshow">
-                <div class="row">
-                    <div class="col-md-6">
-                        <a href="#">
-                            <div class="card service-card card-inverse h-100">
-                                <div class="card-block">
-                                    <i class="bi bi-currency-euro"></i>
-                                    <h4 class="card-title">3.6B€ SALES TURNOVER</h4>
+            <div class="col-md-6 col-sm-12 investor_core_values inv_login_form ">
+                <section class="text-center">
+                    <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#investorLogin">
+                        Already an investor? Login Here
+                    </button>
+                </section>
+                <div class="modal right fade" id="investorLogin" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="investor-login-form form-control">
+	                                <?php
+	                                $redirect_to = '';
+	                                ?>
+                                    <form name="loginform" id="loginform" action="<?php echo site_url( '/wp-login.php' ); ?>" method="post">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input id="user_login" placeholder="name@example.com" class="form-control" type="text" size="20" value="" name="log">
+                                                <input id="user_pass" class="form-control" type="password" size="20" value="" name="pwd">
+                                                <p><input id="rememberme" type="checkbox" value="forever" name="rememberme"></p>
+
+                                                <p><input id="wp-submit" type="submit" value="Login" name="wp-submit"></p>
+
+                                                <input type="hidden" value="<?php echo esc_attr( $redirect_to ); ?>" name="redirect_to">
+                                                <input type="hidden" value="1" name="testcookie">
+
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="#">
-                            <div class="card service-card card-inverse h-100">
-                                <div class="card-block">
-                                    <i class="fa fa-users" aria-hidden="true"></i>
-                                    <h4 class="card-title">400K END USERS</h4>
-                                </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="#">
-                            <div class="card service-card card-inverse h-100">
-                                <div class="card-block">
-                                    <span class="fa fa-lightbulb-o fa-3x"></span>
-                                    <h4 class="card-title">1.4% R&D INVESTMENT FROM SALES</h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="#">
-                            <div class="card service-card card-inverse h-100">
-                                <div class="card-block">
-                                    <span class="fa fa-lightbulb-o fa-3x"></span>
-                                    <h4 class="card-title">1325 KT/Y</h4>
-                                </div>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row mb-4 mt-4">
+            <div class="col-md-6 col-sm-12">
+                <div class="investor_figure box">
+                    <div class="investor_icon">
+                        <div class="investor_image"><i class="bi bi-currency-euro rounded-circle"></i></div>
+                        <div class="investor_info">
+                            <h3 class="investor_title">3.6B SALES TURNOVER</h3>
+
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="investor_figure box">
+                    <div class="investor_icon">
+                        <div class="investor_image"><i class="fa fa-users rounded-circle" aria-hidden="true"></i></div>
+                        <div class="investor_info">
+                            <h3 class="investor_title">400K END USER</h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="investor_figure box">
+                    <div class="investor_icon">
+                        <div class="investor_image"><i class="bi bi-currency-exchange"></i></div>
+                        <div class="investor_info">
+                            <h3 class="investor_title">1.4% R&D INVESTMENT FROM SALES</h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="investor_figure box">
+                    <div class="investor_icon">
+                        <div class="investor_image"><i class="bi bi-power"></i></div>
+                        <div class="investor_info">
+                            <h3 class="investor_title">1325 KT/Y</h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container login-container register">
+        <div class="row">
+
+            <div class="col-md-12 banner-sec investors_slideshow">
+
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

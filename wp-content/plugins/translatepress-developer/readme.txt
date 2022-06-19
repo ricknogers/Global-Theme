@@ -3,9 +3,9 @@ Contributors: cozmoslabs, razvan.mo, madalin.ungureanu, sareiodata
 Donate link: https://www.translatepress.com/
 Tags: translate, translation, multilingual, automatic translation, bilingual, front-end translation, google translate, language
 Requires at least: 3.1.0
-Tested up to: 5.9.2
+Tested up to: 6.0
 Requires PHP: 5.6.20
-Stable tag: 1.1.1
+Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -127,6 +127,23 @@ For more information please check out our [documentation](https://translatepress
 
 
 == Changelog ==
+= 1.1.6 =
+* Fix: issue with Automatic User Language Detection redirect not working on home page for the default language
+* Fix: correctly replace the {{sugested_language}} tag for the Automatic User Language Detection add-on
+
+= 1.1.5 =
+* SEO Pack: Improved compatibility with Elementor Sitemap
+
+= 1.1.4 =
+* Automatic User Language Detection: Improved pop-up compatibility with themes
+
+= 1.1.3 =
+* Automatic User Language Detection: Fixed the 'Close and do not show again' button on the pop-up not working sometimes
+
+= 1.1.2 =
+* SEO Pack: Fixed WooCommerce taxonomies slugs manual translations not saving properly in some cases
+* SEO Pack: Added filter to fix edge case issue on listing page in WP dashboard
+
 = 1.1.1 =
 * Automatic User Language Detection: Show front-end pop-up to visitors, asking to change language instead of redirecting directly to detected language
 * Automatic User Language Detection: Updated Geo IP location database to 20220315 version

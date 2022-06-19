@@ -65,8 +65,8 @@ class TRP_IN_Seo_Pack {
         $this->loader->add_filter( 'pre_get_posts', $this->slug_manager, 'change_slug_var_in_query' );
 
         $this->loader->add_filter( 'sanitize_title', $this->slug_manager, 'change_query_for_page_by_page_slug', 10, 3 );
-        $this->loader->add_filter( 'post_link', $this->slug_manager, 'translate_slug_for_posts', 10, 3 );
-        $this->loader->add_filter( 'post_type_link', $this->slug_manager, 'translate_slug_for_posts', 10, 3 );
+        $this->loader->add_filter( 'post_link', $this->slug_manager, 'translate_slug_for_posts', 99, 3 );
+        $this->loader->add_filter( 'post_type_link', $this->slug_manager, 'translate_slug_for_posts', 99, 3 );
         $this->loader->add_filter( 'get_page_uri', $this->slug_manager, 'translate_slugs_for_pages', 10, 2 );
         $this->loader->add_action( 'trp_translateable_strings', $this->slug_manager, 'include_slug_for_machine_translation', 10, 6 );
         $this->loader->add_action( 'trp_translateable_information', $this->slug_manager, 'save_machine_translated_slug', 10, 3 );
@@ -445,7 +445,7 @@ class TRP_IN_Seo_Pack {
      * @return mixed|void
      */
     function get_schema_node_keys(){
-        return apply_filters('trp_schema_node_keys', array( 'name', 'description' ) );
+        return apply_filters('trp_schema_node_keys', array( 'name', 'description', 'text' ) );
     }
 
     /**

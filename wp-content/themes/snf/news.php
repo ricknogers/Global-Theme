@@ -10,25 +10,16 @@ get_header();?>
     <div class="row">
         <div class="col-md-3 col-xs-12 card card-filter" style="height: 100%;">
 	        <form class="card-body" >
-				<div class="form-row">	      
-					<?php echo do_shortcode('[fe_widget id="80404"]'); ?>
-				</div>
+                <?php echo do_shortcode('[fe_widget id="80404"]'); ?>
 	        </form>
             <div class="row">
                 <div class="col-md-12 col-xs-12 newsSidebarWrapper">
-                    <div class="col">
-                        <section class="topLevelSidebar">
-                            <h2 class="font-weight-bold">Latest News</h2>
-                            <hr class="newsBlue">
-                            <div class="col-sm-12 newsCategoryList">
-
-                            </div><!--news category list-->
-                        </section>
-                    </div><!--latestNews-->
+                   
+                    <hr class="center-diamond">
                     <div class="col newsSidebarCategories">
                         <section class="topLevelSidebar">
                             <h2 class="font-weight-bold">Categories</h2>
-                            <hr class="newsBlue">
+
                             <div class="col-sm-12 newsCategoryList">
                                 <?php $wcatTerms = get_terms('snf-communication-types', array('hide_empty' => 0, 'parent' =>0));
                                 foreach($wcatTerms as $wcatTerm) :
@@ -42,30 +33,30 @@ get_header();?>
                             </div><!--news category list-->
                         </section>
                     </div><!--newsSidebarCategories-->
-                    <div class="col newsSidebarMostReadNews">
-                        <section>
-                            <h2 class="font-weight-bold">Most Read News</h2>
-                            <hr class="newsBlue">
-                            <div class="col-sm-12 newsCategoryList">
+                    <hr class="center-diamond">
 
-
-                            </div><!--news category list-->
+                    <div class="col newsSidebarCategories">
+                        <section class="topLevelSidebar">
+                            <h2 class="font-weight-bold">Similar Posts</h2>
+                            <ul class="list-group">
+	                           
+                            </ul>
                         </section>
-                    </div><!--newsSidebarMostReadNews-->
+                    </div><!--newsSidebarCategories-->
+
                 </div><!--newsSidebarWrapper-->
             </div><!--row-->
         </div>
         <div class="col-md-9 col-xs-12 latestNews communication-feed">
             <div class="newsCategoryWrapper" id="filtered_lists">
                 <?php
-                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $temp =  $query;
                 $the_query = null;
 
                 $args = array(
                     'post_type' => 'global-communication',
                     'posts_per_page' => '8',
-                    'paged' => $paged,
+
 
                 );
                 $the_query = new WP_Query( $args );

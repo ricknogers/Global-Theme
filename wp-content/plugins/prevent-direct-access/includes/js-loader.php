@@ -23,7 +23,7 @@ class Pda_JS_Loader {
 			$screen          = get_current_screen();
 			$screen_map      = $this->get_screen_map_id();
 
-			if ( $screen_map['media'] === $screen->id ) {
+			if ( $screen_map['media'] === $screen->id && (! get_option( 'pda_is_licensed' ) && !is_multisite()) ) {
 				wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . '../js/dist/style/pda_gold_v3_bundle.css', array(), $this->version, 'all' );
 				Pda_JS_Loader::pda_add_style();
 

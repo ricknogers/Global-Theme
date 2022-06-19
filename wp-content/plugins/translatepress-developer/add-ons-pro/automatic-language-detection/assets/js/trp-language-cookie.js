@@ -89,16 +89,19 @@ function TRP_IN_Determine_Language(){
 
         var text_popup = document.getElementById("trp_ald_popup_text");
         var popup = document.getElementById("trp_ald_modal_container");
-        var close = document.getElementById("trp_ald_x_button_and_textarea");
+        var close = document.getElementById("trp_ald_x_button");
 
         var popup_change_button = document.getElementById("trp_ald_popup_change_language");
         var popup_close_button_text = document.getElementById("trp_ald_x_button_textarea");
+        var close_popup = document.getElementById("trp_ald_x_button_and_textarea");
 
         popup.style.display= 'block';
 
         var no_text_popup_select_current_language = document.getElementById('trp_ald_popup_current_language');
 
-        text_popup.innerHTML = trp_language_cookie_data['popup_textarea'];
+        var replace_suggested_language_text = trp_language_cookie_data['popup_textarea'].replace("{{suggested_language}}", trp_language_cookie_data['english_name'][response]);
+
+        text_popup.innerHTML = replace_suggested_language_text;
 
         popup_change_button.innerHTML = trp_language_cookie_data['popup_textarea_change_button'];
 
@@ -106,14 +109,8 @@ function TRP_IN_Determine_Language(){
 
         close.title = trp_language_cookie_data['popup_textarea_close_button'];
         popup_close_button_text.title = trp_language_cookie_data['popup_textarea_close_button'];
-
-        close.onclick = function (){
-            popup.style.display = 'none';
-            trpCookie.setCookie( trp_language_cookie_data['cookie_name'], _this.get_current_dom_language(), trp_language_cookie_data['cookie_age'], trp_language_cookie_data['cookie_path'] );
-
-        }
-
-        popup_close_button_text.onclick = function(){
+        
+        close_popup.onclick = function(){
             popup.style.display = 'none';
             trpCookie.setCookie( trp_language_cookie_data['cookie_name'], _this.get_current_dom_language(), trp_language_cookie_data['cookie_age'], trp_language_cookie_data['cookie_path'] );
 
@@ -124,12 +121,8 @@ function TRP_IN_Determine_Language(){
         popup_change_button.onclick = function(){
             var selected_language = no_text_popup_select_current_language.getAttribute('data-trp-ald-selected-language');
             trpCookie.setCookie( trp_language_cookie_data['cookie_name'], selected_language, trp_language_cookie_data['cookie_age'], trp_language_cookie_data['cookie_path'] );
-            if (selected_language === _this.get_current_dom_language()){
-                popup.style.display = 'none';
-                return;
-            }
-            var url = _this.get_url_for_lang(selected_language);
-            window.location.replace( url );
+
+
         }
 
     }
@@ -151,7 +144,9 @@ function TRP_IN_Determine_Language(){
 
         var div = document.createElement('div');
 
-        no_text_popup_text.innerHTML = trp_language_cookie_data['popup_textarea'];
+        var replace_suggested_language_text = trp_language_cookie_data['popup_textarea'].replace("{{suggested_language}}", trp_language_cookie_data['english_name'][response]);
+
+        no_text_popup_text.innerHTML = replace_suggested_language_text;
 
         button_change_language_no_text_popup.innerHTML = trp_language_cookie_data['popup_textarea_change_button'];
 
@@ -159,13 +154,6 @@ function TRP_IN_Determine_Language(){
         button_change_language_no_text_popup.onclick = function() {
             var selected_language = no_text_popup_select_current_language.getAttribute( 'data-trp-ald-selected-language' );
             trpCookie.setCookie( trp_language_cookie_data[ 'cookie_name' ], selected_language, trp_language_cookie_data[ 'cookie_age' ], trp_language_cookie_data[ 'cookie_path' ] );
-
-            if (selected_language === _this.get_current_dom_language()){
-                document.body.removeChild(div);
-                return;
-            }
-            var url = _this.get_url_for_lang( selected_language );
-            window.location.replace( url );
         }
 
         no_text_popup_x_textarea.innerHTML = trp_language_cookie_data['popup_textarea_close_button'];
@@ -231,24 +219,41 @@ function TRP_IN_Determine_Language(){
     this.ls_select_language = function(){
 
         // todo
-        var no_text_current_language = document.getElementById('trp_ald_popup_current_language');
-
+        var no_text_current_language = document.querySelector('.trp-ls-shortcode-current-language');
+        var no_text_popup_select_current_language = document.querySelector('.trp-ls-shortcode-current-language');
+        var popup_change_button = document.getElementById("trp_ald_popup_change_language");
+        var button_change_language_no_text_popup = document.getElementById('trp_ald_no_text_popup_change_language');
         jQuery('.trp-ald-popup-select').click(function ( item ) {
             no_text_current_language.innerHTML = item.target.innerHTML;
             no_text_current_language.setAttribute('data-trp-ald-selected-language', item.target.getAttribute('data-trp-ald-selected-language'));
+            var selected_language = no_text_popup_select_current_language.getAttribute('data-trp-ald-selected-language');
+            _this.set_language_href(selected_language,popup_change_button,button_change_language_no_text_popup);
         });
     }
 
     this.ls_make_default_language_preselected = function( response ){
 
-        var no_text_current_language = document.querySelector('.trp_ald_ls_container #trp_ald_popup_current_language');
+        var no_text_current_language = document.querySelector(".trp_ald_ls_container #trp_ald_popup_current_language ");
         var all_languages = document.querySelectorAll('.trp_ald_ls_container .trp-ald-popup-select');
-
+        var no_text_popup_select_current_language = document.getElementById('trp_ald_popup_current_language');
+        var popup_change_button = document.getElementById("trp_ald_popup_change_language");
+        var button_change_language_no_text_popup = document.getElementById('trp_ald_no_text_popup_change_language');
         for ( var i = 0; i< all_languages.length; i++){
             if (all_languages[i].id == response){
                 no_text_current_language.innerHTML = all_languages[i].innerHTML;
                 no_text_current_language.setAttribute('data-trp-ald-selected-language', response);
+                var selected_language = no_text_popup_select_current_language.getAttribute('data-trp-ald-selected-language');
+                _this.set_language_href(selected_language, popup_change_button, button_change_language_no_text_popup);
             }
+        }
+    }
+
+    this.set_language_href = function ( selected_language, popup_change_button, button_change_language_no_text_popup ){
+        if( popup_change_button !== null ){
+            popup_change_button.href = _this.get_url_for_lang(selected_language);
+        }
+        if( button_change_language_no_text_popup !== null ){
+            button_change_language_no_text_popup.href = _this.get_url_for_lang(selected_language);
         }
     }
 

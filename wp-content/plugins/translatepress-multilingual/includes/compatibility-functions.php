@@ -203,6 +203,21 @@ function trp_woo_ultimate_pdf_invoices_data_compatibility($data_array){
     return $data_array;
 }
 
+/**
+ * Compatibility with WooCommerce PDF Catalog (woocommerce-pdf-catalog)
+ * https://www.welaunch.io/en/product/woocommerce-pdf-catalog/
+ *
+ * @since 2.2.7
+ *
+ */
+add_filter( 'trp_stop_translating_page', 'trp_woocommerce_pdf_catalog_compatibility_dont_translate_pdf', 10, 2 );
+function trp_woocommerce_pdf_catalog_compatibility_dont_translate_pdf( $bool, $output ){
+	if ( isset( $_REQUEST['pdf-catalog'] ) ) {
+		return true;
+	}
+	return $bool;
+}
+
 
 /**
  * Compatibility with WooCommerce order notes
@@ -247,6 +262,18 @@ function trp_woo_skip_dynamic_translation( $skip_selectors ){
     return $skip_selectors;
 }
 
+/**
+ * Prevent translation of names and addresses in WooCommerce emails.
+ */
+add_action( 'woocommerce_email_customer_details', 'trp_woo_prevent_address_from_translation_in_emails' );
+function trp_woo_prevent_address_from_translation_in_emails(){
+    add_filter( 'woocommerce_order_get_formatted_shipping_address', 'trp_woo_address_no_translate', 10, 3 );
+    add_filter( 'woocommerce_order_get_formatted_billing_address', 'trp_woo_address_no_translate', 10, 3 );
+}
+
+function trp_woo_address_no_translate( $address, $raw_address, $order ){
+    return empty( $address ) ? $address : '<span data-no-translation>' . $address . '</span>';
+}
 
 /**
  * Compatibility with WooCommerce product variation.
@@ -745,12 +772,12 @@ function trp_superfly_change_menu_loading_hook(){
  */
 add_filter( 'wpseo_canonical', 'trp_wpseo_canonical_compat', 99999, 2);
 function trp_wpseo_canonical_compat( $canonical, $presentation_class = null ){
-	global $TRP_LANGUAGE;
-	$trp = TRP_Translate_Press::get_trp_instance();
-	$url_converter = $trp->get_component( 'url_converter' );
-	$canonical = $url_converter->get_url_for_language($TRP_LANGUAGE, $canonical, '');
+    global $TRP_LANGUAGE;
+    $trp           = TRP_Translate_Press::get_trp_instance();
+    $url_converter = $trp->get_component( 'url_converter' );
+    $canonical     = $url_converter->get_url_for_language( $TRP_LANGUAGE, $canonical, '' );
 
-	return $canonical;
+    return $canonical;
 };
 
 add_filter( 'wpseo_opengraph_url', 'trp_opengraph_url', 99999 );
@@ -998,6 +1025,22 @@ function trp_thrive_arhitect_compatibility($bool)    {
 
     return $bool;
 }
+// do not redirect the URL's that are used inside Thrive Architect Editor
+add_filter( 'trp_allow_language_redirect', 'trp_thrive_no_redirect_in_editor', 10, 3 );
+function trp_thrive_no_redirect_in_editor( $allow_redirect, $needed_language, $current_page_url ){
+	if ( strpos($current_page_url, 'tve=true&tcbf')!== false ){
+		return false;
+	}
+	return $allow_redirect;
+};
+// skip the URL's that are used inside Thrive Architect Editor as they are stripped of parameters in certain cases and the editor isn't working.
+add_filter('trp_skip_url_for_language', 'trp_thrive_skip_language_in_editor', 10, 2);
+function trp_thrive_skip_language_in_editor($skip, $url){
+	if ( strpos($url, 'tve=true&tcbf') !== false ){
+		return true;
+	}
+	return $skip;
+}
 
 /**
  * Compatibility with the RECON gateway for woocommerce. We must not send the "trp-form-language" hidden field in the post request to the gateway
@@ -1238,6 +1281,8 @@ function trp_add_current_menu_item_css_class( $items ){
     $trp_settings = $trp->get_component( 'settings' );
     $settings = $trp_settings->get_settings();
 
+    add_filter('pre_get_posts', 'trp_the_event_calendar_set_query_to_true', 2, 1);
+
     foreach( $items as $item ){
         if ( !( $TRP_LANGUAGE === $settings['default-language'] && isset( $settings['add-subdirectory-to-default-language']) && $settings['add-subdirectory-to-default-language'] !== 'yes'  ) &&
             !in_array( 'current-menu-item', $item->classes ) && !in_array( 'menu-item-object-language_switcher', $item->classes ) && ( !empty($item->url) && $item->url !== '#')
@@ -1262,9 +1307,22 @@ function trp_add_current_menu_item_css_class( $items ){
             }
         }
     }
+
+    remove_filter('pre_get_posts', 'trp_the_event_calendar_set_query_to_true', 2);
     return $items;
 }
 
+/**
+ * Function needed to set tribe_suppress_query_filters to false in query in order to avoid errors with The Event Calendar
+ *
+ * @param $query
+ * @return mixed
+ */
+function trp_the_event_calendar_set_query_to_true($query){
+    $query->set('tribe_suppress_query_filters', false);
+
+    return $query;
+}
 
 /**
  * Compatibility with xstore theme ajax search on other languages than english and when automatic translation was on

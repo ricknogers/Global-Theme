@@ -10,34 +10,27 @@
 				        <?php if ( get_field( 'file' ) ) : ?>
 				            <a class="btn btn-info mr-2" href="<?php the_field( 'file' ); ?>">Download File</a>
 				        <?php endif; ?>
-				        <?php $url_redirect = get_field( 'url_redirect' ); ?>
-				        <?php if ( $url_redirect ) : ?>
-				            <a class="btn btn-primary" href="<?php echo esc_url( $url_redirect ); ?>">Read More</a>
-				        <?php else:?>
-	                        <?php if(is_singular()):?>
-	                        <?php else:?>
-				            <a class="btn btn-primary" href="<?php the_permalink();?>">Read More</a>
-	                        <?php endif; ?>
-				        <?php endif; ?>
+
 			        </div>
 			        <div class="text-center col-sm-12 mb-3 mt-3">
 			            <a class="btn btn-sm btn-outline-primary" href="<?php echo home_url('/');?>news">Back to All News</a>
 			        </div>
-			        <section class="contact-bar col-sm-12 bg-fixed text-white bg-dark" style="background-image: url(<?php bloginfo('template_directory'); ?>/resources/images/CraterLakeHeroImage-scaled.jpg)">
-			
-			            <div class="section-header">
-			                <div class="site-cta-container">
-			                    <div class="text-center">
-			                        <h2>Contact SNF Today!</h2>
-			                    </div>
-			                    <hr>
-			                    <div class="text-center">
-			                        <a class="btn btn-outline-light text-white" href="<?php echo home_url('/') ; ?>contact">Lets Work Together</a>
-			                    </div>
+			        <section class="contact-bar bg-fixed text-white bg-dark" >
+			            <div class="container p-0">
+			                <div class="contact_bg_bar"  style="background-image: url(<?php bloginfo('template_directory'); ?>/resources/images/CraterLakeHeroImage-scaled.jpg)">
+			                    <header class="section-header">
+			                        <div class="text-center">
+			                             <h2>Contact SNF Today!</h2>
+			                        </div>
+			                        <hr class="diamond">
+			                        <div class="text-center">
+				                        <a class="btn btn-outline-light text-white" href="<?php echo home_url('/') ; ?>contact">Lets Work Together</a>
+				                    </div>
+			                    </header>
 			                </div>
 			            </div>
-			
 			        </section>
+			        
 				    
 		        </div>
 		        
@@ -45,6 +38,11 @@
         </div>
 		<div class="col-md-3 col-sm-12 articlesSideBar border-left">
             <aside class=" list-group newsSideBar">
+                <section class="sidebar-widget">
+                    <h3 class="sidebarTitle">Social Share</h3>
+	                <?php my_share_buttons(); ?>
+
+                </section>
 	            <section class="sidebar-widget">
                 	<h3 class="sidebarTitle pb-2">You May Also Like:</h3>
 	                <?php
@@ -94,7 +92,9 @@
 		                    </a>
 		                <?php }
 		                ?>
+                    </div>
 	            </section>
+
                 
             </aside><!--newsSideBar-->
     	</div><!--articlesSideBar-->

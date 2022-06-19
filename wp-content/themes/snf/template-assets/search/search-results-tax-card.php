@@ -6,16 +6,7 @@
         <div class="tag-cloud">
             <section>
                 <i class="fa fa-tags" aria-hidden="true"></i>
-                <?php   // Get terms for post
-                $terms = get_the_terms( $post->ID , 'country' );
-                // Loop over each item since it's an array
-                foreach ( $terms as $term ) {?>
-                    <?php $termlinks = get_term_link($term);?>
-                    <a href="<?php echo $termlinks ;?>" class="badge badge-tag country">
-                        <?php echo $term->name;?>
-                    </a>
-                <?php }
-                ?>
+
                 <?php   // Get terms for post
                 $terms = get_the_terms( $post->ID , 'snf-communication-types' );
                 // Loop over each item since it's an array
@@ -38,11 +29,20 @@
                 ?>
             </section>
         </div>
-        <?php if(custom_field_excerpt()):?>
+	    <?php if ( have_rows( 'card_repeater' ) ) : ?>
+		    <?php while ( have_rows( 'card_repeater' ) ) : the_row(); ?>
+			    <?php if(snf_custom_excerpt(get_sub_field('content'))):?>
+				    <?php echo snf_custom_excerpt(get_sub_field('content'));?>
+
+			    <?php endif;?>
+
+		    <?php endwhile; wp_reset_postdata(); ?>
+	    <?php endif;?>
+	    <?php if(custom_field_excerpt()):?>
             <p class="card-text text-black-50 lead"><?php echo custom_field_excerpt();; ?></p>
-        <?php else:?>
+	    <?php else:?>
             <p class="card-text text-black-50 lead"><?php the_excerpt();; ?></p>
-        <?php endif;?>
+	    <?php endif;?>
         <p class="text-muted"><?php echo get_the_date('j M, Y');?></p>
     </div>
     <div class="card-footer bg-transparent border-top border-dark text-muted">

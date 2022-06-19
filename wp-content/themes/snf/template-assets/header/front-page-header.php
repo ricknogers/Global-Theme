@@ -20,6 +20,12 @@
                                 /*clip-path: polygon(0% 0%, 75% 0%, 100% 0, 91% 100%, 0% 100%);*/
                             }
                         }
+                        @media (max-width: 991px){
+                            .card__img{
+                               display:none;
+                                /*clip-path: polygon(0% 0%, 75% 0%, 100% 0, 91% 100%, 0% 100%);*/
+                            }
+                        }
                     </style>
                     <div class="card__img col-lg-12 col-sm-12 ripple-container" id=" ">
                         <div class="card__content " >
@@ -29,7 +35,7 @@
                                         <div class="hero_content_relative">
                                             <h1> <?php echo get_option('company_name') ;?></h1>
                                             <?php if(get_field('banner_excerpt')):?>
-                                                <p><?php the_field('banner_excerpt');?></p>
+                                                <?php the_field('banner_excerpt');?>
                                             <?php endif;?>
                                             <?php if(get_field('banner_button_text')):?>
                                                 <div class="snf-link-wrapper ">

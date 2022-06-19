@@ -45,7 +45,7 @@ class SettingsPage
         <div class="wrap">
             <div id="icon-themes" class="icon32"></div>
 	        <h2>
-		        <?php _e( 'Prevent Direct Access - PDA', 'prevent-direct-access' ); ?>
+		        <?php _e( 'Prevent Direct Access - PDA Lite', 'prevent-direct-access' ); ?>
 		        <span class="pda-version"><?php echo esc_html( PDAF_VERSION ); ?></span>
 	        </h2>
 
@@ -162,14 +162,14 @@ class SettingsPage
                                 <td colspan="2">
                                     <h3>
                                         <?php echo esc_html__( 'OTHER SECURITY OPTIONS', 'prevent-direct-access' ) ?>
-                                        <span title="<?php echo esc_html__( 'Only work on Apache servers', 'prevent-direct-access' ) ?>" class="dashicons dashicons-warning pda-v3-gold-tooltip"></span>
+                                        <span title="<?php echo esc_html__( 'Image hotlinking and directory protection options only work on Apache servers by default', 'prevent-direct-access' ) ?>" class="dashicons dashicons-warning pda-v3-gold-tooltip"></span>
                                     </h3>
                                 </td>
 
                             </tr>
                             <?php
-//                            include PDA_LITE_BASE_DIR . '/includes/views/view-prevent-direct-access-lite-ptotect-file.php';
                             include PDA_LITE_BASE_DIR . '/includes/views/view-prevent-direct-access-lite-prevent-right-click.php';
+                            include PDA_LITE_BASE_DIR . '/includes/views/view-prevent-direct-access-lite-ptotect-file.php';
                             include PDA_LITE_BASE_DIR . '/includes/views/view-prevent-direct-access-lite-prevent-hotlinking.php';
                             include PDA_LITE_BASE_DIR . '/includes/views/view-prevent-direct-access-lite-disable-directory-listing.php';
 //                            include PDA_LITE_BASE_DIR . '/includes/views/view-prevent-direct-access-lite-hide-wordpress-version.php';
@@ -231,22 +231,24 @@ class SettingsPage
     function render_faq_tab() {
         ?>
         <div class="main_container pda_faq">
-        <p><strong>Q:I get this error "Plugin could not be activated because it triggered a fatal error" when activating the plugin, what should I do?<br>
-            </strong>Please check with your web hosting provider about its PHP version and make sure it supports PHP version 5.4 or greater. Our plugin's codes are not compatible with outdated PHP versions. As a matter of fact, WordPress also recommend your host supports:</p>
+        <p><strong>Q: I get this error "Plugin could not be activated because it triggered a fatal error" when activating the plugin, what should I do?<br>
+            </strong>Please check with your web hosting provider about its PHP version and make sure it supports PHP version 5.4 or greater. Our plugin's codes are not compatible with outdated PHP versions. As a matter of fact, WordPress also recommends your host supports:</p>
             <ul>
                 <li>PHP version 7 or greater</li>
                 <li>MySQL version 5.6 or greater OR MariaDB version 10.0 or greater</li>
                 <li>HTTPS support</li>
-                <li>Older PHP or MySQL versions may expose your site to security vulnerabilities.</li>
+                <li>Older PHP or MySQL versions may expose your site to security vulnerabilities</li>
             </ul>
-        <p><strong>Q:Why can I still access my files through non-protected URLs?</strong><br>
+        <p><strong>Q: Why can I still access my files through non-protected URLs?</strong><br>
             Please clear your browser's cache (press CTRL+F5 on PC, CMD+SHIFT+R on Mac) as files and especially images are usually cached by your browsers.</p>
-        <p>Also, if you're using a caching plugin such as W3 Total Cache or WP Super Cache to speed up your WordPress website, please make sure you clear your cache as well. Your browsers and caching plugin could still be showing a cached (older) version of your files.</p>
-        <p><strong>Q:Why am I getting 'page not found' error when using the generated protected link?</strong><br>
-            It seems our codes on your .htaccess are not inserted properly. There are a few reasons for this:</p>
-        <p>– You edit and mess up your .htaccess codes</p>
-        <p>– Your WordPress folders are not structured as normal.</p>
-        <p>For example, in some rare cases, your domain root folder is located at, let's say, home/ folder but your WordPress files are located at home/wp/ folder. In such cases, our plugin can't insert our .htaccess codes properly, and so, you have to manually update your .htaccess located at home/wp/ folder with our plugin's codes (which you can find below).</p>
+        <p>Also, if you're using a caching plugin such as W3 Total Cache or WP Super Cache to speed up your WordPress website, please make sure you clear your cache as well. Your browsers and caching plugins could still be showing a cached (older) version of your files.</p>
+        <p><strong>Q: Why am I getting 'page not found' error when using generated private link?</strong><br>
+            It seems our rewrite rules on your .htaccess are not inserted properly. There are a few reasons for this:</p>
+        <ul>
+            <li>You edit and mess up your .htaccess codes</li>
+            <li>Your WordPress folders are not structured as normal</li>
+        </ul>
+        <p>For example, in some rare cases, your domain root folder is located at, let's say, home/folder but your WordPress files are located at home/wp/folder. In such cases, you have to manually insert <a href="https://preventdirectaccess.com/docs/prevent-direct-access-lite/">our rewrite rules</a> to your .htaccess located at home/wp/folder.</p>
         <p>For more information, please visit our <a href="https://preventdirectaccess.com/faq/?utm_source=wp-lite&utm_content=setttings-link">official FAQ</a>.</p>
         </div>
 
@@ -339,11 +341,11 @@ class SettingsPage
                 <h3><?php _e('Prevent Direct Access Plugins', 'prevent-direct-access'); ?></h3>
                 <div>
 	                <p>
-		                You are new to PDA Lite? Check out the basics of <a target="_blank" rel="noreferrer noopener" href="https://preventdirectaccess.com/docs/prevent-direct-access-lite/?utm_source=user-website&utm_medium=settings-sidebar&utm_campaign=pda-lite#walkthrough">file protection under Media library</a> and <a target="_blank" rel="noreferrer noopener" href="https://preventdirectaccess.com/docs/?utm_source=user-website&utm_medium=settings-sidebar&utm_campaign=pda-lite">how our plugin works</a>.
+		                You are new to PDA Lite? Check out <a target="_blank" rel="noreferrer noopener" href="https://preventdirectaccess.com/docs/prevent-direct-access-lite/?utm_source=user-website&utm_medium=settings-sidebar&utm_campaign=pda-lite#walkthrough">file protection basics</a> and <a target="_blank" rel="noreferrer noopener" href="https://preventdirectaccess.com/docs/?utm_source=user-website&utm_medium=settings-sidebar&utm_campaign=pda-lite">how our plugin works</a>.
 	                </p>
-                    <p><?php _e('Upgrade to Prevent Direct Access Gold NOW and enjoy many more powerful features:', 'prevent-direct-access'); ?></p>
+                    <p><?php _e('Upgrade to PDA Gold NOW and enjoy many more powerful features:', 'prevent-direct-access'); ?></p>
                     <ul class="wpep_pro_upgrade_list">
-                        <li><span class="dashicons dashicons-yes"></span><?php _e('Encrypt and decrypt protected files', 'prevent-direct-access'); ?></li>
+                        <li><span class="dashicons dashicons-yes"></span><?php _e('Encrypt and Decrypt protected files', 'prevent-direct-access'); ?></li>
                         <li><span class="dashicons dashicons-yes"></span><?php _e('Create Unlimited Private URLs', 'prevent-direct-access'); ?></li>
                         <li><span class="dashicons dashicons-yes"></span><?php _e('Generate multiple Private URLs of multiple files', 'prevent-direct-access'); ?></li>
                         <li><span class="dashicons dashicons-yes"></span><?php _e('Grant Logged-in Users Special Access', 'prevent-direct-access'); ?></li>

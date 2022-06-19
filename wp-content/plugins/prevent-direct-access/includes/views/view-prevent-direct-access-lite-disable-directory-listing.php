@@ -9,7 +9,7 @@
 
     <td>
         <p>
-            <label><?php echo esc_html__( 'Disable directory listing', 'prevent-direct-access' ) ?></label>
+            <label><?php echo esc_html__( 'Disable Directory Listing', 'prevent-direct-access' ) ?></label>
             <?php echo esc_html__( 'Disable directory browsing of all folders and subdirectories.', 'prevent-direct-access' ) ?>
         </p>
     </td>

@@ -2,18 +2,11 @@
 /*===================================================
     Global Body Style Rules
 ======================================================*/
-body{
-    /* overflow-x:hidden !important; */
-    margin-top: 15px !important;
-}
+
 .grecaptcha-badge{
     display:none !important;
 }
-#content p{
-    font-size: 1.0rem;
-    font-family: 'Source Sans Pro',  sans-serif;
-    text-align: justify;
-}
+
 /*===================================================
     Headers
 ======================================================*/
@@ -88,7 +81,7 @@ Custom media queries
     position: relative;
     padding: 0 0 0 20px;
     text-align: justify;
-font-size: 1rem;}
+    font-size: 1rem;}
 .subs-flexible-wrapper li::before {
     content: "";
     position: absolute;
@@ -134,6 +127,15 @@ Common Classes
 
 ======================================================*/
 @media(min-width:992px){
+    body{
+        /* overflow-x:hidden !important; */
+        margin-top: 15px !important;
+    }
+    #content p{
+        font-size: 1.0rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align: justify;
+    }
     .site-content img.centered,
     .site-content img.alignleft,
     .site-content .wp-caption.alignleft {
@@ -217,7 +219,7 @@ Common Classes
         font-weight: 500;
         text-transform:uppercase;
         color: #0082CA;
-    font-size: 2.15rem;}
+        font-size: 2.15rem;}
     .section-identifier.one-title h2:before, .section-identifier.one-title h1:before {
         display: block;
         left: 0;
@@ -234,6 +236,15 @@ Common Classes
     }
 }
 @media(max-width:991px){
+    body{
+        /* overflow-x:hidden !important; */
+        /* margin-top: 15px !important; */
+    }
+    #content p{
+        font-size: .9rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align: justify;
+    }
     .site-content img.centered,
     .site-content .aligncenter {
         display: block;
@@ -409,12 +420,13 @@ Common Classes
 /*===================================================
     Inner Specific
 ======================================================*/
-
-.site-content .contact-bar.bg-fixed {
-    background-attachment: fixed;
+.site-content .contact-bar .contact_bg_bar {
     position: relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-.site-content .contact-bar.bg-fixed::before{
+.site-content .contact-bar .contact_bg_bar::before{
     position: absolute;
     content: '';
     top: 0;
@@ -422,42 +434,56 @@ Common Classes
     right: 0;
     bottom: 0;
     background: #191919;
-    opacity: .37;
+    opacity: .5;
     border-radius: inherit;
 }
 .site-content section.contact-bar  {
     margin: 30px 0px 30px 0px;
     /* padding-top: 7rem; */
-    /* padding-bottom: 7rem; */
+    overflow: hidden;
     display: flex;
-    border-bottom: none;
-    background-position: center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* border-bottom: none; */
+    /* background-position: center center; */
+    /* -webkit-background-size: cover; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
     justify-content: center;
     align-items: center;
     width: 100%;
-}
+    /* border-radius: 4px; */}
+.contact_bg_bar{
+    background-position:center;
+    background-size:cover;
+
+    background-attachment: fixed;
+    /* display: flex; */width: 100%;/* height: 100%; */}
 .site-content .contact-bar .section-header {
     text-align: center;
-    /* max-width: 70%; */
-    margin: 3rem;
+    padding: 3rem;
+    justify-content: center;
     z-index: 99;
     position: relative;
+    /* height: 100%; */align-items: center;/* width: 100%; */}
+.site-content .contact_bg_bar .section-header a.btn:hover{
+    background-color:transparent !important;
 }
 .site-content .contact-bar .section-header h2{
     z-index: 9;
     text-transform: uppercase;
     font-weight: 300;
     font-size: 3.1rem;
-}
+    padding: 1rem;text-shadow: 2px 4px 3px rgba(0,0,0,0.3);}
 .site-content .site-cta-container{
 }
+.flexible-layout .section-header a.btn-outline-light:hover{
+    background-color: transparent;
+}
+
 /*===================================================
     Flexible Content
 ======================================================*/
-.flexible-card{
+.flexible-card div.col{
+    margin:10px 0
 }
 .flexible-card .card-img-top {width: 100%;padding: 2rem;}
 .flexible-card .traditional-card{

@@ -7,7 +7,6 @@
             <div class="modal-header">
                 <a href="<?php echo home_url('/');?>" class="navbar-brand">
                     <img src="<?php bloginfo('template_directory'); ?>/resources/images/logos/SNF-Water-Science-Dark-blue-SVG.svg" alt="SNF Logo" class="img-fluid mx-auto d-block">
-
                 </a>
                 <h5 class="modal-title">Select Location</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -55,7 +54,6 @@
                                             <?php else:?>
 		                                        <?php  $url = get_term_link($child_term->slug, 'country');?>
                                                 <li class="list-group-item">
-
                                                     <a href="<?php echo $url['url'];?>">
                                                        <?php echo $child_term->name;?>
                                                     </a>
@@ -69,8 +67,6 @@
                             </div><!--tab -content -->
                         </div>
                     </div>
-
-
                 </div>
             </div><!--modal-body-->
             <div class="modal-footer">

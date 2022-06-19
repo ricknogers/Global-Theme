@@ -391,7 +391,7 @@ function send_file_to_client( $file ) {
 	}
 
 	if ( is_image( $file ) == false && is_pdf( $mimetype ) == false && is_video( $mimetype ) == false && is_audio( $mimetype ) == false ) {
-		$file_name = basename( $file );
+		$file_name = wp_basename( $file );
 		header( "Content-Disposition: attachment; filename=$file_name" );
 	}
 

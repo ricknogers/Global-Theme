@@ -1,94 +1,119 @@
 /*===================================================
     Contact Us Fixed Bottom Button
 ======================================================*/
-@media(min-width: 768px) {
-    .wp-block-columns{
-        margin:0
+@media(min-width:992px){
+    .bg-footer {
+        background-color: #33383c;
+        padding: 50px 0 30px;
     }
-    .footer-social-row{
-        margin:1.5rem 0;
+    .footer-heading {
+        letter-spacing: 2px;
     }
-    .footer-social-row ul{
-        display:inline-flex;
-        justify-content: space-between;
-        width:100%;
+    .footer_legal_links ul{
+        justify-content:center;
     }
-    .footer-social-row ul li{
-        padding:15px 0;
+    .footer-link a {
+        color: #acacac;
+        line-height: 40px;
+        font-size: 14px;
+        transition: all 0.5s;
     }
-    .footer-social-row ul li a{
-        color:#fff;
-        font-weight:700;
+    .footer-link a:hover {
+        color: #0082CA;
     }
-    #footer h2.widgettitle{
-        text-transform:uppercase;
-        color:#fff;
-        font-family: 'Source Sans Pro',  sans-serif;
-        margin: .5rem 0;
-        font-size: 22px;
+    .contact-info {
+        color: #acacac;
+        font-size: 14px;
     }
-    #footer .bottom-footer-widget .widget_nav_menu ul{
-        padding:0;
-    }
-    #footer .bottom-footer-widget .widget_nav_menu ul li{
-        list-style:none;
-    }
-    #footer .bottom-footer-widget .widget_nav_menu ul li a{
-        color:rgba(255,255,255,.65);
-        font-size:15px;
-    }
-    .sidebar-contact {
-        position: fixed;
-        bottom: 0;
-        left: -400px;
-        max-width: 400px;
-        height: auto;
-        background: #fff;
-        box-shadow: 0 20px 50px rgba(0,  0,  0,  .5);
-        box-sizing: border-box;
-        z-index: 4;
-        transition: 0.5s;
-    }
-    .sidebar-contact.active {
-        left: 0;
-    }
-    .sidebar-contact.active .formTitle {
-        padding: 1% 0;
+    .footer-social-icon {
+        font-size: 15px;
+        height: 34px;
+        width: 34px;
+        line-height: 34px;
+        border-radius: 3px;
         text-align: center;
-        background: #002d73;
+        display: inline-block;
+    }
+    .footer-alt {
+        font-size: 14px;color: #acacac;
+        text-align: center !important;}
+    .footer-heading {
         position: relative;
+        padding-bottom: 12px;
     }
-    .sidebar-contact.active h2 {
-        font-weight: 300;
-        text-transform: uppercase;
-        color: #fff;
-        margin: 0;
-    }
-    .email-fixed-contact .form-toggle {
+    .footer-heading:after {
+        content: '';
+        width: 25px;
+        border-bottom: 1px solid #FFF;
         position: absolute;
-        height: 60px;
-        min-width: 59px;
-        text-align: center;
-        cursor: pointer;
-        background: #002d73;
+        left: 0;
         bottom: 0;
-        right: -59px;
-        line-height: 48px;
+        display: block;
+        border-bottom: 1px solid #0082CA;
     }
-    .email-fixed-contact .form-toggle:before {
-        content: '\f003';
-        font-family: fontAwesome;
-        color: #fff;
-        top: 9px;
-        font-size: 20px;
+    #footer  {
         position: relative;
-        right: 4px;
+        background-color: #002d73;
     }
-    .email-fixed-contact .form-toggle.active:before {
-        content: '\f00d';
+    .footerStopScroll  {
+        width:  100%;
     }
-    .popout-form-container {
-        padding: 0 20px;
+    .footerStopScroll #footer-menu ul  {
+        display:  inline-block;
+        text-align:  center;
+        width:  100%;
+    }
+    .footerStopScroll #footer-menu ul li  {
+        display:  inline-block;
+        width:  auto;
+        margin:  12px 15px;
+    }
+    .footerStopScroll #footer-menu ul li a  {
+        color:  #fff;
+        display:  inline-block;
+        text-decoration:  none;
+        text-transform:  uppercase;
+    }
+    .footerStopScroll .copyRights ul li  {
+        list-style:  none;
+    }
+    .footerStopScroll .copyRights ul li p  {
+        text-align:  center;
+        color:  #fff;
+        margin-top:  5px;
+        margin-bottom:  5px;
+        opacity:  .85;
+        font-size:  14px;
+        letter-spacing:  0.5px;
+        text-transform:  uppercase;
+        font-weight:  300;
+    }
+    .blended-logo{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 5%;
+        right: 5%;
+        opacity: .5;
+    }
+    .blended-logo img{
+        height: 50px;
+        /* opacity: .3; */
+    }
+    .fixed_button{
+        position:absolute !important;
+        margin-top:1900px;
+        bottom: auto !important;
+    }
+    .scroll-to-top > div{
+        display:flex;
+        justify-content:space-between;
+    }
+    .footerStopScroll .email-fixed-contact.top-button-visible a {
+        display: inline;
+        bottom: 0;
+        opacity: 1;
     }
     .footerStopScroll .email-fixed-contact.top-button-visible a {
         display: inline;
@@ -172,60 +197,224 @@
         content: "";
         display: block;
         position: absolute;
+        background-color: #0082CA;
+        top: 0;
+        left: -5px;
+        height: 100%;
+        width: 15px;
+    }
+    .footerStopScroll .email-fixed-contact a, .footerStopScroll .email-fixed-contact a:hover, .footerStopScroll .email-fixed-contact a:link {
+        font-size: 12px;
+        position: fixed;
+        left: 0;
+        z-index: 99;
+        cursor: pointer;
+        color: #fff;
+        min-width: 59px;
+        height: 60px;
+        background-position: 17px 17px;
+        padding-top: 20px;
+        text-align: center;
+        background-color: #002d73;
+        animation: moveup .5s;
+    }
+    .footerStopScroll .email-fixed-contact a:before, .footerStopScroll .email-fixed-contact a:hover:before, .footerStopScroll .email-fixed-contact a:link:before {
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: 100;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f003";
+        font-size: 15px;
+        display: block;
+        position: static;
+        top: 11px;
+        color: #fff;
+    }
+    .footerStopScroll .email-fixed-contact a:after, .footerStopScroll .email-fixed-contact a:hover:after, .footerStopScroll .email-fixed-contact a:link:after {
+        content: "";
+        display: block;
+        position: absolute;
         background-color: #002d73;
         top: 0;
         left: -5px;
         height: 100%;
         width: 15px;
     }
-    .sidebar-contact .capthca-popout .ginput_recaptcha {
+    .footerScroll .scroll-to-top.top-button-visible a {
+        display: inline;
+        bottom: 1rem;
     }
-    #footer ul#menu-footer-social{
-        display:inline-flex;
+    .footerScroll .scroll-to-top a, .footerScroll .scroll-to-top a:hover, .footerScroll .scroll-to-top a:link {
+        font-size: 12px;
+        position: fixed;
+        right: 0;
+        z-index: 99;
+        cursor: pointer;
+        left: unset;color: #fff;
+        min-width: 59px;
+        height: 60px;
+        background-position: 17px 17px;
+        padding-top: 15px;
+        text-align: center;
+        letter-spacing: 1px;
+        background-color: #0082CA;
+        animation: moveup .5s;
+    }
+    .footerScroll .scroll-to-top a:before, .footerScroll .scroll-to-top a:hover:before, .footerScroll .scroll-to-top a:link:before {
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: 100;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f106";
+        font-size: 20px;
+        display: block;
+        position: static;
+        top: 11px;
+        color: #fff;
+    }
+    .footerScroll .scroll-to-top a:after, .footerScroll .scroll-to-top a:hover:after, .footerScroll .scroll-to-top a:link:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #0082CA;
+        top: 0;
+        left: -5px;
+        height: 100%;
+        width: 15px;
+    }
+    footer ul.list-group-horizontal {
         justify-content:center;
-        align-items:center;
-        color:#fff;
-        width:100%;
-        margin: 0;
     }
-    .footer-social-widget .widget_nav_menu{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        margin: 5% 0;
+    .copyright{
+        height: 5rem;
         position: relative;
-        width: 100%;
     }
-    #footer ul#menu-footer-social li{
-        font-size: 25px;
-        padding: 0 25px;
-    }
-    #footer ul#menu-footer-social li a{
-        color:#fff;
-    }
-    #footer ul#menu-footer-column-four{
-        display:inline-flex;
-        justify-content:center;
-        align-items:center;
-        text-align:center;
-        width:100%;
-        margin: 0 !important;
-    }
-    #footer ul#menu-footer-column-four li{
-        list-style:none;
-        padding:0 15px;
-    }
-    #footer ul#menu-footer-column-four li a{
-        color:#fff;
-        opacity:.75;
+    .scroll-to-top{
+        position:relative;
     }
 }
-@media(max-width:767px) {
-    .email-fixed-contact .sidebar-contact {
-        display: none;
+
+@media(max-width:991px){
+    .footer_legal_links ul{
+        padding:0 !important;
+        /* display: flex; */}
+    .footer_legal_links ul li{
+        padding: 0 !important;
     }
-    #back-to-top {
+    .bg-footer {
+        background-color: #33383c;
+        padding: 50px 0 30px;
+    }
+    .footer-heading {
+        letter-spacing: 2px;
+    }
+    .footer-link a {
+        color: #acacac;
+        line-height: 30px;
+        font-size: 14px;
+        transition: all 0.5s;
+    }
+    .footer-link a:hover {
+        color: #0082CA;
+    }
+    .contact-info {
+        color: #acacac;
+        font-size: 14px;
+        margin-bottom: 0;}
+    .footer-social-icon {
+        font-size: 15px;
+        height: 34px;
+        width: 34px;
+        line-height: 34px;
+        border-radius: 3px;
+        text-align: center;
+        display: inline-block;
+    }
+    .footer-alt {
+        font-size: 14px;color: #acacac;
+        text-align: center !important;
+    }
+    .footer-heading {
+        position: relative;
+        padding-bottom: 12px;
+    }
+    .footer-heading:after {
+        content: '';
+        width: 25px;
+        border-bottom: 1px solid #FFF;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        border-bottom: 1px solid #0082CA;
+    }
+    #footer{
+        position: relative;
+        background-color: #002d73;
+    }
+    .footerStopScroll  {
+        width:  100%;
+    }
+    .footerStopScroll #footer-menu ul  {
+        display:  inline-block;
+        text-align:  center;
+        width:  100%;
+    }
+    .footerStopScroll #footer-menu ul li  {
+        display:  inline-block;
+        width:  auto;
+        margin:  12px 15px;
+    }
+    .footerStopScroll #footer-menu ul li a  {
+        color:  #fff;
+        display:  inline-block;
+        text-decoration:  none;
+        text-transform:  uppercase;
+    }
+    .footerStopScroll .copyRights ul li  {
+        list-style:  none;
+    }
+    .footerStopScroll .copyRights ul li p  {
+        text-align:  center;
+        color:  #fff;
+        margin-top:  5px;
+        margin-bottom:  5px;
+        opacity:  .85;
+        font-size:  14px;
+        letter-spacing:  0.5px;
+        text-transform:  uppercase;
+        font-weight:  300;
+    }
+    .blended-logo{
+        /* position: absolute; */
         display: none;
+        justify-content: center;
+        align-items: center;
+        bottom: 5%;
+        right: 5%;
+        opacity: .5;
+    }
+    .blended-logo img{
+        height: 50px;
+        /* opacity: .3; */
+    }
+    .fixed_button{
+        position:absolute !important;
+        margin-top:1900px;
+        bottom: auto !important;
+    }
+    .scroll-to-top > div{
+        display:flex;
+        justify-content:space-between;
+    }
+    .footerStopScroll .email-fixed-contact.top-button-visible a {
+        display: inline;
+        bottom: 0;
+        opacity: 1;
     }
     .footerStopScroll .email-fixed-contact.top-button-visible a {
         display: inline;
@@ -278,12 +467,12 @@
     .footerScroll .scroll-to-top a, .footerScroll .scroll-to-top a:hover, .footerScroll .scroll-to-top a:link {
         font-size: 12px;
         position: fixed;
-        left: 0;
+        right: 0;
         z-index: 99;
         cursor: pointer;
         color: #fff;
         min-width: 59px;
-        height: 60px;
+        height: auto;
         background-position: 17px 17px;
         padding-top: 15px;
         text-align: center;
@@ -309,71 +498,103 @@
         content: "";
         display: block;
         position: absolute;
+        background-color: #0082CA;
+        top: 0;
+        left: -5px;
+        height: 100%;
+        width: 15px;
+    }
+    .footerStopScroll .email-fixed-contact a, .footerStopScroll .email-fixed-contact a:hover, .footerStopScroll .email-fixed-contact a:link {
+        font-size: 12px;
+        position: fixed;
+        left: 0;
+        z-index: 99;
+        cursor: pointer;
+        color: #fff;
+        min-width: 59px;
+        height: 60px;
+        background-position: 17px 17px;
+        padding-top: 20px;
+        text-align: center;
+        background-color: #002d73;
+        animation: moveup .5s;
+    }
+    .footerStopScroll .email-fixed-contact a:before, .footerStopScroll .email-fixed-contact a:hover:before, .footerStopScroll .email-fixed-contact a:link:before {
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: 100;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f003";
+        font-size: 15px;
+        display: block;
+        position: static;
+        top: 11px;
+        color: #fff;
+    }
+    .footerStopScroll .email-fixed-contact a:after, .footerStopScroll .email-fixed-contact a:hover:after, .footerStopScroll .email-fixed-contact a:link:after {
+        content: "";
+        display: block;
+        position: absolute;
         background-color: #002d73;
         top: 0;
         left: -5px;
         height: 100%;
         width: 15px;
     }
-    .sidebar-contact .capthca-popout .ginput_recaptcha {
+    .footerScroll .scroll-to-top.top-button-visible a {
+        display: inline;
+        bottom: 1rem;
     }
-}
-#footer  {
-    position: relative;
-    background-color: #002d73;
-}
-.footerStopScroll  {
-    width:  100%;
-}
-.footerStopScroll #footer-menu ul  {
-    display:  inline-block;
-    text-align:  center;
-    width:  100%;
-}
-.footerStopScroll #footer-menu ul li  {
-    display:  inline-block;
-    width:  auto;
-    margin:  12px 15px;
-}
-.footerStopScroll #footer-menu ul li a  {
-    color:  #fff;
-    display:  inline-block;
-    text-decoration:  none;
-    text-transform:  uppercase;
-}
-.footerStopScroll .copyRights ul li  {
-    list-style:  none;
-}
-.footerStopScroll .copyRights ul li p  {
-    text-align:  center;
-    color:  #fff;
-    margin-top:  5px;
-    margin-bottom:  5px;
-    opacity:  .85;
-    font-size:  14px;
-    letter-spacing:  0.5px;
-    text-transform:  uppercase;
-    font-weight:  300;
-}
-.blended-logo{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 5%;
-    right: 5%;
-    opacity: .5;
-}
-.blended-logo img{
-    height: 50px;
-    /* opacity: .3; */
-}
-.fixed_button{
-    position:absolute !important;
-    margin-top:1900px;
-    bottom: auto !important;
-}
-.scroll-to-top > div{
-    display:flex;
-    justify-content:space-between;
+    .footerScroll .scroll-to-top a, .footerScroll .scroll-to-top a:hover, .footerScroll .scroll-to-top a:link {
+        font-size: 12px;
+        position: fixed;
+        right: unset;
+        z-index: 99;
+        cursor: pointer;
+        left: 0;color: #fff;
+        min-width: 59px;
+        height: 60px;
+        background-position: 17px 17px;
+        padding-top: 15px;
+        text-align: center;
+        letter-spacing: 1px;
+        background-color: #0082CA;
+        animation: moveup .5s;
+    }
+    .footerScroll .scroll-to-top a:before, .footerScroll .scroll-to-top a:hover:before, .footerScroll .scroll-to-top a:link:before {
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: 100;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f106";
+        font-size: 20px;
+        display: block;
+        position: static;
+        top: 11px;
+        color: #fff;
+    }
+    .footerScroll .scroll-to-top a:after, .footerScroll .scroll-to-top a:hover:after, .footerScroll .scroll-to-top a:link:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #0082CA;
+        top: 0;
+        left: -5px;
+        height: 100%;
+        width: 15px;
+    }
+    footer ul.list-group-horizontal {
+        /* justify-content: flex-start; */
+    }
+    .copyright{
+        height: 5rem;
+        position: relative;
+    }
+    .scroll-to-top{
+        position:relative;
+    }
 }

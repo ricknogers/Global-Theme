@@ -68,7 +68,7 @@ function snf_group_add_styles()
     wp_enqueue_style( 'snf-group-style', get_stylesheet_uri() );
 //    wp_enqueue_style( 'snf-global-general-style',  get_template_directory_uri() . '/styles/css/global.scss');
     wp_enqueue_style('boot-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css');
-    wp_enqueue_style('Flag Icons', 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css');
+    wp_enqueue_style('flag-icon-css', 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css');
     wp_enqueue_style('font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 'screen');
     wp_enqueue_style('snf-adobe-garamond-pro', 'https://use.typekit.net/fws0qwx.css');
     wp_enqueue_style('snf-source-sans-pro', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
@@ -127,9 +127,9 @@ if(!function_exists('archives_page_styles')) :
     }
 endif;
 add_action('wp_enqueue_scripts', 'archives_page_styles');
-
-
-
+/**
+ *  Trying to Preload Font Family from CDN
+ */
 add_filter('style_loader_tag', 'my_style_loader_tag_filter', 10, 2);
 function my_style_loader_tag_filter($html, $handle) {
     if ($handle === array('snf-source-sans-pro','font-awesome')) {
@@ -150,16 +150,10 @@ function snf_group_add_scripts() {
     wp_enqueue_script('snf-contact-form-slide-out-js', get_template_directory_uri() . '/scripts/js/contact-form-slide-out.js', array('jquery'), 'custom', true);
     wp_enqueue_script( 'snf-app-js-defer', get_template_directory_uri() . '/scripts/js/app.js', array('jquery'), 'custom', true );
     wp_enqueue_script('snf-front-page-js',get_template_directory_uri() . '/scripts/js/front-page.js', array('jquery'), 'custom', true);
-
     wp_enqueue_script('snf-flexible-scripts-js',get_template_directory_uri() . '/scripts/js/flexible.js', array(), false, true );
-
-
-
     if(is_post_type_archive('timeline')){
         wp_enqueue_style('timeline-page-style', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'); // standard way of adding style sheets in WP.
-
     }
-
     // Bootstrap JS CDN
     wp_enqueue_script( 'slim-jquery','https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', true);
     wp_enqueue_script( 'boot-pooper-js','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', true);
@@ -261,7 +255,7 @@ require_once('site-functions/misc/strip-break-tag-from-wysiwyg.php');
 /**
  *  RankMath Breadcrumbs Hook
  */
-require_once('site-functions/breadcrumbs/breadcrumbs-function.php');
+//require_once('site-functions/breadcrumbs/breadcrumbs-function.php');
 
 /**
  *  Dynamic Menu : Nav-Walker
@@ -520,6 +514,18 @@ function myplugin_settings() {
 
 add_action( 'init', 'myplugin_settings' );
 
+
+/**
+ * Fantastic social media share buttons by www.jonakyblog.com
+ */
+function my_share_buttons() {
+    $url   = urlencode( get_the_permalink() ); /* Getting the current post link */
+    $title = urlencode( html_entity_decode( get_the_title(), ENT_COMPAT, 'UTF-8' ) ); /* Get the post title */
+    $media = urlencode( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); /* Get the current post image thumbnail */
+
+    include( locate_template( 'site-functions/post-types/news/share-buttons-template.php', false, false ) );
+
+}
 
 
 

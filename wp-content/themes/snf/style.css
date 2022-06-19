@@ -27,7 +27,9 @@ IX.) News
 /*===================================================
     Bootstrap Import Sass
 ======================================================*/
+
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
 /*===================================================
     Branding
 ======================================================*/
@@ -48,6 +50,7 @@ IX.) News
 @import "styles/css/gravity-overwrite.css";
 @import "styles/css/filter-sidebar.css";
 @import "styles/css/logo-scroll.css";
+@import "styles/css/alert.css";
 
 
 /*===================================================
@@ -58,7 +61,6 @@ IX.) News
 @import "styles/css/cpt/products.css";
 @import "styles/css/cpt/marketing-material.css";
 @import "styles/css/cpt/investors.css";
-@import "styles/css/cpt/timeline.css";
 
 /*===================================================
     Markets
@@ -76,7 +78,6 @@ IX.) News
 @import "styles/css/markets/construction.css";
 @import "styles/css/markets/equipment.css";
 @import "styles/css/markets/mining.css";
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
 /*===================================================
     TEMPLATES

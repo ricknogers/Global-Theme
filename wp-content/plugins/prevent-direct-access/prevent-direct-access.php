@@ -3,7 +3,7 @@
 Plugin Name: Prevent Direct Access
 Plugin URI: https://preventdirectaccess.com
 Description: Prevent Direct Access provides a simple solution to prevent Google indexing as well as the public from accessing your files without permission. This plugin is required for our Gold version to work properly.
-Version: 2.7.10
+Version: 2.8.1
 Author: BWPS
 Author URI: https://preventdirectaccess.com
 Tags: files, management
@@ -31,7 +31,7 @@ define( 'PDA', __FILE__ );
 define( 'PDA_HOME_PAGE', 'https://preventdirectaccess.com/?utm_source=user-website&utm_medium=%s&utm_campaign=%s' );
 define( 'PDA_DOWNLOAD_PAGE', 'https://preventdirectaccess.com/pricing/?utm_source=user-website&amp;utm_medium=settings&amp;utm_campaign=sidebar-cta' );
 define( 'PDA_TEXTDOMAIN', 'prevent-direct-access' );
-define( 'PDAF_VERSION', '2.7.10' );
+define( 'PDAF_VERSION', '2.8.1' );
 define( 'PDA_LITE_BASE_URL', plugin_dir_url( __FILE__ ) );
 define( 'PDA_LITE_BASE_DIR', plugin_dir_path( __FILE__ ) );
 
@@ -52,7 +52,7 @@ class Pda_Admin {
 		if ( ! get_option( 'pda_is_licensed' ) && is_multisite() ) {
 			add_action( 'admin_notices', array( $this, 'multisite_admin_notices' ) );
 			add_action( 'network_admin_notices', array( $this, 'multisite_admin_notices' ) );
-			return;
+			// return;
 		}
 
 		$this->pda_function = new Pda_Function();
@@ -68,7 +68,7 @@ class Pda_Admin {
 
 		add_filter( 'mod_rewrite_rules', array( $this, 'htaccess_contents' ) );
 		// TODO: Hide protected file later.
-//		add_filter('pre_get_posts', array($this, 'hide_posts_media_by_other'));
+		add_filter('pre_get_posts', array($this, 'hide_posts_media_by_other'));
 
 		$this->identifyFeatures();
 		add_action( 'admin_enqueue_scripts', array( $Pda_JS_Loader, 'admin_load_js' ) );
@@ -108,18 +108,11 @@ class Pda_Admin {
 	public function hide_posts_media_by_other($query) {
 		global $pagenow;
 		$pda_option = get_option( 'FREE_PDA_SETTINGS' );
-
 		if ( is_array( $pda_option ) && array_key_exists( 'hide_protected_files_in_media', $pda_option ) && $pda_option['hide_protected_files_in_media'] === "on" ) {
-
-			if( 'upload.php' != $pagenow || (isset($_REQUEST['action']) && $_REQUEST['action'] != 'query-attachments')){
-				return $query;
-			}
-
 			if( !Pda_Helper::is_admin_user_role() ) {
 				global $user_ID;
 				$query->set('author', $user_ID );
 			}
-
 		}
 		return $query;
 	}
@@ -506,6 +499,11 @@ class Pda_Admin {
 				$file_result      = $repository->get_advance_file_by_post_id( $file_info['post_id'] );
 				$file_result->url = site_url() . '/private/' . $file_result->url;
 			}
+			if (is_multisite()) {
+				$file_result = array(
+					'error' => __( "This file is not protect with multisite.", 'prevent-direct-access' ),
+				);
+			}
 		}
 
 		return $file_result;
@@ -772,7 +770,11 @@ class Pda_Admin {
 	public function multisite_admin_notices() {
 		global $pagenow;
 
-		if ( $pagenow !== 'plugins.php' && $pagenow !== 'upload.php' ) {
+		if (
+			$pagenow !== 'plugins.php'
+			&& $pagenow !== 'upload.php'
+			&& (!isset($_GET['page'])
+			|| $_GET['page'] !== 'wp_pda_options' )) {
 			return;
 		}
 
@@ -780,7 +782,7 @@ class Pda_Admin {
 
 		/* translators: %1$s The guide link */
 		$message = sprintf(
-				__( ': Our Free version only supports WordPress single site. Please <a target="_blank" rel="noopener" href="%s">upgrade to Gold version</a> and enter your license key for our file protection to work properly.', 'password-protect-page' ),
+				__( ': Our PDA Lite only supports WordPress single site. Please <a target="_blank" rel="noopener" href="%s">upgrade to Gold version</a> for our file protection to work properly.', 'password-protect-page' ),
 				sprintf( constant( 'PDA_HOME_PAGE' ), 'notification', 'notification-link'
 				)
 		);
@@ -797,11 +799,80 @@ class Pda_Admin {
 	 * Prevent right-click
 	 */
 	function prevent_right_click() {
-		$pda_option = get_option( 'FREE_PDA_SETTINGS' );
-		if ( is_array( $pda_option ) && array_key_exists( 'disable_right_click', $pda_option ) && $pda_option['disable_right_click'] === "on" ) { ?>
+		$pda_option       = get_option( 'FREE_PDA_SETTINGS' );
+		if ( is_array( $pda_option ) && array_key_exists( 'disable_right_click', $pda_option ) && $pda_option['disable_right_click'] === "on" ) {
+			$noscript_message            = apply_filters( 'pda_noscript_message', 'Please enable JavaScript in your browser to view the content' );
+			$disable_right_click_message = apply_filters( 'pda_disable_right_click_message', 'Right-click is disabled' );
+			$show_alert                  = apply_filters( 'pda_show_alert_on_right_clicks', false );
+
+			?>
+			<noscript>
+				<div style="position: fixed; top: 0px; left: 0px; z-index: 30000000;
+                height: 100%; width: 100%; background-color: #FFFFFF">
+					<p style="margin-left: 10px"><?php esc_html_e( $noscript_message, 'prevent-direct-access' ); ?></p>
+				</div>
+			</noscript>
 			<script>
-			  document.addEventListener('contextmenu', event => event.preventDefault());
+			  const show_alert = "<?php echo $show_alert; ?>";
+
+			  document.addEventListener('contextmenu', event => {
+				if (show_alert) {
+					alert('<?php esc_attr_e( $disable_right_click_message, 'prevent-direct-access' ); ?>');
+				}
+				event.preventDefault()
+			  });
+			  document.onkeydown = function (e) {
+				// disable F12 key
+				if(e.keyCode == 123) {
+				  return false;
+				}
+				var ctrlOrMeta = e.ctrlKey || e.metaKey;
+
+				// disable I key
+				if(ctrlOrMeta && e.shiftKey && e.keyCode == 73){
+				  return false;
+				}
+
+				// disable J key
+				if(ctrlOrMeta && e.shiftKey && e.keyCode == 74) {
+				  return false;
+				}
+
+				// disable P key
+				if(ctrlOrMeta && e.keyCode == 80) {
+				  return false;
+				}
+
+				// disable S key
+				if(ctrlOrMeta && e.keyCode == 83) {
+				  return false;
+				}
+
+				// disable U key
+				if(ctrlOrMeta && e.keyCode == 85) {
+				  return false;
+				}
+			  }
 			</script>
+			<style>
+				/* Disable select text */
+                * {
+                    -webkit-touch-callout: none; /* Safari */
+                    -webkit-user-select: none; /* Chrome */
+                    -moz-user-select: none; /* Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                    user-select: none;
+                }
+
+				/* Disable drag image */
+                img {
+                    -webkit-user-drag: none;
+                    -khtml-user-drag: none;
+                    -moz-user-drag: none;
+                    -o-user-drag: none;
+                    user-drag: none;
+                }
+			</style>
 			<?php
 		}
 	}

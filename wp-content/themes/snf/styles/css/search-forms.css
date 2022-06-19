@@ -11,55 +11,210 @@ VI.) Forms
 VII.) Terms and Usage
 IX.) News
 ======================================================*/
-.subsidiaryTopBar .desktopTopBar .itemsRight ul li {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+@media(min-width:992px){
+    .openBtn i {
+        color: #fff !important;
+    }
+    .openBtn:hover {
+        background: transparent;
+    }
+    .overlay {
+        height: 100%;
+        width: 100%;
+        display: none;
+        position: fixed;
+        z-index: 44;
+        top: -10px;
+        right: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0,  0.6);
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        cursor: pointer;
+        color: white;
+    }
+    .overlay .closebtn:hover {
+        color: #ccc;
+    }
+    .overlay input[type=text] {
+        padding: 15px;
+        font-size: 17px;
+        border: none;
+        float: left;
+        width: 80%;
+        background: white;
+    }
+    .overlay button i {
+        color: #fff;
+    }
+    .overlay button:hover {}
+    .SearchHero p {
+        font-size: 13px;
+    }
+    .subsidiaryTopBar .desktopTopBar .itemsRight ul li {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .overlay {
+        height: 100%;
+        width: 100%;
+        display: none;
+        position: fixed;
+        z-index: 44;
+        top: -10px;
+        right: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.6);
+    }
+    .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        cursor: pointer;
+        color: white;
+    }
+    .overlay-content {
+        position: relative;
+        top: 46%;
+        width: 80%;
+        text-align: center;
+        margin-top: 30px;
+        margin: auto;
+    }
+    .overlay input[type=text] {
+        padding: 15px;
+        font-size: 17px;
+        border: none;
+        float: left;
+        width: 80%;
+        background: white;
+    }
+    .overlay button {
+        float: left;
+        width: 20%;
+        padding: 15px;
+        background: #002d73;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+    .overlay button i {
+        color: #fff;
+    }
 }
-.overlay {
-    height: 100%;
-    width: 100%;
-    display: none;
-    position: fixed;
-    z-index: 44;
-    top: -10px;
-    right: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.6);
-}
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    cursor: pointer;
-    color: white;
-}
-.overlay-content {
-    position: relative;
-    top: 46%;
-    width: 80%;
-    text-align: center;
-    margin-top: 30px;
-    margin: auto;
-}
-.overlay input[type=text] {
-    padding: 15px;
-    font-size: 17px;
-    border: none;
-    float: left;
-    width: 80%;
-    background: white;
-}
-.overlay button {
-    float: left;
-    width: 20%;
-    padding: 15px;
-    background: #002d73;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-}
-.overlay button i {
-    color: #fff;
+@media(max-width:991px){
+    #FullScreenOverlay{
+        display:none;
+    }
+    .subsidiaryTopBar .desktopTopBar .itemsRight ul li {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .shrink .searchbardiv{
+        top: 12%;
+        /* position: relative; */width: 100%;height: 100%;/* height: 100%; *//* padding: 0; */}
+    .searchbardiv{
+        display: block;
+        position: fixed;
+        background: #0082CA;
+        top: 12%;
+        right: 0px;
+        z-index: 1001;
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        margin: 0px;
+    }
+    .fixed-top .searchbardiv{
+        display: block;
+        position: fixed;
+        background: #0082CA;
+        top: 7%;
+        right: 0px;
+        z-index: 1001;
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        margin: 0px;
+    }
+    .buttonsearchmobile{
+        /* position: fixed; */
+        top :18px;
+        /* float: right; */
+        right: 0px;
+        /* margin-right: 10px; */
+        background-color: transparent;
+        border: 0px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .buttonsearchmobile:hover{
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border: 0px;
+    }
+    .buttonsearchmobile:focus{
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border: 0px;
+    }
+    #mobilesearch{
+        display: none;
+    }
+    .glyphicon.glyphicon-search {
+        font-size: 18px;
+    }
+    #searchbox {
+        box-shadow: none;
+        padding: 3px 8px;
+    }
+    #searchbox:hover {
+        box-shadow: none;
+    }
+    .form-control:focus {
+        border-color: #ccc;
+    }
+    .navbar-toggle {
+        margin-right: 35px;
+        border: none;
+        background: transparent !important;
+    }
+    .navbar-toggle:hover {
+        background: transparent !important;
+    }
+    .navbar-toggle .icon-bar {
+        width: 22px;
+        transition: all 0.2s;
+    }
+    .navbar-toggle .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+    .navbar-toggle .middle-bar {
+        opacity: 0;
+    }
+    .navbar-toggle .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+    .navbar-toggle.collapsed .top-bar {
+        transform: rotate(0);
+    }
+    .navbar-toggle.collapsed .middle-bar {
+        opacity: 1;
+    }
+    .navbar-toggle.collapsed .bottom-bar {
+        transform: rotate(0);
+    }
 }

@@ -97,17 +97,19 @@ class TRP_IN_SP_Slug_Manager {
         $new_query_vars = $this->change_slug_var_in_request( $query->query_vars );
 
         //url_to_post_id on the posts page slug ( Settings > Reading ) does not work correctly (instead of not returning the id it returns the last page that was created) so we have to force a different query, fake an archive query
-        if( isset( $new_query_vars['pagename'] ) ) {
-            $page_for_posts = get_option('page_for_posts');
-            if( !empty( $page_for_posts ) ) {
-                $reqpage = get_page_by_path($new_query_vars['pagename']);
+        if( apply_filters( 'trp_remove_url_post_id_on_the_post_page_slug', true ) ) {
+            if ( isset( $new_query_vars['pagename'] ) ) {
+                $page_for_posts = get_option( 'page_for_posts' );
+                if ( !empty( $page_for_posts ) ) {
+                    $reqpage = get_page_by_path( $new_query_vars['pagename'] );
 
-                if (!empty($reqpage)) {
-                    $reqpage = $reqpage->ID;
+                    if ( !empty( $reqpage ) ) {
+                        $reqpage = $reqpage->ID;
 
-                    if ($page_for_posts == $reqpage) {
-                        $new_query_vars['post_type'] = 'post';
-                        unset($new_query_vars['pagename']);
+                        if ( $page_for_posts == $reqpage ) {
+                            $new_query_vars['post_type'] = 'post';
+                            unset( $new_query_vars['pagename'] );
+                        }
                     }
                 }
             }
@@ -972,7 +974,7 @@ class TRP_IN_SP_Slug_Manager {
             $termlink = $this->replace_last_occurrence_of_term_slug_in_link( $termlink, $term, $TRP_LANGUAGE );
 
             //handle hierarchical terms
-            if(isset($term->term_id)) {
+            if ( isset( $term->term_id ) ) {
                 $parents_ids = get_ancestors( $term->term_id, $taxonomy, 'taxonomy' );
                 if ( !empty( $parents_ids ) ) {
                     foreach ( $parents_ids as $parent_id ) {
@@ -1020,72 +1022,87 @@ class TRP_IN_SP_Slug_Manager {
      * @param $query_vars
      * @return mixed
      */
-    public function change_term_slug_var_in_request( $query_vars ){
+	public function change_term_slug_var_in_request( $query_vars ){
 
-        global $TRP_LANGUAGE, $wp_current_filter;
-        if ( $query_vars == null ){
-            return $query_vars;
-        }
+		global $TRP_LANGUAGE, $wp_current_filter;
+		if ( $query_vars == null ){
+			return $query_vars;
+		}
 
-        if( !empty($TRP_LANGUAGE) ) {
+		if( !empty($TRP_LANGUAGE) ) {
 
-            if( did_action('wp_loaded') ) {//only use the global after init, when probably all taxonomies were registered. we had a case in Bridge theme where this function ran before init and the global was set with just a part of the taxonomies
-                global $trp_all_taxonomies;
-                if (!isset($trp_all_taxonomies))
-                    $trp_all_taxonomies = get_taxonomies();
-            }
-            else
-                $trp_all_taxonomies = get_taxonomies();
+			if( did_action('wp_loaded') ) {//only use the global after init, when probably all taxonomies were registered. we had a case in Bridge theme where this function ran before init and the global was set with just a part of the taxonomies
+				global $trp_all_taxonomies;
+				if (!isset($trp_all_taxonomies))
+					$trp_all_taxonomies = get_taxonomies();
+			}
+			else
+				$trp_all_taxonomies = get_taxonomies();
 
-            // a request to display a term page seems to only have one query_var or 2 if they are paged
-            if( ( in_array( 'request', $wp_current_filter ) && ( count( $query_vars ) === 1 || count( $query_vars ) === 2 ) ) || in_array( 'pre_get_posts', $wp_current_filter ) ){
-                foreach( $query_vars as $taxonomy => $terms ){
+			// a request to display a term page seems to only have one query_var or 2 if they are paged
+			// there are two formats that come in $wp_query
+			if( ( in_array( 'request', $wp_current_filter ) && ( count( $query_vars ) === 1 || count( $query_vars ) === 2 ) ) || in_array( 'pre_get_posts', $wp_current_filter ) ){
 
-                    //normalize built in category and tag taxonomies which have special query vars
-                    $actual_taxonomy = $this->trp_normalize_taxonomy_names( $taxonomy );
+				if (isset($query_vars['taxonomy']) && $query_vars['term']){
+					$format = 'individual-tax-and-term';
+					$taxonomy = $query_vars['taxonomy'];
+					$terms = $query_vars['term'];
+				} elseif (count( $query_vars ) === 1){
+					$format = 'combined-tax-and-term';
+					$keys = array_keys($query_vars);
+					$taxonomy = $keys[0];
+					$terms = $query_vars[$taxonomy];
+				}
 
-                    //check if it is actually a taxonomy we have
-                    if( in_array( $actual_taxonomy, $trp_all_taxonomies ) && is_string($terms) && !empty($terms) ){
-                        $terms = explode( '/', $terms); //we could have this situation $query_vars['category_name'] = 'caty/caty-copil/caty-caty-copil'; hierarchic in category
-                        $translated_slugs = array();
-                        foreach( $terms as $translated_term_slug ){
+				//normalize built in category and tag taxonomies which have special query vars
+				$actual_taxonomy = $this->trp_normalize_taxonomy_names( $taxonomy );
 
-                            //in some cases the slug is encoded in some decoded...we need all to be decoded if it has special characters in it
-                            $translated_term_slug = urlencode( urldecode( $translated_term_slug ) );
+				//check if it is actually a taxonomy we have
+				if( in_array( $actual_taxonomy, $trp_all_taxonomies ) && is_string($terms) && !empty($terms) ){
+					$terms = explode( '/', $terms); //we could have this situation $query_vars['category_name'] = 'caty/caty-copil/caty-caty-copil'; hierarchic in category
+					$translated_slugs = array();
+					foreach( $terms as $translated_term_slug ){
 
-                            if( $this->settings["default-language"] != $TRP_LANGUAGE ) {
-                                //find the original slug from the translated slug for a term in a taxonomy
-                                $original_slug = $this->get_original_term_slug($translated_term_slug, $actual_taxonomy, $TRP_LANGUAGE);
+						//in some cases the slug is encoded in some decoded...we need all to be decoded if it has special characters in it
+						$translated_term_slug = urlencode( urldecode( $translated_term_slug ) );
 
-                            }
-                            else{
-                                $original_slug = $translated_term_slug;
-                            }
+						if( $this->settings["default-language"] != $TRP_LANGUAGE ) {
+							//find the original slug from the translated slug for a term in a taxonomy
+							$original_slug = $this->get_original_term_slug($translated_term_slug, $actual_taxonomy, $TRP_LANGUAGE);
 
-                            $translated_slugs[] = $original_slug;
+						}
+						else{
+							$original_slug = $translated_term_slug;
+						}
 
-                            /* set here some globals that we can use inside get_url_for_language() function so we can have proper language switcher links */
-                            /* it's ok that it is overwritten because we only need the last one in the hierarchy */
-                            if( in_array( 'request', $wp_current_filter ) || in_array( 'wpseo_sitemap_url', $wp_current_filter ) || in_array( 'rank_math/sitemap/url', $wp_current_filter ) || in_array( 'seopress_sitemaps_url', $wp_current_filter ) ) {//this is how we identify later that we are on a term page
-                                global  $trp_current_url_term_slug, $trp_current_url_taxonomy;
-                                $trp_current_url_term_slug = $original_slug;
-                                $trp_current_url_taxonomy = $actual_taxonomy;
-                            }
+						$translated_slugs[] = $original_slug;
 
-                        }
+						/* set here some globals that we can use inside get_url_for_language() function so we can have proper language switcher links */
+						/* it's ok that it is overwritten because we only need the last one in the hierarchy */
+						if( in_array( 'request', $wp_current_filter ) || in_array( 'wpseo_sitemap_url', $wp_current_filter ) || in_array( 'rank_math/sitemap/url', $wp_current_filter ) || in_array( 'seopress_sitemaps_url', $wp_current_filter ) ) {//this is how we identify later that we are on a term page
+							global  $trp_current_url_term_slug, $trp_current_url_taxonomy;
+							$trp_current_url_term_slug = $original_slug;
+							$trp_current_url_taxonomy = $actual_taxonomy;
+						}
 
-                        $translated_slugs = implode('/', $translated_slugs);
+					}
 
+					$translated_slugs = implode('/', $translated_slugs);
 
-                        $query_vars[$taxonomy] = $translated_slugs;
-                    }
-                }
-            }
+					if ($format == 'individual-tax-and-term'){
+						$query_vars['taxonomy'] = $taxonomy;
+						$query_vars['term'] =  $translated_slugs;
+					} elseif ($format == 'combined-tax-and-term'){
+						$query_vars[$taxonomy] = $translated_slugs;
+					}
+				}
 
-        }
+			}
 
-        return $query_vars;
-    }
+		}
+
+		return $query_vars;
+	}
 
     /**
      * Function used so we have the original query vars inside queries
@@ -1274,7 +1291,10 @@ class TRP_IN_SP_Slug_Manager {
                         foreach( $new_translations as $translation ){
                             //remove any slashes before comparison
                             $translation['id'] = trim($translation['id'], '/\\');
-                            if( $translation['id'] === 'product' || $translation['id'] === 'product-category' || $translation['id'] === 'product-tag' ){
+                            //consider woocommerce slugs as they are written in the Permalinks section of admin
+                            $slugs = $this->option_based_strings->get_woocommerce_actual_slugs();
+                            $all_slugs = array_unique( array_merge( $slugs, array( 'product', 'product-category', 'product-tag' ) ) );
+                            if( in_array( $translation['id'], $all_slugs ) ){
                                 $delete_transients = true;
                                 break;
                             }

@@ -8,7 +8,7 @@
                     <div class="sustain_highlight_box">
                         <div class="esg-overlay">
                             <div class="esg-content">
-                                <a href="<?php echo $esg_pdf_link;?>"> <?php echo $esg_title; ?></a>
+                                <a href="<?php echo $esg_pdf_link;?>" target="_blank"> <?php echo $esg_title; ?></a>
                             </div>
                         </div>
                     </div>

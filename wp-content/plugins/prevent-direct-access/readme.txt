@@ -1,10 +1,10 @@
 === Prevent Direct Access - Protect WordPress Files ===
 Contributors: gaupoit, rexhoang, wpdafiles, buildwps
-Tags: folder protection, protect uploads, protection, downloads, uploads
+Tags: folder protection, protection, downloads, uploads, copy protection
 Requires at least: 4.7
 Requires PHP: 5.6.1
-Tested up to: 5.9.0
-Stable tag: 2.7.10
+Tested up to: 6.0
+Stable tag: 2.8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -152,13 +152,23 @@ The Lite version of this plugin only supports Apache, Nginx, and IIS single site
 
 == Changelog ==
 
-= 2.7.10 February 9, 2022 =
-* Secure input and output data
-* Update Settings UI using WordPress built-in jQuery libraries
+= 2.8.1 Jun 12, 2022 =
+* [New Feature] Restrict media files access to file’s authors only
+* [Improvement] Show warning messages on multisites
+* [Fix] Show non-latin characters in protected file names
+
+= 2.8.0 April 20, 2022 =
+* [Improvement] Disable text selection and image drag-and-drop features
+* [Improvement] Disable content copy functions
+* [Improvement] Display alert message on mouse right click
+
+= 2.7.10 February 9, 2021 =
+* [Refactoring] Secure input and output data
+* [Refactoring] Update Settings UI using WordPress built-in jQuery libraries
 
 = 2.7.9 Jan 28, 2022 =
-* Provide an settings option to prevent right-clicking on all pages
-* Remove “Invite & Earn” submenu & UTM tags on the plugin author URI
+* [New Feature] Provide an settings option to prevent right-clicking on all pages
+* [Improvement] Remove “Invite & Earn” submenu & UTM tags on the plugin author URI
 
 = 2.7.8 December 6, 2021 =
 * Allow admins to access protected files whose FAP are “the file’s author” via a hook

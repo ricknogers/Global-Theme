@@ -2,10 +2,10 @@
 Contributors: rankmath
 Plugin link: https://rankmath.com/?utm_source=LP&utm_campaign=WP
 Tags: seo, sitemap, google search console, schema, redirection, WordPress SEO
-Tested up to: 5.9
+Tested up to: 6.0
 Requires at least: 5.6
 Requires PHP: 7.2
-Stable tag: 1.0.85.1
+Stable tag: 1.0.91
 License: GPL-2.0+
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -185,7 +185,7 @@ Even with significantly more features than other plugins, Rank Math SEO loads am
 ### Take a sneak peek into Rank Math SEO’s features ###
 
 #### Detailed Setup Tutorial ####
-[youtube https://www.youtube.com/watch?v=dTvZuMRzW4w]
+[youtube https://www.youtube.com/watch?v=cQLvCBVev3I]
 
 ### List of Best Rank Math SEO Features ###
 
@@ -580,23 +580,19 @@ Please drop us an email at support@rankmath.com and we would be more than happy 
 
 == Changelog ==
 
-= 1.0.85.1 [Mar 24, 2022] =
-* Fixed: Trailing slashes were automatically added to [Source URL](https://rankmath.com/kb/setting-up-redirections/#source-urls) when creating a **new** Redirection rule
-
-= 1.0.85 [Mar 23, 2022] =
-* Added: Search field for in the property selection dropdown present in the [Analytics Module settings](https://rankmath.com/kb/general-settings/#search-console-settings)
-* Improved: Increased the width of [tables present on the Analytics Pages](https://rankmath.com/kb/analytics/)
-* Improved: Added condition to validate the date before adding it to `article:published_time` & `article:modified_time` tags
-* Updated: [CTR](https://rankmath.com/kb/analytics/#seo-performance) calculation formula to show more accurate values in the Analytics Module
-* Fixed: [SEO Analysis](https://rankmath.com/kb/seo-analysis/) was not working on some setups
-* Fixed: [SEO score](https://rankmath.com/kb/score-100-in-tests/) was crossing 100 value on some setups
-* Fixed: Trailing slash was getting stripped from the [Source URL](https://rankmath.com/kb/setting-up-redirections/#source-urls) when setting a Redirection
-* Fixed: [SERP preview](https://rankmath.com/kb/general-tab/#num-1-4-writing-a-compelling-title-permalink-and-description) in Divi editor was not showing the parent page in the permalink
-* Fixed: [Auto Post Redirection](https://rankmath.com/kb/general-settings/#auto-post-redirect) was not working on Product Category pages when the WPML plugin is active
-* Fixed: [Rest of the Keywords](https://rankmath.com/kb/analytics/#num-4-2-rest-of-the-keywords) was not showing any data when keywords had Multibyte characters
-* Fixed: Links inserted from [Link Suggestion](https://rankmath.com/kb/pillar-content-internal-linking/#pillar-content) were getting inserted to the wrong location in the Block editor
-* Fixed: [Index Status](https://rankmath.com/kb/url-inspection-api-integration/) was showing wrong pagination count when entries were not present in the `rank_math_analytics_objects` table
-* Fixed: Non-existent [sitemap](https://rankmath.com/kb/configure-sitemaps/) pages were showing a blank sitemap instead of a 404 error, props to [@Roger_Montti](https://www.linkedin.com/in/martinibuster/)
-* Fixed: Incompatibility with the Blocksy theme
+= 1.0.91 [Jun 15, 2022] =
+* Added: [HUGE!] Synced [Content Analysis tests](https://rankmath.com/kb/score-100-in-tests/) with the recommendations provided by the [Content AI](https://rankmath.com/kb/how-to-use-content-ai/)
+* Improved: Added a new column on the [Redirections page](https://rankmath.com/kb/setting-up-redirections/#redirections) to show the Created date of the redirect
+* Improved: [Search Preview & Mobile Search Preview](https://rankmath.com/kb/seo-analysis/#search-preview) shown in the SEO Analysis tool
+* Improved: Image SEO code to make it FASTER
+* Fixed: Some string translations were not working well
+* Fixed: Unable to connect account when WordPress is installed in a subfolder
+* Fixed: [Connect to Rank Math account](https://rankmath.com/kb/free-account-benefits/) was not working properly when the URL contained special characters
+* Fixed: [Debug Redirections option](https://rankmath.com/kb/general-settings/#debug-redirections) was not working well
+* Fixed: Some Schema properties were missing in the [EDD Product Schema](https://rankmath.com/kb/edd-product-schema/)
+* Fixed: Analytics data was not getting imported correctly when domain property was selected in the [Site Profile](https://rankmath.com/kb/general-settings/#search-console-settings)
+* Fixed: The maintenance page created using Elementor editor was not working well when the Rank Math plugin is active on the site
+* Fixed: Hash links added in the Elementor Accordion were counted as internal links
+* Fixed: JS errors on the Categories list page
 
 Full changelog can be found here - **[Rank Math SEO changelog](https://rankmath.com/changelog/?utm_source=Plugin&utm_medium=Changelog&utm_campaign=WP)**

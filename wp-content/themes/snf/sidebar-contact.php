@@ -1,12 +1,14 @@
 <aside class="sidebar  ">
     <div class="card  mb-3" style="border:solid 1px rgb(107,105,135);">
         <div class="card-header bg-transparent">
-            <h4 class="display-5 text-uppercase text-center" >Country Contact</h4>
+            <h4 class="display-5 text-uppercase text-center" >Subsidiary Contact</h4>
             <img src="<?php bloginfo('template_directory'); ?>/resources/images/contact-world-display.png" alt="SNF Country Contact Map" class="img-fluid mx-auto d-block">
         </div>
         <div class="card-body text-primary">
             <div class="location-cats-dropdown">
                 <form id="location-category-select" class="location-category-select" method="get">
+
+
                     <?php $terms = get_terms( array(
                         'taxonomy' => 'country',
                         'hide_empty' => true,
@@ -14,12 +16,16 @@
                         'order' => 'DESC',
                     ) );
                     if ( $terms ) : ?>
-                        <select name="location_category" id="location_category" class="form-control">
+                        <select name="location_category" id="location_category" class="form-control show-tick">
                             <option value="">Choose a region</option>
-	                        <?php foreach( get_terms( 'country', array(  'hide_empty' => true, 'depth'=> 1, 'parent' => 0 ) ) as $parent_term ) :?>
-	                            <?php foreach( get_terms( 'country', array( 'hide_empty' => true, 'parent' => $parent_term->term_id ) ) as $child_term ) :?>
+	                        <?php foreach( get_terms( 'country', array(  'hide_empty' => true,  'depth'=> 1, 'parent' => 0 ) ) as $parent_term ) :?>
+                                <optgroup label="<?php echo $parent_term->slug; ?>">
+	                            <?php foreach( get_terms( 'country', array( 'hide_empty' => true, 'orderby' => 'name', 'order' => 'ASC', 'parent' => $parent_term->term_id ) ) as $child_term ) :?>
                                     <option class="country-select " value="<?php echo $child_term->slug; ?>" id="term-id-<?php echo $child_term->term_id; ?>"><?php echo $child_term->name; ?></option>
                                 <?php endforeach; ?>
+                                </optgroup>
+                                <div role="separator" class="dropdown-divider"></div>
+
 	                        <?php endforeach; ?>
                         </select>
                     <?php endif;

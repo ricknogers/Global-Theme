@@ -9,6 +9,7 @@
     $trp_language_switcher = $trp->get_component('language_switcher');
     $ls_option = $trp_settings->get_language_switcher_options();
     $shortcode_settings = $ls_option[$settings['shortcode-options']];
+    $language_cookie_data = $this->get_language_cookie_data();
     ?>
     <div class="trp_ald_modal" id="trp_ald_modal_popup">
             <div id="trp_ald_popup_text"></div>
@@ -24,7 +25,7 @@
                     <?php echo $current_language_preference; /* phpcs:ignore */ /* escaped inside the function that generates the output */ ?>
                 </div>
                 <div class="trp-ls-shortcode-language">
-                    <div class="trp-ald-popup-select" id="trp_ald_no_text_popup_select_current_language" data-trp-ald-selected-language = "<?php echo esc_attr($settings['default-language']);?>">
+                    <div class="trp-ald-popup-select" id="<?php echo esc_attr($settings["default-language"]); ?>" data-trp-ald-selected-language = "<?php echo esc_attr($settings['default-language']);?>">
                         <?php echo $current_language_preference; /* phpcs:ignore */ /* escaped inside the function that generates the output */ ?>
                     </div>
                     <?php foreach ( $published_languages as $code => $name ){
@@ -42,9 +43,9 @@
 
 
             <div class="trp_ald_button">
-            <button id="trp_ald_popup_change_language"></button>
+            <a href="<?php echo esc_url( $language_cookie_data['abs_home'] ); ?>" id="trp_ald_popup_change_language"></a>
             </div>
          </div>
-        <div id="trp_ald_x_button_and_textarea"> <button id="trp_ald_x_button"></button><span id="trp_ald_x_button_textarea"></span></div>
+        <a id="trp_ald_x_button_and_textarea"> <span id="trp_ald_x_button"></span><span id="trp_ald_x_button_textarea"></span></a>
     </div>
 </div>

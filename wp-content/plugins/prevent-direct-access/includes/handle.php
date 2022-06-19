@@ -100,12 +100,12 @@ if(!class_exists("Pda_Free_Handle")) {
             $backup_sizes = $this->get_files_from_meta( $backups );
 
             $old_basenames = $new_basenames = array_merge(
-                array( basename( $file ) ),
+                array( wp_basename( $file ) ),
                 $sizes,
                 $backup_sizes
             );
 
-            $orig_basename = basename( $file );
+            $orig_basename = wp_basename( $file );
             if( is_array( $backups ) && isset( $backups['full-orig'] ) ) {
                 $orig_basename = $backups['full-orig']['file'];
             }
