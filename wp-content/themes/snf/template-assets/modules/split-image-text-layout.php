@@ -1,5 +1,6 @@
 <?php if ( have_rows( 'split_layout_repeater' ) ) : ?>
     <?php while ( have_rows( 'split_layout_repeater' ) ) : the_row(); ?>
+    	<?php $counter == 0 ?>
         <?php if ($counter % 2 === 0) :?>
 	        <div class="row split-spacing mt-2 mb-2 highlight-section align-items-center">
 	            <div class="content-column col-md-7 col-sm-12 col-xs-12">
@@ -18,16 +19,16 @@
                                     <p><?php the_sub_field('content');?></p>
                                 <?php endif;?>
                             <?php endif;?>
-		                    <?php $link = get_sub_field( 'link' );
-
-
+		                    <?php 
+			                    $link = get_sub_field( 'link' );
 		                    ?>
                             <?php if ( $link ) : ?>
-                                <?php
-	                            $link_title = $link['title'];
-	                            $link_target = $link['target'] ? $link['target'] : '_self';
-                                ;?>
-                                <div class="snf-link-wrapper ">
+                            <?php 
+			                       $link_url = $link['url'];
+								    $link_title = $link['title'];
+								    $link_target = $link['target'] ? $link['target'] : '_self';
+								 ?>
+]                                <div class="snf-link-wrapper ">
                                     <div class="snf-link">
                                         <?php if(get_sub_field('link')):?>
                                             <a href="<?php echo esc_url( $link); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="product-list-link"><?php the_sub_field( 'link_title' ); ?></a>
@@ -79,15 +80,16 @@
                                     <p><?php the_sub_field('content');?></p>
 		                        <?php endif;?>
 	                        <?php endif;?>
-	                        <?php $link = get_sub_field( 'link' );
-
-
+	                        <?php 
+		                        $link = get_sub_field( 'link' );
+		                        
 	                        ?>
 	                        <?php if ( $link ) : ?>
-		                        <?php
-		                        $link_title = $link['title'];
-		                        $link_target = $link['target'] ? $link['target'] : '_self';
-		                        ;?>
+		                       <?php 
+			                       $link_url = $link['url'];
+								    $link_title = $link['title'];
+								    $link_target = $link['target'] ? $link['target'] : '_self';
+								 ?>
                                 <div class="snf-link-wrapper ">
                                     <div class="snf-link">
 				                        <?php if(get_sub_field('link')):?>

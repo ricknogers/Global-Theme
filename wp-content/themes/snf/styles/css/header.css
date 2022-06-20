@@ -1216,7 +1216,7 @@ VII.) Media Query
         /* max-width: 1140px; */
         /* margin-left: auto; */
         /* margin-right: auto; */
-        /* width: 100%; */
+        width: 100%;
     }
     .shrink.snf-global-menu nav{
         padding:0 !important;
@@ -1306,7 +1306,7 @@ VII.) Media Query
     .global-nav-wrapper nav #main-menu li:hover ul.dropdown-menu {
         margin-top: 0;
         /* opacity: 1; */
-        min-width: 300px;
+        min-width: 350px;
         background-color: #fff;
         border-radius: 0;
         border: 0;
@@ -1358,7 +1358,7 @@ VII.) Media Query
 }
 @media(min-width:992px) {
     .logo-navigation-container {
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         display: inline-flex;
         padding: 0 !important;
@@ -2201,10 +2201,10 @@ VII.) Media Query
     }
     #desktopNavigation {
         /* display: block; */
-        /* padding: 0; */
-        /* position: fixed; */
-        /* width: 100%; */
-    }
+        background-color: #fff;
+        /* position: absolute; */
+        width: 100vw;
+        /* top: 0; */}
     #mobileNavigation {
         display: none;
     }
@@ -2598,8 +2598,8 @@ html body .content .content-wrapper .content-header-title {
     }
     .transition-navbar{
         top: 0;
-        /* width: 100%; */
-        position: relative;
+        width: 100%;
+        /* background-color: #fff; */position: relative;
     }
     .breadcrumbs-right .breadcrumb {
         float: right;
@@ -2804,21 +2804,21 @@ html body .content .content-wrapper .content-header-title {
         background-color: #002d73;
     }
     #custom-tax-second-nav{
-        position: relative;
-        /* display: inline-flex; */
-        /* justify-content: center; */
-        /* align-items: center; */
-        padding: 0;
-        border: none;
+        /* position: relative; */
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        /* padding: 0; */
+        /* border: none; */
         /* top: 0; */
         width: 100%;
     }
     .second-tier-nav{
-        border-radius: 0;
-        border: none;
-        padding: 0 !important;
-        width: 100%;
-        display: flex;
+        /* position: relative; */
+        /* border: none; */
+        /* padding: 0 !important; */
+        /* width: 100%; */
+        display: inline-flex;
         justify-content: center;
         /* max-width: 1140px; */
         /* top: 0; */
@@ -2833,10 +2833,10 @@ html body .content .content-wrapper .content-header-title {
 
     .page-listing-positioning{
         /* max-width: 1140px; */
-        margin: 0;
+        /* margin: 0; */
         /* width: 100%; */
-        position: relative;
-        display: inline-flex;
+        /* position: relative; */
+        /* display: inline-flex; */
         align-items: center;
         justify-content: center;}
     .subsidiary-children-pages ul li.menu-item a{color:#fff;font-weight: 300;font-size: 16px;text-transform: uppercase;padding: .75rem;}
@@ -2864,7 +2864,7 @@ html body .content .content-wrapper .content-header-title {
     }
     .subsidiary-children-pages ul li a:after{
     }
-    .subsidiary-children-pages ul li{background-color: transparent !important;border: none;padding: .75rem;}
+    .subsidiary-children-pages ul li{background-color: transparent !important;border: none;display: inline-flex;padding: 0 .5rem;justify-content: center;align-items: center;}
     .market_nav_elements ul li:hover ul.dropdown-menu{
         display:block;
         position: absolute;min-width: 360px;top: 94%;border-radius: 0;border: none;}
@@ -2877,10 +2877,10 @@ html body .content .content-wrapper .content-header-title {
         justify-content: space-between;
     }
     .subsidiary-children-pages ul.navbar-nav{
-        display:inline-block;
+        display: inline-block;
         border: none;
         padding: 0;
-        justify-content: center;align-items: center;
+        justify-content: center;/* align-items: center; */
         width: 100%;
         background-color: transparent;}
     .breadcrumbs-container ul li.current-menu-item{

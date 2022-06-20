@@ -1,14 +1,14 @@
 @media(min-width:992px){
     .scroll_element {
-        width: 1351px;
-        /* height: 100%; */
+        width: 31vw;
+        position: relative;
         /* overflow: hidden; */
         /* border-radius: 50px; */
-        display: inline-block;
-        margin: 0px 4rem;
+        /* display: inline-flex; */
+        /* margin: 0px 4rem; */
         border-radius: 5px;
         transition: all .2s ease-out;
-        justify-content: space-between;align-items: center;}
+        /* justify-content: center; *//* align-items: center; */}
     .scroll_element:hover {
         transform: scale(1.2);
         opacity: .5;
@@ -26,8 +26,8 @@
     .scroll_box {
         display: inline-flex;
         /* overflow-y: hidden; */
-        position:relative;
-        width: 200%;
+        position: relative;
+        /* width: 100%; */
         align-items: center;justify-content: center;/* height: 100%; */
         animation:scroll 40s linear infinite;
     }
@@ -78,7 +78,7 @@
     }
     .scroll-container{
         /* height:250px; */
-        /* position:relative; */
+        position:relative;
     }
     .logo-box{
         overflow-x:hidden;
@@ -91,10 +91,10 @@
         display:none;
     }
     .scroll_box img{
-        /* width:150px; */
+        /* width: 158px; */
         height:150px;
         /* margin:3px; */
-        /* float:left; */
+        float:left;
     }
 
     .scroll_box .scroll-container{

@@ -390,7 +390,7 @@ Cards
         padding: 7px .5rem;}
     .second-tier-nav .market_nav_elements{
         /* display:inline-flex; */
-        /* position:relative; */
+        position:relative;
         /* width:100%; */
         /* height: 100%; */}
     .second-tier-nav ul li{

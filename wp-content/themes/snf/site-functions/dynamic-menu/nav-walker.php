@@ -17,9 +17,36 @@ function register_my_menus() {
             'snf_markets_textiles_nav' => __( 'Textiles Menu'),
 			'snf_markets_equipment_nav'  => __( 'Equipment & Engineering Menu'),
             'snf_markets_construction_nav'  => __( '	Construction & Civil Engineering Menu'),
+            'snf_subsidiary_usa_nav'  => __( 'United States Menu'),
+            'snf_subsidiary_uk_nav'  => __( 'United Kingdom Menu'),
+            'snf_subsidiary_france_nav'  => __( 'France Menu'),
+            'snf_subsidiary_canada_nav'  => __( 'Canada Menu'),
+            'snf_subsidiary_austraila_nav'  => __( 'Austraila Menu'),
         )
     );
 }
+
+
+/**
+ * Country Sites Navwalker  Menus
+ */
+function snf_subsidiary_usa_nav($depth) {
+    // display the wp3 menu if available
+    require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
+    wp_nav_menu( array(
+        'theme_location'  => 'snf_subsidiary_usa_nav',
+        'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+        'container'       => 'div',
+        'container_class' => 'market_nav_elements  navbar-collapse',
+        'container_id'    => 'country-menu',
+        'menu_class'      => 'navbar-nav mr-auto',
+        'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+        'walker'          => new WP_Bootstrap_Mega_Navwalker(),
+    ) );
+
+}
+
+
 /**
  * Market Sites Navwalker  Menus
  */

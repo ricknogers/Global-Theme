@@ -76,7 +76,7 @@
         content: '';
         width: 14px;
         height: 2px;
-        background: #333;
+        background: #0082CA;
         position: absolute;
         top: calc(50% - 1px);
         right: 1rem;
@@ -88,7 +88,7 @@
         content: '';
         width: 2px;
         height: 14px;
-        background: #333;
+        background: #0082CA;
         position: absolute;
         top: calc(50% - 7px);
         right: calc(1rem + 6px);
@@ -196,10 +196,17 @@
     .global-overflow{
         /* overflow-x: hidden !important; */
     }
-    .subsid-accordion a.subsididary-collapse{
+    .subsid-accordion h5 a.subsididary-collapse.collapsed{
+        font-weight:600 !important;
+
+    }
+    .subsid-accordion h5 a.subsididary-collapse{
+
+        font-weight: 600;}
+    .subsid-accordion h5 a.collapsible-link[aria-expanded='true']{
+        color: #0082CA !important;
         font-weight:600 !important;
     }
-
 }
 @media(max-width:767px){
     layout-title{

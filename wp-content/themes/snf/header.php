@@ -69,7 +69,7 @@
 
 <div class="transition-navbar rounded">
 	<section class="navigation-block ">
-        <div class="container" id="desktopNavigation">
+        <div class="container-fluid" id="desktopNavigation">
             <div class="row snf-global-menu subsidiary-menu ">
                 <div class="col-sm-12 logo-navigation-container">
                     <div class="nav-element-responsive logo-options">
