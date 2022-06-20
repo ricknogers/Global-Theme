@@ -427,7 +427,7 @@ add_filter( 'wp_title', 'theme_slug_filter_wp_title' );
  *
  */
 
-add_filter( 'gform_submit_button', 'fe_gravity_forms_btn_classes', 10, 2 );
+//add_filter( 'gform_submit_button', 'fe_gravity_forms_btn_classes', 10, 2 );
 
 /**
  * Replace Gravity Forms button classes with Bootstrap button classes.
@@ -454,15 +454,10 @@ function snf_check_page_market_tax(){
 	        'order' => 'ASC'
 	    )
 	);
-
-		
-		foreach ( $term_list as $term_single ) {
-			$term_array[] = $term_single->name; //do something here
-		}
-		return $term_array;
-
-
-	                                                 
+    foreach ( $term_list as $term_single ) {
+        $term_array[] = $term_single->name; //do something here
+    }
+    return $term_array;
 }
 
 /**
@@ -508,10 +503,6 @@ function myplugin_settings() {
     // Add category metabox to page
     register_taxonomy_for_object_type('category', 'page');
 }
-/**
- * Add to the admin_init hook of your theme functions.php file
- */
-
 add_action( 'init', 'myplugin_settings' );
 
 

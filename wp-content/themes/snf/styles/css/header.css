@@ -1306,7 +1306,7 @@ VII.) Media Query
     .global-nav-wrapper nav #main-menu li:hover ul.dropdown-menu {
         margin-top: 0;
         /* opacity: 1; */
-        min-width: 300px;
+        min-width: 350px;
         background-color: #fff;
         border-radius: 0;
         border: 0;
