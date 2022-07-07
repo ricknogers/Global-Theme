@@ -1,7 +1,10 @@
+
+
+
 <section class="login-block shadow-sm">
-    <div class=" login-container register">
+    <div class="container login-container register mb-4">
         <div class="row">
-            <div class="col page-header theme-bg-dark py-5 text-center position- optimized-selection mt-3 ">
+            <div class="col page-header theme-bg-dark py-md-5 text-center position- optimized-selection  ">
                 <div class="page-header-shapes-right "></div>
                 <div class="page-header-shapes-left"></div>
                 <div class="row">
@@ -23,11 +26,12 @@
                 </div><!--card shadow-->
             </div><!--breadcrumbs-container-->
         </div><!--row-->
-        <div class="row  mb-4 mt-4  h-100">
-            <div class="col-sm-12 text-center mb-5">
-                <h3 class="display-4" style="font-size:1.7rem;">   Interested in becoming an investor with us?</h3>
+        <div class="row my-md-4 h-100">
+            <div class="col-sm-12 text-center ">
+                <h2 class="display-4" style="font-size:1.7rem;">   Interested in becoming an investor with us?</h2>
             </div>
-            <div class="col-md-6 col-sm-12 investor_core_values  inv_reg_form">
+          
+	        <div class="col-md-6 col-sm-12 investor_core_values  inv_reg_form  my-md-3 my-2">
                 <section class="text-center">
                     <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#investorRegistrationForm">
                         Become an Investor
@@ -53,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 investor_core_values inv_login_form ">
+	        <div class="col-md-6 col-sm-12 investor_core_values inv_login_form my-md-3 my-2 ">
                 <section class="text-center">
                     <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#investorLogin">
                         Already an investor? Login Here
@@ -63,24 +67,25 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-body">
-                                <div class="investor-login-form form-control">
-	                                <?php
-	                                $redirect_to = '';
-	                                ?>
+                                <div class="investor-login-form ">
+                                    <?php
+                                    $redirect_to = 'https://dev-eu-snf-group.pantheonsite.io/investors-center/';
+                                    ?>
                                     <form name="loginform" id="loginform" action="<?php echo site_url( '/wp-login.php' ); ?>" method="post">
-                                        <div class="row">
-                                            <div class="col">
-                                                <input id="user_login" placeholder="name@example.com" class="form-control" type="text" size="20" value="" name="log">
-                                                <input id="user_pass" class="form-control" type="password" size="20" value="" name="pwd">
-                                                <p><input id="rememberme" type="checkbox" value="forever" name="rememberme"></p>
-
-                                                <p><input id="wp-submit" type="submit" value="Login" name="wp-submit"></p>
-
-                                                <input type="hidden" value="<?php echo esc_attr( $redirect_to ); ?>" name="redirect_to">
-                                                <input type="hidden" value="1" name="testcookie">
-
-                                            </div>
+                                        <div class="form-group">
+                                            <label for="user_login">Email address</label>
+                                            <input type="email" class="form-control"   value="" aria-describedby="emailHelp" id="user_login" placeholder="name@example.com">
+                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                         </div>
+                                        <div class="form-group">
+                                            <label for="user_pass">Password</label>
+                                            <input type="password" class="form-control" id="user_pass" size="20" value="" name="pwd">
+
+                                        </div>
+
+                                        <button type="submit" class="btn btn-outline-primary">Submit</button>
+
+                                        <input type="hidden" value="<?php echo esc_attr( $redirect_to ); ?>" name="redirect_to">
                                     </form>
                                 </div>
                             </div>
@@ -93,15 +98,14 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row mb-4 mt-4">
+    <div class="container d-none d-md-block icon_figure_grouping">
+        <div class="row my-md-4 my-sm-2 ">
             <div class="col-md-6 col-sm-12">
                 <div class="investor_figure box">
                     <div class="investor_icon">
                         <div class="investor_image"><i class="bi bi-currency-euro rounded-circle"></i></div>
                         <div class="investor_info">
                             <h3 class="investor_title">3.6B SALES TURNOVER</h3>
-
                         </div>
                     </div>
                     <div class="space"></div>
@@ -113,7 +117,6 @@
                         <div class="investor_image"><i class="fa fa-users rounded-circle" aria-hidden="true"></i></div>
                         <div class="investor_info">
                             <h3 class="investor_title">400K END USER</h3>
-
                         </div>
                     </div>
                 </div>
@@ -124,7 +127,6 @@
                         <div class="investor_image"><i class="bi bi-currency-exchange"></i></div>
                         <div class="investor_info">
                             <h3 class="investor_title">1.4% R&D INVESTMENT FROM SALES</h3>
-
                         </div>
                     </div>
                 </div>
@@ -132,22 +134,19 @@
             <div class="col-md-6 col-sm-12">
                 <div class="investor_figure box">
                     <div class="investor_icon">
-                        <div class="investor_image"><i class="bi bi-power"></i></div>
+                        <div class="investor_image"><i class="fa fa-balance-scale" aria-hidden="true"></i></div>
                         <div class="investor_info">
                             <h3 class="investor_title">1325 KT/Y</h3>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container login-container register">
+    <div class="container slider-highlights ">
         <div class="row">
-
             <div class="col-md-12 banner-sec investors_slideshow">
-
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -155,29 +154,30 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <img class="d-block img-fluid" src="https://static.pexels.com/photos/33972/pexels-photo.jpg" alt="First slide">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="inv bg-img" style="background-image:url(https://dev-eu-snf-group.pantheonsite.io/wp-content/uploads/2021/10/Industrial-Waste-Treatment.jpg); "></div>
+
+                            <div class="carousel-caption-inv d-none d-md-block">
                                 <div class="banner-text">
-                                    <h2>This is First Slide</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+
+                                    <p>70 subsidiaries located in more than 40 countries, in 3 major economic regions (The Americas, Europe, and Asia)</p>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" alt="Second slide">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="inv bg-img" style="background-image:url(<?php bloginfo('template_directory'); ?>/resources/images/snf-agriculture.jpg); "></div>
+
+                            <div class="carousel-caption-inv d-none d-md-block">
                                 <div class="banner-text">
-                                    <h2>This is Second Slide</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                                    <p>With 400 Scientists/Laboratory Technicians, 230 Field Technicians, and 100 Engineers; R&D, Engineering, and Innovation are at the Heart of our Strategy.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="https://www.snf.com/wp-content/themes/SNF.COM/images/Key-Figures-Web-2022.png" alt="Third slide">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="inv bg-img" style="background-image:url(https://dev-eu-snf-group.pantheonsite.io/wp-content/uploads/2022/05/Reclaimed-Tailings-Pond-scaled-1.jpg); "></div>
+
+                            <div class="carousel-caption-inv d-none d-md-block">
                                 <div class="banner-text">
-                                    <h2>This is Heaven</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                                    <p>3.	SNF, founded in 1978, has developed a strategy of organic growth and reinvestment that could not be achieved by a publicly traded corporation. SNF is committed to continuously maintaining it’s privately held status.</p>
                                 </div>
                             </div>
                         </div>
@@ -186,12 +186,14 @@
             </div>
         </div>
         <div class="row no-gutters investor_counting">
-            <div class="col-sm-12 mb-3 mt-3">
-                <h2 class="display-4 text-center">Discover More Investor Resources</h2>
+            <div class="col-sm-12 inv-title-seperation">
+                <section class="inv_title_container">
+                    <div class="heading "><h4 class="display-5">Discover More Investor Resources</h4></div>
+                </section>
             </div>
-            <div class="col-sm-12 mb-3 mt-3">
+            <div class="col-sm-12 my-md-3">
                 <div class="row  investor_advancement mb-3 ">
-                    <div class="col-md-6 col-sm-12 investor_core_values  ">
+                    <div class="col-md-6 col-sm-12 investor_core_values my-3 ">
                         <div class="card text-white bg-dark  h-100 rounded" style="background-color:#0082CA">
                             <div class="card-body">
                                 <h5 class="card-title">Mission</h5>
@@ -199,7 +201,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12 investor_core_values ">
+                    <div class="col-md-6 col-sm-12 investor_core_values my-3">
                         <div class="card text-white bg-dark   h-100 rounded" style="background-color:#0082CA">
                             <div class="card-body">
                                 <h5 class="card-title">Vision</h5>
@@ -215,7 +217,6 @@
                         <section class="inv_title_container">
                             <div class="heading "><h4 class="display-5">SNF Market Share by Industry</h4></div>
                         </section>
-
                     </div>
                 </div>
                 <div class="row " >
@@ -272,17 +273,50 @@
 
             <div class="col-sm-12 mt-3 mb-3">
                 <div class="row  investor_advancement  ">
-                    <div class="col-md-6 col-sm-12  hover-mask ">
-                        <a class="hover_icon " href="https://www.snf.com/wp-content/themes/SNF.COM/images/Key-Figures-Web-2022.png" data-toggle="lightbox" data-max-width="600" data-type="image">
-                            <img class="d-block img-fluid" src="https://www.snf.com/wp-content/themes/SNF.COM/images/Key-Figures-Web-2022.png" alt="Third slide">
+                    <div class=" col-sm-12  hover-mask ">
+                        <a class="hover_icon " href="https://dev-eu-snf-group.pantheonsite.io/wp-content/uploads/2022/07/Key-Figures-Web-2022-V2.png" data-toggle="lightbox" data-max-width="600" data-type="image">
+                            <img class="d-block img-fluid" src="https://dev-eu-snf-group.pantheonsite.io//wp-content/uploads/2022/07/Key-Figures-Web-2022-V2.png" alt="Third slide">
                             <h2><i class="ligthbox fa fa-search-plus" aria-hidden="true"></i></h2>
                         </a>
                     </div>
-                    <div class="col-md-6 col-sm-12  ">
-                        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/384048206?h=573dd206bc&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-                    </div>
+
                 </div>
             </div>
         </div>
     </div>
+    <div class="container d-none d-md-block icon_figure_grouping">
+        <div class="row my-md-4 my-sm-2 ">
+            <div class="col-sm-12">
+                <div class="card bg-dark text-white text-center p-3">
+
+                    <a  class="m-video-link" id="play-inv" data-toggle="modal"  data-target="#investorOverviewVideo">
+                        <div class="m-video-link--icon"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    </a>
+                    <div class="modal fade" id="investorOverviewVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body mb-0 ">
+                                    <!-- 16:9 aspect ratio -->
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                        <?php the_field( 'video_url' ); ?>
+                                    </div>
+                                </div>
+
+                                <!--Footer-->
+                                <div class="modal-footer justify-content-center text-white text-center flex-column flex-md-row">
+
+                                    <button type="button" class="btn btn-outline-light btn-rounded btn-md ml-4"
+                                            data-dismiss="modal">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
 </section>

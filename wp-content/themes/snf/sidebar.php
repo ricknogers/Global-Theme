@@ -20,8 +20,8 @@
 			<?php else:?>
             <?php endif; ?>
         </section>
-        <section class="sidebar-widget">
-            <div class="heading mb-3 "><h4 class="display-5">Sustainability</h4></div>
+        <section class="sidebar-widget sustain">
+            <div class="heading mb-2 "><h4 class="display-5">Sustainability</h4></div>
             <div class="card-body">
                 <?php if( $terms ): ?>
                     <?php foreach( $terms as $term ): ?>
@@ -30,10 +30,10 @@
                                 <?php while ( have_rows( 'sdg' ,$term->taxonomy . '_' . $term->term_id) ) : the_row(); ?>
                                     <?php $sdg_Icon = get_sub_field('icon', $term->taxonomy . '_' . $term->term_id);?>
                                     <?php $sdgTitle = get_sub_field('title', $term->taxonomy . '_' . $term->term_id );?>
-                                    <div class="item hover-mask">
-                                        <a class="hover_icon" href="<?php echo get_sub_field('icon', $term->taxonomy . '_' . $term->term_id) ?>" data-toggle="lightbox" data-max-width="600"  data-type="image">
+                                    <div class="item hover-mask mb-1">
+                                        <a class="hover_icon" href="<?php echo get_sub_field('icon', $term->taxonomy . '_' . $term->term_id) ?>" data-toggle="lightbox" data-max-width="200"  data-type="image">
                                             <figure class="figure translation-block">
-                                                <img  src="<?php echo get_sub_field('icon', $term->taxonomy . '_' . $term->term_id) ?>" style="" alt="<?php echo $sdgTitle;?>" class="  img-fluid mb-1 mr-1 img-fluidrounded " />
+                                                <img  src="<?php echo get_sub_field('icon', $term->taxonomy . '_' . $term->term_id) ?>" style="" alt="<?php echo $sdgTitle;?>" class="  img-fluid mb-1  rounded " />
                                                 <h2><i class="ligthbox fa fa-search-plus" aria-hidden="true"></i></h2>
                                                 <figcaption class="figure-caption"><?php echo $sdgTitle;?></figcaption>
                                             </figure>
@@ -49,7 +49,7 @@
             </div>
         </section>
         <section class="sidebar-widget">
-            <div class="heading mb-3"><h4 class="display-5">Related Posts</h4></div>
+            <div class="heading mb-2"><h4 class="display-5">Related Posts</h4></div>
             <div class="col-xs-12 card-body">
                 <?php foreach( $terms as $term ): ?>
                     <?php $args = array('post_type' => 'global-communication','posts_per_page'=>4,

@@ -59,7 +59,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-12">
+            <div class="col-lg-2 col-sm-12">
                 <div class="">
                     <h6 class="footer-heading text-uppercase text-white">Stay Updated</h6>
                     <ul class="list-inline list-unstyled footer-link mt-2">
@@ -89,16 +89,16 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-2 col-sm-12">
+            <div class="col-lg-3 col-sm-12">
                 <div class="footer-link">
                     <h6 class="footer-heading text-uppercase text-white">Contact Us</h6>
-                    <p class="contact-info">+33 (0) 477 36 86 00</p>
+                    <p class="contact-info"><a href="tel:+33 (0) 477 36 86 00">+33 (0) 477 36 86 00 </a> (SNF Group HQ)</p>
                     <p class="contact-info"><a href="mailto:info@snf.com">info@snf.com</a></p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 md-text-center mt-md-1 p-sm-0 footer_legal_links">
+            <div class="col-sm-12 md-text-center mt-md-1  footer_legal_links">
                 <ul class="list-group list-group-horizontal-md footer-link p-sm-0">
                     <li class="list-group-item bg-transparent border-0"><a href="<?php echo home_url('/');?>privacy-policy/">Privacy Policy </a></li>
                     <li class="list-group-item bg-transparent border-0"><a href="<?php echo home_url('/');?>cookies-policy/">Cookies Policy</a></li>
@@ -118,17 +118,13 @@
     </div>
 </footer>
 
-<?php if(is_front_page()):?>
-    <script  src=https://app.termly.io/embed.min.js data-auto-block="on" data-website-uuid="b8dae01b-f7ee-446f-abc2-8547bb006b4d"></script>
-<?php endif;?>
+
+    <script defer  src=https://app.termly.io/embed.min.js data-auto-block="on" data-website-uuid="b8dae01b-f7ee-446f-abc2-8547bb006b4d"></script>
+
 <?php wp_footer(); ?>
 
-<?php if(is_post_type_archive('timeline')):?>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
-<?php endif;?>
-<?php if(is_page('contact')):?>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-<?php endif;?>
+
+
 
 <script>
     (function($, window){

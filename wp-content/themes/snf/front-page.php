@@ -7,6 +7,7 @@
  */
 
 get_header(); ?>
+
 <div class="container">
     <div class="row">
         <div class="col-sm-12 introduction mb-md-5 mt-md-5">
@@ -16,16 +17,14 @@ get_header(); ?>
 </div>
 <!-- SECTION -->
 <div class="oval-overlay executive-highlight">
-    <section class="geometric-overlay bg-img" style="background-image:url(<?php bloginfo('template_directory'); ?>/resources/images/shutterstock_327901652-min.jpg); ">
+    <section class="geometric-overlay bg-img" style="background-image:url(https://dev-eu-snf-group.pantheonsite.io/wp-content/uploads/2021/10/Industrial-Waste-Treatment.jpg); ">
         <div class="container p-md-5 p-sm-2 d-flex h-100 ">
             <div class="row align-items-center overview-wrapper">
                 <div class="col-md-8 col-sm-12 overview">
                     <div class="clearfix">
                         <div class="col-sm-12 branded-title-seperation">
                             <section class="branded_title_container">
-                                <div class="heading">
-                                    <h2 class="display-3 text-white">SNF Corporate Video</h2>
-                                </div>
+                                <h2 class="display-3 text-white">SNF Corporate Video</h2>
                                 <h6 class="text-mute text-white mt-md-3 mb-md-4">Learn more about what SNF does and all the industries we are involved in.</h6>
                             </section><!--branded_title_container-->
                             <div class="snf-link-wrapper ">
@@ -43,33 +42,17 @@ get_header(); ?>
                     <div class="modal fade" id="overviewVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
-                                <div class="modal-body mb-0 p-0">
+                                <div class="modal-body mb-0 ">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <!-- 16:9 aspect ratio -->
                                     <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/384048206?badge=0&autoplay=1&loop=1" id="player"  frameborder="0" allowscriptaccess="always"  allowfullscreen></iframe>
+	                                    <?php the_field( 'video_url' ); ?>
                                     </div>
                                 </div>
-                                <script>
-                                         jQuery(document).ready(function($){
-                                            $("element").data('bs.modal')?._isShown    // Bootstrap 4
-                                            $('#overviewVideo').on('hidden.bs.modal', function(){
-                                                if($('.modal.show').length){
-                                                }
-                                                else{
-                                                    $('#overviewVideo iframe').removeAttr('src');
-                                                }
-                                            });
-                                         });
-                                </script>
+
                                 <!--Footer-->
                                 <div class="modal-footer justify-content-center text-white text-center flex-column flex-md-row">
-                                    <span class="mr-4">Spread the word!</span>
-                                    <div>
-                                        <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                                        <a type="button" class="btn-floating btn-sm btn-gplus"><i class="fa fa-vimeo-square"></i></a>
-                                        <a type="button" class="btn-floating btn-sm btn-ins"><i class="fa fa-linkedin-square"></i></a>
-                                    </div>
+
                                     <button type="button" class="btn btn-outline-light btn-rounded btn-md ml-4"
                                             data-dismiss="modal">Close
                                     </button>
@@ -105,9 +88,7 @@ get_header(); ?>
                 <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                     <div class="col-sm-12 branded-title-seperation">
                         <section class="branded_title_container">
-                            <div class="heading">
-                                <h2 class="display-3">Pascal Remy</h2>
-                            </div>
+                            <h2 class="display-3">Pascal Remy</h2>
                             <h6 class="text-mute mt-md-3"><?php the_title();?></h6>
                         </section>
                     </div>
@@ -131,26 +112,21 @@ get_header(); ?>
 
 <!-- Markets Cards w/Icons -->
 <div class="markets-shutter site-outer">
-
     <?php get_template_part('template-assets/front-page/home-page-industry-panel-reveal');?>
 </div><!-- Markets Shutter -->
 
-<!-- CTA -->
 <div class="py-md-5 py-lg-5  bg-light hp_cta wrap-cta-box">
-    <!-- Row  -->
     <div class="container">
         <div class="row d-flex p-3 align-items-center ">
             <div class="col-md-5 col-sm-5 cta_image">
                 <div class="cta_content_overlay"></div>
-                <img src="<?php bloginfo('template_directory'); ?>/resources/images/default-banner/fallback-innerpage-banner_1.jpg" class="img-fluid rounded " alt="" />
+                <img src="<?php bloginfo('template_directory'); ?>/resources/images/default-banner/snf-homepage-calltoaction-min.jpg" class="img-fluid rounded " alt="" />
             </div>
             <div class="col-md-7 col-sm-7 hp_cta_contact">
                 <div class="cta_content">
-
                     <section class="cta_subline">
-
-                    <h3 class="my-3 text-uppercase text-dark display-4 text-center">Contact SNF Today!</h3>
-                    <p class="lead text-center">Find out how SNF is investing towards a sustainable future today!</p>
+                        <h3 class="my-3 text-uppercase text-dark display-4 text-center">Contact SNF Today!</h3>
+                        <p class="lead text-center">Find out how SNF is investing towards a sustainable future today!</p>
                     </section>
                     <div class="row mt-3">
                         <div class="col-md-12 cta_stats">
@@ -182,21 +158,16 @@ get_header(); ?>
         </div>
     </div>
 </div>
-<!-- CTA -->
-
-<!-- News SECTION -->
 <div class="container">
     <div class="row mt-md-3 mb-md-3 my-sm-1">
         <div class="col-sm-12 news-title-seperation">
             <section class="news_title_container">
                 <div class="heading "><h4 class="display-3">News & Events</h4></div>
             </section>
-
         </div>
     </div>
-
     <div class="row ">
-        <div id="news_carousel" class="carousel slide w-100 mt-3 " data-ride="carousel">
+        <div id="news_carousel" class="carousel slide w-100 mt-md-3 " data-ride="carousel">
             <?php
                 $counter = 0;
                 $args = array(
@@ -215,7 +186,7 @@ get_header(); ?>
                                 <?php the_post_thumbnail('full', array('class' => ' card-img-top d-none d-sm-none d-md-block ', 'alt' => 'slide ' .  $counter . ' ')); ?>
                                 <div class="news_featured d-sm-block d-md-none d-lg-non"  style="background-image: url(<?php echo the_post_thumbnail_url("full") ;?>)"></div>
                                 <div class="card-body">
-                                    <h2 class="display-4"><?php the_title();?></h2>
+                                    <h2 class="display-4 card-title"><?php the_title();?></h2>
                                 </div>
                                 <div class="card-footer bg-transparent border-0">
                                     <?php if(get_field('news_url_change')):?>
@@ -245,7 +216,7 @@ get_header(); ?>
         </div><!--col-->
     </div>
     <div class="row ">
-        <div class="col-sm-12 text-center mt-md-5 mt-sm-2 pb-md-3 ">
+        <div class="col-sm-12 text-center mt-md-5 mt-sm-5 pb-md-3 ">
             <div class="snf-link-wrapper ">
                 <div class="snf-link">
                     <a  href="<?php echo home_url( '/' ); ?>news" class="product-list-link">View All News Articles</a>

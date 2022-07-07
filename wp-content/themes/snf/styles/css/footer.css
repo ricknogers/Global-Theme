@@ -5,7 +5,7 @@
     .bg-footer {
         background-color: #33383c;
         padding: 50px 0 30px;
-    }
+        position: relative;}
     .footer-heading {
         letter-spacing: 2px;
     }
@@ -17,6 +17,7 @@
         line-height: 40px;
         font-size: 14px;
         transition: all 0.5s;
+        text-decoration: none;
     }
     .footer-link a:hover {
         color: #0082CA;
@@ -94,7 +95,7 @@
         justify-content: center;
         align-items: center;
         bottom: 5%;
-        right: 5%;
+        left: 5%;
         opacity: .5;
     }
     .blended-logo img{
@@ -317,7 +318,7 @@
         line-height: 30px;
         font-size: 14px;
         transition: all 0.5s;
-    }
+    text-decoration: none;}
     .footer-link a:hover {
         color: #0082CA;
     }

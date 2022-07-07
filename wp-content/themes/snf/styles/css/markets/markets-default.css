@@ -14,23 +14,7 @@ VI.)
 VII.)
 IX.)
 ======================================================*/
-.right-side-sidebar .sidebar {
-    padding: 15px;
-    background-color: transparent;
-    border: none;
-}
-.right-side-sidebar .sidebar .nav {
-    position: relative;
-}
-.right-side-sidebar .sidebar li {
-    border:0 #f2f2f2 solid;
-    border-bottom-width:1px;
-    background-color: unset;
-    padding: .75rem 0rem;
-}
-.right-side-sidebar .sidebar li a{
-    color: #212529;
-    font-size: .85rem;}
+
 /* collapsed sidebar styles */
 @media screen and (max-width: 767px) {
     .row-offcanvas {
@@ -90,6 +74,24 @@ IX.)
         border-top-color: #fff;
         border-bottom-color: #fff;
     }
+    .right-side-sidebar .sidebar {
+        padding: 0 5px;
+        background-color: transparent;
+        border: none;
+    }
+    .right-side-sidebar .sidebar .nav {
+        position: relative;
+    }
+    .right-side-sidebar .sidebar li {
+        border:0 #f2f2f2 solid;
+        border-bottom-width:1px;
+        background-color: unset;
+        padding: .75rem 0rem;
+    }
+    .right-side-sidebar .sidebar li a{
+        color: #212529;
+        font-size: .85rem;font-weight: 600;
+    text-decoration: none;}
 }
 .sidebar-offcanvas .nav .nav.collapse,
 .sidebar-offcanvas .nav .nav.collapsing {
@@ -123,73 +125,7 @@ IX.)
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
 }
-.left-side-sidebar {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-.right-side-sidebar {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 0;padding-right: 0;}
 
-.right-side-sidebar .sidebar-widget h4{
-    font-size: 26px;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: #002d73
-}
-.right-side-sidebar .sidebar-widget .heading{
-    display: block;
-    margin-bottom: 25px;
-    border-bottom: 1px dotted #e4e4e4;
-    background-color: transparent;
-    padding: 0;
-}
-.right-side-sidebar .sidebar-widget h4:before{
-    display: block;
-    left: 0;
-    top: 40px;
-    position: relative;
-    width: 30%;
-    height: 2px;
-    content: "";
-    background-color: #002d73;
-}
-.sidebar-widget{
-    padding-bottom: 20px;
-    border-radius: 4px;}
-.sidebar-market-contact{
-    background-size:cover;
-    background-position:center;
-    height: 135px;
-    position:relative;
-    /* z-index:-1; */
-    display: flex;border-radius: 4px;justify-content: center;align-items: center;}
-.sidebar-market-contact .sidebar-overlay{
-    position: absolute;
-    top:0;
-    opacity: .64;
-    left:0;
-    height:100%;
-    border-radius: 4px;width: 100%;
-    padding:1.75rem;
-}
-.sidebar-market-contact .markets-contact-content{
-    z-index:15;
-    position:relative;
-    color:#fff;
-    display: block;
-
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;text-align: center;}
-.sidebar-market-contact .markets-contact-content h3{
-    text-shadow: 1px 1px #000;font-size: 1.15rem;
-    font-weight: 800;letter-spacing: .1rem;}
-.sidebar-market-contact .markets-contact-content a{
-    font-weight:800;
-    border:solid 2px;
-}
 /*===================================================
 SDG Sidebar
 ======================================================*/
@@ -230,17 +166,20 @@ SDG Sidebar
 .photos .item img{
     height: 80px;
     width: auto;
-    min-height: 70px;
-    min-width: 70px;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-}
+    /* margin: 0; *//* margin-right: 0 !important; */}
 .photos figure{
     position:relative;
-}
+    margin: 0 !important;margin-block-start: 0;margin-inline-start: 0 !important;margin-inline-end: 0 !important;margin-block-end: 0 !important;/* min-height: 96px; *//* max-width: 135px; */overflow: hidden;padding: 10px;display: block;text-align: center;}
+.hover-mask{
+    /* height: 125px; */
+    /* width: 100%; */position: relative;display: block;}
 /*===================================================
 Cards
 ======================================================*/
@@ -248,11 +187,317 @@ Cards
 /*===================================================
 
 ======================================================*/
+@nedua(max-width:991px){
+    
+        position: absolute;
+        top:0;
+        opacity: .64;
+        left:0;
+        height:100%;
+        border-radius: 4px;width: 100%;
+        padding:1.75rem;
+    }
+    .sidebar-market-contact .markets-contact-content{
+        z-index:15;
+        position:relative;
+        color:#fff;
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;text-align: center;}
+    .sidebar-market-contact .sidebar-overlay{
+        position: absolute;
+        top:0;
+        opacity: .64;
+        left:0;
+        height:100%;
+        border-radius: 4px;width: 100%;
+        padding:1.75rem;
+    }
+    .sidebar-market-contact .markets-contact-content{
+        z-index:15;
+        position:relative;
+        color:#fff;
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;text-align: center;}
+    .sidebar-market-contact .markets-contact-content h3{
+        text-shadow: 1px 1px #000;font-size: 1.15rem;
+        font-weight: 800;letter-spacing: .1rem;}
+    .sidebar-market-contact .markets-contact-content a{
+        font-weight:800;
+        border:solid 2px;
+        color: #f8f9fa;}
+    .left-side-sidebar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .right-side-sidebar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0;padding-right: 0;}
+
+    .right-side-sidebar .sidebar-widget h4{
+        font-size: 26px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #002d73
+    }
+    .right-side-sidebar .sidebar-widget .heading{
+        display: block;
+        margin-bottom: 25px;
+        border-bottom: 1px dotted #e4e4e4;
+        background-color: transparent;
+        padding: 0;
+    }
+    .right-side-sidebar .sidebar-widget h4:before{
+        display: block;
+        left: 0;
+        top: 40px;
+        position: relative;
+        width: 30%;
+        height: 2px;
+        content: "";
+        background-color: #002d73;
+    }
+    .sidebar-widget{
+        padding-bottom: 10px;
+        border-radius: 4px;}
+    .sidebar-market-contact{
+        background-size:cover;
+        background-position:center;
+        height: 135px;
+        position:relative;
+        /* z-index:-1; */
+        display: flex;border-radius: 4px;justify-content: center;align-items: center;}
+    .sidebar-market-contact .sidebar-overlay{
+        position: absolute;
+        top:0;
+        opacity: .64;
+        left:0;
+        height:100%;
+        border-radius: 4px;width: 100%;
+        padding:1.75rem;
+    }
+    .sidebar-market-contact .markets-contact-content{
+        z-index:15;
+        position:relative;
+        color:#fff;
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;text-align: center;}
+    .sidebar-market-contact .markets-contact-content h3{
+        text-shadow: 1px 1px #000;font-size: 1.15rem;
+        font-weight: 800;letter-spacing: .1rem;}
+    .sidebar-market-contact .markets-contact-content a{
+        font-weight:800;
+        border:solid 2px;
+        color: #f8f9fa;}
+    .sidebar-market-contact .markets-contact-content a:hover{
+        font-weight:800;
+        border:solid 2px #f8f9fa;
+        background-color: transparent;
+    }
+    #markets_carousel .card-img-top {
+        height: 20vw;
+    }
+    .flexible-card .traditional-card{
+        background-size: cover;
+        background-position: center;
+        height: 185px;
+    }
+    .flexible-card .card-tag{
+    }
+    .second-tier-nav .market_nav_elements ul li{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        /* padding: 0; *//* line-height: 1.5; */}
+    .second-tier-nav .market_nav_elements ul li ul.dropdown-menu li a{
+        color:#002d73;
+        font-weight: 600;
+    }
+    .second-tier-nav .market_nav_elements ul li ul.dropdown-menu li{
+        display:block;
+        border-bottom: solid 1px #cecece;line-height: 45px;}
+    .second-tier-nav .market_nav_elements{
+        /* display:inline-flex; */
+        position:relative;
+        /* width:100%; */
+        /* height: 100%; */}
+    .second-tier-nav ul li{
+        display: inline-block;
+        /* font-size: 22px; */
+
+        /* margin: 0; */
+        /* text-transform: uppercase; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* background: transparent; */
+        position: relative;
+        /* width: auto; */
+        line-height: 1.2;
+    }
+    .second-tier-nav ul li ul li{
+        display:block;
+        /* padding: 7px .5rem; */
+    }
+   
+
+    
+    .second-tier-nav ul li.active{
+        /* position: relative; */
+        /* padding: 0; */
+
+
+        /* border-radius: 0 !important; */
+    }
+   
+    .second-tier-nav ul li.active:before{
+        position:absolute;
+        left: 0%;
+        top: 0;
+        height: 100%;
+        /* content:""; */
+        /* clip-path: polygon(0 0, 79% 0, 87% 100%, 0% 100%); */
+        /* width: 7vw; */
+        /* background: rgb(249,176,0); */
+        /* margin-right: 5%; */
+    }
+    .second-tier-nav ul li:hover ul.children{
+        display: block;
+        position:absolute;
+        top: 100%;
+        left:0;
+        min-width:220px;
+        background-color: #fff;
+        width: 100%;padding: 0 .85rem;z-index: 5;
+        box-shadow: 0px 1px 2px #999;
+    }
+    .second-tier-nav ul li ul.children{
+        display: none;
+    }
+    #children-listing-sidebar{
+        position:relative;
+        z-index: 5;
+        /* overflow-x:hidden; */
+    }
+    .bg_image_card{
+        background-size:cover;
+        background-position: center;
+        height: 200px;
+    }
+    #markets_carousel .card-body h4{
+        font-weight:300;
+        color:#002d73;
+    }
+    #markets_carousel{
+        position:relative;
+        width:100%;
+        padding: 0;min-height: 80vh;}
+    .left-side-sidebar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .right-side-sidebar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0;padding-right: 0;}
+
+    .right-side-sidebar .sidebar-widget h4{
+        font-size: 26px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #002d73
+    }
+    .right-side-sidebar .sidebar-widget .heading{
+        display: block;
+        margin-bottom: 25px;
+        border-bottom: 1px dotted #e4e4e4;
+        background-color: transparent;
+        padding: 0;
+    }
+    .right-side-sidebar .sidebar-widget h4:before{
+        display: block;
+        left: 0;
+        top: 40px;
+        position: relative;
+        width: 30%;
+        height: 2px;
+        content: "";
+        background-color: #002d73;
+    }
+.sustain{
+    display:none;
+}
+    .sidebar-widget{
+        padding-bottom: 10px;
+        border-radius: 4px;}
+    .sidebar-market-contact{
+        background-size:cover;
+        background-position:center;
+        height: 135px;
+        position:relative;
+        /* z-index:-1; */
+        display: flex;border-radius: 4px;justify-content: center;align-items: center;}
+    .sidebar-market-contact .sidebar-overlay{
+        position: absolute;
+        top:0;
+        opacity: .64;
+        left:0;
+        height:100%;
+        border-radius: 4px;width: 100%;
+        padding:1.75rem;
+    }
+    .sidebar-market-contact .markets-contact-content{
+        z-index:15;
+        position:relative;
+        color:#fff;
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;text-align: center;}
+    .sidebar-market-contact .markets-contact-content h3{
+        text-shadow: 1px 1px #000;font-size: 1.15rem;
+        font-weight: 800;letter-spacing: .1rem;}
+    .sidebar-market-contact .markets-contact-content a{
+        font-weight:800;
+        border:solid 2px;
+        color: #f8f9fa;}
+    .sidebar-market-contact .markets-contact-content a:hover{
+        font-weight:800;
+        border:solid 2px #f8f9fa;
+        background-color: transparent;
+    }
+}
 
 /*===================================================
     Market Slider
 ======================================================*/
 @media (min-width: 768px) {
+    .right-side-sidebar .sidebar {
+        padding: 0 5px;
+        background-color: transparent;
+        border: none;
+    }
+    .right-side-sidebar .sidebar .nav {
+        position: relative;
+    }
+    .right-side-sidebar .sidebar li {
+        border:0 #f2f2f2 solid;
+        border-bottom-width:1px;
+        background-color: unset;
+        padding: .75rem 0rem;
+    }
+    .right-side-sidebar .sidebar li a{
+        color: #212529;
+        font-size: .85rem;font-weight: 600;}
 
     /* show 3 items */
     #markets_carousel .carousel-inner .active,
@@ -366,6 +611,78 @@ Cards
 }
 
 @media (min-width: 992px) {
+    .left-side-sidebar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .right-side-sidebar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0;padding-right: 0;}
+
+    .right-side-sidebar .sidebar-widget h4{
+        font-size: 26px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #002d73
+    }
+    .right-side-sidebar .sidebar-widget .heading{
+        display: block;
+        margin-bottom: 25px;
+        border-bottom: 1px dotted #e4e4e4;
+        background-color: transparent;
+        padding: 0;
+    }
+    .right-side-sidebar .sidebar-widget h4:before{
+        display: block;
+        left: 0;
+        top: 40px;
+        position: relative;
+        width: 30%;
+        height: 2px;
+        content: "";
+        background-color: #002d73;
+    }
+    .sidebar-widget{
+        padding-bottom: 10px;
+        border-radius: 4px;}
+    .sidebar-market-contact{
+        background-size:cover;
+        background-position:center;
+        height: 135px;
+        position:relative;
+        /* z-index:-1; */
+        display: flex;border-radius: 4px;justify-content: center;align-items: center;}
+    .sidebar-market-contact .sidebar-overlay{
+        position: absolute;
+        top:0;
+        opacity: .64;
+        left:0;
+        height:100%;
+        border-radius: 4px;width: 100%;
+        padding:1.75rem;
+    }
+    .sidebar-market-contact .markets-contact-content{
+        z-index:15;
+        position:relative;
+        color:#fff;
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;text-align: center;}
+    .sidebar-market-contact .markets-contact-content h3{
+        text-shadow: 1px 1px #000;font-size: 1.15rem;
+        font-weight: 800;letter-spacing: .1rem;}
+    .sidebar-market-contact .markets-contact-content a{
+        font-weight:800;
+        border:solid 2px;
+        color: #f8f9fa;}
+    .sidebar-market-contact .markets-contact-content a:hover{
+        font-weight:800;
+        border:solid 2px #f8f9fa;
+        background-color: transparent;
+    }
     #markets_carousel .card-img-top {
         height: 20vw;
     }
@@ -380,14 +697,14 @@ Cards
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        padding: 0;line-height: 1.5;}
+        /* padding: 0; *//* line-height: 1.5; */}
     .second-tier-nav .market_nav_elements ul li ul.dropdown-menu li a{
         color:#002d73;
-        font-weight:400;
+        font-weight: 600;
     }
     .second-tier-nav .market_nav_elements ul li ul.dropdown-menu li{
         display:block;
-        padding: 7px .5rem;}
+        border-bottom: solid 1px #cecece;line-height: 45px;}
     .second-tier-nav .market_nav_elements{
         /* display:inline-flex; */
         position:relative;
@@ -408,7 +725,7 @@ Cards
     }
     .second-tier-nav ul li ul li{
         display:block;
-        padding: 7px .5rem;
+        /* padding: 7px .5rem; */
     }
     .shrink.second-tier-nav ul li{
         border: none;
@@ -558,6 +875,58 @@ section.contact-bar  {
 }
 .carousel-inner{
     min-height:450px;
+}
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover{
+    color: rgb(249,176,0);
+}
+.repeater-slider .bgTitle{
+    background-color:rgb(249,176,0);
+    position: absolute;
+    z-index: 1;
+}
+.fillImage .design-overlay{
+    position: absolute;
+    height: auto;
+    padding: 5px 1rem;
+    width: 75%;
+    background-color:rgb(249,176,0);
+    clip-path: polygon(0 0, 100% 0%, 89% 100%, 0 100%);
+    opacity: .9;
+}
+.fillImage .design-overlay h2{
+    color:#fff;
+    padding: 0;
+    font-size: 20px;
+    margin:0;
+    text-transform:uppercase;
+    text-shadow: 0px 1px 1px #000;
+    letter-spacing: 1px;
+}
+.subsidiary-children-pages ul li a {
+    /* font-size: 14px; */
+    /* letter-spacing: 2px; */
+    /* font-weight: 300; */
+    text-decoration: none;
+    width: auto;
+    top: 8%;}
+.subsidiary-children-pages ul li span:before{
+    content:"\F229";
+    position: absolute;
+    right: 5%;
+    color: #002d73;
+    top:0;
+    font-family: bootstrap-icons !important;
+}
+.shrink.second-tier-nav ul li.active h3{
+    color:#002d73;
+    z-index: 7;
+    font-weight: 600;
+    text-align: center;
+}
+.repeater-slider .carousel-indicators li.active{
+    background: rgb(249,176,0);
+    /* width: 20px; */
+    /* border-radius: 25px; */
 }
 /*===================================================
    Horizontal Card Layout

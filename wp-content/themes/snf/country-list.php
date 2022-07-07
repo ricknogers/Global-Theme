@@ -31,12 +31,12 @@
                             <div class="tab-content">
                                 <?php $counterLoop = 0;?>
                                 <div class="tab-pane <?php if ($counterLoop === 0):?> active <?php endif;?>" id="all" aria-labelledby="all" role="tabpanel">
-                                    <h6 class="text-muted">Other Options</h6>
+                                    <h6 class="text-muted">Quick Links</h6>
                                     <ul class="list-group list-group-flush">
-                                        <a class="p-3 list-group-item d-flex justify-content-between" href="<?php echo home_url('/');?>contact-us/">Contact Us</a>
-                                        <a class="p-3 list-group-item d-flex justify-content-between" href="<?php echo home_url('/');?>products/">Products</a>
-                                        <a class="p-3 list-group-item d-flex justify-content-between" href="<?php echo home_url('/');?>investor-center/">Investors</a>
-                                        <a class="p-3 list-group-item d-flex justify-content-between" href="<?php echo home_url('/');?>investor-center/">SNF Sustainability</a>
+                                        <a class="p-3 list-group-item d-flex justify-content-between" href="<?php echo home_url('/');?>contact">Contact Us</a>
+                                        <a class="p-3 list-group-item d-flex justify-content-between" href="<?php echo home_url('/');?>news/">News</a>
+                                        <a class="p-3 list-group-item d-flex justify-content-between" href="<?php echo home_url('/');?>investors">Investors</a>
+                                        <a class="p-3 list-group-item d-flex justify-content-between" href="<?php echo home_url('/');?>sustainability/overview/"> Sustainability</a>
                                     </ul>
                                 </div>
                                 <?php foreach( get_terms( 'country', array( 'hide_empty' => false, 'parent' => 0 ) ) as $parent_term ) :?>
@@ -53,9 +53,10 @@
                                                 </li>
                                             <?php else:?>
 		                                        <?php  $url = get_term_link($child_term->slug, 'country');?>
+
                                                 <li class="list-group-item">
-                                                    <a href="<?php echo $url['url'];?>">
-                                                       <?php echo $child_term->name;?>
+                                                    <a href="<?php echo get_term_link($child_term->slug, $child_term->taxonomy);?>" >
+                                                        <h2><?php echo $child_term->name; ?> </h2>
                                                     </a>
                                                 </li>
                                             <?php endif;?>

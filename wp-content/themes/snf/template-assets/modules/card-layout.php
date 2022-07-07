@@ -62,15 +62,13 @@
 		                            <div class="card-footer bg-transparent border-0">
 			                            <?php $button_link = get_sub_field( 'button_link' ); ?>
 			                            <?php if ( $button_link ) : ?>
-		                                    <div class="snf-link-wrapper ">
-		                                        <div class="snf-link">
-						                            <?php if(get_sub_field('button_text')):?>
-		                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?></a>
-						                            <?php else:?>
-		                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More</a>
-						                            <?php endif;?>
-		                                        </div>
-		                                    </div>
+		                                   
+                                            <?php if(get_sub_field('button_text')):?>
+                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?></a>
+                                            <?php else:?>
+                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More</a>
+                                            <?php endif;?>
+		                                       
 		                                <?php else:?>
 			                            <?php endif; ?>
 		                            </div>
@@ -114,15 +112,13 @@
                             <section class=" card-footer bg-transparency">
 			                    <?php $button_link = get_sub_field( 'button_link' ); ?>
 			                    <?php if ( $button_link ) : ?>
-                                    <div class="snf-link-wrapper ">
-                                        <div class="snf-link">
+
 						                    <?php if(get_sub_field('button_text')):?>
-                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?></a>
+                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?> <i class="bi bi-chevron-double-right"></i></a>
 						                    <?php else:?>
-                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More</a>
+                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More <i class="bi bi-chevron-double-right"></i></a>
 						                    <?php endif;?>
-                                        </div><!--snf-link-->
-                                    </div><!--snf-link-wrapper-->
+
 			                    <?php endif; ?>
                             </section><!--card-footer-->
 	                        <div class="shape__shadow"></div><!--shape__shadow-->
@@ -179,15 +175,13 @@
                                     <div class="postcard__tagbox">
 	                                    <?php $button_link = get_sub_field( 'button_link' ); ?>
 	                                    <?php if ( $button_link ) : ?>
-                                            <div class="snf-link-wrapper ">
-                                                <div class="snf-link">
-				                                    <?php if(get_sub_field('button_text')):?>
-                                                        <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?>></a>
-				                                    <?php else:?>
-                                                        <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More</a>
-				                                    <?php endif;?>
-                                                </div><!--snf-link-->
-                                            </div><!--snf-link-wrapper-->
+
+                                            <?php if(get_sub_field('button_text')):?>
+                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?> <i class="bi bi-chevron-double-right"></i></a>
+                                            <?php else:?>
+                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More <i class="bi bi-chevron-double-right"></i></a>
+                                            <?php endif;?>
+
 	                                    <?php endif; ?>
                                     </div><!--postcard__tagbox-->
                                 </div><!--postcard__text-->
@@ -231,15 +225,13 @@
                                     <div class="postcard__tagbox">
 	                                    <?php $button_link = get_sub_field( 'button_link' ); ?>
 	                                    <?php if ( $button_link ) : ?>
-                                            <div class="snf-link-wrapper ">
-                                                <div class="snf-link">
+
 				                                    <?php if(get_sub_field('button_text')):?>
-                                                        <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?>></a>
+                                                        <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?> <i class="bi bi-chevron-double-right"></i></a>
 				                                    <?php else:?>
-                                                        <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More</a>
+                                                        <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More <i class="bi bi-chevron-double-right"></i></a>
 				                                    <?php endif;?>
-                                                </div>
-                                            </div>
+
 	                                    <?php endif; ?>
                                     </div><!--postcard__tagbox-->
                                 </div><!--postcard__text-->

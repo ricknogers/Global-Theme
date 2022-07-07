@@ -24,12 +24,15 @@ a,  li,  li a,  p, span, b, em, button, nav {
     /* color: #212529; */}
 #content h3{
 }
+a, li a, a button, p a{
+    text-decoration:
+            underline;
+    text-underline-offset: 3px;
+}
 /*===================================================
     I.) Links
 ======================================================*/
-a{
-    text-decoration: none !important;
-}
+
 /*===================================================
     II.) Buttons
 ======================================================*/
@@ -56,9 +59,15 @@ button, .btn, .btn-default, .btn-small{
 .subs-content h3{
     font-size:1.35rem;
 }
+.subs-content ul{
+    padding: 0;
+}
 .flexible-layout ul{
     line-height: 1.5em;
     margin: 5px 0 15px;
+}
+.subs-content li{
+    text-align:left !important;
 }
 .flexible-layout li {
     list-style: none;

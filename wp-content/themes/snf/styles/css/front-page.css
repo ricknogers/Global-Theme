@@ -48,10 +48,10 @@ III.) Remy & Executives
         background-color: #fff;
     }
 }
-@media(max-width:991px){
+@media(min-width:768px){
     .introduction .introduction-title h2 {
         text-align: center;
-        font-weight: 300;
+        font-weight: 500;
         position: relative;
         padding: 10px 0;
         letter-spacing: 1px;
@@ -88,7 +88,7 @@ III.) Remy & Executives
 ======================================================*/
 @media(min-width:992px){
     .hp_cta {
-        font-family: "Montserrat", sans-serif;
+        /* font-family: "Montserrat", sans-serif; */
         color: #8d97ad;
         font-weight: 300;
     }
@@ -139,7 +139,7 @@ III.) Remy & Executives
         font-size: 16px;
     }
 }
-@media(max-width:991px){
+@media(min-width:768px){
     .hp_cta {
         color: #8d97ad;
         font-weight: 300;
@@ -192,7 +192,7 @@ III.) Remy & Executives
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1200px) {
     .hp_cta.wrap-cta-box .left-image {
         position: relative;
         top: -90px;
@@ -402,7 +402,7 @@ III.) Remy & Executives
         background-color: #bbbbbb;
     }
 }
-@media(max-width:991px){
+@media(min-width:768px){
 
     .sec-title2{
         color:#fff;
@@ -538,54 +538,73 @@ III.) Remy & Executives
 /*===================================================
     Video Icon Modal
 ======================================================*/
-.z-depth-1-half {
-    -webkit-box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%) !important;
-    box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%) !important;
-    margin-top: 45px !important;
-}
-.video-overview .modal-dialog {
-    width: auto !important;
-    max-width: 800px !important;
-    height: unset;
-    margin: 1.75rem auto;
-}
-.embed-responsive-16by9::before {
-    padding-top: 56.25%;
-}
-.video-overview .modal-dialog .modal-content {
-    background-color: #000;
-    border: 0;
-    border-radius: 0.125rem;
-    -webkit-box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
-    box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
-    height: unset;
-}
-.btn-floating.btn-sm {
-    width: 36.15385px;
-    color: #fff;
-    height: 36.15385px;
-}
-.video-overview .modal{
-    top:20%;
-}
-.video-overview button.close span{
-    color:#fff;
-    font-size:40px;
-    text-shadow: unset;
-    font-weight: 300;
-    top: -10px;
-    position: absolute;
-    right: 15px;
-    z-index: 11;
-}
-.video-overview .modal-body {
-    overflow-y: auto;
-    position: relative;
-    top: 15px;
+@media(min-width:768px){
+    .z-depth-1-half {
+        -webkit-box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%) !important;
+        box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%) !important;
+        /* margin-top: 45px !important; */
+    }
+    .video-overview .modal-dialog {
+        width: auto !important;
+        max-width: 800px !important;
+        height: unset;
+        /* padding: 1.75rem; */}
+    .embed-responsive-16by9::before {
+        padding-top: 56.25%;
+    }
+    .video-overview .modal-dialog .modal-content {
+        background-color: #000;
+        border: 0;
+        border-radius: 0.125rem;
+        -webkit-box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+        box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+        height: unset;
+    }
+    .btn-floating.btn-sm {
+        width: 36.15385px;
+        color: #fff;
+        height: 36.15385px;
+    }
+    .video-overview .modal{
+        top: 10%;
+    }
+    .video-overview button.close span{
+        color:#fff;
+        font-size:40px;
+        text-shadow: unset;
+        font-weight: 300;
+        top: -10px;
+        position: absolute;
+        right: 15px;
+        z-index: 11;
+    }
+    .video-overview .modal-body {
+        overflow-y: auto;
+        position: relative;
+        padding: 2rem;
+    }
 }
 /*===================================================
 
 ======================================================*/
+@media (min-width: 576px) {
+    .cta_subline{
+        position: absolute;
+        /* z-index: 11; */
+        top: -100%;/* height: 100%; */
+    }
+    .cta_subline p{
+        color: #fff;
+    }
+    .highlight-section .image-column{
+        position:
+                relative;
+        /* display: none; */
+        justify-content: center;
+        align-items: center;
+        padding: 0rem;
+    }
+}
 @media(min-width:992px){
     .highlight-section{
         position:relative;
@@ -595,7 +614,7 @@ III.) Remy & Executives
         position:relative;
         margin-bottom: 0;
     }
-    .branded-title-seperation .branded_title_container .heading {
+    .branded-title-seperation .branded_title_container h2 {
         display: block;
         /* height: 100%; */
         border-bottom: 1px dotted #6d6d6d;
@@ -621,7 +640,7 @@ III.) Remy & Executives
     .branded-title-seperation .branded_title_container h2:before {
         display: block;
         left: 0;
-        top: 38px;
+        top: 40px;
         position: relative;
         width: 30%;
         height: 2px;
@@ -662,7 +681,7 @@ III.) Remy & Executives
         display: flex;
         justify-content: center;
         align-items: center;
-        /* padding: 1rem; */}
+        padding: 1rem;}
     .highlight-section .image-column .inner-column{
         position:relative;
         padding: 20px 20px 0px 0px;
@@ -737,8 +756,10 @@ III.) Remy & Executives
         bottom: -10px;
         background: url(https://i.ibb.co/DKn55Qz/pattern-1.jpg) repeat;
     }
+    .cta_subline p{
+        color: #212529;font-size: 1.25em;}
 }
-@media(max-width:991px){
+@media(min-width:768px){
     .branded-title-seperation .branded_title_container .heading {
         display: block;
         /* height: 100%; */
@@ -787,22 +808,12 @@ III.) Remy & Executives
     .cta_content{
         position: relative;
     }
-    .cta_subline{
-        position: absolute;
-        /* z-index: 11; */top: -100%;/* height: 100%; */}
+
     .cta_subline h3{
-        z-index:12;
-        color: #fff !important;font-size: 1.25rem;font-weight: 600;letter-spacing: 1px;}
-    .cta_subline p{
-        color:#fff
-    }
-    .cta_content_overlay{
-        position:absolute;
-        height:100%;
-        width:100%;
-        background-color:rgba(0,0,0,.6);
-        top: 0;
-        left: 0;right: 0;border-radius: .25rem;}
+        /* z-index:12; */
+        /* color: #fff !important; */font-size: 1.25rem;font-weight: 600;letter-spacing: 1px;margin: unset;}
+
+
     .highlight-section{
         position:relative;
         padding: 0;
@@ -835,17 +846,12 @@ III.) Remy & Executives
         margin-bottom:50px;
     }
     .home .highlight-section .image-column{
-        display: none !important;
+        /* display: none !important; */
         display: flex;
         /* justify-content: center; */
         /* align-items: center; */
         /* padding: 0 !important; */}
-    .highlight-section .image-column{
-        position:relative;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        padding: 4rem;}
+
     .highlight-section .image-column .inner-column{
         position:relative;
         padding: 20px 20px 0px 0px;
@@ -881,7 +887,7 @@ III.) Remy & Executives
         position:relative;
         width:100%;
         border-radius: 4px;display:block;
-        max-height: 20vh;}
+        /* max-height: 50vh; */}
     .highlight-section .image-column .inner-column .image .overlay-box{
         position:absolute;
         left:40px;
@@ -920,111 +926,188 @@ III.) Remy & Executives
         bottom: -10px;
         background: url(https://i.ibb.co/DKn55Qz/pattern-1.jpg) repeat;
     }
+    .cta_subline{
+        position: relative;
+        z-index: 11;
+        /* top: 0; */height: 100%;
+    }
 }
 
 /*===================================================
     Market Panel Skewed
 ======================================================*/
-.market-icon{position: relative;padding: 0 !important;overflow:hidden;/* height: 100%; */}
-.market-icon a:hover > .market-title{
-    opacity: 0;
-    padding: 0 !important;
+@media (min-width: 768px) {
+    .market-icon{position: relative;padding: 0 !important;overflow:hidden;/* height: 100%; */}
+    .market-icon a:hover > .market-title{
+        opacity: 0;
+        padding: 0 !important;
+    }
+    .market-icon a:hover >  .market-icon-container{
+        background-size: cover;
+        background-position: center;
+        height: 220px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        opacity: 1 !important;
+        /* display: block; */
+        transition: opacity .5s linear;
+        /* padding: 0 !important; */
+    }
+    .market-icon .market-title h3{
+        text-transform:uppercase;
+        color:rgb(64,64,64);
+        font-size: .85rem;
+        /* font-weight:bold; */
+        color: #fff;
+        text-shadow: 1px 1px 4px #000;
+        display: block;
+    }
+    .market-icon .market-title{
+        height: 100%;
+        text-align: center;
+        padding: 9px;
+        /* display: flex; */
+        transition: opacity .5s linear;
+    }
+    .market-icon .card-container{
+        height: 100%;
+        width:100%;
+    }
+    .market-icon a:hover .card-container{
+        background-color:#000;
+        padding: 10px;position: absolute;left: 0;right: 0;}
+    .market-icon a:hover .card-container p{
+        font-size: .7rem !important;
+        color:#fff;
+        text-align: left !important;}
+    .market-icon .market-icon-container .market-title{
+        background-size:cover;
+        background-position:center;
+        padding: 0;position: relative;/* overflow: hidden; */}
+    .icon-square-hover{
+        height: 125px;
+        /* position: relative; */
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+        /* display: block; */
+    }
+    .icon-square-hover img{
+        display:block;
+        z-index:4;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        /* right: 0; */
+        height: 115px;
+    }
+    .markets-card-icon .market-icon{
+        height:400px;
+        background-position: center;
+        background-size: cover;
+        position:relative;
+    }
+    .market-icon .card-body{
+        min-height: 200px;
+        border-radius: 9px;
+        position: relative;
+        box-shadow: 0px 3px 7px rgb(0 0 0 / 40%);
+    }
+    .market-icon .market-title-overlay{
+        position: relative;
+        padding:8px 15px
+    }
+    .market-icon-container{
+        /* position: absolute; */
+        /* background-color:#fff; */
+        right: 0;
+        /* height: 150px; */
+        bottom: 0;
+        /* border-radius: 50%; */
+        left: 0;
+    }
+    .market-icon-container img{
+    }
+    .market-icon .market-title-overlay h3{
+        margin:0;
+        font-size:20px;
+        font-weight:800;
+    }
 }
-.market-icon a:hover >  .market-icon-container{
-    background-size: cover;
-    background-position: center;
-    height: 220px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    opacity: 1 !important;
-    /* display: block; */
-    transition: opacity .5s linear;
-    /* padding: 0 !important; */
-}
-.market-icon .market-title h3{
-    text-transform:uppercase;
-    color:rgb(64,64,64);
-    font-size: .85rem;
-    /* font-weight:bold; */
-    color: #fff;
-    text-shadow: 1px 1px 4px #000;
-    display: block;
-}
-.market-icon .market-title{
-    height: 100%;
-    text-align: center;
-    padding: 9px;
-    /* display: flex; */
-    transition: opacity .5s linear;
-}
-.market-icon .card-container{
-    height: 100%;
-    width:100%;
-}
-.market-icon a:hover .card-container{
-    background-color:#000;
-    padding: 10px;position: absolute;left: 0;right: 0;}
-.market-icon a:hover .card-container p{
-    font-size: .7rem !important;
-    color:#fff;
-    text-align: left !important;}
-.market-icon .market-icon-container .market-title{
-    background-size:cover;
-    background-position:center;
-    padding: 0;position: relative;/* overflow: hidden; */}
-.icon-square-hover{
-    height: 125px;
-    /* position: relative; */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* display: block; */
-}
-.icon-square-hover img{
-    display:block;
-    z-index:4;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    /* right: 0; */
-    height: 115px;
-}
-.markets-card-icon .market-icon{
-    height:400px;
-    background-position: center;
-    background-size: cover;
-    position:relative;
-}
-.market-icon .card-body{
-    min-height: 200px;
-    border-radius: 9px;
-    position: relative;
-    box-shadow: 0px 3px 7px rgb(0 0 0 / 40%);
-}
-.market-icon .market-title-overlay{
-    position: relative;
-    padding:8px 15px
-}
-.market-icon-container{
-    /* position: absolute; */
-    /* background-color:#fff; */
-    right: 0;
-    /* height: 150px; */
-    bottom: 0;
-    /* border-radius: 50%; */
-    left: 0;
-}
-.market-icon-container img{
-}
-.market-icon .market-title-overlay h3{
-    margin:0;
-    font-size:20px;
-    font-weight:800;
-}
+
 /*========================================================
     nEWS sLIDER
 ========================================================*/
+
+
+/* Responsive design for image heights */
+@media (min-width: 576px) {
+    #news_carousel .card-img-top {
+        height: 56vw;
+    }
+    #news_carousel .card-body h2{
+        font-size: 1.05rem;
+        margin-bottom: 0;
+    }
+    .cta_content_overlay{
+        position:absolute;
+        height:100%;
+        width:100%;
+        background-color:rgba(0,0,0,.6);
+        top: 0;
+        left: 0;right: 0;border-radius: .25rem;
+    }
+}
+
 @media (min-width: 768px) {
+    .news_featured{
+        background-size: cover;background-position: center;height: 9rem;
+    }
+    #news_carousel .card-img-top {
+        height: 20vw;
+    }
+    .carousel-inner .carousel-item {
+        /* margin-right: unset; */
+    }
+    #news_carousel .card-body h2{
+        font-size:1.15rem;
+    }
+    #news_carousel .carousel-inner{
+        background-color:#fff;
+    }
+    #news_carousel .carousel-control-prev, #news_carousel .carousel-control-next{
+        display: none;
+        opacity: 1;/* display: inline-flex; */position: relative;top: -320px;}
+    #news_carousel .carousel-control-prev{
+        left: 260px;
+    }
+    #news_carousel .carousel-control-prev svg, #news_carousel .carousel-control-next svg{
+        color:black;
+        /* font-size: 1.15rem; */
+    }
+    #news_carousel .carousel-control-next{
+        right: -240px;
+    }
+    #news_carousel .carousel-control-next-icon{
+        background-color:#002d73;;
+        width: 50px;font-size: 25px;}
+    #news_carousel .carousel-control-prev-icon{
+        background-color:#002d73;;
+        width: 50px;font-size: 25px;
+    }
+    .carousel-indicators.communication_indicators{
+        margin: 0;background-color: #000;padding: 15px 0;position: relative;
+    }
+    #news_carousel .card-img-top {
+        object-fit: cover;
+    }
+
+    #news_carousel a.btn{
+        padding:0;
+    }
+    #news_carousel .card-body, #news_carousel .card-footer {
+        padding:.5rem 1.25rem;
+    }
     /* show 3 items */
     #news_carousel .carousel-inner .active,
     #news_carousel .carousel-inner .active + .carousel-item,
@@ -1078,81 +1161,12 @@ III.) Remy & Executives
         display: block;
         visibility: visible;
     }
-}
-
-/* Responsive design for image heights */
-@media (max-width: 576px) {
-    #news_carousel .card-img-top {
-        height: 56vw;
-    }
-    #news_carousel .card-body h2{
-        font-size: 1.05rem;
-        margin-bottom: 0;}
-}
-@media(max-width:991px){
-    .news_featured{
-        background-size: cover;background-position: center;height: 9rem;
-    }
-    #news_carousel .card-img-top {
-        height: 20vw;
-    }
-    .carousel-inner .carousel-item {
-        /* margin-right: unset; */
-    }
-    #news_carousel .card-body h2{
-        font-size:1.15rem;
-    }
-    #news_carousel .carousel-inner{
-        background-color:#fff;
-    }
-    #news_carousel .carousel-control-prev, #news_carousel .carousel-control-next{
-        display: none;
-        opacity: 1;/* display: inline-flex; */position: relative;top: -320px;}
-    #news_carousel .carousel-control-prev{
-        left: 260px;
-    }
-    #news_carousel .carousel-control-prev svg, #news_carousel .carousel-control-next svg{
-        color:black;
-        /* font-size: 1.15rem; */
-    }
-    #news_carousel .carousel-control-next{
-        right: -240px;
-    }
-    #news_carousel .carousel-control-next-icon{
-        background-color:#002d73;;
-        width: 50px;font-size: 25px;}
-    #news_carousel .carousel-control-prev-icon{
-        background-color:#002d73;;
-        width: 50px;font-size: 25px;
-    }
-    .carousel-indicators.communication_indicators{
-        margin: 0;background-color: #000;padding: 15px 0;position: relative;
-    }
-    #news_carousel .card-img-top {
-        object-fit: cover;
-    }
-    .news_featured {
-
-    }
-    #news_carousel a.btn{
-        padding:0;
-    }
-    #news_carousel .card-body, #news_carousel .card-footer {
-        padding:.5rem 1.25rem;
-    }
-}
-@media (min-width: 768px) {
     #news_carousel .card-img-top {
         height: 30vw;
     }
 }
 @media (min-width: 992px) {
-    .hp_cta_contact{
 
-    }
-    .hp_cta_contact h3{
-
-    }
     #news_carousel .card-img-top {
         height: 20vw;
     }
@@ -1198,6 +1212,295 @@ III.) Remy & Executives
 @media (min-width: 1200px) {
     #news_carousel .card-img-top {
         height: 9vw;
+    }
+}
+@media(max-width:767px){
+    .introduction .introduction-title h2{
+        display:none;
+    }
+     .news_featured{
+        background-size: cover;background-position: center;height: 9rem;
+    }
+    #news_carousel .card-img-top {
+        height: 20vw;
+    }
+    .carousel-inner .carousel-item {
+        /* margin-right: unset; */
+    }
+    #news_carousel .card-body h2{
+        font-size:1.15rem;
+    }
+    #news_carousel .carousel-inner{
+        background-color:#fff;
+    }
+    #news_carousel .carousel-control-prev, #news_carousel .carousel-control-next{
+        display: none;
+        opacity: 1;/* display: inline-flex; */position: relative;top: -320px;}
+    #news_carousel .carousel-control-prev{
+        left: 260px;
+    }
+    #news_carousel .carousel-control-prev svg, #news_carousel .carousel-control-next svg{
+        color:black;
+        /* font-size: 1.15rem; */
+    }
+    #news_carousel .carousel-control-next{
+        right: -240px;
+    }
+    #news_carousel .carousel-control-next-icon{
+        background-color:#002d73;;
+        width: 50px;font-size: 25px;}
+    #news_carousel .carousel-control-prev-icon{
+        background-color:#002d73;;
+        width: 50px;font-size: 25px;
+    }
+    .carousel-indicators.communication_indicators{
+        margin: 0;background-color: #000;padding: 15px 0;position: relative;
+    }
+    #news_carousel .card-img-top {
+        object-fit: cover;
+    }
+
+    #news_carousel a.btn{
+        padding:0;
+    }
+    #news_carousel .card-body, #news_carousel .card-footer {
+        padding:.5rem 1.25rem;
+    }
+    /* show 3 items */
+    #news_carousel .carousel-inner .active,
+    #news_carousel .carousel-inner .active + .carousel-item,
+    #news_carousel .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+    #news_carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    #news_carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    #news_carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    #news_carousel .carousel-inner .carousel-item-next,
+    #news_carousel .carousel-inner .carousel-item-prev {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    #news_carousel .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.333%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    #news_carousel .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    #news_carousel .carousel-item-next.carousel-item-left + .carousel-item,
+    #news_carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    #news_carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be abso position for animations */
+    #news_carousel .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    #news_carousel .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    #news_carousel .carousel-item-prev.carousel-item-right + .carousel-item,
+    #news_carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    #news_carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+    #news_carousel .card-img-top {
+        height: 30vw;
+    }
+    .executive-highlight{
+        /* margin:0; */
+        /* padding:0; */
+        height: 100%;
+        position: relative;
+    }
+    .executive-highlight .bg-img::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #191919;
+        opacity: .6;
+        border-radius: inherit;
+    }
+    .executive-highlight .bg-img{
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* height: 25vh; */
+        /* min-height: 250px; */}
+    .oval-divider--10 {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNmZmZmZmYiPjxwYXRoIGQ9Ik0xMDk0LjQ0IDExOUwxNzIuNyA2OC43MmE3NC41NCA3NC41NCAwIDAgMS0yNS4xOS01Ljk1TDAgMHYxNDBoMTI4MFYwbC0xMzMuODUgMTAyYy0xNS44NCAxMi4wOS0zMy43IDE3Ljk1LTUxLjcxIDE3eiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik0xMDkzLjQ4IDEzMS44NUwxNzMgOTRhNzYuODUgNzYuODUgMCAwIDEtMzYuNzktMTEuNDZMMCAwdjE0MGgxMjgwVjBsLTEzMS44MSAxMTEuNjhjLTE2LjQ3IDEzLjk2LTM1LjQ3IDIwLjk2LTU0LjcxIDIwLjE3eiIvPjwvZz48L3N2Zz4=);
+    }
+    .oval-divider--bottom {
+        background-size: 100% 100px;
+        bottom: 0;
+        /* height: 100px; */
+        z-index: 1;
+    }
+    .oval-divider--bottom {
+        margin-bottom: -1px;
+    }
+    .oval-divider--bottom, .oval-divider--top {
+        display: block;
+        position: absolute;
+        width: 100%;
+        /* height: 100%; */
+        /* bottom: 0; */
+        /* left: 0; */
+        pointer-events: none;
+        background-repeat-y: no-repeat;
+        /* right: 0; */
+    }
+    .geometric-overlay{
+        position: relative;
+        border-bottom: none;
+        background-position: center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .m-gab-2-top {
+        padding-top: 4.0625rem;
+    }
+    .m-video-link .m-video-link--icon {
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        padding: 12px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.20);
+        line-height: 1;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .m-video-link .m-video-link--icon i {
+        background: rgba(255, 255, 255, 0.39);
+        padding: 22px;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+    }
+    .m-video-link .m-video-link--icon:hover {
+        padding: 15px;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+    }
+    .overview-wrapper{
+        /* display:flex; */
+        /* justify-content:center; */
+        /* align-items:center; */
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+    .overview-wrapper .snf-link-wrapper{
+        display:none;
+    }
+    .overview{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100%; */
+        padding: 0 !important;}
+    .executive-highlight .overview h2{
+
+        font-size: 1.5rem !important;font-weight: 600;/* text-align: center; */}
+    .executive-highlight .overview h6{
+        text-align: center;
+    }
+    .branded-title-seperation .branded_title_container .heading {
+        display: block;
+        /* height: 100%; */
+        border-bottom: 1px dotted #6d6d6d;
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 5px;}
+    .branded-title-seperation {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        /* padding-left: 0 !important; */
+        padding-right: 0;
+    }
+    .branded-title-seperation .branded_title_container h2 {
+        font-size: 32px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #002d73;
+        margin-bottom: 0;}
+     .branded-title-seperation .branded_title_container h6{
+         margin-top:5px;
+     }
+    .oval-overlay .branded-title-seperation .branded_title_container h2:before {
+
+        background-color: #fff;
+        top: 30px;}
+    .branded-title-seperation .branded_title_container h2:before {
+        display: block;
+        left: 0;
+        top: 40px;
+        position: relative;
+        width: 30%;
+        height: 2px;
+        content: "";
+        background-color: #002d73;
+    }
+        .highlight-section .image-column .inner-column .image img{
+        display: none;
+        /* width:100%; */
+        /* border-radius: 4px; *//* display: flex; */
+        /* height: 25vh; *//* justify-content: center; *//* align-items: center; */}
+    .home .highlight-section .image-column{
+        /* display: none !important; */
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* padding: 0 !important; */}
+
+    .highlight-section .image-column .inner-column{
+        position:relative;
+        /* padding: 20px 20px 0px 0px; */
+        /* margin-left:50px; */
+    }
+    .highlight-section .image-column .inner-column:after{
+        position:absolute;
+        content:'';
+        right:0px;
+        top:0px;
+        left: 20px;
+        bottom: 50px;
+        border-radius: 4px;z-index:-1;
+        background-color: #f3f1eb;/* border: 2px solid #002d73; */
+    }
+    .highlight-section .image-column .inner-column .image{
+        position:relative;
+        z-index: 4;
+        background-color: #fff;
+    }
+    .highlight-section .image-column .inner-column .image:before{
+        position:absolute;
+        /* content:''; */
+        left:-50px;
+        bottom:-50px;
+        width:299px;
+        background-color: #fff;
+        height:299px;
+        background:url(img/pattern-2.png) no-repeat;
+        /* z-index: 6; */
     }
 }
 .carousel-inner .active.right { left: 25%; }

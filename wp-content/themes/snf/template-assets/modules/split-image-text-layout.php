@@ -2,8 +2,8 @@
     <?php while ( have_rows( 'split_layout_repeater' ) ) : the_row(); ?>
     	<?php $counter == 0 ?>
         <?php if ($counter % 2 === 0) :?>
-	        <div class="row split-spacing mt-2 mb-2 highlight-section align-items-center">
-	            <div class="content-column col-md-7 col-sm-12 col-xs-12">
+	        <div class="row split-spacing my-3 highlight-section align-items-center">
+	            <div class="content-column col-md-7 col-lg-7 col-xl-6 col-sm-12">
 	                <div class="inner-column left">
 		                <?php $title = get_sub_field('title');?>
                         <?php if($title):?>
@@ -19,31 +19,21 @@
                                     <p><?php the_sub_field('content');?></p>
                                 <?php endif;?>
                             <?php endif;?>
-		                    <?php 
-			                    $link = get_sub_field( 'link' );
-		                    ?>
+		                    <?php $link = get_sub_field( 'link' ); ?>
                             <?php if ( $link ) : ?>
-                            <?php 
-			                       $link_url = $link['url'];
-								    $link_title = $link['title'];
-								    $link_target = $link['target'] ? $link['target'] : '_self';
-								 ?>
-]                                <div class="snf-link-wrapper ">
-                                    <div class="snf-link">
-                                        <?php if(get_sub_field('link')):?>
-                                            <a href="<?php echo esc_url( $link); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="product-list-link"><?php the_sub_field( 'link_title' ); ?></a>
-                                        <?php else:?>
-                                            <a href="<?php echo esc_url( $link); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="product-list-link">Read More</a>
-                                        <?php endif;?>
-                                    </div>
-                                </div>
+                                
+                                <?php if(get_sub_field('link')):?>
+                                    <a href="<?php echo esc_url( $link); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="page-linkage"><?php the_sub_field( 'link_title' ); ?> <i class="bi bi-chevron-double-right"></i></a>
+                                <?php else:?>
+                                    <a href="<?php echo esc_url( $link); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="page-linkage">Read More <i class="bi bi-chevron-double-right"></i></a>
+                                <?php endif;?>
+                                   
                             <?php else:?>
                             <?php endif; ?>
                         </div>
 	                </div>
 	            </div>
-	            <!--Image Column-->
-	            <div class="image-column col-md-5 col-sm-12 col-xs-12">
+	            <div class="image-column col-md-5 col-lg-5 col-xl-6 d-xs-none">
 	                <div class="inner-column ">
 	                    <div class="image w-100 shadow">
 	                        <?php if ( get_sub_field( 'image' ) ) : ?>
@@ -55,7 +45,9 @@
 	        </div>
         <?php else:?>
             <div class="row split-spacing pt-3 pb-3 highlight-section align-items-center" id="">
-                <div class="image-column col-md-5 col-sm-12 col-xs-12">
+                
+
+                <div class="image-column col-md-5 col-lg-5 col-xl-6 d-xs-none order-first">
                     <div class="inner-column " >
                         <div class="image w-100 shadow">
                             <?php if ( get_sub_field( 'image' ) ) : ?>
@@ -64,43 +56,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="content-column col-md-7 col-sm-12 col-xs-12">
+                <div class="content-column col-md-7 col-lg-7 col-xl-6 col-sm-12 order-last">
                     <div class="inner-column right">
-	                    <?php $title = get_sub_field('title');?>
-	                    <?php if($title):?>
+			            <?php $title = get_sub_field('title');?>
+			            <?php if($title):?>
                             <div class="sec-title">
                                 <h2 class="title"><?php echo $title; ?></h2>
                             </div>
-	                    <?php endif;?>
+			            <?php endif;?>
                         <div class="text">
-	                        <?php if (get_sub_field( 'content_length' ) == 'excerpt' ) : ?>
+				            <?php if (get_sub_field( 'content_length' ) == 'excerpt' ) : ?>
                                 <p><?php echo snf_custom_excerpt(get_sub_field('content'));?></p>
-	                        <?php else:?>
-		                        <?php if (get_sub_field( 'content_length' ) == 'full-length' ) : ?>
+				            <?php else:?>
+					            <?php if (get_sub_field( 'content_length' ) == 'full-length' ) : ?>
                                     <p><?php the_sub_field('content');?></p>
-		                        <?php endif;?>
-	                        <?php endif;?>
-	                        <?php 
-		                        $link = get_sub_field( 'link' );
-		                        
-	                        ?>
-	                        <?php if ( $link ) : ?>
-		                       <?php 
-			                       $link_url = $link['url'];
-								    $link_title = $link['title'];
-								    $link_target = $link['target'] ? $link['target'] : '_self';
-								 ?>
-                                <div class="snf-link-wrapper ">
-                                    <div class="snf-link">
-				                        <?php if(get_sub_field('link')):?>
-                                            <a href="<?php echo esc_url( $link); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="product-list-link"><?php the_sub_field( 'link_title' ); ?></a>
-				                        <?php else:?>
-                                            <a href="<?php echo esc_url( $link); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="product-list-link">Read More</a>
-				                        <?php endif;?>
-                                    </div>
-                                </div>
-	                        <?php else:?>
-	                        <?php endif; ?>
+					            <?php endif;?>
+				            <?php endif;?>
+				            <?php $link = get_sub_field( 'link' ); ?>
+				            <?php if ( $link ) : ?>
+
+					            <?php if($link):?>
+                                    <a href="<?php echo esc_url( $link); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="page-linkage"><?php the_sub_field( 'link_title' ); ?> <i class="bi bi-chevron-double-right"></i></a>
+					            <?php else:?>
+                                    <a href="<?php echo esc_url( $link); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="page-linkage">Read More <i class="bi bi-chevron-double-right"></i></a>
+					            <?php endif;?>
+
+				            <?php else:?>
+				            <?php endif; ?>
                         </div>
                     </div>
                 </div>

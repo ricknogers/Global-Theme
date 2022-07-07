@@ -149,7 +149,7 @@ IX.) News
         /* position: fixed; */
         top :18px;
         /* float: right; */
-        right: 0px;
+        /* right: 0px; */
         /* margin-right: 10px; */
         background-color: transparent;
         border: 0px;
@@ -168,6 +168,9 @@ IX.) News
         -moz-box-shadow: none;
         box-shadow: none;
         border: 0px;
+    }
+    .buttonsearchmobile i{
+        font-size:23px;
     }
     #mobilesearch{
         display: none;

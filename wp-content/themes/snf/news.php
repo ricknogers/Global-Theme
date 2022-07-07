@@ -14,12 +14,10 @@ get_header();?>
 	        </form>
             <div class="row">
                 <div class="col-md-12 col-xs-12 newsSidebarWrapper">
-                   
                     <hr class="center-diamond">
                     <div class="col newsSidebarCategories">
                         <section class="topLevelSidebar">
                             <h2 class="font-weight-bold">Categories</h2>
-
                             <div class="col-sm-12 newsCategoryList">
                                 <?php $wcatTerms = get_terms('snf-communication-types', array('hide_empty' => 0, 'parent' =>0));
                                 foreach($wcatTerms as $wcatTerm) :
@@ -34,7 +32,6 @@ get_header();?>
                         </section>
                     </div><!--newsSidebarCategories-->
                     <hr class="center-diamond">
-
                     <div class="col newsSidebarCategories">
                         <section class="topLevelSidebar">
                             <h2 class="font-weight-bold">Similar Posts</h2>
@@ -43,7 +40,6 @@ get_header();?>
                             </ul>
                         </section>
                     </div><!--newsSidebarCategories-->
-
                 </div><!--newsSidebarWrapper-->
             </div><!--row-->
         </div>
@@ -52,12 +48,9 @@ get_header();?>
                 <?php
                 $temp =  $query;
                 $the_query = null;
-
                 $args = array(
                     'post_type' => 'global-communication',
                     'posts_per_page' => '8',
-
-
                 );
                 $the_query = new WP_Query( $args );
                 ?>
@@ -107,7 +100,6 @@ get_header();?>
                                                 <?php else:?>
                                                     <a class="btn btn-sm  btn-outline-dark " href="<?php the_permalink();?>">Read More</a>
                                                 <?php endif; ?>
-
                                             </div>
                                         </div>
                                     </div>
@@ -116,27 +108,16 @@ get_header();?>
                         </div>
                     <?php endwhile; ?>
                     <?php if ($the_query->max_num_pages > 1) : // custom pagination  ?>
-                        <?php
-                        $orig_query = $wp_query; // fix for pagination to work
-                        $wp_query = $the_query;
-                        ?>
+                        <?php $orig_query = $wp_query;  $wp_query = $the_query; ?>
                         <div class=" col-sm-12 pagination pagination-wrapper">
                             <?php echo bootstrap_pagination(); ?>
                         </div>
                     <?php endif; ?>
-
                 <?php wp_reset_postdata();?>
-
                 <?php else:?>
-
-
-
                     <p>Sorry, there are no posts to display</p>
                 <?php endif; ?>
-
-
             </div>
-
         </div><!-- latestNews -->
     </div>
 </div>

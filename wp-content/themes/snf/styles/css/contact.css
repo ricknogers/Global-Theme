@@ -21,7 +21,7 @@ IX.) News
 }
 .output .country_list_elements li{
 	display: inline-flex;
-	justify-content: space-around;
+	justify-content: start;
 	align-items: center;
 	padding: .95rem .05rem;}
 .output .country_list_elements li i{
@@ -29,7 +29,10 @@ IX.) News
 	/* color: #212529; */}
 .output .country_list_elements li p.lead{
 	margin:0;
-	font-size: .95rem !important;color: #212529;}
+	font-size: .95rem !important;color: #212529;text-align: left !important;}
+.output .country_list_elements li a{
+	text-decoration:none;
+}
 .sidebar .card-body{
 	padding: 1.25rem .75rem;
 }

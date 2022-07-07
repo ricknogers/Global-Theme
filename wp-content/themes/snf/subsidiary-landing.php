@@ -33,14 +33,14 @@ get_header(); ?>
                                                 <a class=" list-group-item list-group-item-action " href="<?php echo esc_url( $link) ; ?>" target="_blank">
                                                     <div class="d-flex justify-content-between align-items-center">
                                                     <h3 class="card-title pt-1"><?php the_sub_field( 'title' ); ?></h3>
-                                                    <img src="<?php bloginfo('template_directory'); ?>/resources/images/icons/pdf.svg" alt="Arrow Link to Continue to Content" class="img-fluid ">
+                                                        <i class="certification-icon bi bi-filetype-pdf"></i>
                                                     </div>
                                                 </a>
                                             <?php else:?>
                                                 <a class=" list-group-item list-group-item-action " href="#" target="">
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <h3 class="card-title pt-1"><?php the_sub_field( 'title' ); ?></h3>
-                                                        <img src="<?php bloginfo('template_directory'); ?>/resources/images/icons/pdf.svg" alt="Arrow Link to Continue to Content" class="img-fluid ">
+                                                        <i class="certification-icon bi bi-filetype-pdf"></i>
                                                     </div>
                                                 </a>
                                             <?php endif; ?>
@@ -55,8 +55,8 @@ get_header(); ?>
                         <?php if ( have_rows( 'split_layout_repeater' ) ) : ?>
                             <?php while ( have_rows( 'split_layout_repeater' ) ) : the_row(); ?>
                                 <?php if ($counter % 2 === 0) :?>
-                                    <div class=" split-container">
-                                        <div class="row layered-bg-behind">
+                                    <div class=" split-container my-md-5">
+                                        <div class="row layered-bg-behind shadow">
                                             <div class="col split-content p-5">
                                                 <h2> <?php the_sub_field( 'title' ); ?></h2>
                                                 <?php the_sub_field( 'content' ); ?>
@@ -76,8 +76,8 @@ get_header(); ?>
                                         </div><!--layered-bg-behind-->
                                     </div><!--split-container-->
                                 <?php else:?>
-                                    <div class=" split-container">
-                                        <div class="row layered-bg-behind ">
+                                    <div class=" split-container my-md-5">
+                                        <div class="row layered-bg-behind shadow">
                                             <?php if ( get_sub_field( 'image' ) ) : ?>
                                                 <div class="col split-imagery " style="background-image: url(<?php the_sub_field('image')?>)"></div>
                                             <?php endif ?>

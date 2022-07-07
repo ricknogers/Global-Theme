@@ -1,5 +1,5 @@
 <aside class="sidebar  ">
-    <div class="card  mb-3" style="border:solid 1px rgb(107,105,135);">
+    <div class="card  my-3" style="border:solid 1px rgb(107,105,135);">
         <div class="card-header bg-transparent">
             <h4 class="display-5 text-uppercase text-center" >Subsidiary Contact</h4>
             <img src="<?php bloginfo('template_directory'); ?>/resources/images/contact-world-display.png" alt="SNF Country Contact Map" class="img-fluid mx-auto d-block">
@@ -45,53 +45,52 @@
                                     <ul class="list-group list-group-flush country_list_elements">
                                         <?php if(get_sub_field('continent')):?>
                                             <li class="list-group-item">
-                                                <div class="col-md-2 col-sm-2 p-0 border-right"><i class="bi bi-globe"></i></div>
-                                                <div class="col"><p class="lead text-uppercase"><?php the_sub_field('continent') ?></p></div>
+                                                <div class="col"><p class="lead text-uppercase"><i class="bi bi-globe"></i> <?php the_sub_field('continent') ?></p></div>
                                             </li>
                                         <?php endif;?>
                                         <?php if(get_sub_field('general_phone_number')):?>
                                             <li class="list-group-item">
-                                                <div class="col-md-2 col-sm-2 p-0 border-right">
-                                                    <i class="bi bi-telephone"></i>
-                                                </div>
-                                                <div class="col">
-                                                    <p class="lead text-uppercase"><?php the_sub_field('general_phone_number') ?></p>
-                                                </div>
+                                            	<a href="tel:<?php the_sub_field('general_phone_number');?>">
+	                                             
+	                                                <div class="col">
+	                                                    <p class="lead text-uppercase"> <i class="bi bi-telephone"></i><?php the_sub_field('general_phone_number') ?></p>
+	                                                </div>
+                                            	</a>
                                             </li>
                                         <?php endif;?>
                                         <?php if(get_sub_field('general_email_address')):?>
                                             <li class="list-group-item">
-                                                <div class="col-md-2 col-sm-2 p-0 border-right">
-                                                    <i class="bi bi-envelope-check"></i>
-                                                </div>
-                                                <div class="col">
-                                                    <p class="lead text-uppercase"><?php the_sub_field('general_email_address') ?></p>
-                                                </div>
+                                            
+                                            	<a href="mailto:<?php the_sub_field('general_email_address');?>">
+
+	                                               
+	                                                <div class="col">
+	                                                    <p class="lead text-uppercase"><i class="bi bi-envelope-check"></i> <?php the_sub_field('general_email_address') ?></p>
+	                                                </div>
+                                            	</a>
                                             </li>
                                         <?php endif;?>
                                         <?php if(get_sub_field('address')):?>
                                             <li class="list-group-item">
-                                                <div class="col-md-2 col-sm-2 p-0 border-right">
-                                                    <i class="bi bi-geo"></i>
-                                                </div>
+                                               
                                                 <div class="col">
-                                                    <p class="lead text-uppercase"><?php the_sub_field('address') ?> <?php the_sub_field('city') ?> <?php the_sub_field('state') ?> <?php the_sub_field('postal_code') ?></p>
+                                                    <p class="lead text-uppercase"><i class="bi bi-geo"></i> <br/><?php the_sub_field('subsidiary_name') ?><br/><?php the_sub_field('address') ?> <br/><?php the_sub_field('city') ?>, <?php the_sub_field('state') ?> <?php the_sub_field('postal_code') ?> <?php the_sub_field('country') ?> </p>
                                                 </div>
                                             </li>
                                         <?php endif;?>
                                         <?php if(get_sub_field('facility_type')):?>
                                             <li class="list-group-item">
                                                 <div class="col-md-2 col-sm-2 p-0 border-right">
-                                                    <i class="bi bi-building"></i>
+                                                   
                                                 </div>
                                                 <div class="col">
-                                                    <p class="lead text-uppercase"><?php the_sub_field('facility_type') ?></p>
+                                                    <p class="lead text-uppercase">  <i class="bi bi-building"></i><?php the_sub_field('facility_type') ?></p>
                                                 </div>
                                             </li>
                                         <?php endif;?>
                                         <li class="list-group-item mt-4">
                                             <?php if($link):?>
-                                                <a class="btn btn-outline-primary text-white border-0" style="background-color:rgb(107,105,135);" href="<?php echo $link['url'];?>contact"> Contact <?php echo $child_term->name;?></a>
+                                                <a class="btn btn-outline-primary text-white border-0" style="background-color:rgb(107,105,135);" href="<?php echo $link['url'];?>contact/"> Contact <?php echo $child_term->name;?></a>
                                             <?php else:?>
 	                                            <?php $terms = get_the_terms(get_the_ID(), 'markets');?>
                                                 <?php foreach($terms as $term) :?>

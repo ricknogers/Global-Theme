@@ -22,18 +22,23 @@
                         }
                         @media (max-width: 991px){
                             .card__img{
-                               display:none;
+                               background-size: cover;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                position: relative;
+                                padding:0;
+                                background-image:url("<?php echo the_post_thumbnail_url("full") ;?>");
                                 /*clip-path: polygon(0% 0%, 75% 0%, 100% 0, 91% 100%, 0% 100%);*/
                             }
                         }
                     </style>
                     <div class="card__img col-lg-12 col-sm-12 ripple-container" id=" ">
                         <div class="card__content " >
-                            <div class="hero_banner_content">
+                               <div class="hero_banner_content"> </div>
                                 <div class="header-content">
                                     <section>
                                         <div class="hero_content_relative">
-                                            <h1> <?php echo get_option('company_name') ;?></h1>
+                                             <?php // echo get_option('company_name') ;?></h1>
                                             <?php if(get_field('banner_excerpt')):?>
                                                 <?php the_field('banner_excerpt');?>
                                             <?php endif;?>
@@ -47,13 +52,14 @@
                                         </div>
                                     </section>
                                 </div><!--header-content-->
+                        
+                            <div class="title-bar">
+                                <div class="title-bar-text">
+                                    <h1 class="skinnyTitle"><?php echo get_option('corporate_tag_line') ;?></h1>
+                                </div>
                             </div>
                         </div> <!-- .card__content -->
-                        <div class="title-bar">
-                            <div class="title-bar-text">
-                                <h2 class="skinnyTitle"><?php echo get_option('corporate_tag_line') ;?></h2>
-                            </div>
-                        </div>
+
                     </div><!-- .card__img -->
                 </section> <!-- .card -->
             </div> <!-- .wrapper -->

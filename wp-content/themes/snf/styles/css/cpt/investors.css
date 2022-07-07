@@ -10,19 +10,55 @@
 .login-block {
     /* background: #f3f1eb; */
 }
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .investors_slideshow {
+        background-size: cover;
+        min-height: 20vh;
+        /* border-radius: 4px; */
+        position: relative;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .investors_slideshow  .carousel-inner .carousel-item{
 
-.investors_slideshow .banner-sec {
-    /* background: url(https://static.pexels.com/photos/33972/pexels-photo.jpg) no-repeat left bottom; */
-    background-size: cover;
-    min-height: 500px;
-    /* border-radius: 0 10px 10px 0; */
-    padding: 0 !important;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+        margin-right: -100%;}
+    .investors_slideshow  .carousel-inner .carousel-item img{
+        object-fit: cover;
+        object-position: center;
+        height: 50vh;
+        overflow: hidden;
+    }
 }
+
+@media only screen and (min-width: 959px) {
+    .investors_slideshow {
+        /* background-size: cover; */
+        /* min-height: 100%; */
+        /* border-radius: 4px; */
+        /* padding: 0 !important; */
+        /* display:
+        flex; */
+        /* justify-content:
+        center; */
+        /* position: relative; */
+        /* align-items:
+        center; */
+    }
+    .investors_slideshow  .carousel-inner .carousel-item{
+
+        margin-right: -100%;}
+
+}
+.investors_slideshow .carousel-inner .carousel-item .bg-img.inv{
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
 .investor_advancement .investor_core_values .card{
-    border-radius: 0 !important;
+    /* border-radius: 0 !important; */
 }
 .investor_advancement .investor_core_values .card h5{
     text-align:center;
@@ -30,11 +66,21 @@
     font-size:1.75rem
 }
 .investors_slideshow .carousel-inner {
-    border-radius: 0 10px 10px 0;
-}
-.investors_slideshow .carousel-caption {
-    text-align: left;
-    left: 5%;
+    border-radius: 4px;
+    /* position: relative; */
+    /* width: 100%; */
+    height: 100%; /* 16:9 Aspect Ratio */;}
+.investors_slideshow .carousel-caption-inv {
+    /* position: relative; */
+    display: block;
+    /* bottom: 0; */
+    /* background-color: #002d73; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* opacity: .76; */
 }
 .login-sec {
     padding: 10px 30px;
@@ -76,10 +122,18 @@
     font-weight: 600;
 }
 .banner-text {
-    width: 70%;
+    left: 0;
     position: absolute;
-    bottom: 40px;
-    padding-left: 20px;
+    bottom: 0;
+    top: 0;
+    background-color: #002d73;
+    opacity: .85;
+    padding: 3rem;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 .banner-text h2 {
     color: #fff;
@@ -96,6 +150,8 @@
 }
 .banner-text p {
     color: #fff;
+    text-align: center !important;
+    font-size: 1.1rem !important;
 }
 .register-right{
     background: #f3f1eb;
@@ -219,11 +275,57 @@ a#login-tab {}
     justify-content: center;
     align-items: center;
 }
+@media(min-width:991px){
+
+}
+@media(max-width:992px){
+
+}
 /*===================================================
 ======================================================*/
-@media(min-width:768px){
-    .investor-gradient{
+@media(min-width:992px){
+    .right-side-sidebar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0;
+        padding-right: 0;
     }
+    .right-side-sidebar .sidebar-widget h4{
+        font-size: 26px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #002d73
+    }
+    .right-side-sidebar .sidebar-widget .heading{
+        display: block;
+        margin-bottom: 25px;
+        border-bottom: 1px dotted #e4e4e4;
+        background-color: transparent;
+        padding: 0;
+    }
+    .right-side-sidebar .sidebar-widget h4:before{
+        display: block;
+        left: 0;
+        top: 40px;
+        position: relative;
+        width: 30%;
+        height: 2px;
+        content: "";
+        background-color: #002d73;
+    }
+    .sidebar-widget{
+        padding-bottom: 10px;
+        border-radius: 4px;
+    }
+    .sidebar-widget a h5, .sidebar-widget a{
+        text-decoration:none;
+        color:var(--defaultBlueHEX, #002d73);
+        font-size:.95rem;
+        text-align:center;
+        font-weight:600
+    }
+    .investor-gradient{
+        overflow-x: hidden;border-bottom-left-radius: 0 !important;}
     .investor-info{
         background-color:transparent;
         border: none !important;
@@ -243,7 +345,7 @@ a#login-tab {}
         top: 0;
         width: 93%;
         height: 100%;
-        background-color: var(--defaultBlueHEX, #002d73);
+        background-color: #0082CA;
         transform: skewX(
                 -13deg);
         z-index: -1;
@@ -251,7 +353,7 @@ a#login-tab {}
     }
     .investor-info h3.card-title a{
         color:var(--defaultBlueHEX, #002d73);
-    }
+        font-weight: 600;}
     .date a h5.text-muted {
         font-size: 15px;
         margin:0;
@@ -265,7 +367,7 @@ a#login-tab {}
     }
     .investorCard{
         margin:15px 0;
-    }
+        overflow-x: hidden;}
     .investorCard .card-footer{
         background-color:#002d73;
         padding: 3px;
@@ -283,11 +385,21 @@ a#login-tab {}
     }
     .investorCategoryListings ul{
         margin: 10px 0;
-        padding-left: revert;
+        /* padding-left: revert; */
     }
-    .investorCategoryListings ul a:hover{
+    .investorCategoryListings ul li a h5{
+        color:
+                var(--defaultBlueHEX, #002d73);
+        font-weight:600;
+        text-decoration:
+                underline;
+        text-underline-offset: 5px;
+    }
+    .investorCategoryListings ul li a, .investorCategoryTitle a, .investorCategoryListings ul a:hover{
         text-decoration:none;
+
     }
+
     .investorCategoryListings ul hr{
         margin:1% 0;
     }
@@ -339,7 +451,7 @@ a#login-tab {}
         position: relative;
         display: flex;
         justify-content: space-evenly;
-        margin: 0 20px;
+        /* margin: 0 20px; */
         padding: 6px;
         background: var(--processBlueHEX, #0082CA);
         height: 100%;
@@ -347,7 +459,7 @@ a#login-tab {}
         border-radius: 3px;
     }
     .investorCategoryListings li.media{
-        display: inline-flex;
+        display: flex;
         padding: 0;
         align-items: center;
         height: 125px;
@@ -358,13 +470,13 @@ a#login-tab {}
         padding: 0 !important;
         background: #002d73;
         border-bottom: solid 1px #002d73;
-    }
+        border-radius: 4px !important;}
     .investorCategoryListings{
-        align-items: center;
-        /* height: 100%; */
-        /* width: 100%; */
+        /* align-items: center; */
+        height: 100%;
+        width: 100%;
         position: relative;
-        display: inline-flex;
+        /* display: inline-flex; */
     }
     .investorCategoryListings li.media h5{
         color: #002d73;
@@ -436,7 +548,7 @@ a#login-tab {}
         position: relative;
         height: 100%;
         width: 100%;
-    }
+        border-radius: 4px !important;}
     .catLable li{
         border:none;
         justify-content: space-between;
@@ -529,68 +641,288 @@ a#login-tab {}
         position: relative;
         z-index: 4;
         color: #fff;
+        padding: 0 !important;
+        border-radius: 4px;}
+    .inv-title-seperation {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0;padding-right: 0;}
+
+    .inv-title-seperation .inv_title_container h4{
+        font-size: 26px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #002d73
+    }
+    .inv-title-seperation .inv_title_container .heading{
+        display: block;
+        margin-bottom: 25px;
+        border-bottom: 1px dotted #e4e4e4;
+        background-color: transparent;
         padding: 0;
     }
-    .investor-support{
+    .inv-title-seperation .inv_title_container  h4:before{
+        display: block;
+        left: 0;
+        top: 40px;
+        position: relative;
+        width: 30%;
+        height: 2px;
+        content: "";
+        background-color: #002d73;
     }
-    .investor-support ul{
-        padding: 0;
+    .inv_title_container{
+        padding-bottom: 20px;
+        border-radius: 4px;
     }
-    .investor-support ul li{
+    .single-chart {
+        justify-content: space-around;
     }
-    /*Profile card 2*/
-    .investor-support .profile-card-2 .card-img-block{
-        float:left;
-        width:100%;
-        height:150px;
-        overflow:hidden;
+    .circle-bg {
+        fill: none;
+        stroke: #eee;
+        stroke-width: 3.8;
     }
-    .investor-support .profile-card-2 .card-body{
-        position:relative;
+    .circle {
+        fill: none;
+        stroke-width: 2.8;
+        stroke-linecap: round;
     }
-    .investor-support .profile-card-2 .profile {
-        border-radius: 50%;
-        position: absolute;
-        top: -42px;
-        left: 15%;
-        max-width: 75px;
-        border: 3px solid rgba(255, 255, 255, 1);
-        -webkit-transform: translate(-50%, 0%);
-        transform: translate(-50%, 0%);
+    .aos-animate .circle-39 {
+        animation: progress-39 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
     }
-    .investor-support .profile-card-2 h5{
-        font-weight:600;
-        color:#6ab04c;
+    .aos-animate .circle-28 {
+        animation: progress-28 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
     }
-    .investor-support .profile-card-2 .card-text{
-        font-weight:300;
-        font-size:15px;
+    .aos-animate .circle-11 {
+        animation: progress-11 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
     }
-    .investor-support .profile-card-2 .icon-block{
-        float:left;
-        width:100%;
+    .aos-animate .circle-7 {
+        animation: progress-7 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
     }
-    .investor-support .profile-card-2 .icon-block a{
-        text-decoration:none;
+    .aos-animate .circle-6 {
+        animation: progress-6 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
     }
-    .investor-support .profile-card-2 i {
-        display: inline-block;
-        font-size: 16px;
-        color: #6ab04c;
-        text-align: center;
-        border: 1px solid #6ab04c;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        border-radius: 50%;
-        margin:0 5px;
+    .aos-animate .circle-2 {
+        animation: progress-2 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
     }
-    .investor-support .profile-card-2 i:hover {
-        background-color:#6ab04c;
-        color:#fff;
+    @keyframes progress-39 {
+        0% {
+            stroke-dasharray: 0,  100;
+        }
+        100% {
+            stroke-dasharray: 39,  100;
+        }
+    }@keyframes progress-28 {
+         0% {
+             stroke-dasharray: 0,  100;
+         }
+         100% {
+             stroke-dasharray: 28,  100;
+         }
+     }@keyframes progress-11 {
+          0% {
+              stroke-dasharray: 0,  100;
+          }
+          100% {
+              stroke-dasharray: 11,  100;
+          }
+      }@keyframes progress-7 {
+           0% {
+               stroke-dasharray: 0,  100;
+           }
+           100% {
+               stroke-dasharray: 7,  100;
+           }
+       }@keyframes progress-6 {
+            0% {
+                stroke-dasharray: 0,  100;
+            }
+            100% {
+                stroke-dasharray: 6,  100;
+            }
+        }@keyframes progress-2 {
+             0% {
+                 stroke-dasharray: 0,  100;
+             }
+             100% {
+                 stroke-dasharray: 2,  100;
+             }
+         }
+    .circular-chart.blue .circle {
+        stroke: #002d73;
     }
+    .circular-chart.blue2 .circle {
+        stroke: rgba(0,  45,  115,  .9);
+    }
+    .circular-chart.blue3 .circle {
+        stroke: rgba(0,  45,  115,  .8);
+    }
+    .circular-chart.blue4 .circle {
+        stroke: rgba(0,  45,  115,  .7);
+    }
+    .circular-chart.blue5 .circle {
+        stroke: rgba(0,  45,  115,  .6);
+    }
+    .circular-chart.blue6 .circle {
+        stroke: rgba(0,  45,  115,  .5);
+    }
+    .circular-chart.blue7 .circle {
+        stroke: rgba(0,  45,  115,  .4);
+    }
+    .percentage {
+        fill: #666;
+        font-family: sans-serif;
+        font-size: .5em;
+        text-anchor: middle;
+    }
+    .chartTitle {
+        fill: #666;
+        font-family: sans-serif;
+        font-size: .2em;
+        text-anchor: middle;
+    }
+    .keyFigureBreak {
+        border-top: solid 8px #002d73;
+    }
+
+
 }
-@media(max-width:767px){
+@media(max-width:991px){
+    .single-chart {
+        justify-content: space-around;
+        /* height: 50px; */}
+    .circle-bg {
+        fill: none;
+        stroke: #eee;
+        stroke-width: 3.8;
+    }
+    .circle {
+        fill: none;
+        stroke-width: 2.8;
+        stroke-linecap: round;
+    }
+    .aos-animate .circle-39 {
+        animation: progress-39 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    .aos-animate .circle-28 {
+        animation: progress-28 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    .aos-animate .circle-11 {
+        animation: progress-11 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    .aos-animate .circle-7 {
+        animation: progress-7 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    .aos-animate .circle-6 {
+        animation: progress-6 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    .aos-animate .circle-2 {
+        animation: progress-2 3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    @keyframes progress-39 {
+        0% {
+            stroke-dasharray: 0,  100;
+        }
+        100% {
+            stroke-dasharray: 39,  100;
+        }
+    }@keyframes progress-28 {
+         0% {
+             stroke-dasharray: 0,  100;
+         }
+         100% {
+             stroke-dasharray: 28,  100;
+         }
+     }@keyframes progress-11 {
+          0% {
+              stroke-dasharray: 0,  100;
+          }
+          100% {
+              stroke-dasharray: 11,  100;
+          }
+      }@keyframes progress-7 {
+           0% {
+               stroke-dasharray: 0,  100;
+           }
+           100% {
+               stroke-dasharray: 7,  100;
+           }
+       }@keyframes progress-6 {
+            0% {
+                stroke-dasharray: 0,  100;
+            }
+            100% {
+                stroke-dasharray: 6,  100;
+            }
+        }@keyframes progress-2 {
+             0% {
+                 stroke-dasharray: 0,  100;
+             }
+             100% {
+                 stroke-dasharray: 2,  100;
+             }
+         }.circular-chart.blue .circle {
+              stroke: #002d73;
+          }
+    .circular-chart.blue2 .circle {
+        stroke: rgba(0,  45,  115,  .9);
+    }
+    .circular-chart.blue3 .circle {
+        stroke: rgba(0,  45,  115,  .8);
+    }
+    .circular-chart.blue4 .circle {
+        stroke: rgba(0,  45,  115,  .7);
+    }
+    .circular-chart.blue5 .circle {
+        stroke: rgba(0,  45,  115,  .6);
+    }
+    .circular-chart.blue6 .circle {
+        stroke: rgba(0,  45,  115,  .5);
+    }
+    .circular-chart.blue7 .circle {
+        stroke: rgba(0,  45,  115,  .4);
+    }
+    .percentage {
+        fill: #666;
+        font-family: sans-serif;
+        font-size: .3em;
+        text-anchor: middle;
+    }
+    .chartTitle {
+        fill: #666;
+        font-family: sans-serif;
+        font-size: .1em;
+        text-anchor: middle;
+    }
+    .keyFigureBreak {
+        border-top: solid 8px #002d73;
+    }
+
     .investorYearDescription{
     }
     .investorCategoryListings ul{
@@ -797,6 +1129,39 @@ a#login-tab {}
         color:#002d73;
         font-size:24px;
     }
+    .inv-title-seperation {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0;padding-right: 0;
+    }
+
+    .inv-title-seperation .inv_title_container h4{
+        font-size: 19px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #002d73
+    ;text-align: center;}
+    .inv-title-seperation .inv_title_container .heading{
+        display: block;
+        margin-bottom: 25px;
+        border-bottom: 1px dotted #e4e4e4;
+        background-color: transparent;
+        padding: 0;
+    }
+    .inv-title-seperation .inv_title_container  h4:before{
+        display: block;
+        left: 0;
+        top: 40px;
+        position: relative;
+        width: 30%;
+        height: 2px;
+        /* content: ""; */
+        background-color: #002d73;
+    }
+    .inv_title_container{
+        padding-bottom: 20px;
+        border-radius: 4px;}
+
 }
 /*** jeremy's quick fix so nick doesn't have to work on vacay. ***/
 /*** investor registration page: form absolute positioning causes form to run under footer for small screens/mobile and with browser zoom. ***/
@@ -815,7 +1180,7 @@ js-(before|after)
         height:50px;
     }
     .login-container {
-        margin-top: 60px;
+        /* margin-top: 60px; */
     }
 }
 @media(max-width:780px){
@@ -834,134 +1199,8 @@ js-(before|after)
         margin-bottom: 40px;
     }
 }
-.page-template-investors .card{
-    border-radius: 5px;
-    margin: 0;
-    overflow: hidden;
-    /* border: none; */
-}
 
-.single-chart {
-    justify-content: space-around;
-}
-.circle-bg {
-    fill: none;
-    stroke: #eee;
-    stroke-width: 3.8;
-}
-.circle {
-    fill: none;
-    stroke-width: 2.8;
-    stroke-linecap: round;
-}
-.aos-animate .circle-39 {
-    animation: progress-39 3s ease-out;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-}
-.aos-animate .circle-28 {
-    animation: progress-28 3s ease-out;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-}
-.aos-animate .circle-11 {
-    animation: progress-11 3s ease-out;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-}
-.aos-animate .circle-7 {
-    animation: progress-7 3s ease-out;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-}
-.aos-animate .circle-6 {
-    animation: progress-6 3s ease-out;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-}
-.aos-animate .circle-2 {
-    animation: progress-2 3s ease-out;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-}
-@keyframes progress-39 {
-    0% {
-        stroke-dasharray: 0,  100;
-    }
-    100% {
-        stroke-dasharray: 39,  100;
-    }
-}@keyframes progress-28 {
-     0% {
-         stroke-dasharray: 0,  100;
-     }
-     100% {
-         stroke-dasharray: 28,  100;
-     }
- }@keyframes progress-11 {
-      0% {
-          stroke-dasharray: 0,  100;
-      }
-      100% {
-          stroke-dasharray: 11,  100;
-      }
-  }@keyframes progress-7 {
-       0% {
-           stroke-dasharray: 0,  100;
-       }
-       100% {
-           stroke-dasharray: 7,  100;
-       }
-   }@keyframes progress-6 {
-        0% {
-            stroke-dasharray: 0,  100;
-        }
-        100% {
-            stroke-dasharray: 6,  100;
-        }
-    }@keyframes progress-2 {
-         0% {
-             stroke-dasharray: 0,  100;
-         }
-         100% {
-             stroke-dasharray: 2,  100;
-         }
-     }.circular-chart.blue .circle {
-          stroke: #002d73;
-      }
-.circular-chart.blue2 .circle {
-    stroke: rgba(0,  45,  115,  .9);
-}
-.circular-chart.blue3 .circle {
-    stroke: rgba(0,  45,  115,  .8);
-}
-.circular-chart.blue4 .circle {
-    stroke: rgba(0,  45,  115,  .7);
-}
-.circular-chart.blue5 .circle {
-    stroke: rgba(0,  45,  115,  .6);
-}
-.circular-chart.blue6 .circle {
-    stroke: rgba(0,  45,  115,  .5);
-}
-.circular-chart.blue7 .circle {
-    stroke: rgba(0,  45,  115,  .4);
-}
-.percentage {
-    fill: #666;
-    font-family: sans-serif;
-    font-size: .5em;
-    text-anchor: middle;
-}
-.chartTitle {
-    fill: #666;
-    font-family: sans-serif;
-    font-size: .2em;
-    text-anchor: middle;
-}
-.keyFigureBreak {
-    border-top: solid 8px #002d73;
-}
+
 @media (min-width:992px) {
     .seven-cols .col-lg-1,
     .seven-cols .col-md-1, .seven-cols .col-sm-1 {
@@ -977,44 +1216,13 @@ js-(before|after)
         flex: none !important;
     }
 }
-.inv-title-seperation {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 0;padding-right: 0;}
-
-.inv-title-seperation .inv_title_container h4{
-    font-size: 26px;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: #002d73
-}
-.inv-title-seperation .inv_title_container .heading{
-    display: block;
-    margin-bottom: 25px;
-    border-bottom: 1px dotted #e4e4e4;
-    background-color: transparent;
-    padding: 0;
-}
-.inv-title-seperation .inv_title_container  h4:before{
-    display: block;
-    left: 0;
-    top: 40px;
-    position: relative;
-    width: 30%;
-    height: 2px;
-    content: "";
-    background-color: #002d73;
-}
-.inv_title_container{
-    padding-bottom: 20px;
-    border-radius: 4px;}
 
 /*ZoomIn Hover-Mask Effect*/
 .hover-mask a {
-    display: block;
+    /* display: flex; */
     position: relative;
     overflow: hidden;
-}
+    height: 100%;width: 100%;justify-content: start;}
 .hover-mask img {
     width: 100%;
     height: auto;
@@ -1025,22 +1233,22 @@ js-(before|after)
     transition: all 0.5s ease-in-out;
 }
 .hover-mask:hover img {
-    -webkit-transform: scale(1.2);
+    /* -webkit-transform: scale(1.2); */
     -moz-transform: scale(1.2);
     -o-transform: scale(1.2);
     -ms-transform: scale(1.2);
-    transform: scale(1.2);
-}
+    /* transform: scale(1.2); */
+    margin: 0;}
 .hover-mask a h2 {
-    display: block;
-    position: absolute;
-    top: 0;
+    display: inline-flex;
+    justify-content: center;position: absolute;
+    align-items: center;top: 0;
     left: 0;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    border-radius: 5px;
+    /* margin-bottom: 0px; */
     height: 100%;
     width: 100%;
-    padding: 20% 20px;
+    padding: 3rem;
     text-align: center;
     background-color: rgba(0,0,0,0.4);
     -webkit-transition: all 0.5s linear;
@@ -1091,67 +1299,137 @@ js-(before|after)
 /*===================================================
 
 ======================================================*/
-.investor_core_values .modal.left .modal-dialog {
-    position:fixed;
-    left: 0;
-    margin: auto;
-    width: 35vw;
-    height: 100%;
-    -webkit-transform: translate3d(0%, 0, 0);
-    -ms-transform: translate3d(0%, 0, 0);
-    -o-transform: translate3d(0%, 0, 0);
-    transform: translate3d(0%, 0, 0);
+@media(min-width:768px){
+    .investor_core_values .modal.left .modal-dialog {
+        position:fixed;
+        left: 0;
+        margin: auto;
+        width: 35vw;
+        height: 100%;
+        -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+        -o-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+    }
+    .investor_core_values .modal.right .modal-dialog {
+        position:fixed;
+        right: 0;
+        margin: auto;
+        width: 35vw;
+        height: 100%;
+        -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+        -o-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+    }
+    .investor_core_values .modal.left .modal-content, .investor_core_values .modal.right .modal-content{
+        height: 100%;
+        overflow-y: auto;
+    }
+    .investor_core_values .modal.right .modal-body, .investor_core_values .modal.left .modal-body{
+        padding: 15px 15px 80px;
+    }
+    .investor_core_values .modal.left.fade .modal-dialog {
+        left: -35vw;
+        -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+        transition: opacity 0.3s linear, left 0.3s ease-out;
+    }
+    .investor_core_values .modal.right.fade .modal-dialog {
+        right: -35vw;
+        -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+        transition: opacity 0.3s linear, left 0.3s ease-out;
+    }
+    .investor_core_values .modal.right.fade.show .modal-dialog {
+        right: 0;
+    }
+    .investor_core_values .modal.left.fade.show .modal-dialog {
+        left: 0;
+    }
+    /* ----- MODAL STYLE ----- */
+    .investor_core_values .modal-content {
+        border-radius: 0;
+        border: none;
+    }
+    .investor_core_values .modal-header {
+        border-bottom-color: #eeeeee;
+        background-color: #fafafa;
+    }
+    /* ----- v CAN BE DELETED v ----- */
+    .btn-outline-light:focus {
+        outline: 0;
+    }
 }
-.investor_core_values .modal.right .modal-dialog {
-    position:fixed;
-    right: 0;
-    margin: auto;
-    width: 35vw;
-    height: 100%;
-    -webkit-transform: translate3d(0%, 0, 0);
-    -ms-transform: translate3d(0%, 0, 0);
-    -o-transform: translate3d(0%, 0, 0);
-    transform: translate3d(0%, 0, 0);
-}
-.investor_core_values .modal.left .modal-content, .investor_core_values .modal.right .modal-content{
-    height: 100%;
-    overflow-y: auto;
-}
-.investor_core_values .modal.right .modal-body, .investor_core_values .modal.left .modal-body{
-    padding: 15px 15px 80px;
-}
-.investor_core_values .modal.left.fade .modal-dialog {
-    left: -35vw;
-    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
-    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
-    -o-transition: opacity 0.3s linear, left 0.3s ease-out;
-    transition: opacity 0.3s linear, left 0.3s ease-out;
-}
-.investor_core_values .modal.right.fade .modal-dialog {
-    right: -35vw;
-    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
-    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
-    -o-transition: opacity 0.3s linear, left 0.3s ease-out;
-    transition: opacity 0.3s linear, left 0.3s ease-out;
-}
-.investor_core_values .modal.right.fade.show .modal-dialog {
-    right: 0;
-}
-.investor_core_values .modal.left.fade.show .modal-dialog {
-    left: 0;
-}
-/* ----- MODAL STYLE ----- */
-.investor_core_values .modal-content {
-    border-radius: 0;
-    border: none;
-}
-.investor_core_values .modal-header {
-    border-bottom-color: #eeeeee;
-    background-color: #fafafa;
-}
-/* ----- v CAN BE DELETED v ----- */
-.btn-outline-light:focus {
-    outline: 0;
+@media(max-width:767px){
+    .investor_core_values .modal.left .modal-dialog {
+        position:fixed;
+        left: 0;
+        margin: auto;
+        width: 100vw;
+        height: 100%;
+        -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+        -o-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+    }
+    .investor_core_values .modal.right .modal-dialog {
+        position:fixed;
+        right: 0;
+        margin: auto;
+        width: 35vw;
+        height: 100%;
+        -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+        -o-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+    }
+    .investor_core_values .modal.left .modal-content, .investor_core_values .modal.right .modal-content{
+        height: 100%;
+        overflow-y: auto;
+    }
+    .investor_core_values .modal.right .modal-body, .investor_core_values .modal.left .modal-body{
+        padding: 15px 15px 80px;
+    }
+    .investor_core_values .modal.left.fade .modal-dialog {
+        left: -35vw;
+        -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+        transition: opacity 0.3s linear, left 0.3s ease-out;
+    }
+    .investor_core_values .modal.right.fade .modal-dialog {
+        right: -35vw;
+        -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+        transition: opacity 0.3s linear, left 0.3s ease-out;
+    }
+    .investor_core_values .modal.right.fade.show .modal-dialog {
+        right: 0;
+    }
+    .investor_core_values .modal.left.fade.show .modal-dialog {
+        left: 0;
+    }
+    .investor_core_values .modal.left.fade.show .modal-dialog .modal-content{
+        opacity: .9;
+        background-color:#b5b5b5
+    }
+    /* ----- MODAL STYLE ----- */
+    .investor_core_values .modal-content {
+        border-radius: 0;
+        border: none;
+    }
+    .investor_core_values .modal-header {
+        border-bottom-color: #eeeeee;
+        background-color: #fafafa;
+    }
+    /* ----- v CAN BE DELETED v ----- */
+    .btn-outline-light:focus {
+        outline: 0;
+    }
 }
 /*===================================================
 
@@ -1186,9 +1464,10 @@ js-(before|after)
 }
 .investor_icon > .investor_info {
     margin-top: -24px;
-    background: rgba(0, 0, 0, 0.04);
+    background: #0082CA;
     border: 1px solid #e0e0e0;
     padding: 15px 0 10px 0;
+    border-radius: 4px;
 }
 .investor_icon:hover > .investor_info {
     background: rgba(0, 0, 0, 0.04);
@@ -1198,9 +1477,11 @@ js-(before|after)
 .investor_icon > .investor_info > h3.investor_title {
     /* font-family: "Roboto", sans-serif !important; */
     font-size: 16px;
-    color: #222;
-    font-weight: 500;
-    margin-bottom: 10px;margin-top: 20px;}
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
 
 .investor_icon > .investor_info > p {
     font-family: "Roboto", sans-serif !important;
@@ -1214,7 +1495,3 @@ js-(before|after)
 .investor_icon:hover > .investor_info > .more > a {
     color: #222;
 }
-
-
-
-

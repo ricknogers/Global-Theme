@@ -32,6 +32,12 @@ Bootstrap 4 breakpoints
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
     h1 {font-size:2rem;} /*1rem = 16px*/
+    img.alignright { float: right; margin: 0 0 1em 1em; }
+    img.alignleft { float: left; margin: 0 1em 1em 0; }
+    img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+    .alignright { float: right; }
+    .alignleft { float: left; }
+    .aligncenter { display: block; margin-left: auto; margin-right: auto; }
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -129,7 +135,7 @@ Common Classes
 @media(min-width:992px){
     body{
         overflow-x:hidden !important;
-        margin-top: 15px !important;
+        /* margin-top: 15px !important; */
     }
     #content p{
         font-size: 1.0rem;
@@ -237,13 +243,66 @@ Common Classes
 }
 @media(max-width:991px){
     body{
-        /* overflow-x:hidden !important; */
+        overflow-x:hidden !important;
         /* margin-top: 15px !important; */
     }
     #content p{
         font-size: .9rem;
         font-family: 'Source Sans Pro',  sans-serif;
         text-align: justify;
+    }
+    .section-identifier{
+        margin: 1rem 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        /* padding-bottom: 5px; */
+    }
+    .section-identifier.two-titles h2, .section-identifier.two-titles h1 {
+        font-size: 34px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #0082CA;
+        line-height: 1em;
+        margin: 0;
+    }
+    .section-identifier.two-titles h2:before, .section-identifier.two-titles h1:before {
+        display: block;
+        position: relative;
+        left: 0;
+        top: 70px;
+        width: 60px;
+        height: 2px;
+        content: "";
+        background-color: #0082CA;
+    }
+    .section-identifier.two-titles h2 span,  .section-identifier.two-titles h1 span {
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        /* line-height: 1em; */
+        /* padding-left: 0.25em; */
+        display: block;
+        color: rgba(0, 0, 0, 0.4);
+        /* padding-bottom: 10px; */
+    }
+    .section-identifier.one-title h2,  .section-identifier.one-title h1 {
+        margin: 0;
+        /* font-size:34px; */
+        font-weight: 500;
+        text-transform:uppercase;
+        color: #0082CA;
+        font-size: 1.8rem;}
+    .section-identifier.one-title h2:before, .section-identifier.one-title h1:before {
+        display: block;
+        left: 0;
+        top: 50px;
+        position: relative;
+        width: 60px;
+        height: 3px;
+        /* content: ""; */
+        background-color: #0082CA;
     }
     .site-content img.centered,
     .site-content .aligncenter {
@@ -301,7 +360,7 @@ Common Classes
         -webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
     }
     .section-identifier{
-        min-height: 85px;
+        /* min-height: 85px; */
         position: relative;
         display: flex;
         align-items: center;
@@ -450,7 +509,8 @@ Common Classes
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* border-radius: 4px; */}
+    border-radius: 4px;
+}
 .contact_bg_bar{
     background-position:center;
     background-size:cover;
@@ -461,14 +521,14 @@ Common Classes
     text-align: center;
     padding: 3rem;
     justify-content: center;
-    z-index: 99;
+    /* z-index: 99; */
     position: relative;
     /* height: 100%; */align-items: center;/* width: 100%; */}
 .site-content .contact_bg_bar .section-header a.btn:hover{
     background-color:transparent !important;
 }
 .site-content .contact-bar .section-header h2{
-    z-index: 9;
+    z-index: 0;
     text-transform: uppercase;
     font-weight: 300;
     font-size: 3.1rem;

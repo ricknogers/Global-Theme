@@ -38,7 +38,8 @@
         color:#0082CA;
         text-transform: uppercase;
         padding: 1% 0;
-        font-weight: 300 !important;
+        /* font-weight: 300 !important; */
+        margin-bottom: 0;
     }
     h2.layout-title::after{
         content"";
@@ -110,9 +111,10 @@
     .certification-row .card{
         border-top: solid 2px #002d73;
     }
-    .certification-row .certificate-link img{
-        height:45px;
-        width:45px;
+    .certification-row .certificate-link .certification-icon{
+        /* height:45px; */
+        font-size: 1.55rem;
+        color: #0082CA;
     }
     .certification-row h3{
         text-transform: uppercase;
@@ -126,18 +128,20 @@
     I.) Split Layout Alternating
     ======================================================*/
     .split-container{
-        position:relative;
-        padding: 2% 0;
+        position:
+                relative;
+        /* padding: 2% 0; */
     }
     .layered-bg-behind{
-        position:relative;
+        /* position:
+        relative; */
         /* width: 100%; */
         height: 100%;
         /* margin-left: 0 !important; */
-        /* margin-right: 0 !important; */
+        /* border-radius: 4px; */
     }
     .layered-bg-behind::before {
-        content: "";
+        /* content: ""; */
         position: absolute;
         top: 0;
         left: 0;
@@ -145,12 +149,13 @@
         transform: skew(15deg) translateX(-50%);
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(120deg,#002d73,#0082CA);
+        /* background-image: linear-gradient(120deg,#002d73,#0082CA); */
         opacity: .7;
+        border-radius: 4px;
     }
     .layered-bg-behind::before {
-        transform: skew(-15deg) translateX(-50%);
-        transform: unset;
+        /* transform: skew(-15deg) translateX(-50%); */
+        /* transform: unset; */
     }
     .layered-bg-behind.right::before{
         content: "";
@@ -175,7 +180,7 @@
         display: flex;
         z-index:1;
         min-height: 40vh;
-    }
+        border-radius: 4px;}
     .split-content{
         background-color: rgba(255,255,255,.8);
         display: grid;
@@ -186,7 +191,7 @@
     .split-content h2{
         color:rgba(0,130,202,1);
         margin: 1% 0;
-        font-weight: 100;
+        /* font-weight: 100; */
         display:block;
         row-gap: 15px;
     }
@@ -209,7 +214,7 @@
     }
 }
 @media(max-width:767px){
-    layout-title{
+    .layout-title{
         color:#0082CA;
         text-transform: uppercase;
         padding: 1% 0;

@@ -11,10 +11,23 @@ VI.) Forms
 VII.) Terms and Usage
 IX.) News
 ======================================================*/
-@media(min-width:768px){
 
-    .content-area{
+@media (min-width: 576px) {  
+ 	#content p{
+        font-size: 1.0rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align: justify;
+    }
+}
+ 
+@media (min-width: 768px) {  
+ 	.content-area{
         margin:10px 0;
+    }
+    #content p{
+        font-size: 1.0rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align: justify;
     }
     aside.newsSideBar h3.sidebarTitle {
         border-bottom: solid 2px #002d73;
@@ -48,65 +61,30 @@ IX.) News
 
     }
 }
-/* Extra small devices (portrait phones, less than 576px) */
-/*  No media query since this is the default in Bootstrap
-
-/*  Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px){
-    .page-template-products #content p{
-        font-size: 1rem;
-        font-family: 'Source Sans Pro',  sans-serif;
-        text-align:unset;
-    }
-    #content p{
-        font-size: 1.0rem;
-        font-family: 'Source Sans Pro',  sans-serif;
-        text-align: justify;
-    }
-
-}
-
-/*  Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px){
-    .page-template-products #content p{
-        font-size: 1rem;
-        font-family: 'Source Sans Pro',  sans-serif;
-        text-align:unset;
-    }
-    #content p{
-        font-size: 1.0rem;
-        font-family: 'Source Sans Pro',  sans-serif;
-        text-align: justify;
-    }
-}
-
-/*  Large devices (desktops, 992px and up)*/
-@media (min-width: 992px){
-    .page-template-products #content p{
-        font-size: 1rem;
-        font-family: 'Source Sans Pro',  sans-serif;
-        text-align:unset;
-    }
-    #content p{
+ 
+@media (min-width: 992px) {
+ 	 #content p{
         font-size: 1.05rem;
         font-family: 'Source Sans Pro',  sans-serif;
         text-align: justify;
     }
 }
-
-/* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px){
-    .page-template-products #content p{
-        font-size: 1rem;
-        font-family: 'Source Sans Pro',  sans-serif;
-        text-align:unset;
-    }
-    #content p{
-        font-size: 1rem;
+ 
+@media (min-width: 1200px) {  
+     #content p{
+        font-size: 1em;
         font-family: 'Source Sans Pro',  sans-serif;
         text-align: justify;
     }
 }
-@media(max-width:767px){
-
+ 
+ 
+ 
+ 
+@media (max-width: 950px) {
+ 
 }
+
+
+
+

@@ -60,8 +60,11 @@ get_header(); ?>
                                         // get date
                                         $date = date_create( get_field('doc_date') ); ?>
                                         <li class="list-group-item">
-                                            <?php if(get_field('doc_fichier')):?>
-                                                <a href="<?php echo the_field('doc_fichier');?>">
+                                            <?php  $file = get_field('doc_fichier');?>
+	                                        <?php if($file) :?>
+
+
+                                                <a href="<?php echo esc_url( $file['url'] ); ?>" target="_blank">
                                                     <div class="taxonomy-card">
                                                         <div class="taxonomy-card-title">
                                                             <?php echo  get_the_title( $query->post->ID ) ?>
@@ -87,7 +90,7 @@ get_header(); ?>
                 <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly?>
             <?php   }?>
         </div><!-- #primary -->
-        <aside class="col-sm-4 col-xs-12 " id="sidebar" role="complementary">
+        <aside class="col-sm-4 col-xs-12 right-side-sidebar" id="sidebar" role="complementary">
             <?php get_sidebar('investor'); ?>
         </aside>
     </div>

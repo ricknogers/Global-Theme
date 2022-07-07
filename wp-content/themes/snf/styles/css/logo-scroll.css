@@ -1,10 +1,10 @@
 @media(min-width:992px){
     .scroll_element {
-        width: 31vw;
+        /* width: fit-content; */
         position: relative;
-        /* overflow: hidden; */
+        min-width: 20vw;
         /* border-radius: 50px; */
-        /* display: inline-flex; */
+        display: inline-flex;
         /* margin: 0px 4rem; */
         border-radius: 5px;
         transition: all .2s ease-out;
@@ -16,19 +16,19 @@
     }
     .infinity_loop {
         height: 100%;
-        width: 100%;
+        width: 100vw !important;
         border: 2px solid #eee;
         overflow: hidden;
         box-sizing: border-box;
         position: relative;
-        /* padding: 5px 0; */;
+        padding: 5px 0;;
     }
     .scroll_box {
         display: inline-flex;
-        /* overflow-y: hidden; */
+        overflow-x: hidden;
         position: relative;
         /* width: 100%; */
-        align-items: center;justify-content: center;/* height: 100%; */
+        align-items: center;justify-content: space-evenly;/* height: 100%; */
         animation:scroll 40s linear infinite;
     }
     .scroll_box:hover {
@@ -77,7 +77,7 @@
         to {margin-left: -100%}
     }
     .scroll-container{
-        /* height:250px; */
+        height: 100%;
         position:relative;
     }
     .logo-box{

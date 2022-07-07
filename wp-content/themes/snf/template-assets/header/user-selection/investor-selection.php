@@ -1,6 +1,6 @@
 <?php if(  is_user_logged_in()):?>
 	<div class="row">
-		<div class="col page-header theme-bg-dark py-5 text-center position-relative">
+		<div class="col page-header theme-bg-dark py-md-4 text-center position-relative">
 			<div class="page-header-shapes-right "></div>
 			<div class="page-header-shapes-left"></div>
 			<div class="row">
@@ -32,12 +32,9 @@
 				<div class="row">
 					<div class="col-sm-12 investor-update">
 						<blockquote class="blockquote text-center">
-
 							<section class="investor-overlay">
 								<?php the_content();?>
 							</section>
-
-
 						</blockquote>
 					</div>
 				</div>

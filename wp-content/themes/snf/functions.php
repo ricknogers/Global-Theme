@@ -27,17 +27,13 @@ if ( ! function_exists( 'snf_group_setup' ) ) :
          */
         load_theme_textdomain( 'snf_group', get_template_directory() . '/languages' );
         // Add default posts and comments RSS feed links to head.
-        add_theme_support( 'automatic-feed-links' );
         /*
          * Enable support for Post Thumbnails on posts and pages.
          *
          * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
          */
         add_theme_support( 'post-thumbnails' );
-        // This theme uses wp_nav_menu() in one location.
-        register_nav_menus( array(
-            )
-        );
+
         // Setup the WordPress core custom background feature.
         // Enable support for HTML5 markup.
         add_theme_support( 'html5', array(
@@ -47,7 +43,6 @@ if ( ! function_exists( 'snf_group_setup' ) ) :
             'gallery',
             'caption',
         ) );
-        add_theme_support( 'post-thumbnails' );
         /**
          * Register Custom Navigation Walker
          */
@@ -66,48 +61,22 @@ add_action( 'after_setup_theme', 'snf_group_setup' );
 function snf_group_add_styles()
 {
     wp_enqueue_style( 'snf-group-style', get_stylesheet_uri() );
-//    wp_enqueue_style( 'snf-global-general-style',  get_template_directory_uri() . '/styles/css/global.scss');
     wp_enqueue_style('boot-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css');
-    wp_enqueue_style('flag-icon-css', 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css');
-    wp_enqueue_style('font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 'screen');
     wp_enqueue_style('snf-adobe-garamond-pro', 'https://use.typekit.net/fws0qwx.css');
     wp_enqueue_style('snf-source-sans-pro', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
     wp_enqueue_style('snf-esg-lightbox', 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css');
-
+	if(is_page_template('archive.php')) {
+    	wp_enqueue_style('archives-page-style', get_template_directory_uri() . '/styles/css/archives-page-style.css'); // standard way of adding style sheets in WP.
+    }
 
     /**
      * Conditional Market Style Sheet
      */
     $marketConditional = (is_page_template(array(
-
         'market-sites/market-home.php',
         'market-sites/market-inner-template.php',
-        'market-sites/market-news-template.php',
-        'market-sites/market-products-template.php'
     )));
-    $args = array(
-        'hide_empty' => 0
-    );
-    $terms = get_terms('markets', $args);
-    if (!empty($terms) && !is_wp_error($terms)) {
-        foreach ($terms as $term) {
-            $custom_field = get_field('market_ready', $term);
-            if ($custom_field == 'true') {
-                if (has_term('oil-gas', 'markets') && $marketConditional) {
-                  wp_enqueue_style('snf-oil-gas-css', get_template_directory_uri() . "/styles/css/markets/oil-gas.css");
-                }
-                if (has_term('personal-care', 'markets') && $marketConditional || (is_page_template('markets/markets-search.php'))) {
-                    wp_enqueue_style('snf-pc-css', get_template_directory_uri() . "/styles/css/markets/personal-care.css");
-                }
-                if (has_term('home-care-ii', 'markets') && $marketConditional) {
-                    wp_enqueue_style('snf-hc-ii-css', get_template_directory_uri() . "/styles/css/markets/home-care.css");
-                }
-                if (has_term('agriculture', 'markest') && $marketConditional) {
-                    wp_enqueue_style('snf-agriculture-css', get_template_directory_uri() . "/styles/css/markets/agriculture.css");
-                }
-            }
-        }
-    }
+    
     if ($marketConditional) {
         wp_enqueue_style('markets-standard', get_template_directory_uri() . "/styles/css/markets/markets-default.css");
     }
@@ -115,29 +84,7 @@ function snf_group_add_styles()
 add_action( 'wp_enqueue_scripts', 'snf_group_add_styles' );
 
 
-/**
- * Conditional Archive Style Sheet
- */
-if(!function_exists('archives_page_styles')) :
-    function archives_page_styles() {
-        if(is_page_template('archive.php')) {
-            wp_enqueue_style('archives-page-style', get_template_directory_uri() . '/styles/css/archives-page-style.css'); // standard way of adding style sheets in WP.
-        }
 
-    }
-endif;
-add_action('wp_enqueue_scripts', 'archives_page_styles');
-/**
- *  Trying to Preload Font Family from CDN
- */
-add_filter('style_loader_tag', 'my_style_loader_tag_filter', 10, 2);
-function my_style_loader_tag_filter($html, $handle) {
-    if ($handle === array('snf-source-sans-pro','font-awesome')) {
-        return str_replace("rel='stylesheet'",
-            "rel='preload' as='font' type='font/woff2' crossorigin='anonymous'", $html);
-    }
-    return $html;
-}
 /**
  * Enqueue scripts
  */
@@ -150,41 +97,20 @@ function snf_group_add_scripts() {
     wp_enqueue_script('snf-contact-form-slide-out-js', get_template_directory_uri() . '/scripts/js/contact-form-slide-out.js', array('jquery'), 'custom', true);
     wp_enqueue_script( 'snf-app-js-defer', get_template_directory_uri() . '/scripts/js/app.js', array('jquery'), 'custom', true );
     wp_enqueue_script('snf-front-page-js',get_template_directory_uri() . '/scripts/js/front-page.js', array('jquery'), 'custom', true);
-    wp_enqueue_script('snf-flexible-scripts-js',get_template_directory_uri() . '/scripts/js/flexible.js', array(), false, true );
-    if(is_post_type_archive('timeline')){
-        wp_enqueue_style('timeline-page-style', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'); // standard way of adding style sheets in WP.
-    }
+
     // Bootstrap JS CDN
     wp_enqueue_script( 'slim-jquery','https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', true);
     wp_enqueue_script( 'boot-pooper-js','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', true);
     wp_enqueue_script( 'boot-js','https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js', array('jquery'), true);
     wp_enqueue_script('jquery-ui', 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('jquery'), true);
     wp_enqueue_script('snf-lightbox-scripts-js','https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js', array(), '', true  );
+    if( is_404()){
+        wp_enqueue_script('snf-oops-js', get_template_directory_uri() . '/scripts/js/oops.js', array('jquery'), 'custom', true);
+    }
 
 }
 add_action( 'wp_enqueue_scripts', 'snf_group_add_scripts' );
 
-/**
- * Only Enqueue Specific Scripts for these conditions
- */
-function specific_scripts() {
-    if( is_404() ){
-        wp_enqueue_script('snf-oops-js', get_template_directory_uri() . '/scripts/js/oops.js', array('jquery'), 'custom', true);
-    }
-}
-add_action('wp_enqueue_scripts', 'specific_scripts');
-
-/**
- * Only Enqueue Specific Styles for these conditions
- */
-if(!function_exists('archives_page_styles')) :
-    function archives_page_styles() {
-        if(is_page_template('tmpl_archives.php')) {
-            wp_enqueue_style('archives-page-style', get_template_directory_uri() . '/styles/css/archives-page-style.css'); // standard way of adding style sheets in WP.
-        }
-    }
-endif;
-add_action('wp_enqueue_scripts', 'archives_page_styles');
 
 /**
  * Custom Login Screen
@@ -236,6 +162,12 @@ require_once('site-functions/post-types/news/news-cpt-display-on-category-page.p
  *  Setting Default Page Template if the user is not an administrator
  */
 require_once('site-functions/misc/setting-default-page-template.php');
+
+
+/**
+ *  Defers WP Core Scripts and Style Sheets
+ */
+require_once('site-functions/theme/scripts-styles-defer.php');
 
 /**
  *  Removes Comments From Dashboard
@@ -322,6 +254,12 @@ require_once('site-functions/footer/footer-widget.php');
  * Subsidiary & Locations Child Pages
  */
 require_once('site-functions/subsidiary/subsidiary-child-pages.php');
+
+
+
+
+
+
 
 /**
  *  Subsidiary & Locations Remove WYSIWYG
@@ -460,35 +398,6 @@ function snf_check_page_market_tax(){
     return $term_array;
 }
 
-/**
- * Check Market Pages and Retrives the market selected on the Backend of WP
- */
-function wpdocs_custom_taxonomies_terms_links() {
-    // Get post by post ID.
-    if ( ! $post = get_post() ) {
-        return '';
-    }
-    // Get post type by post.
-    $post_type = $post->post_type;
-    // Get post type taxonomies.
-    $taxonomies = get_object_taxonomies( $post_type, 'markets' );
-    $out = array();
-    foreach ( $taxonomies as $taxonomy_slug => $taxonomy ){
-        // Get the terms related to post.
-        $terms = get_the_terms( $post->ID, $taxonomy_slug );
-        if ( ! empty( $terms ) ) {?>
-    <?php  $out[] = "<div class='card-header heading'>"; ?>
-            <?php foreach ( $terms as $term ):?>
-              <?php  $out[] = sprintf( '<a href="%1$s"><h4 class="display-5">'.  $term->name .'</h4></a>',
-                    esc_url( get_term_link( $term->slug, $taxonomy_slug ) ),
-                    esc_html( $term->name )
-                );?>
-            <?php endforeach;?>
-             <?php  $out[] = "</div>";
-        }
-    }
-    return implode( '', $out );
-}
 
 /**
  * On WP Dashboard this Removes the Welcome Quick Edit Modal
@@ -507,7 +416,7 @@ add_action( 'init', 'myplugin_settings' );
 
 
 /**
- * Fantastic social media share buttons by www.jonakyblog.com
+ *  social media share buttons
  */
 function my_share_buttons() {
     $url   = urlencode( get_the_permalink() ); /* Getting the current post link */

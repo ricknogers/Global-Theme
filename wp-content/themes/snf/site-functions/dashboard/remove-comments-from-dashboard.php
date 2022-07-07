@@ -17,6 +17,7 @@ function remove_comment_support() {
 function mytheme_admin_bar_render() {
     global $wp_admin_bar;
     $wp_admin_bar->remove_menu('comments');
+	$wp_admin_bar->remove_menu('export-personal-data');
 
 }
 add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
