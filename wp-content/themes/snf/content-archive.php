@@ -5,7 +5,9 @@
 				<?php if(get_field('trade_name')):?>
                     <h3><?php the_field('trade_name'); ?> <?php if(get_field('product_range')):?> <?php the_field('product_range');?> <?php endif;?></h3>
 				<?php else:?>
-                    <h3><?php  echo get_the_title(); ?> </h3>
+                    <a href="<?php echo the_permalink();?>">
+                        <h4 style="color:#002d73;" class="card-title"><?php  echo get_the_title(); ?> </h4>
+                    </a>
 				<?php endif;?>
             </div>
             <div class="col col-xs-12 market-badge ">

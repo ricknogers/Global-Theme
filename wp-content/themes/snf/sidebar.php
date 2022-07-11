@@ -1,6 +1,6 @@
 <?php if(has_term('','markets')):?>
 <?php $terms = get_the_terms(get_the_ID(), 'markets');?>
-    <aside class="sidebar card ">
+    <aside class="sidebar card border-0">
         <section class="sidebar-widget bordered-sidebar">
             <?php if( $terms ): ?>
                 <?php foreach( $terms as $term ): ?>
@@ -20,7 +20,7 @@
 			<?php else:?>
             <?php endif; ?>
         </section>
-        <section class="sidebar-widget sustain">
+        <section class="sidebar-widget sustainability">
             <div class="heading mb-2 "><h4 class="display-5">Sustainability</h4></div>
             <div class="card-body">
                 <?php if( $terms ): ?>
@@ -63,7 +63,7 @@
                     );
                     $loop = new WP_Query($args);
                     if($loop->have_posts()) {
-                        echo '<ul class="list-group">';
+                        echo '<ul class="list-group list-group-flush border-0">';
                         while($loop->have_posts()) : $loop->the_post();
                             echo '<li class="list-group-item"><a href="'.get_permalink().'" title="'.get_the_title().'" target="_blank">'.get_the_title().'</a></li>';
                         endwhile;
