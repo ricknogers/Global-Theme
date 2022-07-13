@@ -37,7 +37,8 @@
 	                <div class="inner-column ">
 	                    <div class="image w-100 shadow">
 	                        <?php if ( get_sub_field( 'image' ) ) : ?>
-	                            <img class="projcard-img img-fluid" src="<?php the_sub_field( 'image' ); ?>" />
+                                <img src="<?php the_sub_field( 'image' ); ?>" class="projcard-img img-fluid rounded shadow-3 mb-1" alt="<?php the_title() ?>" loading="lazy">
+
 	                        <?php endif ?>
 	                    </div>
 	                </div>
@@ -51,7 +52,8 @@
                     <div class="inner-column " >
                         <div class="image w-100 shadow">
                             <?php if ( get_sub_field( 'image' ) ) : ?>
-                                <img class="projcard-img img-fluid" src="<?php the_sub_field( 'image' ); ?>" />
+                                <img src="<?php the_sub_field( 'image' ); ?>" class="projcard-img img-fluid rounded shadow-3 mb-1" alt="<?php the_title() ?>" loading="lazy">
+
                             <?php endif ?>
                         </div>
                     </div>

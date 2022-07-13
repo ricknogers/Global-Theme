@@ -49,10 +49,8 @@ get_header(); ?>
 	                                    <?php the_field( 'video_url' ); ?>
                                     </div>
                                 </div>
-
                                 <!--Footer-->
                                 <div class="modal-footer justify-content-center text-white text-center flex-column flex-md-row">
-
                                     <button type="button" class="btn btn-outline-light btn-rounded btn-md ml-4"
                                             data-dismiss="modal">Close
                                     </button>
@@ -100,7 +98,9 @@ get_header(); ?>
                     <div class="image-column col-md-5 col-sm-12 col-xs-12">
                         <div class="inner-column " >
                             <div class="image">
-                                <?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
+                                <img src="<?php the_post_thumbnail_url('full') ?>" class="img-fluid rounded shadow-3 mb-1" alt="<?php the_title() ?>" loading="lazy">
+
+                                <?php // the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
                             </div>
                         </div>
                     </div>
@@ -115,40 +115,43 @@ get_header(); ?>
     <?php get_template_part('template-assets/front-page/home-page-industry-panel-reveal');?>
 </div><!-- Markets Shutter -->
 
-<div class="py-md-5 py-lg-5  bg-light hp_cta wrap-cta-box">
+<div class="py-md-3 py-lg-3  bg-light hp_cta wrap-cta-box">
     <div class="container">
         <div class="row d-flex p-3 align-items-center ">
-            <div class="col-md-5 col-sm-5 cta_image">
-                <div class="cta_content_overlay"></div>
-                <img src="<?php bloginfo('template_directory'); ?>/resources/images/default-banner/snf-homepage-calltoaction-min.jpg" class="img-fluid rounded " alt="" />
+	        <div class="col-sm-12 cta_subline">
+		        <h3 class="my-3 text-uppercase text-dark display-4 text-center">Contact SNF Today!</h3>
+		        <p class="lead text-center">Find out how SNF is investing towards a sustainable future today!</p>
+
+	        </div>
+            <div class="col-md-4 col-sm-12 cta_image">
+                        
+                <img src="<?php bloginfo('template_directory'); ?>/resources/images/default-banner/snf-homepage-calltoaction-min.jpg" class="img-fluid rounded " alt="SNF Digital Graphic drawing attention to the Call to Action button"  loading="lazy"  />
             </div>
-            <div class="col-md-7 col-sm-7 hp_cta_contact">
+            <div class="col-md-8 col-sm-12 hp_cta_contact ">
                 <div class="cta_content">
-                    <section class="cta_subline">
-                        <h3 class="my-3 text-uppercase text-dark display-4 text-center">Contact SNF Today!</h3>
-                        <p class="lead text-center">Find out how SNF is investing towards a sustainable future today!</p>
-                    </section>
-                    <div class="row mt-3">
+                  
+                    <div class="row ">
                         <div class="col-md-12 cta_stats">
-                            <div class="card card-shadow border-0 mb-3">
+                            <div class="card card-shadow border-0 ">
                                 <div class="card-body">
-                                    <div class="row p-1">
-                                        <div class="col-6 border-right text-center">
-                                            <h3 class="mb-0 font-weight-medium">400K</h3>
-                                            <h6 class="text-muted font-weight-light">End Users</h6>
-                                        </div>
-                                        <div class="col-6 text-right border-left text-center">
-                                            <h3 class="mb-0 font-weight-medium">130</h3>
-                                            <h6 class="text-muted font-weight-light">Countries Served</h6>
-                                        </div>
-                                        <div class="col-lg-12 mt-3 text-center">
-                                            <div class="snf-link-wrapper ">
-                                                <div class="snf-link">
-                                                    <a href="<?php echo home_url('/');?>contact" class="product-list-link">Connect With SNF</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                	<div class="row">
+	                                    <div class="col-6 border-right text-center">
+	                                        <h3 class="mb-0 font-weight-bold">400K</h3>
+	                                        <h6 class="text-muted font-weight-medium">End Users</h6>
+	                                    </div>
+	                                    <div class="col-6 text-right border-left text-center">
+	                                        <h3 class="mb-0 font-weight-bold">130</h3>
+	                                        <h6 class="text-muted font-weight-medium">Countries Served</h6>
+	                                    </div>
+	                                    <div class="col-lg-12 mt-md-3 mt-sm-1 text-center">
+	                                        <div class="snf-link-wrapper ">
+	                                            <div class="snf-link">
+	                                                <a href="<?php echo home_url('/');?>contact" class="product-list-link">Connect With SNF</a>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+                                	</div>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -158,6 +161,7 @@ get_header(); ?>
         </div>
     </div>
 </div>
+<!-- Home Page News Slider -->
 <div class="container">
     <div class="row mt-md-3 mb-md-3 my-sm-1">
         <div class="col-sm-12 news-title-seperation">
@@ -173,7 +177,7 @@ get_header(); ?>
                 $args = array(
                     'post_type' =>  'global-communication',
                     'posts_per_page' => 6,
-                    'order' => 'ASC',
+                    'order' => 'DESC',
                     'orderby' => 'DATE',
                 );
                 $query = new WP_Query( $args );
@@ -183,16 +187,21 @@ get_header(); ?>
                     <?php  while($query->have_posts()) : $query->the_post() ;?>
                         <div class="carousel-item col-md-4  <?php if ($query->current_post == 0):?> active <?php endif;?>">
                             <div class=" card h-100">
-                                <?php the_post_thumbnail('full', array('class' => ' card-img-top d-none d-sm-none d-md-block ', 'alt' => 'slide ' .  $counter . ' ')); ?>
-                                <div class="news_featured d-sm-block d-md-none d-lg-non"  style="background-image: url(<?php echo the_post_thumbnail_url("full") ;?>)"></div>
+                                <?php if(has_post_thumbnail()):?>
+                                    <div class="news_featured  "  style="background-image: url(<?php echo the_post_thumbnail_url("full") ;?>)"></div>
+                                <?php else:?>
+                                    <div class="news_featured_no_image  "  style="background-color:#002d73; ">
+                                        <img src="<?php bloginfo('template_directory'); ?>/resources/images/logos/SNF-White.png" alt="SNF Logo" loading="lazy" class="img-fluid mx-auto d-block">
+                                    </div>
+                                <?php endif;?>
                                 <div class="card-body">
                                     <h2 class="display-4 card-title"><?php the_title();?></h2>
                                 </div>
                                 <div class="card-footer bg-transparent border-0">
                                     <?php if(get_field('news_url_change')):?>
-                                        <a href="<?php the_field('news_url_change');?>" class="btn btn-block btn-outline-primary btn-rounded">Read More</a>
+                                        <a href="<?php the_field('news_url_change');?>" class="btn btn-sm  btn-outline-dark">Read More</a>
                                     <?php else:?>
-                                        <a class="btn btn-outline-primary btn-rounded btn-block" href="<?php the_permalink();?>">Read More</a>
+                                        <a class="btn btn-sm  btn-outline-dark" href="<?php the_permalink();?>">Read More</a>
                                     <?php endif;?>
                                 </div>
                             </div><!--card-->

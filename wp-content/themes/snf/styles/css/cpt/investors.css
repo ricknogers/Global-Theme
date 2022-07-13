@@ -12,17 +12,22 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     .investors_slideshow {
-        background-size: cover;
-        min-height: 20vh;
-        /* border-radius: 4px; */
+        /* background-size: cover; */
+        /* height: 20vh; */
+        border-radius: 4px;
         position: relative;
-        display:flex;
-        justify-content:center;
-        align-items:center;
+        /* display:
+        flex; */
+        justify-content:
+                center;
+        align-items:
+                center;
     }
     .investors_slideshow  .carousel-inner .carousel-item{
 
-        margin-right: -100%;}
+        margin-right: -100%;
+
+    }
     .investors_slideshow  .carousel-inner .carousel-item img{
         object-fit: cover;
         object-position: center;
@@ -69,7 +74,8 @@
     border-radius: 4px;
     /* position: relative; */
     /* width: 100%; */
-    height: 100%; /* 16:9 Aspect Ratio */;}
+    height: 100%; /* 16:9 Aspect Ratio */
+}
 .investors_slideshow .carousel-caption-inv {
     /* position: relative; */
     display: block;
@@ -121,38 +127,7 @@
     color: #fff;
     font-weight: 600;
 }
-.banner-text {
-    left: 0;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    background-color: #002d73;
-    opacity: .85;
-    padding: 3rem;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-}
-.banner-text h2 {
-    color: #fff;
-    font-weight: 600;
-}
-.banner-text h2:after {
-    content: " ";
-    width: 100px;
-    height: 5px;
-    background: #FFF;
-    display: block;
-    margin-top: 20px;
-    border-radius: 3px;
-}
-.banner-text p {
-    color: #fff;
-    text-align: center !important;
-    font-size: 1.1rem !important;
-}
+
 .register-right{
     background: #f3f1eb;
     /* border-top-left-radius: 3%; */
@@ -284,6 +259,38 @@ a#login-tab {}
 /*===================================================
 ======================================================*/
 @media(min-width:992px){
+    .banner-text {
+        left: 0;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        background-color: #002d73;
+        opacity: .85;
+        padding: 3rem;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .banner-text h2 {
+        color: #fff;
+        font-weight: 600;
+    }
+    .banner-text h2:after {
+        content: " ";
+        width: 100px;
+        height: 5px;
+        background: #FFF;
+        display: block;
+        margin-top: 20px;
+        border-radius: 3px;
+    }
+    .banner-text p {
+        color: #fff;
+        text-align: center !important;
+        font-size: 1.1rem !important;
+    }
     .right-side-sidebar {
         padding-top: 5px;
         padding-bottom: 5px;
@@ -361,7 +368,8 @@ a#login-tab {}
     }
     .investor-info a p{
         color: #6c757d !important;
-        font-size: 12px;
+        font-size: 12px !important;
+        text-align: left !important;
     }
     .most-recent-inv-docs{
     }
@@ -384,7 +392,7 @@ a#login-tab {}
         padding: .5em;
     }
     .investorCategoryListings ul{
-        margin: 10px 0;
+        /* margin: 10px 0; */
         /* padding-left: revert; */
     }
     .investorCategoryListings ul li a h5{
@@ -801,6 +809,38 @@ a#login-tab {}
 
 }
 @media(max-width:991px){
+    .banner-text {
+        left: 0;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        background-color: #002d73;
+        opacity: .85;
+        padding: 3rem;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .banner-text h2 {
+        color: #fff;
+        font-weight: 600;
+    }
+    .banner-text h2:after {
+        content: " ";
+        width: 100px;
+        height: 5px;
+        background: #FFF;
+        display: block;
+        margin-top: 20px;
+        border-radius: 3px;
+    }
+    .banner-text p {
+        color: #fff;
+        text-align: center !important;
+        font-size: .75rem !important;
+    }
     .single-chart {
         justify-content: space-around;
         /* height: 50px; */}
@@ -1328,6 +1368,9 @@ js-(before|after)
     }
     .investor_core_values .modal.right .modal-body, .investor_core_values .modal.left .modal-body{
         padding: 15px 15px 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .investor_core_values .modal.left.fade .modal-dialog {
         left: -35vw;
@@ -1361,6 +1404,68 @@ js-(before|after)
     /* ----- v CAN BE DELETED v ----- */
     .btn-outline-light:focus {
         outline: 0;
+    }
+    @media (min-width: 768px) {
+
+        /* show 3 items */
+        #markets_carousel .carousel-inner .active,
+        #markets_carousel .carousel-inner .active + .carousel-item,
+        #markets_carousel .carousel-inner .active + .carousel-item + .carousel-item {
+            display: block;
+        }
+
+        #markets_carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        #markets_carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+        #markets_carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+            transition: none;
+        }
+
+        #markets_carousel .carousel-inner .carousel-item-next,
+        #markets_carousel .carousel-inner .carousel-item-prev {
+            position: relative;
+            transform: translate3d(0, 0, 0);
+        }
+
+        #markets_carousel .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: absolute;
+            top: 0;
+            right: -33.333%;
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+
+        /* left or forward direction */
+        #markets_carousel .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        #markets_carousel .carousel-item-next.carousel-item-left + .carousel-item,
+        #markets_carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+        #markets_carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(-100%, 0, 0);
+            visibility: visible;
+        }
+
+        /* farthest right hidden item must be abso position for animations */
+        #markets_carousel .carousel-inner .carousel-item-prev.carousel-item-right {
+            position: absolute;
+            top: 0;
+            left: 0%;
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+
+        /* right or prev direction */
+        #markets_carousel .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        #markets_carousel .carousel-item-prev.carousel-item-right + .carousel-item,
+        #markets_carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+        #markets_carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+            display: block;
+            visibility: visible;
+        }
     }
 }
 @media(max-width:767px){

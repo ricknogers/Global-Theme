@@ -55,7 +55,7 @@
 		                                        <?php  $url = get_term_link($child_term->slug, 'country');?>
 
                                                 <li class="list-group-item">
-                                                    <a href="<?php echo get_term_link($child_term->slug, $child_term->taxonomy);?>" >
+                                                    <a href="<?php echo get_term_link($child_term->slug, $taxonomy);?>" >
                                                         <h2><?php echo $child_term->name; ?> </h2>
                                                     </a>
                                                 </li>

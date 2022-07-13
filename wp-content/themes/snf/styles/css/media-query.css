@@ -12,16 +12,16 @@ VII.) Terms and Usage
 IX.) News
 ======================================================*/
 
-@media (min-width: 576px) {  
- 	#content p{
+@media (min-width: 576px) {
+    #content p{
         font-size: 1.0rem;
         font-family: 'Source Sans Pro',  sans-serif;
         text-align: justify;
     }
 }
- 
-@media (min-width: 768px) {  
- 	.content-area{
+
+@media (min-width: 768px) {
+    .content-area{
         margin:10px 0;
     }
     #content p{
@@ -61,28 +61,66 @@ IX.) News
 
     }
 }
- 
+
 @media (min-width: 992px) {
- 	 #content p{
+    #content p{
         font-size: 1.05rem;
         font-family: 'Source Sans Pro',  sans-serif;
         text-align: justify;
     }
 }
- 
-@media (min-width: 1200px) {  
-     #content p{
+
+@media (min-width: 1200px) {
+    #content p{
         font-size: 1em;
         font-family: 'Source Sans Pro',  sans-serif;
         text-align: justify;
     }
 }
- 
- 
- 
- 
-@media (max-width: 950px) {
- 
+
+
+
+
+@media (max-width: 767px) {
+    .content-area{
+        margin:10px 0;
+    }
+    #content p{
+        font-size: 1.0rem;
+        font-family: 'Source Sans Pro',  sans-serif;
+        text-align: justify;
+    }
+    aside.newsSideBar h3.sidebarTitle {
+        border-bottom: solid 2px #002d73;
+        color: #002d73;
+        font-size: 1.5rem;
+    }
+    aside.newsSideBar ul {
+        padding: 0;
+    }
+    aside.newsSideBar ul li {
+        list-style: none;
+        border: none;
+        border-bottom:solid 1px #cecece;
+    }
+    aside.newsSideBar ul li a{
+        color:#212529;
+    }
+    .single .page-header h1{
+        font-weight:600;
+        font-size: 1.5rem;/* color:#002d73; */
+    }
+
+    aside.newsSideBar h4.recentPosts {
+        font-size: 16px;
+    }
+    .singleContent{
+        margin: 2% 0;
+    }
+    sidebar-widget ul li {
+        border:none !important;
+
+    }
 }
 
 

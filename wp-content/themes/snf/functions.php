@@ -62,8 +62,6 @@ function snf_group_add_styles()
 {
     wp_enqueue_style( 'snf-group-style', get_stylesheet_uri() );
     wp_enqueue_style('boot-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css');
-    wp_enqueue_style('snf-adobe-garamond-pro', 'https://use.typekit.net/fws0qwx.css');
-    wp_enqueue_style('snf-source-sans-pro', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
     wp_enqueue_style('snf-esg-lightbox', 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css');
 	if(is_page_template('archive.php')) {
     	wp_enqueue_style('archives-page-style', get_template_directory_uri() . '/styles/css/archives-page-style.css'); // standard way of adding style sheets in WP.
@@ -359,25 +357,6 @@ function theme_slug_filter_wp_title( $title ) {
 }
 // Hook into wp_title filter hook
 add_filter( 'wp_title', 'theme_slug_filter_wp_title' );
-
-/**
- *  Gravity Forms Bootstrap Styling Overwrite
- *
- */
-
-//add_filter( 'gform_submit_button', 'fe_gravity_forms_btn_classes', 10, 2 );
-
-/**
- * Replace Gravity Forms button classes with Bootstrap button classes.
- */
-// function fe_gravity_forms_btn_classes( $button, $form ) {
-//     return str_replace( 'gform_button button', 'btn btn-primary', $button );
-// }
-
-add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
-function form_submit_button( $button, $form ) {
-    return "<div class='snf-link-wrapper gform_button ' id='gform_submit_button_{$form['id']}'><div class='snf-link'><span class='product-list-link'>Submit</span></div></div>";
-}
 
 /**
  *  Test *

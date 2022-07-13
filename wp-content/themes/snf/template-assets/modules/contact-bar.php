@@ -1,8 +1,8 @@
 <?php if ( get_sub_field( 'include_contact_us_bar' ) == 1 ) : ?>
     <?php if ( get_sub_field( 'background_image' ) ) : ?>
-        <section class="contact-bar bg-fixed text-white " >
+        <section class="contact-bar bg-fixed text-white d-md-none d-lg-block " >
             <div class="container p-0">
-                <div class="contact_bg_bar" style="background-image: url(<?php the_sub_field( 'background_image' ); ?>)">
+                <div class="contact_bg_bar" style="background-image: url(<?php the_sub_field( 'background_image' ); ?>)" loading="lazy">
                     <header class="section-header">
                         <div class="text-center">
                             <h2><?php the_sub_field( 'title' ); ?></h2>
@@ -22,9 +22,9 @@
             </div><!--container-->
         </section><!--contact-bar-->
     <?php else:?>
-        <section class="contact-bar bg-fixed text-white bg-dark">
+        <section class="contact-bar bg-fixed text-white bg-dark d-md-none d-lg-block">
             <div class="container p-0">
-                <div class="contact_bg_bar" style="background-image: url(<?php bloginfo('template_directory'); ?>/resources/images/CraterLakeHeroImage-scaled.jpg)">
+                <div class="contact_bg_bar" style="background-image: url(<?php bloginfo('template_directory'); ?>/resources/images/CraterLakeHeroImage-scaled.jpg)" loading="lazy">
                     <header class="section-header">
                         <div class="text-center">
                             <h2><?php the_sub_field( 'title' ); ?></h2>

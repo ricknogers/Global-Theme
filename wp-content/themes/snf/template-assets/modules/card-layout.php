@@ -46,7 +46,7 @@
 									<?php else:?>
 						                <?php if (get_sub_field( 'image_type' ) == 'responsive-image' ) : ?>
 		                                    <div class="card-img-top">
-		                                        <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>" />
+		                                        <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>"  loading="lazy" />
 		                                    </div>
 						                <?php endif;?>
 					                <?php endif;?>
@@ -96,7 +96,7 @@
                                 <?php if (get_sub_field( 'image_type' ) == 'responsive-image' ) : ?>
 						            <?php $image = get_sub_field('image');?>
                                         <div class="card-img-top">
-                                            <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>" />
+                                            <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>"  loading="lazy" />
                                         </div><!--card-img-top-->
                                 <?php endif;?>
                             <?php endif;?>
@@ -113,11 +113,11 @@
 			                    <?php $button_link = get_sub_field( 'button_link' ); ?>
 			                    <?php if ( $button_link ) : ?>
 
-						                    <?php if(get_sub_field('button_text')):?>
-                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?> <i class="bi bi-chevron-double-right"></i></a>
-						                    <?php else:?>
-                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More <i class="bi bi-chevron-double-right"></i></a>
-						                    <?php endif;?>
+                                    <?php if(get_sub_field('button_text')):?>
+                                        <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?> <i class="bi bi-chevron-double-right"></i></a>
+                                    <?php else:?>
+                                        <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More <i class="bi bi-chevron-double-right"></i></a>
+                                    <?php endif;?>
 
 			                    <?php endif; ?>
                             </section><!--card-footer-->
@@ -146,7 +146,7 @@
 			                                <div class="horizontal_card_img" style="background-image: url(<?php echo $image['url']; ?>)"></div>
 										<?php else:?>
 							                <?php if (get_sub_field( 'image_type' ) == 'responsive-image' ) : ?>
-													<img class="   postcard__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+													<img class="   postcard__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>"  loading="lazy">
 							                <?php endif;?>
 						                <?php endif;?>
                                     </a>
@@ -156,7 +156,7 @@
 		                                <div class="horizontal_card_img " style="background-image: url(<?php echo $image['url']; ?>)"></div><!--horizontal_card_img-->
 									<?php else:?>
 						                <?php if (get_sub_field( 'image_type' ) == 'responsive-image' ) : ?>
-											<img class="postcard__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>" />
+											<img class="postcard__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>"  loading="lazy"/>
 						                <?php endif;?>
 					                <?php endif;?>
                                 <?php endif; ?>
@@ -196,7 +196,7 @@
 			                                <div class="horizontal_card_img" style="background-image: url(<?php echo $image['url']; ?>)"></div><!--horizontal_card_img-->
 										<?php else:?>
 							                <?php if (get_sub_field( 'image_type' ) == 'responsive-image' ) : ?>
-												<img class=" postcard__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>" />
+												<img class=" postcard__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>"  loading="lazy"/>
 							                <?php endif;?>
 						                <?php endif;?>
                                     </a>
@@ -206,7 +206,7 @@
 		                                <div class="horizontal_card_img" style="background-image: url(<?php echo $image['url']; ?>)"></div><!--horizontal_card_img-->
 									<?php else:?>
 						                <?php if (get_sub_field( 'image_type' ) == 'responsive-image' ) : ?>
-											<img class=" postcard__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>" />
+											<img class=" postcard__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>"  loading="lazy"/>
 						                <?php endif;?>
 					                <?php endif;?>
                                 <?php endif; ?>
@@ -226,11 +226,11 @@
 	                                    <?php $button_link = get_sub_field( 'button_link' ); ?>
 	                                    <?php if ( $button_link ) : ?>
 
-				                                    <?php if(get_sub_field('button_text')):?>
-                                                        <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?> <i class="bi bi-chevron-double-right"></i></a>
-				                                    <?php else:?>
-                                                        <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More <i class="bi bi-chevron-double-right"></i></a>
-				                                    <?php endif;?>
+                                            <?php if(get_sub_field('button_text')):?>
+                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link"><?php the_sub_field('button_text');?> <i class="bi bi-chevron-double-right"></i></a>
+                                            <?php else:?>
+                                                <a href="<?php echo esc_url( $button_link); ?>" class="product-list-link">Read More <i class="bi bi-chevron-double-right"></i></a>
+                                            <?php endif;?>
 
 	                                    <?php endif; ?>
                                     </div><!--postcard__tagbox-->

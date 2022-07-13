@@ -1,10 +1,10 @@
 @media(min-width:992px){
     .scroll_element {
         /* width: fit-content; */
-        position: relative;
-        min-width: 20vw;
+        /* position: relative; */
+        /* min-width: 20vw; */
         /* border-radius: 50px; */
-        display: inline-flex;
+        /* display: inline-flex; */
         /* margin: 0px 4rem; */
         border-radius: 5px;
         transition: all .2s ease-out;
@@ -27,8 +27,8 @@
         display: inline-flex;
         overflow-x: hidden;
         position: relative;
-        /* width: 100%; */
-        align-items: center;justify-content: space-evenly;/* height: 100%; */
+        width: 200vw;
+        align-items: center;justify-content: space-between;/* height: 100%; */
         animation:scroll 40s linear infinite;
     }
     .scroll_box:hover {
@@ -123,16 +123,273 @@
     .scroll_element:hover .industry_loop_container .market-title .card-container{
         position:relative;
     }
+    /* =========== New Marquee Scroller ================*/
+    .marquee {
+        background: linear-gradient(-135deg, #002d73, #0082CA);
+        /* width: 185vw; */
+        box-sizing: border-box;
+        padding: 1em;
+        color: #fff;
+        font-weight: 200;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    .marquee-content {
+        display: flex;
+        animation: marquee 18s linear infinite running;
+    }
+    .marquee-content:hover {
+        animation-play-state: paused;
+    }
+    .marquee-tag {
+        width: 190px;
+        margin: 0.5em;
+        padding: 0.5em;
+        background: rgba(255,255,255,0.1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        position: relative;
+        /* height: 100%; */
+    }
+    .marquee-tag:hover {
+        background: rgba(255,255,255,0.5);
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    @-moz-keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translate(-50%);
+        }
+    }
+    @-webkit-keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translate(-50%);
+        }
+    }
+    @-o-keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translate(-50%);
+        }
+    }
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translate(-50%);
+        }
+    }
+    .element_title{
+        display:none;
+    }
+    .marquee-tag:hover .element_title{
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: .5rem;
+        right: 0;
+        height: 100%;
+    }
+    .marquee-tag:hover .element_title .market-title{
+        text-align: center;
+        width: 100%;
+    }
+    .marquee-tag:hover .element_title .market-title .card-container{
+        height:100%;
+        width:100%;
+        position:relative;
+    }
+
+    .marquee-tag:hover .element_title .market-title .card-title{
+        margin:0;
+        font-size: 1.05rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #fff;
+        text-shadow: 1px 1px 4px #000;
+    }
+    /* =========== New Marquee Scroller ================*/
+
 }
 @media(max-width:991px){
-    .market-title{
-        position:relative;
+    /* =========== New Marquee Scroller ================*/
+
+    .marquee {
+        background: linear-gradient(-135deg, #002d73, #0082CA);
+        width: 85vw;
+        box-sizing: border-box;
+        padding: 1em;
+        color: #fff;
+        font-weight: 200;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    .marquee-content {
+        display: flex;
+        animation: marquee 18s linear infinite running;
+    }
+    .marquee-content:hover {
+        animation-play-state: paused;
+    }
+    .marquee-tag {
+        width: 150px;
+        margin: 0.5em;
+        padding: 0.5em;
+        background: rgba(255,255,255,0.1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        position: relative;
+        /* height: 100%; */
+    }
+    .marquee-tag:hover {
+        background: rgba(255,255,255,0.5);
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    @-moz-keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translate(-50%);
+        }
+    }
+    @-webkit-keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translate(-50%);
+        }
+    }
+    @-o-keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translate(-50%);
+        }
+    }
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translate(-50%);
+        }
+    }
+    .element_title{
+        display:none;
+    }
+    .marquee-tag:hover .element_title{
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: .5rem;
+        right: 0;
+        height: 100%;
+    }
+    .marquee-tag:hover .element_title .market-title{
+        text-align: center;
         width: 100%;
-        padding:10px;
     }
-    .market-title h3{
-        color:#fff;
+    .marquee-tag:hover .element_title .market-title .card-container{
+        height:100%;
+        width:100%;
+        position:relative;
     }
+
+    .marquee-tag:hover .element_title .market-title .card-title{
+        margin:0;
+        font-size: 1.05rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #fff;
+        text-shadow: 1px 1px 4px #000;
+    }
+
+
+
+    /* =========== New Marquee Scroller ================*/
+
+    .scroll_element {
+        /* width: fit-content; */
+        /* position: relative; */
+        /* min-width: 20vw; */
+        /* border-radius: 50px; */
+        /* display: inline-flex; */
+        /* margin: 0px 4rem; */
+        border-radius: 5px;
+        transition: all .2s ease-out;
+        /* justify-content: center; *//* align-items: center; */}
+    .scroll_element:hover {
+        transform: scale(1.2);
+        opacity: .5;
+        cursor: pointer;
+    }
+    .infinity_loop {
+        height: 100%;
+        width: 100vw !important;
+        border: 2px solid #eee;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+        padding: 5px 0;;
+    }
+    .scroll_box {
+        display: inline-flex;
+        overflow-x: hidden;
+        position: relative;
+        width: 200vw;
+        align-items: center;justify-content: space-between;/* height: 100%; */
+        animation:scroll 40s linear infinite;
+    }
+    .scroll_box:hover {
+        animation-play-state: paused;
+    }
+    /*.half {
+      float: left;
+      width: 10%;
+    }*/
+    .infinity_loop ul {
+        margin: 0;
+        /* width: 100%; */}
+    @keyframes scroll{
+        0% { left: 0; }
+        100% { left: -100%; }
+    }
+    @keyframes infinity_loop {
+        0% { left: 0; }
+        100% { left: -100%; }
+    }
+
     .slider-scroll {/* margin: auto; *//* overflow: visible; */height: 100%;/* min-height: 50vh; */}
     .slider-scroll ul {
         display: flex;
@@ -160,8 +417,8 @@
         to {margin-left: -100%}
     }
     .scroll-container{
-        /* height:250px; */
-        /* position:relative; */
+        height: 100%;
+        position:relative;
     }
     .logo-box{
         overflow-x:hidden;
@@ -171,14 +428,15 @@
     .logo-box img{height: 130px;}
 
     .industry_loop_container{
-        width: 100%;
-        height: 100%;}
-    .scroll_box img{
-        display: none;
-        /* height:150px; */
-        /* margin:3px; */
-        /* float:left; */
+        display:none;
     }
+    .scroll_box img{
+        /* width: 158px; */
+        height:150px;
+        /* margin:3px; */
+        float:left;
+    }
+
     .scroll_box .scroll-container{
         /* height:250px; */
     }
@@ -204,56 +462,6 @@
     }
     .scroll_element:hover .industry_loop_container .market-title .card-container{
         position:relative;
-    }
-    .scroll_element {
-        width: 33%;
-        height: 100%;
-        /* overflow: hidden; */
-        /* border-radius: 50px; */
-        /* display: inline-block; */
-        margin: 0px 1rem;
-        border-radius: 5px;
-        transition: all .2s ease-out;
-        /* justify-content: space-between; *//* align-items: center; */text-align: center;}
-    .scroll_element:hover {
-        transform: scale(1.2);
-        opacity: .5;
-        cursor: pointer;
-    }
-    .infinity_loop {
-        height: 100%;
-        width: 100%;
-        border: 2px solid #eee;
-        overflow: hidden;
-        box-sizing: border-box;
-        position: relative;
-        /* padding: 5px 0; */;
-    }
-    .scroll_box {
-        display: inline-flex;
-        overflow-x: hidden !important;
-        position:relative;
-        /* width: 100%; */
-        align-items: center;justify-content: space-evenly;height: 100%;
-        animation:scroll 40s linear infinite;
-    }
-    .scroll_box:hover {
-        animation-play-state: paused;
-    }
-    /*.half {
-      float: left;
-      width: 10%;
-    }*/
-    .infinity_loop ul {
-        margin: 0;
-        /* width: 100%; */}
-    @keyframes scroll{
-        0% { left: 0; }
-        100% { left: -100%; }
-    }
-    @keyframes infinity_loop {
-        0% { left: 0; }
-        100% { left: -100%; }
     }
 
 }

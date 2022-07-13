@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div id="primary" class="content-area col-md-9 col-sm-12 ">
-			<?php?>
+
 			<?php if(have_posts()):?>
                 <div class="article-list">
 					<?php while ( have_posts() ) : the_post(); ?>

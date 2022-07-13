@@ -14,7 +14,7 @@
                                     <div class="scroll-container">
 	                                    <?php $image = get_sub_field( 'image' ); ?>
 	                                    <?php if ( $image ) : ?>
-                                            <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" class="img-fluid" />
+                                            <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" class="img-fluid" loading="lazy" />
 	                                    <?php endif; ?>
 
                                     </div>
@@ -25,7 +25,7 @@
                                 <div class="scroll-container">
 		                            <?php $image = get_sub_field( 'image' ); ?>
 		                            <?php if ( $image ) : ?>
-                                        <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" class="img-fluid" />
+                                        <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" class="img-fluid" loading="lazy" />
 		                            <?php endif; ?>
                                 </div>
                             </li>

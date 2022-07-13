@@ -8,7 +8,6 @@ function remove_default_stylesheet() {
     wp_deregister_style( 'wpc-filter-everything-custom' );
     wp_deregister_style( 'wpc-filter-everything' );
     
-       wp_deregister_style( 'gravity-flow' );
 
 
 }

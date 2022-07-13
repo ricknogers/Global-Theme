@@ -15,37 +15,7 @@
 		<?php else:?>
 			<p class="card-text text-black-50 lead"><?php the_excerpt();; ?></p>
 		<?php endif;?>
-		<div class="tag-cloud">
-			<section>
-				<?php   // Get terms for post
-				$terms = get_the_terms( $post->ID , 'snf-communication-types' );
-				// Loop over each item since it's an array
-				foreach ( $terms as $term ) {?>
-					<?php $termlinks = get_term_link($term);?>
-					<a href="<?php echo $termlinks ;?>" class="badge badge-tag comm-types">
-						<?php echo $term->name;?>
-					</a>
-				<?php } ?>
-				<?php   // Get terms for post
-				$terms = get_the_terms( $post->ID , 'markets' );
-				// Loop over each item since it's an array
-				foreach ( $terms as $term ) {?>
-					<?php $termlinks = get_term_link($term);?>
-					<a href="<?php echo $termlinks ;?>" class="badge badge-tag markets">
-						<?php echo $term->name;?>
-					</a>
-				<?php } ?>
-				<?php   // Get terms for post
-				$terms = get_the_terms( $post->ID , 'product-applications' );
-				// Loop over each item since it's an array
-				foreach ( $terms as $term ) {?>
-					<?php $termlinks = get_term_link($term);?>
-					<a href="<?php echo $termlinks ;?>" class="badge badge-tag markets">
-						<?php echo $term->name;?>
-					</a>
-				<?php } ?>
-			</section>
-		</div><!--tag-cloud-->
+		
 	</div>
 	<div class="card-footer bg-transparent border-top border-dark text-muted">
 		<?php if ( get_field( 'file' ) ) : ?>

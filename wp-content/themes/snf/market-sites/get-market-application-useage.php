@@ -1,9 +1,9 @@
 <?php $market_terms = get_the_terms(get_the_ID(), 'markets');?>
-<?php $i == 0;?>
+<?php $count == 0;?>
 <?php if( $market_terms  ): ?>
 
     <div class="row ">
-        <div id="markets_carousel" class="carousel slide col-sm-12  " data-ride="carousel">
+        <div id="markets_carousel" class="carousel slide w-100 mt-md-3 " data-ride="carousel">
             <div class="row ">
                 <div class="col-sm-12">
                     <a class="left carousel-control-prev" href="#markets_carousel" role="button" data-slide="prev">
@@ -35,7 +35,7 @@
                         <?php if ( $terms ) : ?>
                             <?php foreach ( $terms as $term ) : ?>
                                 <?php if (!empty($term->description   )):?>
-                                <div class="carousel-item col-md-4   <?php if ($i == 0):?> active <?php endif;?>">
+                                <div class="carousel-item col-md-4   <?php if ($count == 0):?> active <?php endif;?>">
                                     <div class="cta_card_slider card h-100 shadow-sm">
                                         <?php $image = get_field( 'image', $term->taxonomy . '_' . $term->term_id);?>
                                         <?php if ( $image ) : ?>
@@ -48,15 +48,12 @@
                                         <div class="card-footer bg-transparent border-0">
                                             <?php $button_link = get_field( 'application_redirection', $term->taxonomy . '_' . $term->term_id);?>
                                             <?php if ( $button_link ) : ?>
-                                            <div class="snf-link-wrapper ">
-                                                <div class="snf-link">
-                                                    <a  class="product-list-link" href="<?php echo esc_url( $button_link['url'] ); ?>" target="<?php echo esc_attr( $button_link['target'] ); ?>"><?php echo esc_html( $button_link['title'] ); ?></a>
-                                                </div>
-                                            </div>
+
+                                                    <a  class="page-linkage" href="<?php echo esc_url( $button_link['url'] ); ?>" target="<?php echo esc_attr( $button_link['target'] ); ?>"> <?php echo esc_html( $button_link['title'] ); ?> <i class="bi bi-chevron-double-right"></i></a>
                                             <?php endif; ?>
                                         </div>
                                     </div>
-                                </div> <?php $i++;?>
+                                </div> <?php $count++;?>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         <?php endif; ?>

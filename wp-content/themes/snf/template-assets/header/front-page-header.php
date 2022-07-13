@@ -38,7 +38,7 @@
                                 <div class="header-content">
                                     <section>
                                         <div class="hero_content_relative">
-                                             <?php // echo get_option('company_name') ;?></h1>
+                                             <h2><?php echo get_option('company_name') ;?></h2>
                                             <?php if(get_field('banner_excerpt')):?>
                                                 <?php the_field('banner_excerpt');?>
                                             <?php endif;?>

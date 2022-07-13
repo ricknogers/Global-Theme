@@ -11,18 +11,13 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+	    <script   src=https://app.termly.io/embed.min.js data-auto-block="on" data-website-uuid="b8dae01b-f7ee-446f-abc2-8547bb006b4d"></script>
+
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com/" >
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//typekit.net">
-
-
     <title> <?php wp_title( '' )   ?></title>
     <meta name="google-site-verification" content="kZJWqTUOOX2VlJRCdWXCu8HIO0LMwoTxZgC-PVCBbLE" />
     <?php wp_head(); ?>
@@ -75,7 +70,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
 			<?php
 			require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 			wp_nav_menu( array(
@@ -118,4 +112,4 @@
     <?php get_template_part('template-assets/header/inner-pages-header-image');?>
 <?php endif;?>
 
-<div id="content" class="site-content d-flex flex-column min-vh-100">
+<div id="content" class="site-content d-flex flex-column min-vh-100 mt-sm-4">

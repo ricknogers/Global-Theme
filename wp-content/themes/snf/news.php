@@ -32,14 +32,7 @@ get_header();?>
                         </section>
                     </div><!--newsSidebarCategories-->
                     <hr class="center-diamond">
-                    <div class="col newsSidebarCategories">
-                        <section class="topLevelSidebar">
-                            <h2 class="font-weight-bold">Similar Posts</h2>
-                            <ul class="list-group">
-	                           
-                            </ul>
-                        </section>
-                    </div><!--newsSidebarCategories-->
+
                 </div><!--newsSidebarWrapper-->
             </div><!--row-->
         </div>
@@ -51,6 +44,11 @@ get_header();?>
                 $args = array(
                     'post_type' => 'global-communication',
                     'posts_per_page' => '8',
+                    'post_status' => 'publish',
+                    'orderby' => 'publish_date',
+                    'order' => 'DESC'
+
+
                 );
                 $the_query = new WP_Query( $args );
                 ?>
@@ -61,12 +59,10 @@ get_header();?>
                                 <?php if ( get_field( 'file_preview_image' ) ) : ?>
                                     <div class="media-body col-10 ">
                                         <h5 class="mt-0 mb-1 display-4"><?php the_title();?></h5>
-                                        <div class="tag-cloud  ">
-                                            <?php get_template_part('template-assets/misc/tag-cloud');?>
-                                        </div><!--tag cloud-->
+
                                         <p class="lead"><?php echo custom_field_excerpt(); ?></p>
-                                        <div class="row">
-                                            <div class="btn-bar col">
+                                        <div class="row ">
+                                            <div class="btn-bar col ">
                                                 <?php if ( get_field( 'file' ) ) : ?>
                                                     <a class="btn btn-sm btn-outline-primary " href="<?php the_field( 'file' ); ?>">Download File</a>
                                                 <?php endif; ?>
@@ -76,7 +72,9 @@ get_header();?>
                                                 <?php else:?>
                                                     <a class="btn btn-sm  btn-outline-dark " href="<?php the_permalink();?>">Read More</a>
                                                 <?php endif; ?>
+                                                <small class="text-muted mt-2 d-block">Published Date: <?php echo get_the_date() ?></small>
                                             </div>
+
                                         </div>
                                     </div>
                                     <div class="media-image col-2">
@@ -85,11 +83,8 @@ get_header();?>
                                 <?php else:?>
                                     <div class="media-body col ">
                                         <h5 class="mt-0 mb-1 display-4"><?php the_title();?></h5>
-                                        <div class="tag-cloud  ">
-                                            <?php get_template_part('template-assets/misc/tag-cloud');?>
-                                        </div><!--tag cloud-->
                                         <p class="lead"><?php echo custom_field_excerpt(); ?></p>
-                                        <div class="row">
+                                        <div class="row ">
                                             <div class="btn-bar col">
                                                 <?php if ( get_field( 'file' ) ) : ?>
                                                     <a class="btn btn-sm btn-outline-primary " href="<?php the_field( 'file' ); ?>">Download File</a>
@@ -100,7 +95,10 @@ get_header();?>
                                                 <?php else:?>
                                                     <a class="btn btn-sm  btn-outline-dark " href="<?php the_permalink();?>">Read More</a>
                                                 <?php endif; ?>
+                                                <small class="text-muted mt-2 d-block">Published Date: <?php echo get_the_date() ?></small>
+
                                             </div>
+
                                         </div>
                                     </div>
                                 <?php endif ?>

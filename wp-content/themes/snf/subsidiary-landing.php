@@ -63,7 +63,7 @@ get_header(); ?>
                                                 <?php $link = get_sub_field( 'link' ); ?>
                                                 <?php if ( $link ) : ?>
                                                     <a href="<?php echo esc_url( $link) ; ?>" class="split-link">
-                                                        <img src="<?php bloginfo('template_directory'); ?>/resources/images/icons/arrow-thin-right.svg" alt="Arrow Link to Continue to Content" class="img-fluid ">
+                                                        <img src="<?php bloginfo('template_directory'); ?>/resources/images/icons/arrow-thin-right.svg" alt="Arrow Link to Continue to Content" class="img-fluid "  loading="lazy">
                                                     </a>
                                                 <?php endif; ?>
                                             </div><!--split-content-->
@@ -87,7 +87,7 @@ get_header(); ?>
                                                 <?php $link = get_sub_field( 'link' ); ?>
                                                 <?php if ( $link ) : ?>
                                                     <a href="<?php echo esc_url( $link) ; ?>" class="split-link">
-                                                        <img src="<?php bloginfo('template_directory'); ?>/resources/images/icons/arrow-thin-right.svg" alt="Arrow Link to Continue to Content" class="img-fluid ">
+                                                        <img src="<?php bloginfo('template_directory'); ?>/resources/images/icons/arrow-thin-right.svg" alt="Arrow Link to Continue to Content" class="img-fluid "  loading="lazy">
                                                     </a>
                                                 <?php endif; ?>
                                             </div><!--split-content-->

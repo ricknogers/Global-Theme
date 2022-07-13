@@ -114,12 +114,11 @@
         </div>
     </div>
     <div class="blended-logo">
-        <img src="<?php bloginfo('template_directory'); ?>/resources/images/logos/SNF-White.png" alt="SNF Logo" class="img-fluid mx-auto d-block">
+        <img src="<?php bloginfo('template_directory'); ?>/resources/images/logos/SNF-White.png" alt="SNF Logo" class="img-fluid mx-auto d-block" lazyload="load">
     </div>
 </footer>
 
 
-    <script defer  src=https://app.termly.io/embed.min.js data-auto-block="on" data-website-uuid="b8dae01b-f7ee-446f-abc2-8547bb006b4d"></script>
 
 <?php wp_footer(); ?>
 

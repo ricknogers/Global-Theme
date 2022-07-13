@@ -12,7 +12,7 @@
     .footer_legal_links ul{
         justify-content:center;
     }
-    .footer-link a {
+    .footer-link a, .footer-link a:focus, .footer-link a:hover {
         color: #acacac;
         line-height: 40px;
         font-size: 14px;
@@ -24,7 +24,7 @@
     }
     .contact-info {
         color: #acacac;
-        font-size: 14px;
+        font-size: 14px !important;
     }
     .footer-social-icon {
         font-size: 15px;
@@ -318,7 +318,7 @@
         line-height: 30px;
         font-size: 14px;
         transition: all 0.5s;
-    text-decoration: none;}
+        text-decoration: none;}
     .footer-link a:hover {
         color: #0082CA;
     }
