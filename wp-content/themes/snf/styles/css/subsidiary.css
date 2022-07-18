@@ -218,7 +218,8 @@
         color:#0082CA;
         text-transform: uppercase;
         padding: 1% 0;
-        font-weight: 300;
+        font-size: 1.5rem;
+        font-weight: 600;
     }
     h2.layout-title::after{
         content"";
@@ -237,15 +238,22 @@
     }
     .subsid-accordion{
     }
-
+    .subs-content ol{
+        padding:0;
+    }
+    .subsid-accordion h4{
+        font-size:1rem;
+        font-weight:800;
+    }
     .subsid-accordion .card{
         margin:1% 0;
     }
     .subsid-accordion .card-header{
-        background-color:rgb(203,203,215) !important;
+        padding: .5rem;
     }
     .subsid-accordion h5{
         font-weight: 400;
+        font-size: .55rem;
     }
     /* Horizontal line */
     .subsid-accordion .collapsible-link::before {
@@ -283,6 +291,9 @@
     .certification-row{
         margin-top: 5%
     }
+    .certification-row p{
+        text-align:left !important;
+    }
     .certification-row .card{
         border-top: solid 2px #002d73;
     }
@@ -292,18 +303,19 @@
     }
     .certification-row h3{
         text-transform: uppercase;
-        font-size: 16px;
+        font-size: 15px;
         color: #0082CA;
         margin: 0;
-        /* display: flex; */
-        /* justify-content: center; */
+        font-weight: 500;
+        /* letter-spacing: .5px; */
     }
     /*===================================================
     I.) Split Layout Alternating
     ======================================================*/
     .split-container{
-        position:relative;
-        padding: 2% 0;
+        position:
+                relative;
+        /* padding: 2% 0; */
     }
     .layered-bg-behind{
         position:relative;
@@ -313,16 +325,16 @@
         /* margin-right: 0 !important; */
     }
     .layered-bg-behind::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
+        /* content: ""; */
+        /* position: absolute; */
+        /* top: 0; */
+        /* left: 0; */
         bottom: 0;
         transform: skew(15deg) translateX(-50%);
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(120deg,#002d73,#0082CA);
-        opacity: .7;
+        /* width: 100%; */
+        /* height: 100%; */
+        /* background-image: linear-gradient(120deg,#002d73,#0082CA); */
+        /* opacity: .7; */
     }
     .layered-bg-behind::before {
         transform: skew(-15deg) translateX(-50%);
@@ -348,22 +360,24 @@
     .split-imagery{
         background-size: cover;
         background-position: center;
-        display: flex;
-        z-index:1;
-        min-height: 40vh;
+        /* display: flex; */
+        /* z-index:1; */
+        min-height: 15vh;
     }
     .split-content{
         background-color: rgba(255,255,255,.8);
-        display: grid;
-        justify-content: center;
-        align-items: center;
+        /* display: grid; */
+        /* justify-content: center; */
+        /* align-items: center; */
     }
     .split-content h2, .split-content p{/* row-gap: 15px; *//* grid-template-columns: 100px 50px 100px; *//* grid-template-rows: 80px auto 80px; *//* column-gap: 10px; */}
     .split-content h2{
-        color:rgba(0,130,202,1);
+        color:
+                rgba(0,130,202,1);
         margin: 1% 0;
-        font-weight: 100;
-        display:block;
+        /* font-weight: 100; */
+        display:
+                block;
         row-gap: 15px;
     }
     .split-content .split-link img{

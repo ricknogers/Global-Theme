@@ -20,14 +20,12 @@
                                 <?php endif;?>
                             <?php endif;?>
 		                    <?php $link = get_sub_field( 'link' ); ?>
-                            <?php if ( $link ) : ?>
-                                
+                            <?php if ( $link ):?>
                                 <?php if(get_sub_field('link')):?>
                                     <a href="<?php echo esc_url( $link); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="page-linkage"><?php the_sub_field( 'link_title' ); ?> <i class="bi bi-chevron-double-right"></i></a>
                                 <?php else:?>
                                     <a href="<?php echo esc_url( $link); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="page-linkage">Read More <i class="bi bi-chevron-double-right"></i></a>
                                 <?php endif;?>
-                                   
                             <?php else:?>
                             <?php endif; ?>
                         </div>
@@ -38,7 +36,6 @@
 	                    <div class="image w-100 shadow">
 	                        <?php if ( get_sub_field( 'image' ) ) : ?>
                                 <img src="<?php the_sub_field( 'image' ); ?>" class="projcard-img img-fluid rounded shadow-3 mb-1" alt="<?php the_title() ?>" loading="lazy">
-
 	                        <?php endif ?>
 	                    </div>
 	                </div>
@@ -46,8 +43,6 @@
 	        </div>
         <?php else:?>
             <div class="row split-spacing pt-3 pb-3 highlight-section align-items-center" id="">
-                
-
                 <div class="image-column col-md-5 col-lg-5 col-xl-6 d-xs-none order-first">
                     <div class="inner-column " >
                         <div class="image w-100 shadow">

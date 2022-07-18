@@ -2459,7 +2459,7 @@ html body .content .content-wrapper .content-header-title{
         /* min-width: 75%; */
         /* width: auto; */justify-content: center;align-items: center;/* text-align: center; *//* height: 100%; *//* line-height: 1.75; */}
     .subsidiary-children-pages ul{
-        width: 100%;
+        width: 170%;
         display: inline-block;
         top: 0;
     }
@@ -2469,7 +2469,7 @@ html body .content .content-wrapper .content-header-title{
     .subsidiary-children-pages li.dropdown.show ul.dropdown-menu{
         display: block;
         /* padding: 0; */margin: 0;top: 0!important;}
-    .subsidiary-children-pages ul li{/* background-color: transparent !important; */border: none;padding: .75rem 0.25rem;list-style: none;}
+    .subsidiary-children-pages ul li{/* background-color: transparent !important; */border: none;padding: 1rem 0.85rem;list-style: none;}
     .subsidiary-children-pages li ul.children{
         display: none;
         /* border: none; */
@@ -2960,7 +2960,7 @@ html body .content .content-wrapper .content-header-title{
         /* padding-bottom: 15px; */
         /* width: 75%; */
         /* max-height: calc(100vh - 15.5em); */
-        /* overflow-y: auto; */
+        overflow: scroll;
     }
     .navbar-collapse.collapsing {
         left: -75%;

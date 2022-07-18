@@ -62,7 +62,6 @@ function register_my_menus() {
 			'snf_country_nav_sweden' => _('Sweden Country Menu'),
 			'snf_country_nav_switzerland' => _('Switzerland Country Menu'),
 			'snf_country_nav_turkey' => _('Turkey Country Menu'),
-			'snf_country_nav_netherlands' => _('Netherlands Country Menu'),
 		)
 	);
 }

@@ -19,12 +19,12 @@ get_header(); ?>
                                     <h2 class="layout-title"><?php the_sub_field( 'card_layout_title' ); ?></h2>
                                 <?php endif; ?>
                             </div>
-                            <div class="col h-100 certificate-info">
+                            <div class="col-md-6 col-sm-12 h-100 certificate-info">
                                 <?php if(get_sub_field('card_description')):?>
                                     <p ><?php the_sub_field( 'card_description' ); ?></p>
                                 <?php endif; ?>
                             </div>
-                            <div class="col h-100 certificate-link">
+                            <div class="col-md-6 col-sm-12 h-100 certificate-link">
                                 <?php if ( have_rows( 'card_repeater' ) ) : $i = 0;?>
                                     <div class="list-group ">
                                         <?php while ( have_rows( 'card_repeater' ) ) : the_row(); $i++; ?>
@@ -57,7 +57,7 @@ get_header(); ?>
                                 <?php if ($counter % 2 === 0) :?>
                                     <div class=" split-container my-md-5">
                                         <div class="row layered-bg-behind shadow">
-                                            <div class="col split-content p-5">
+                                            <div class=" col-md-6 col-sm-12 split-content p-md-5 p-3">
                                                 <h2> <?php the_sub_field( 'title' ); ?></h2>
                                                 <?php the_sub_field( 'content' ); ?>
                                                 <?php $link = get_sub_field( 'link' ); ?>
@@ -68,7 +68,7 @@ get_header(); ?>
                                                 <?php endif; ?>
                                             </div><!--split-content-->
                                             <?php if ( get_sub_field( 'image' ) ) : ?>
-                                                <div class="col split-imagery " style="background-image: url(<?php the_sub_field('image')?>)">
+                                                <div class="col-md-6 d-sm-none split-imagery " style="background-image: url(<?php the_sub_field('image')?>)">
                                                     
 
                                                 </div><!--split-imagery-->
@@ -79,9 +79,9 @@ get_header(); ?>
                                     <div class=" split-container my-md-5">
                                         <div class="row layered-bg-behind shadow">
                                             <?php if ( get_sub_field( 'image' ) ) : ?>
-                                                <div class="col split-imagery " style="background-image: url(<?php the_sub_field('image')?>)"></div>
+                                                <div class="col-md-6 d-sm-none split-imagery " style="background-image: url(<?php the_sub_field('image')?>)"></div>
                                             <?php endif ?>
-                                            <div class="col split-content p-5">
+                                            <div class="col-md-6 col-sm-12 split-content p-md-5 p-3">
                                                 <h2> <?php the_sub_field( 'title' ); ?></h2>
                                                 <?php the_sub_field( 'content' ); ?>
                                                 <?php $link = get_sub_field( 'link' ); ?>

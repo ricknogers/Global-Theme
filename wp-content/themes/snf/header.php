@@ -11,8 +11,17 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	    <script   src=https://app.termly.io/embed.min.js data-auto-block="on" data-website-uuid="b8dae01b-f7ee-446f-abc2-8547bb006b4d"></script>
+    <script   src=https://app.termly.io/embed.min.js data-auto-block="on" data-website-uuid="b8dae01b-f7ee-446f-abc2-8547bb006b4d"></script>
+    <!-- Clarity tracking code for https://snf.com/ -->
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152401851-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-152401851-1');
+    </script>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

@@ -3,6 +3,7 @@
     <div class=" " id="custom-tax-second-nav" style="<?php foreach($terms as $term) :?><?php $breadcrumbsColor = get_field('color_scheme', $term->taxonomy . '_' . $term->term_id);?>background-color:<?php echo $breadcrumbsColor;?><?php endforeach; ?>">
         <div class="col second-tier-nav subsidiary-children-pages  h-100 bg-transparent">
             <div class="page-listing-positioning ">
+
 	            <?php if( $terms ): ?>
                     <?php foreach($terms as $term) :?>
                         <?php if($term->slug == 'oil-gas'):?>

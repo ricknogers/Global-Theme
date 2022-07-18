@@ -71,6 +71,9 @@ button, .btn, .btn-default, .btn-small{
         line-height: 1.5em;
         margin: 5px 0 15px;
     }
+    .inner-column ul{
+        padding:0;
+    }
     .subs-content li{
         text-align:left !important;
     }
