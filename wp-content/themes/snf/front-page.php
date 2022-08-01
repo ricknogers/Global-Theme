@@ -17,7 +17,7 @@ get_header(); ?>
 </div>
 <!-- SECTION -->
 <div class="oval-overlay executive-highlight">
-    <section class="geometric-overlay bg-img" style="background-image:url(https://dev-eu-snf-group.pantheonsite.io/wp-content/uploads/2021/10/Industrial-Waste-Treatment.jpg); ">
+    <section class="geometric-overlay bg-img" style="background-image:url(https://snf.com/wp-content/uploads/2021/10/Industrial-Waste-Treatment.jpg); ">
         <div class="container p-md-5 p-sm-2 d-flex h-100 ">
             <div class="row align-items-center overview-wrapper">
                 <div class="col-md-8 col-sm-12 overview">
@@ -121,42 +121,32 @@ get_header(); ?>
 	        <div class="col-sm-12 cta_subline">
 		        <h3 class="my-3 text-uppercase text-dark display-4 text-center">Contact SNF Today!</h3>
 		        <p class="lead text-center">Find out how SNF is investing towards a sustainable future today!</p>
-
 	        </div>
-            <div class="col-md-4 col-sm-12 cta_image">
-                        
-                <img src="<?php bloginfo('template_directory'); ?>/resources/images/default-banner/snf-homepage-calltoaction-min.jpg" class="img-fluid rounded " alt="SNF Digital Graphic drawing attention to the Call to Action button"  loading="lazy"  />
-            </div>
-            <div class="col-md-8 col-sm-12 hp_cta_contact ">
-                <div class="cta_content">
-                  
-                    <div class="row ">
-                        <div class="col-md-12 cta_stats">
-                            <div class="card card-shadow border-0 ">
-                                <div class="card-body">
-                                	<div class="row">
-	                                    <div class="col-6 border-right text-center">
-	                                        <h3 class="mb-0 font-weight-bold">400K</h3>
-	                                        <h6 class="text-muted font-weight-medium">End Users</h6>
-	                                    </div>
-	                                    <div class="col-6 text-right border-left text-center">
-	                                        <h3 class="mb-0 font-weight-bold">130</h3>
-	                                        <h6 class="text-muted font-weight-medium">Countries Served</h6>
-	                                    </div>
-	                                    <div class="col-lg-12 mt-md-3 mt-sm-1 text-center">
-	                                        <div class="snf-link-wrapper ">
-	                                            <div class="snf-link">
-	                                                <a href="<?php echo home_url('/');?>contact" class="product-list-link">Connect With SNF</a>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-                                	</div>
-                                   
+            <div class="card shadow-sm border-0 ">
+                <div class="row h-100">
+                    <div class="col-md-4 col-sm-12 cta_image">
+                        <img src="<?php bloginfo('template_directory'); ?>/resources/images/default-banner/snf-homepage-calltoaction-min.jpg" class="img-fluid rounded " alt="SNF Digital Graphic drawing attention to the Call to Action button"  loading="lazy"  />
+                    </div>
+                    <div class="col-md-8 col-sm-12 hp_cta_contact ">
+                        <div class="row">
+                            <div class="col border-right text-center">
+                                <h3 class="mb-0 font-weight-bold">400K</h3>
+                                <h6 class="text-muted font-weight-medium">End Users</h6>
+                            </div>
+                            <div class="col text-right border-left text-center">
+                                <h3 class="mb-0 font-weight-bold">130</h3>
+                                <h6 class="text-muted font-weight-medium">Countries Served</h6>
+                            </div>
+                            <div class="col-lg-12 mt-md-3 mt-1 text-center">
+                                <div class="snf-link-wrapper ">
+                                    <div class="snf-link">
+                                        <a href="<?php echo home_url('/');?>contact" class="product-list-link">Connect With SNF</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div><!--cta_content_overlay-->
-                </div><!--cta_content-->
+                    </div>
+                </div>
             </div>
         </div>
     </div>

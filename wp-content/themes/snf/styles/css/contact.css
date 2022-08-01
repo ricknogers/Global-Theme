@@ -25,13 +25,25 @@ IX.) News
 	align-items: center;
 	padding: .95rem .05rem;}
 .output .country_list_elements li i{
-	padding:4px;
-	/* color: #212529; */}
+	padding: 6px 10px;
+	background-color: rgb(107,105,135);
+	border-radius: 50%;
+	color: #e2e2e2;
+	margin: 0 1rem 0 0;
+}
 .output .country_list_elements li p.lead{
 	margin:0;
-	font-size: .95rem !important;color: #212529;text-align: left !important;}
+	font-size: .95rem !important;
+	color: #212529;
+	text-align: left !important;
+	font-weight: 600;
+}
 .output .country_list_elements li a{
-	text-decoration:none;
+	color: #33383c;
+	text-decoration: none;
+}
+.output .country_list_elements li:hover a p{
+	border-bottom: solid 1px;
 }
 .sidebar-widget .card-body li {
 	padding: 0.5rem 0 !important;

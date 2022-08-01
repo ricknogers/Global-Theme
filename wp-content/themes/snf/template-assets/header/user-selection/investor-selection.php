@@ -30,7 +30,7 @@
 		<?php if ( $query->have_posts() ) : ?>
 			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="row">
-					<div class="col-sm-12 investor-update">
+					<div class="col-sm-12 investor-update border shadow-sm">
 						<blockquote class="blockquote text-center">
 							<section class="investor-overlay">
 								<?php the_content();?>

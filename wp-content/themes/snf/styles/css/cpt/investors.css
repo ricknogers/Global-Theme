@@ -55,179 +55,11 @@
         margin-right: -100%;}
 
 }
-.investors_slideshow .carousel-inner .carousel-item .bg-img.inv{
-    height: 30vh;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
 
-.investor_advancement .investor_core_values .card{
-    /* border-radius: 0 !important; */
-}
-.investor_advancement .investor_core_values .card h5{
-    text-align:center;
-    font-weight:600;
-    font-size:1.75rem
-}
-.investors_slideshow .carousel-inner {
-    border-radius: 4px;
-    /* position: relative; */
-    /* width: 100%; */
-    height: 100%; /* 16:9 Aspect Ratio */
-}
-.investors_slideshow .carousel-caption-inv {
-    /* position: relative; */
-    display: block;
-    /* bottom: 0; */
-    /* background-color: #002d73; */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    /* opacity: .76; */
-}
-.login-sec {
-    padding: 10px 30px;
-    position: relative;
-}
-.login-sec .copy-text {
-    position: absolute;
-    width: 80%;
-    bottom: 20px;
-    font-size: 13px;
-    text-align: center;
-}
-.login-sec .copy-text i {
-    color: #FEB58A;
-}
-.login-sec .copy-text a {
-    color: #E36262;
-}
-.login-sec h2 {
-    margin-bottom: 30px;
-    font-weight: 800;
-    font-size: 30px;
-    color: #DE6262;
-}
-.login-sec h2:after {
-    content: " ";
-    width: 100px;
-    height: 5px;
-    background: #FEB58A;
-    display: block;
-    margin-top: 20px;
-    border-radius: 3px;
-    margin-left: auto;
-    margin-right: auto
-}
-.btn-login {
-    background: #DE6262;
-    color: #fff;
-    font-weight: 600;
-}
-
-.register-right{
-    background: #f3f1eb;
-    /* border-top-left-radius: 3%; */
-    /* border-bottom-left-radius: 3% 3%; */
-}
-@-webkit-keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
-}
-@keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
-}
-@-webkit-keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
-}
-@keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
-}
-.register-left p{
-    font-weight: lighter;
-    padding: 12%;
-    margin-top: -9%;
-}
-.register .register-form{
-    padding: 10%;
-    margin-top: 10%;
-}
-.btnRegister{
-    float: right;
-    margin-top: 10%;
-    border: none;
-    border-radius: 1.5rem;
-    padding: 2%;
-    background: #0062cc;
-    color: #fff;
-    font-weight: 600;
-    width: 50%;
-    cursor: pointer;
-}
-.register .nav-tabs{
-    /* margin-top: 3%; */
-    border: none;
-
-    border-radius: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;align-items: center;
-}
-.register .nav-tabs .nav-link{
-    font-weight: 200;
-    color: #fff;
-    border-radius: 0;
-    background-color: #002d73;
-    border: 0;}
-.register .nav-tabs .nav-link:hover{
-    border: none;
-}
-.register .nav-tabs .nav-items{
-    position:relative;
-    overflow-x:hidden;
-}
-.register .nav-tabs .nav-link.active{
-    width: 100%;color: #002d73;
-    background-color: #f3f1eb;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;border-bottom: 0;position: relative;font-weight: 700;
-}
-.register .nav-tabs .nav-link.active:before{
-    content: "\f229";
-    position: relative;
-    bottom: -25px;
-    right: 0;
-    font-family: bootstrap-icons !important;
-    display: inline-flex;
-    justify-content: center;
-
-    align-items: center;}
-
-a#login-tab {}
-.register-heading{
-    text-align: center;
-    margin-top: 8%;
-    margin-bottom: -15%;
-    color: #495057;
-}
 /*===================================================
 
 ======================================================*/
-#investorHighlight span{
-}
-.bs-calltoaction{
-}
-.bs-calltoaction > .row{
-}
-.bs-calltoaction > .row > [class^="col-"],
-.bs-calltoaction > .row > [class*=" col-"]{
-}
+
 .page-template-investors .cta-contents{
     padding-top: 10px;
     padding-bottom: 10px;
@@ -250,11 +82,332 @@ a#login-tab {}
     justify-content: center;
     align-items: center;
 }
-@media(min-width:991px){
-
+@media(min-width:992px){
+    .investors_slideshow .carousel-inner .carousel-item .bg-img.inv{
+        height: 30vh;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .investor_advancement .investor_core_values .card{
+        /* border-radius: 0 !important; */
+    }
+    .investor_advancement .investor_core_values .card h5{
+        text-align:center;
+        font-weight:600;
+        font-size:1.75rem
+    }
+    .investors_slideshow .carousel-inner {
+        border-radius: 4px;
+        /* position: relative; */
+        /* width: 100%; */
+        height: 100%; /* 16:9 Aspect Ratio */
+    }
+    .investors_slideshow .carousel-caption-inv {
+        /* position: relative; */
+        display: block;
+        /* bottom: 0; */
+        /* background-color: #002d73; */
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        /* opacity: .76; */
+    }
+    .login-sec {
+        padding: 10px 30px;
+        position: relative;
+    }
+    .login-sec .copy-text {
+        position: absolute;
+        width: 80%;
+        bottom: 20px;
+        font-size: 13px;
+        text-align: center;
+    }
+    .login-sec .copy-text i {
+        color: #FEB58A;
+    }
+    .login-sec .copy-text a {
+        color: #E36262;
+    }
+    .login-sec h2 {
+        margin-bottom: 30px;
+        font-weight: 800;
+        font-size: 30px;
+        color: #DE6262;
+    }
+    .login-sec h2:after {
+        content: " ";
+        width: 100px;
+        height: 5px;
+        background: #FEB58A;
+        display: block;
+        margin-top: 20px;
+        border-radius: 3px;
+        margin-left: auto;
+        margin-right: auto
+    }
+    .btn-login {
+        background: #DE6262;
+        color: #fff;
+        font-weight: 600;
+    }
+    
+    .register-right{
+        background: #f3f1eb;
+        /* border-top-left-radius: 3%; */
+        /* border-bottom-left-radius: 3% 3%; */
+    }
+    @-webkit-keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-20px); }
+    }
+    @keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-20px); }
+    }
+    @-webkit-keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-20px); }
+    }
+    @keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-20px); }
+    }
+    .register-left p{
+        font-weight: lighter;
+        padding: 12%;
+        margin-top: -9%;
+    }
+    .register .register-form{
+        padding: 10%;
+        margin-top: 10%;
+    }
+    .btnRegister{
+        float: right;
+        margin-top: 10%;
+        border: none;
+        border-radius: 1.5rem;
+        padding: 2%;
+        background: #0062cc;
+        color: #fff;
+        font-weight: 600;
+        width: 50%;
+        cursor: pointer;
+    }
+    .register .nav-tabs{
+        /* margin-top: 3%; */
+        border: none;
+    
+        border-radius: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;align-items: center;
+    }
+    .register .nav-tabs .nav-link{
+        font-weight: 200;
+        color: #fff;
+        border-radius: 0;
+        background-color: #002d73;
+        border: 0;}
+    .register .nav-tabs .nav-link:hover{
+        border: none;
+    }
+    .register .nav-tabs .nav-items{
+        position:relative;
+        overflow-x:hidden;
+    }
+    .register .nav-tabs .nav-link.active{
+        width: 100%;color: #002d73;
+        background-color: #f3f1eb;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;border-bottom: 0;position: relative;font-weight: 700;
+    }
+    .register .nav-tabs .nav-link.active:before{
+        content: "\f229";
+        position: relative;
+        bottom: -25px;
+        right: 0;
+        font-family: bootstrap-icons !important;
+        display: inline-flex;
+        justify-content: center;
+    
+        align-items: center;}
+    
+    a#login-tab {}
+    .register-heading{
+        text-align: center;
+        margin-top: 8%;
+        margin-bottom: -15%;
+        color: #495057;
+    }
 }
-@media(max-width:992px){
-
+@media(max-width:991px){
+	.investors_slideshow .carousel-inner .carousel-item .bg-img.inv{
+        height: 30vh;
+   
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .investor_advancement .investor_core_values .card{
+        /* border-radius: 0 !important; */
+    }
+    .investor_advancement .investor_core_values .card h5{
+        text-align:center;
+        font-weight:600;
+        font-size:1.75rem
+    }
+    .investors_slideshow .carousel-inner {
+        border-radius: 4px;
+        /* position: relative; */
+        /* width: 100%; */
+        height: 100%; /* 16:9 Aspect Ratio */
+    }
+    .investors_slideshow .carousel-caption-inv {
+        /* position: relative; */
+        display: block;
+        /* bottom: 0; */
+        /* background-color: #002d73; */
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        /* opacity: .76; */
+    }
+    .login-sec {
+        padding: 10px 30px;
+        position: relative;
+    }
+    .login-sec .copy-text {
+        position: absolute;
+        width: 80%;
+        bottom: 20px;
+        font-size: 13px;
+        text-align: center;
+    }
+    .login-sec .copy-text i {
+        color: #FEB58A;
+    }
+    .login-sec .copy-text a {
+        color: #E36262;
+    }
+    .login-sec h2 {
+        margin-bottom: 30px;
+        font-weight: 800;
+        font-size: 30px;
+        color: #DE6262;
+    }
+    .login-sec h2:after {
+        content: " ";
+        width: 100px;
+        height: 5px;
+        background: #FEB58A;
+        display: block;
+        margin-top: 20px;
+        border-radius: 3px;
+        margin-left: auto;
+        margin-right: auto
+    }
+    .btn-login {
+        background: #DE6262;
+        color: #fff;
+        font-weight: 600;
+    }
+    
+    .register-right{
+        background: #f3f1eb;
+        /* border-top-left-radius: 3%; */
+        /* border-bottom-left-radius: 3% 3%; */
+    }
+    @-webkit-keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-20px); }
+    }
+    @keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-20px); }
+    }
+    @-webkit-keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-20px); }
+    }
+    @keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-20px); }
+    }
+    .register-left p{
+        font-weight: lighter;
+        padding: 12%;
+        margin-top: -9%;
+    }
+    .register .register-form{
+        padding: 10%;
+        margin-top: 10%;
+    }
+    .btnRegister{
+        float: right;
+        margin-top: 10%;
+        border: none;
+        border-radius: 1.5rem;
+        padding: 2%;
+        background: #0062cc;
+        color: #fff;
+        font-weight: 600;
+        width: 50%;
+        cursor: pointer;
+    }
+    .register .nav-tabs{
+        /* margin-top: 3%; */
+        border: none;
+    
+        border-radius: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;align-items: center;
+    }
+    .register .nav-tabs .nav-link{
+        font-weight: 200;
+        color: #fff;
+        border-radius: 0;
+        background-color: #002d73;
+        border: 0;}
+    .register .nav-tabs .nav-link:hover{
+        border: none;
+    }
+    .register .nav-tabs .nav-items{
+        position:relative;
+        overflow-x:hidden;
+    }
+    .register .nav-tabs .nav-link.active{
+        width: 100%;color: #002d73;
+        background-color: #f3f1eb;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;border-bottom: 0;position: relative;font-weight: 700;
+    }
+    .register .nav-tabs .nav-link.active:before{
+        content: "\f229";
+        position: relative;
+        bottom: -25px;
+        right: 0;
+        font-family: bootstrap-icons !important;
+        display: inline-flex;
+        justify-content: center;
+    
+        align-items: center;}
+    
+    a#login-tab {}
+    .register-heading{
+        text-align: center;
+        margin-top: 8%;
+        margin-bottom: -15%;
+        color: #495057;
+    }
 }
 /*===================================================
 ======================================================*/
@@ -642,15 +795,18 @@ a#login-tab {}
         height: 100%;
         width: 100%;
         left: 0;
-        background-color: #000;
+        /* background-color: #000; */
         opacity: .9;
-        padding: 1.6rem;border-radius: 4px;}
+        padding: 1.6rem;
+        border-radius: 4px;
+    }
     .investor-update{
         position: relative;
         z-index: 4;
-        color: #fff;
+        color: #0082CA;
         padding: 0 !important;
-        border-radius: 4px;}
+        border-radius: 4px;
+    }
     .inv-title-seperation {
         padding-top: 5px;
         padding-bottom: 5px;
@@ -821,7 +977,7 @@ a#login-tab {}
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50%;
+        /* width: 50%; */
     }
     .banner-text h2 {
         color: #fff;
@@ -839,7 +995,402 @@ a#login-tab {}
     .banner-text p {
         color: #fff;
         text-align: center !important;
-        font-size: .75rem !important;
+        font-size: 1.05rem !important;
+    }
+    .right-side-sidebar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .right-side-sidebar .sidebar-widget h4{
+        font-size: 26px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #002d73
+    }
+    .right-side-sidebar .sidebar-widget .heading{
+        display: block;
+        margin-bottom: 25px;
+        border-bottom: 1px dotted #e4e4e4;
+        background-color: transparent;
+        padding: 0;
+    }
+    .right-side-sidebar .sidebar-widget h4:before{
+        display: block;
+        left: 0;
+        top: 40px;
+        position: relative;
+        width: 30%;
+        height: 2px;
+        content: "";
+        background-color: #002d73;
+    }
+    .sidebar-widget{
+        padding-bottom: 10px;
+        border-radius: 4px;
+    }
+    .sidebar-widget a h5, .sidebar-widget a{
+        text-decoration:none;
+        color:var(--defaultBlueHEX, #002d73);
+        font-size:.95rem;
+        text-align:center;
+        font-weight:600
+    }
+    .investor-gradient{
+        overflow-x: hidden;border-bottom-left-radius: 0 !important;}
+    .investor-info{
+        background-color:transparent;
+        border: none !important;
+    }
+    .investor-gradient .date{
+        text-transform: uppercase;
+        z-index: 1;
+        position: relative;
+        left: -10px;
+        padding: .75rem 1.25rem;
+        text-transform:uppercase;
+    }
+    .investor-gradient .date:before{
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 0;
+        width: 93%;
+        height: 100%;
+        background-color: #0082CA;
+        transform: skewX(
+                -13deg);
+        z-index: -1;
+        box-sizing: content-box;
+    }
+    .investor-info h3.card-title a{
+        color:var(--defaultBlueHEX, #002d73);
+        font-weight: 600;}
+    .date a h5.text-muted {
+        font-size: 15px;
+        margin:0;
+        color: var(--white, #fff) !important;
+    }
+    .investor-info a p{
+        color: #6c757d !important;
+        font-size: 12px !important;
+        text-align: left !important;
+    }
+    .most-recent-inv-docs{
+    }
+    .investorCard{
+        margin:15px 0;
+        overflow-x: hidden;}
+    .investorCard .card-footer{
+        background-color:#002d73;
+        padding: 3px;
+        text-align: center;
+        font-style: italic;
+    }
+    .investorCard .card-footer small{
+        color:#fff !important;
+    }
+    .most-recent-inv-docs .investor-info{
+    }
+    .yearly-title{
+        background-color:var(--fallback);
+        padding: .5em;
+    }
+    .investorCategoryListings ul{
+        /* margin: 10px 0; */
+        /* padding-left: revert; */
+    }
+    .investorCategoryListings ul li a h5{
+        color:
+                var(--defaultBlueHEX, #002d73);
+        font-weight:600;
+        text-decoration:
+                underline;
+        text-underline-offset: 5px;
+    }
+    .investorCategoryListings ul li a, .investorCategoryTitle a, .investorCategoryListings ul a:hover{
+        text-decoration:none;
+
+    }
+
+    .investorCategoryListings ul hr{
+        margin:1% 0;
+    }
+    .investorsThumbnailcontainer{
+        color: #fff;
+        position: relative;
+        height: 25vh;
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    .investorsThumbnailcontainer .card{
+        background-color:transparent;
+    }
+    .page-template-investors .thumbnailLong{
+        color: #fff;
+        position: relative;
+        height: 30vh;
+        background-position: center;
+        background-size: cover;
+    }
+    .investorsThumbnailcontainer a{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 11;
+        position: relative;
+        height: 100%;
+    }
+    .investorSectionTitle h2{
+        margin:1% 0;
+        /* padding: 0 10px; */
+        color: var(--defaultBlueHEX);
+        text-transform: uppercase;
+    }
+    .page-template-investors .card-content-date{
+        font-size: 11px;
+        color: #fff;
+        text-align: left;
+    }
+    .investorsThumbnailcontainer .card-content h2{
+        color: var(--white) !important;
+        font-family:var(--font-family);
+        text-align: left;
+        font-size: 25px;
+        margin: 0;
+    }
+    .page-template-investors .img-card-top{
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        /* margin: 0 20px; */
+        padding: 6px;
+        background: var(--processBlueHEX, #0082CA);
+        height: 100%;
+        align-items: center;
+        border-radius: 3px;
+    }
+    .investorCategoryListings li.media{
+        display: flex;
+        padding: 0;
+        align-items: center;
+        height: 125px;
+        /* width: 100%; */
+    }
+    .investorCategoryTitle{
+        position: relative;
+        padding: 0 !important;
+        background: #002d73;
+        border-bottom: solid 1px #002d73;
+        border-radius: 4px !important;}
+    .investorCategoryListings{
+        /* align-items: center; */
+        height: 100%;
+        width: 100%;
+        position: relative;
+        /* display: inline-flex; */
+    }
+    .investorCategoryListings li.media h5{
+        color: #002d73;
+    }
+    .investorCategoryTitle h2{
+        margin:1% 0;
+        color: var(--white);
+        text-align: left;
+        text-transform: uppercase;
+    }
+    .taxonomy-list-elements ul li{
+        list-style: none;
+        display: flex;
+        width: 100%;
+    }
+    .taxonomy-list-elements ul i{
+        font-size: 10px;
+        color: #fff;
+        opacity: .85;
+        display: flex;
+        justify-content: start;
+        align-items: baseline;
+    }
+    .taxonomy-list-elements a{
+        color: #fff;
+    }
+    .taxonomy-card{
+        position:relative;
+        width: 100%;
+        padding: 10px 15px;
+        color: #002d73;
+        display: inline-grid;
+    }
+    .taxonomy-card-title{
+        display:flex;
+        justify-content:center;
+        align-items:start;
+    }
+    .taxonomy-card-date{
+        height: 100%;
+    }
+    .taxonomy-list-elements ul{
+        margin:0;
+    }
+    .recentInvestors{
+        padding: 0 !important;
+        border:solid 1px rgb(255, 255, 255);
+    }
+    .recentInvestors .card{
+        z-index:11;
+    }
+    .dateContainer{
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
+    .dateContainer span.month{
+        font-size: 35px;
+        display: block;
+        line-height: 100%;
+        color: #ffffff;
+        border-bottom: solid 1px #ffffff;
+    }
+    .dateContainer span.year{
+        color: rgb(255, 255, 255);
+    }
+    .catLable{
+        background-color: var(--fallback);
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px !important;}
+    .catLable li{
+        border:none;
+        justify-content: space-between;
+        background-color: transparent;
+    }
+    .catLable button{
+    }
+    .catLable button.none {
+        border: none;
+        background-color:transparent;
+    }
+    .catLable button.none .text-info{
+        color:var(--white) !important;
+        font-size: 22px;
+    }
+    .investorOverlay{
+        position: absolute;
+        top: 0;
+        left:0;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        opacity: 0.5;
+        z-index: 0;
+    }
+    .archive .article-list .archive-content{
+        margin-bottom:0
+    }
+    .archive .article-list .archive-content p{
+        color: var(--linkColorDefault);
+    }
+    .investorArchiveTitle h1{
+        font-size: 32px;
+        font-weight: 800;
+    }
+    .archiveSideBar ul li a.active{
+        font-weight:800;
+    }
+    div.banner-inner-investor {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 300px;
+        display: block;
+        position: relative;
+    }
+    .investorTitleContainer  .innerTitleContainer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 7;
+        display: flex;
+        justify-content: center;
+        background-color: var(--white);
+        opacity:.9;
+        overflow: hidden;
+        text-align: center;
+        align-items: center;
+    }
+    .investorTitleContainer  .innerTitleContainer h1{
+        color: var(--secondaryOption, rgb(107,105,135));
+        font-family:var(--fontFamilySecondary);
+        /* font-size:24px; */
+    }
+    .investorYearDescription h3{
+        color: var(--white, #fff) !important;
+        margin: 0;
+        font-family:var(--fontFamilyPrimary);
+    }
+    .catLable ul li.list-group-item .catCount{
+    }
+    ul.catLable  li.list-group-item .catCount span{
+        color:var(--white,#fff);
+        font-family:var(--fontFamilyPrimary);
+    }
+    .investorYearDescription{
+        padding: 0 !important;
+        margin: 1%;
+    }
+    .investor-overlay{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        /* background-color: #000; */
+        opacity: .9;
+        padding: 1.6rem;
+        border-radius: 4px;
+    }
+    .investor-update{
+        position: relative;
+        z-index: 4;
+        color: #0082CA;
+        padding: 0 !important;
+        border-radius: 4px;
+    }
+    .inv-title-seperation {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0;padding-right: 0;}
+
+    .inv-title-seperation .inv_title_container h4{
+        font-size: 26px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #002d73
+    }
+    .inv-title-seperation .inv_title_container .heading{
+        display: block;
+        margin-bottom: 25px;
+        border-bottom: 1px dotted #e4e4e4;
+        background-color: transparent;
+        padding: 0;
+    }
+    .inv-title-seperation .inv_title_container  h4:before{
+        display: block;
+        left: 0;
+        top: 40px;
+        position: relative;
+        width: 30%;
+        height: 2px;
+        content: "";
+        background-color: #002d73;
+    }
+    .inv_title_container{
+        padding-bottom: 20px;
+        border-radius: 4px;
     }
     .single-chart {
         justify-content: space-around;

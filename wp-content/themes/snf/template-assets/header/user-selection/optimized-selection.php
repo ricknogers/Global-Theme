@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col page-header theme-bg-dark py-md-5 text-center position- optimized-selection  ">
+    <div class="col page-header theme-bg-dark py-md-5 py-2 text-center position- optimized-selection  ">
         <div class="page-header-shapes-right "></div>
         <div class="page-header-shapes-left"></div>
         <div class="row">

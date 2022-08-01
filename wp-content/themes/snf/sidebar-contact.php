@@ -45,15 +45,15 @@
                                     <ul class="list-group list-group-flush country_list_elements">
                                         <?php if(get_sub_field('continent')):?>
                                             <li class="list-group-item">
-                                                <div class="col"><p class="lead text-uppercase"><i class="bi bi-globe"></i> <?php the_sub_field('continent') ?></p></div>
+                                                <div class="col d-inline-flex justify-content-center align-items-center"><i class="bi bi-globe"></i> <p class="lead text-uppercase"><?php the_sub_field('continent') ?></p></div>
                                             </li>
                                         <?php endif;?>
                                         <?php if(get_sub_field('general_phone_number')):?>
                                             <li class="list-group-item">
                                             	<a href="tel:<?php the_sub_field('general_phone_number');?>">
 	                                             
-	                                                <div class="col">
-	                                                    <p class="lead text-uppercase"> <i class="bi bi-telephone"></i><?php the_sub_field('general_phone_number') ?></p>
+	                                                <div class="col d-inline-flex justify-content-center align-items-center">
+	                                                     <i class="bi bi-telephone"></i><p class="lead text-uppercase"><?php the_sub_field('general_phone_number') ?></p>
 	                                                </div>
                                             	</a>
                                             </li>
@@ -64,8 +64,8 @@
                                             	<a href="mailto:<?php the_sub_field('general_email_address');?>">
 
 	                                               
-	                                                <div class="col">
-	                                                    <p class="lead text-uppercase"><i class="bi bi-envelope-check"></i> <?php the_sub_field('general_email_address') ?></p>
+	                                                <div class="col d-inline-flex justify-content-center align-items-center">
+	                                                    <i class="bi bi-envelope-check"></i> <p class="lead text-uppercase"><?php the_sub_field('general_email_address') ?></p>
 	                                                </div>
                                             	</a>
                                             </li>
@@ -73,18 +73,16 @@
                                         <?php if(get_sub_field('address')):?>
                                             <li class="list-group-item">
                                                
-                                                <div class="col">
-                                                    <p class="lead text-uppercase"><i class="bi bi-geo"></i> <br/><?php the_sub_field('subsidiary_name') ?><br/><?php the_sub_field('address') ?> <br/><?php the_sub_field('city') ?>, <?php the_sub_field('state') ?> <?php the_sub_field('postal_code') ?> <?php the_sub_field('country') ?> </p>
+                                                <div class="col d-inline-flex justify-content-center align-items-center">
+                                                    <i class="bi bi-geo"></i> <p class="lead text-uppercase"><?php the_sub_field('subsidiary_name') ?><br/><?php the_sub_field('address') ?> <br/><?php the_sub_field('city') ?>, <?php the_sub_field('state') ?> <?php the_sub_field('postal_code') ?> <?php the_sub_field('country') ?> </p>
                                                 </div>
                                             </li>
                                         <?php endif;?>
                                         <?php if(get_sub_field('facility_type')):?>
                                             <li class="list-group-item">
-                                                <div class="col-md-2 col-sm-2 p-0 border-right">
-                                                   
-                                                </div>
-                                                <div class="col">
-                                                    <p class="lead text-uppercase">  <i class="bi bi-building"></i><?php the_sub_field('facility_type') ?></p>
+
+                                                <div class="col d-inline-flex justify-content-center align-items-center">
+                                                    <i class="bi bi-building"></i> <p class="lead text-uppercase"> <?php the_sub_field('facility_type') ?></p>
                                                 </div>
                                             </li>
                                         <?php endif;?>

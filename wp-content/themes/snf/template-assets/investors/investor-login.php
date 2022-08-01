@@ -138,9 +138,9 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <div class="inv bg-img" style="background-image:url(https://dev-eu-snf-group.pantheonsite.io/wp-content/uploads/2021/10/Industrial-Waste-Treatment.jpg); "></div>
+                            <div class="inv bg-img" style="background-image:url(https://snf.com/wp-content/uploads/2021/10/Industrial-Waste-Treatment.jpg); "></div>
 
-                            <div class="carousel-caption-inv d-none d-md-block">
+                            <div class="carousel-caption-inv d-block">
                                 <div class="banner-text">
 
                                     <p>70 subsidiaries located in more than 40 countries, in 3 major economic regions (The Americas, Europe, and Asia)</p>
@@ -150,16 +150,16 @@
                         <div class="carousel-item">
                             <div class="inv bg-img" style="background-image:url(<?php bloginfo('template_directory'); ?>/resources/images/snf-agriculture.jpg); "></div>
 
-                            <div class="carousel-caption-inv d-none d-md-block">
+                            <div class="carousel-caption-inv d-block">
                                 <div class="banner-text">
                                     <p>With 400 Scientists/Laboratory Technicians, 230 Field Technicians, and 100 Engineers; R&D, Engineering, and Innovation are at the Heart of our Strategy.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="inv bg-img" style="background-image:url(https://dev-eu-snf-group.pantheonsite.io/wp-content/uploads/2022/05/Reclaimed-Tailings-Pond-scaled-1.jpg); "></div>
+                            <div class="inv bg-img" style="background-image:url(https://snf.com/wp-content/uploads/2022/05/Reclaimed-Tailings-Pond-scaled-1.jpg); "></div>
 
-                            <div class="carousel-caption-inv d-none d-md-block">
+                            <div class="carousel-caption-inv  d-block">
                                 <div class="banner-text">
                                     <p>SNF, founded in 1978, has developed a strategy of organic growth and reinvestment that could not be achieved by a publicly traded corporation. SNF is committed to continuously maintaining it’s privately held status.</p>
                                 </div>
@@ -195,7 +195,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 graphSeperator mt-3 mb-3">
+            <div class="col-md-12 graphSeperator mt-3 mb-3 d-sm-none ">
                 <div class="row">
                     <div class="col-sm-12 inv-title-seperation">
                         <section class="inv_title_container">
@@ -204,7 +204,7 @@
                     </div>
                 </div>
                 <div class="row " >
-                    <div class="col-md-2 col-sm-6 col-xs-4 single-chart">
+                    <div class="col-md-2 single-chart">
                         <svg viewBox="0 0 36 36" class="circular-chart blue4">
                             <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
                             <path class="circle circle-7" stroke-dasharray="44, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
@@ -213,7 +213,7 @@
                         </svg>
                     </div>
 
-                    <div class="col-md-2 col-sm-4 col-xs-4 single-chart">
+                    <div class="col-md-2 single-chart">
                         <svg  viewBox="0 0 36 36" class="circular-chart blue2 ">
                             <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
                             <path class="circle circle-28" stroke-dasharray="20, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
@@ -221,7 +221,7 @@
                             <text x="18" y="20.35" class="percentage ">20%</text>
                         </svg>
                     </div>
-                    <div class="col-md-2 col-sm-4 col-xs-4 single-chart">
+                    <div class="col-md-2  single-chart">
                         <svg  viewBox="0 0 36 36" class="circular-chart blue3">
                             <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                             <path class="circle circle-11" stroke-dasharray="12, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
@@ -229,7 +229,7 @@
                             <text x="18" y="20.35" class="percentage  ">12%</text>
                         </svg>
                     </div>
-                    <div class="col-md-2 col-sm-6 col-xs-4 single-chart">
+                    <div class="col-md-2  single-chart">
                         <svg viewBox="0 0 36 36" class="circular-chart blue4">
                             <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
                             <path class="circle circle-7" stroke-dasharray="10, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
@@ -237,7 +237,7 @@
                             <text x="18" y="20.35" class="percentage  ">10%</text>
                         </svg>
                     </div>
-                    <div class="col-md-2 col-sm-6 col-xs-4 single-chart">
+                    <div class="col-md-2  single-chart">
                         <svg viewBox="0 0 36 36" class="circular-chart blue5">
                             <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831"/>
                             <path class="circle circle-7" stroke-dasharray="9, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831"/>
@@ -245,7 +245,7 @@
                             <text x="18" y="20.35" class="percentage  ">9%</text>
                         </svg>
                     </div>
-                    <div class="col-md-2 col-sm-6 col-xs-4 single-chart">
+                    <div class="col-md-2  single-chart">
                         <svg viewBox="0 0 36 36" class="circular-chart blue6 ">
                             <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831"/>
                             <path class="circle circle-6" stroke-dasharray="6, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831"/>
@@ -259,8 +259,8 @@
             <div class="col-sm-12 mt-3 mb-3">
                 <div class="row  investor_advancement  ">
                     <div class=" col-sm-12  hover-mask ">
-                        <a class="hover_icon " href="https://dev-eu-snf-group.pantheonsite.io/wp-content/uploads/2022/07/Key-Figures-Web-2022-V2.png" >
-                            <img class="d-block img-fluid" src="https://dev-eu-snf-group.pantheonsite.io//wp-content/uploads/2022/07/Key-Figures-Web-2022-V2.png" alt="Third slide">
+                        <a class="hover_icon " href="https://snf.com/wp-content/uploads/2022/07/Key-Figures-Web-2022-V2.png" >
+                            <img class="d-block img-fluid" loading="lazy" src="https://snf.com/wp-content/uploads/2022/07/Key-Figures-Web-2022-V2.png" alt=" SNF Global Key Figures our impact on a global scale">
 
                         </a>
                     </div>

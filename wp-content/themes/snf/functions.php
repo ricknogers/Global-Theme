@@ -97,10 +97,9 @@ function snf_group_add_scripts() {
     wp_enqueue_script('snf-front-page-js',get_template_directory_uri() . '/scripts/js/front-page.js', array('jquery'), 'custom', true);
 
     // Bootstrap JS CDN
-    wp_enqueue_script( 'slim-jquery','https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', true);
-    wp_enqueue_script( 'boot-pooper-js','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', true);
-    wp_enqueue_script( 'boot-js','https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js', array('jquery'), true);
-    wp_enqueue_script('jquery-ui', 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('jquery'), true);
+    wp_enqueue_script( 'slim-jquery','https://code.jquery.com/jquery-3.5.1.slim.min.js', true);
+    wp_enqueue_script( 'boot-pooper-js','https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', true);
+    wp_enqueue_script( 'boot-js','https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js', array('jquery'), true);
     wp_enqueue_script('snf-lightbox-scripts-js','https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js', array(), '', true  );
     if( is_404()){
         wp_enqueue_script('snf-oops-js', get_template_directory_uri() . '/scripts/js/oops.js', array('jquery'), 'custom', true);
@@ -254,7 +253,40 @@ require_once('site-functions/footer/footer-widget.php');
 require_once('site-functions/subsidiary/subsidiary-child-pages.php');
 
 
+/**
+ * WP HeartBeat
+ */
 
+// Remove static query resources
+function _remove_script_version( $src ){
+	$parts = explode( '?ver', $src );
+	return $parts[0];
+}
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
+
+// Block WP enumeration scans
+if (!is_admin()) {
+	if (preg_match('/author=([0-9]*)/i', $_SERVER['QUERY_STRING'])) die();
+	add_filter('redirect_canonical', 'shapeSpace_check_enum', 10, 2);
+}
+function shapeSpace_check_enum($redirect, $request) {
+	if (preg_match('/\?author=([0-9]*)(\/*)/i', $request)) die();
+	else return $redirect;
+}
+
+// Limit WP heartbeat
+function wptuts_heartbeat_settings( $settings ) {
+	$settings['interval'] = 60;
+	return $settings;
+}
+add_filter( 'heartbeat_settings', 'wptuts_heartbeat_settings' );
+add_filter('relevanssi_remove_punctuation', 'saveampersands_1', 9);
+function saveampersands_1($a) {
+	$a = str_replace('&amp;', 'AMPERSAND', $a);
+	$a = str_replace('-', 'AMPERSAND', $a);
+	return $a;
+}
 
 
 
@@ -283,34 +315,18 @@ require_once('site-functions/misc/scripts-defer.php');
  *
  */
 require_once('site-functions/dynamic-menu/wp-menu-add-on-hooks.php');
-
-//
-//
-// add_filter( 'body_class', 'market_body_class' );
-// // add classes to body based on custom taxonomy ('sections')
-// // examples: section-about-us, section-start, section-nyc
-// function market_body_class( $classes ) {
-//    global $post;
-//     $section_terms = get_the_terms( $post->ID, 'country' );
-//    $market_terms = get_the_terms( $post->ID, 'markets' );
-//    if ( $market_terms && ! is_wp_error( $market_terms ) ) {
-//        foreach ($market_terms as $term) {
-//            $classes[] = 'taxonomy';
-//            $classes[] = $term->slug;
-//
-//
-//        }
-//    }
-//     if ( $section_terms && ! is_wp_error( $section_terms ) ) {
-//           foreach ($section_terms as $term) {
-//               $classes[] = 'taxonomy';
-//               $classes[] = $term->slug;
-//
-//
-//           }
-//       }
-//    return $classes;
-// }
+/**
+ * Remove Admin Bar for Investor Subscriber
+ */
+function disable_admin_bar_for_subscribers(){
+	if ( is_user_logged_in() ):
+		global $current_user;
+		if( !empty( $current_user->caps['subscriber'] ) ):
+			add_filter('show_admin_bar', '__return_false');
+		endif;
+	endif;
+}
+add_action('init', 'disable_admin_bar_for_subscribers', 9);
 /**
  * Customizer additions.
  */
@@ -407,7 +423,7 @@ function my_share_buttons() {
 }
 
 
-
+add_filter('action_scheduler_run_schedule', function($arg) { return 86400; });
 
 /**
  * Customizer additions.

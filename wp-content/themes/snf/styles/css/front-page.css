@@ -811,11 +811,11 @@ III.) Remy & Executives
 
         /* position: absolute !important; */
 
-        /* left: 0; */
+        display: flex;
 
-        /* right: 0; */
+        justify-content: center;
 
-        /* top: 100%; */
+        align-items: center;
 
     }
     .cta_image{

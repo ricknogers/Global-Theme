@@ -18,10 +18,4 @@
             <?php endif; wp_reset_query(); ?>
         </div><!-- #primary -->
         <div class="col-md-3 col-sm-12 articlesSideBar mt-4">
-            <aside class=" list-group newsSideBar " id="sidebar" role="complementary">
-                <?php get_sidebar('archive'); ?>
-            </aside>
-        </div>
-    </div>
-</div>
-<?php get_footer(); ?>
+            <aside class=" list-group newsS

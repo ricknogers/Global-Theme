@@ -10,5 +10,21 @@ function snf_widgets_init() {
         'before_title'    => '<h4>',
         'after_title'     => '</h4>',
     ) );
+
 }
 add_action( 'widgets_init', 'snf_widgets_init' );
+
+function register_search_widget() {
+	register_sidebar(
+		array(
+			'before_title'  => '<h4 class="search-bar-results">',
+			'after_title'   => '</h4>',
+			'before_widget' => '<div class="search-widget">',
+			'after_widget'  => '</div>',
+			'name'        => __( 'Search Widget', 'snf_group' ),
+			'id'          => 'search-widget',
+			'description' => __( 'This is for search results.', 'snf_group' ),
+		)
+	);
+}
+add_action( 'widgets_init', 'register_search_widget' );
