@@ -13,9 +13,7 @@
     </div>
 <?php endif; ?>
 <?php if (get_sub_field( 'card_layout' ) == 'card-slider' ) : ?>
-	<?php if(has_term('','markets' )):?>
-		<?php get_template_part('/market-sites/get-market-application-useage');?>
-	<?php else:?>
+	
 		<div class="row mb-5 mt-2">
 		    <div id="markets_carousel" class="carousel slide col-sm-12 mt-3 mb-3" data-ride="carousel">
 				<div class="row mb-3">
@@ -80,7 +78,7 @@
 		        </div><!--carousel-inner-->
 		    </div><!--col-->
 		</div><!--row-->
-	<?php endif; ?>
+	
 <?php else : ?>
 	<?php if (get_sub_field( 'card_layout' ) == 'traditional-card' ) : ?>
         <div class="row  row-cols-1 row-cols-md-3 flexible-card mb-5 mt-2">

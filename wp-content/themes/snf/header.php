@@ -11,6 +11,13 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+    <script>
+        (function(g,e,o,t,a,r,ge,tl,y,s){
+            t=g.getElementsByTagName(e)[0];y=g.createElement(e);y.async=true;
+            y.src='https://g9508048080.co/gr?id=-MA7EuMgCRz-0MUypLA3&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);
+            t.parentNode.insertBefore(y,t);
+        })(document,'script');
+    </script>
 	<?php  if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'live' ) ) ):?>
 		<script   src=https://app.termly.io/embed.min.js data-auto-block="on" data-website-uuid="b8dae01b-f7ee-446f-abc2-8547bb006b4d"></script>
 		<!-- Clarity tracking code for https://snf.com/ -->
@@ -97,7 +104,7 @@
 			require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 			wp_nav_menu( array(
 				'theme_location'  => 'snf_global_main_nav',
-				'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+				'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 				'container'       => 'div',
 				'container_class' => 'collapse navbar-collapse ',
 				'container_id'    => 'main-menu',

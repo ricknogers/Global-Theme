@@ -1736,9 +1736,9 @@ VII.) Media Query
         height: auto;
         background-color:#002d73;
         position: absolute;
-        left: 0;
+        /* left: 0; */
         top: 0;
-        display: inline-block !important;
+        display: block !important;
         min-height: auto;
     }
     .globalTopBar .desktopTopBar .itemsRight ul li .trp-language-switcher > div > a:hover{

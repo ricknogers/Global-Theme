@@ -110,4 +110,50 @@ get_header(); ?>
                                         <div class="row layered-bg-behind shadow">
                                             <?php if ( get_sub_field( 'image' ) ) : ?>
                                                 <div class="col-md-6 d-xs-none split-imagery " style="background-image: url(<?php the_sub_field('image')?>)"></div>
-                         
+                                            <?php endif ?>
+                                            <div class="col-md-6 col-sm-12 split-content p-md-5 p-3">
+                                                <h2> <?php the_sub_field( 'title' ); ?></h2>
+                                                <?php the_sub_field( 'content' ); ?>
+                                                <?php $link = get_sub_field( 'link' ); ?>
+                                                <?php if ( $link ) : ?>
+                                                    <a href="<?php echo esc_url( $link) ; ?>" class="split-link">
+                                                        <img src="<?php bloginfo('template_directory'); ?>/resources/images/icons/arrow-thin-right.svg" alt="Arrow Link to Continue to Content" class="img-fluid "  loading="lazy">
+                                                    </a>
+                                                <?php endif; ?>
+                                            </div><!--split-content-->
+                                        </div><!--layered-bg-behind-->
+                                    </div><!--split-container-->
+                                <?php endif;?>
+                                <?php $counter++; ?>
+                            <?php endwhile; ?>
+                        <?php else : ?>
+                            <?php // No rows found ?>
+                        <?php endif; ?>
+                    <?php elseif ( get_row_layout() == 'accordion_layout' ) : ?>
+                        <?php get_template_part('template-assets/modules/accordion-repeater');?>
+                    <?php elseif ( get_row_layout() == 'wysiwyg' ) : ?>
+                        <div class="subs-content element pt-3" >
+                            <?php the_sub_field('wysiwyg');     ?>
+                        </div>
+                        <hr class="center-diamond">
+                    <?php elseif ( get_row_layout() == 'section_identifier' ) : ?>
+                        <?php if(get_sub_field('secondary_title') && get_sub_field('primary_title')):?>
+                            <div class="section-identifier two-titles">
+                                <h2><?php the_sub_field( 'primary_title' ); ?><span><?php the_sub_field( 'secondary_title' ); ?></span></h2>
+                            </div>
+                        <?php else:?>
+                            <div class="section-identifier one-title">
+                                <h2><?php the_sub_field( 'primary_title' ); ?></h2>
+                            </div>
+                        <?php endif;?>
+                    <?php elseif ( get_row_layout() == 'contact_bar' ) : ?>
+                        <?php get_template_part('template-assets/modules/contact-bar');?>
+                    <?php endif; ?>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <?php // No layouts found ?>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+<?php get_footer(); ?>

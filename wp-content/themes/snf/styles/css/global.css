@@ -233,7 +233,7 @@ Common Classes
         position: relative;
         width: 60px;
         height: 3px;
-        content: "";
+        /* content: ""; */
         background-color: #0082CA;
     }
     .site-content .aligncenter {

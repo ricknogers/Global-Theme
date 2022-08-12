@@ -13,21 +13,14 @@
     <div class="col scroll-to-top top-button-visible stop-scroll">
         <a id="back-to-top" class="" href="#" title="top">Top</a>
     </div>
+<!--
     <?php if(!is_page('contact')):?>
-      <!--  <div class="col email-fixed-contact top-button-visible stop-scroll">
-            <div class="sidebar-contact">
-                <div class="form-toggle"></div>
-                    <div class="col formTitle">
-                         <h2>Contact Us</h2>
-                    </div>
-                <div class="scroll"></div>
-                <div class="popout-form-container">
+
                     <?php dynamic_sidebar('sidebar-contact-form');?>
-                </div>
-            </div
-        </div>sidebar-contact-->
+
     <?php else:?>
     <?php endif;?>
+-->
 </section>
 <footer class="section bg-footer">
     <div class="container">
@@ -113,9 +106,9 @@
             </div>
         </div>
     </div>
-    <div class="blended-logo">
-        <img src="<?php bloginfo('template_directory'); ?>/resources/images/logos/SNF-White.png" alt="SNF Logo" class="img-fluid mx-auto d-block" lazyload="load">
-    </div>
+<!--    <div class="blended-logo">-->
+<!--        <img src="--><?php //bloginfo('template_directory'); ?><!--/resources/images/logos/SNF-White.png" alt="SNF Logo" class="img-fluid mx-auto d-block" lazyload="load">-->
+<!--    </div>-->
 </footer>
 
 

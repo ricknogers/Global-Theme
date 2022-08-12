@@ -72,7 +72,7 @@ function register_my_menus() {
 
 
 function snf_country_nav_us($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_us',
@@ -80,14 +80,14 @@ function snf_country_nav_us($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-us-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_fr($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_fr',
@@ -95,14 +95,14 @@ function snf_country_nav_fr($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-us-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_uk($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_uk',
@@ -110,14 +110,14 @@ function snf_country_nav_uk($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-us-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_ca($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_ca',
@@ -125,14 +125,14 @@ function snf_country_nav_ca($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-us-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_australia($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_australia',
@@ -140,14 +140,14 @@ function snf_country_nav_australia($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-us-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_chad($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_chad',
@@ -155,14 +155,14 @@ function snf_country_nav_chad($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-chad-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_egypt($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_egypt',
@@ -170,14 +170,14 @@ function snf_country_nav_egypt($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-egypt-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_oman($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_oman',
@@ -185,15 +185,15 @@ function snf_country_nav_oman($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-oman-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 
 function snf_country_nav_israel($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_israel',
@@ -201,14 +201,14 @@ function snf_country_nav_israel($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-israel-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_saudi_arabia($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_saudi_arabia',
@@ -216,14 +216,14 @@ function snf_country_nav_saudi_arabia($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-saudi_arabia-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_south_africa($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_south_africa',
@@ -231,14 +231,14 @@ function snf_country_nav_south_africa($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-south_africa-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_uae($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_uae',
@@ -246,14 +246,14 @@ function snf_country_nav_uae($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-uae-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_argentina($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_argentina',
@@ -261,14 +261,14 @@ function snf_country_nav_argentina($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-argentina-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_brazil($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_brazil',
@@ -276,14 +276,14 @@ function snf_country_nav_brazil($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-brazil-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_chile($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_chile',
@@ -291,14 +291,14 @@ function snf_country_nav_chile($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-chile-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_colombia($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_colombia',
@@ -306,14 +306,14 @@ function snf_country_nav_colombia($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-colombia-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_mexico($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_mexico',
@@ -321,14 +321,14 @@ function snf_country_nav_mexico($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-mexico-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_china($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_china',
@@ -336,14 +336,14 @@ function snf_country_nav_china($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-china-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_in($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_in',
@@ -351,14 +351,14 @@ function snf_country_nav_in($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-in-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_indonesia($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_indonesia',
@@ -366,14 +366,14 @@ function snf_country_nav_indonesia($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-indonesia-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_japan($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_japan',
@@ -381,14 +381,14 @@ function snf_country_nav_japan($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-japan-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_philippines($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_philippines',
@@ -396,14 +396,14 @@ function snf_country_nav_philippines($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-philippines-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_kr($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_kr',
@@ -411,14 +411,14 @@ function snf_country_nav_kr($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-kr-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_singapore($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_singapore',
@@ -426,14 +426,14 @@ function snf_country_nav_singapore($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-singapore-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_taiwan($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_taiwan',
@@ -441,14 +441,14 @@ function snf_country_nav_taiwan($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-taiwan-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_thailand($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_thailand',
@@ -456,14 +456,14 @@ function snf_country_nav_thailand($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-thailand-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_austria($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_austria',
@@ -471,14 +471,14 @@ function snf_country_nav_austria($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-austria-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_belgium($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_belgium',
@@ -486,14 +486,14 @@ function snf_country_nav_belgium($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-belgium-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_croatia($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_croatia',
@@ -501,14 +501,14 @@ function snf_country_nav_croatia($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-croatia-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_czech_republic($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_czech_republic',
@@ -516,14 +516,14 @@ function snf_country_nav_czech_republic($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-czech_republic-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_finland($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_finland',
@@ -531,14 +531,14 @@ function snf_country_nav_finland($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-finland-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_germany($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_germany',
@@ -546,14 +546,14 @@ function snf_country_nav_germany($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-germany-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_greece($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_greece',
@@ -561,14 +561,14 @@ function snf_country_nav_greece($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-greece-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_italy($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_italy',
@@ -576,14 +576,14 @@ function snf_country_nav_italy($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-italy-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_kazakhstan($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_kazakhstan',
@@ -591,14 +591,14 @@ function snf_country_nav_kazakhstan($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-kazakhstan-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_netherlands($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_netherlands',
@@ -606,14 +606,14 @@ function snf_country_nav_netherlands($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-netherlands-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_poland($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_poland',
@@ -621,14 +621,14 @@ function snf_country_nav_poland($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-poland-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_portugal($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_portugal',
@@ -636,14 +636,14 @@ function snf_country_nav_portugal($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-portugal-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_russia($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_russia',
@@ -651,14 +651,14 @@ function snf_country_nav_russia($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-russia-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_slovakia($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_slovakia',
@@ -666,14 +666,14 @@ function snf_country_nav_slovakia($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-slovakia-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_spain($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_spain',
@@ -681,14 +681,14 @@ function snf_country_nav_spain($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-spain-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_sweden($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_sweden',
@@ -696,14 +696,14 @@ function snf_country_nav_sweden($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-sweden-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_switzerland($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_switzerland',
@@ -711,14 +711,14 @@ function snf_country_nav_switzerland($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-switzerland-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
 }
 function snf_country_nav_turkey($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu( array(
 		'theme_location'  => 'snf_country_nav_turkey',
@@ -726,8 +726,8 @@ function snf_country_nav_turkey($depth) {
 		'container_class' => 'market_nav_elements  navbar-collapse',
 		'menu_class'      => 'navbar-nav mr-auto',
 		'container_id' => 'country-turkey-menu',
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+		'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+		'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 		'walker' => new WP_Bootstrap_Mega_Navwalker()
 	) );
 
@@ -741,16 +741,16 @@ function snf_country_nav_turkey($depth) {
  * Market Sites Navwalker  Menus
  */
 function snf_global_main_nav($depth) {
-    // display the wp3 menu if available
+    // display the wp2 menu if available
     require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
     wp_nav_menu( array(
         'theme_location'  => 'snf_global_main_nav',
-        'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+        'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
         'container'       => 'div',
         'container_class' => 'collapse navbar-collapse',
         'container_id'    => 'main-menu',
         'menu_class'      => 'navbar-nav mr-auto',
-        'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+        'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
         'walker'          => new WP_Bootstrap_Mega_Navwalker(),
     ) );
 
@@ -758,7 +758,7 @@ function snf_global_main_nav($depth) {
 
 
 function snf_markets_municipal_nav($depth) {
-    // display the wp3 menu if available
+    // display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
     wp_nav_menu(
         array(
@@ -767,14 +767,14 @@ function snf_markets_municipal_nav($depth) {
             'container_class' => 'market_nav_elements  navbar-collapse',
             'menu_class'      => 'navbar-nav mr-auto',
             'container_id' => 'municipal-market-menu',
-            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-            'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+            'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+            'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
             'walker' => new WP_Bootstrap_Mega_Navwalker()
         )
     );
 }
 function snf_markets_og_nav($depth) {
-    // display the wp3 menu if available
+    // display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
     wp_nav_menu(
         array(
@@ -783,14 +783,14 @@ function snf_markets_og_nav($depth) {
             'container' => 'div', /* container class */
             'container_class' => 'market_nav_elements  navbar-collapse',
             'container_id' => 'og-market-menu',
-            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-            'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+            'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+            'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
             'walker' => new WP_Bootstrap_Mega_Navwalker()
         )
     );
 }
 function snf_markets_pc_nav($depth) {
-    // display the wp3 menu if available
+    // display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
     wp_nav_menu(
         array(
@@ -799,14 +799,14 @@ function snf_markets_pc_nav($depth) {
 	        'menu_class'      => 'navbar-nav mr-auto',
 	        'container' => 'div', /* container class */
 	        'container_class' => 'market_nav_elements   navbar-collapse',
-	        'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-	        'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+	        'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+	        'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
             'walker' => new WP_Bootstrap_Mega_Navwalker()
         )
     );
 }
 function snf_markets_ag_nav($depth) {
-    // display the wp3 menu if available
+    // display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
     wp_nav_menu(
         array(
@@ -815,14 +815,14 @@ function snf_markets_ag_nav($depth) {
             'menu_class'      => 'navbar-nav mr-auto',
             'container' => 'div', /* container class */
             'container_class' => 'market_nav_elements  navbar-collapse',
-            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-            'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+            'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+            'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
             'walker' => new WP_Bootstrap_Mega_Navwalker()
         )
     );
 }
 function snf_markets_homecare_nav($depth) {
-    // display the wp3 menu if available
+    // display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
     wp_nav_menu(
         array(
@@ -831,14 +831,14 @@ function snf_markets_homecare_nav($depth) {
             'menu_class'      => 'navbar-nav mr-auto',
             'container' => 'div', /* container class */
             'container_class' => 'market_nav_elements  navbar-collapse',
-            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-            'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+            'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+            'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
             'walker' => new WP_Bootstrap_Mega_Navwalker()
         )
     );
 }
 function snf_markets_industrial_nav($depth) {
-    // display the wp3 menu if available
+    // display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
     wp_nav_menu(
         array(
@@ -847,14 +847,14 @@ function snf_markets_industrial_nav($depth) {
             'menu_class'      => 'navbar-nav mr-auto',
             'container' => 'div', /* container class */
             'container_class' => 'market_nav_elements  navbar-collapse',
-            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-            'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+            'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+            'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
             'walker' => new WP_Bootstrap_Mega_Navwalker()
         )
     );
 }
 function snf_markets_dredging_nav($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu(
 		array(
@@ -863,14 +863,14 @@ function snf_markets_dredging_nav($depth) {
 			'menu_class'      => 'navbar-nav mr-auto',
 			'container' => 'div', /* container class */
 			'container_class' => 'market_nav_elements  navbar-collapse',
-			'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-			'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+			'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+			'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 			'walker' => new WP_Bootstrap_Mega_Navwalker()
 		)
 	);
 }
 function snf_markets_mining_nav($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu(
 		array(
@@ -879,14 +879,14 @@ function snf_markets_mining_nav($depth) {
 			'menu_class'      => 'navbar-nav mr-auto',
 			'container' => 'div', /* container class */
 			'container_class' => 'market_nav_elements  navbar-collapse',
-			'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-			'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+			'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+			'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 			'walker' => new WP_Bootstrap_Mega_Navwalker()
 		)
 	);
 }
 function snf_markets_pulp_nav($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu(
 		array(
@@ -895,14 +895,14 @@ function snf_markets_pulp_nav($depth) {
 			'menu_class'      => 'navbar-nav mr-auto',
 			'container' => 'div', /* container class */
 			'container_class' => 'market_nav_elements  navbar-collapse',
-			'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-			'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+			'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+			'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 			'walker' => new WP_Bootstrap_Mega_Navwalker()
 		)
 	);
 }
 function snf_markets_textiles_nav($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu(
 		array(
@@ -912,14 +912,14 @@ function snf_markets_textiles_nav($depth) {
 			'menu_class'      => 'navbar-nav mr-auto',
 			'container' => 'div', /* container class */
 			'container_class' => 'market_nav_elements  navbar-collapse',
-			'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-			'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+			'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+			'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 			'walker' => new WP_Bootstrap_Mega_Navwalker()
 		)
 	);
 }
 function snf_markets_equipment_nav($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu(
 		array(
@@ -928,14 +928,14 @@ function snf_markets_equipment_nav($depth) {
 			'menu_class'      => 'navbar-nav mr-auto',
 			'container' => 'div', /* container class */
 			'container_class' => 'market_nav_elements  navbar-collapse',
-			'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-			'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+			'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+			'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 			'walker' => new WP_Bootstrap_Mega_Navwalker()
 		)
 	);
 }
 function snf_markets_construction_nav($depth) {
-	// display the wp3 menu if available
+	// display the wp2 menu if available
 	require_once get_template_directory() . '/resources/inc/class-wp-bootstrap-navwalker.php';
 	wp_nav_menu(
 		array(
@@ -945,8 +945,8 @@ function snf_markets_construction_nav($depth) {
 			'menu_class'      => 'navbar-nav mr-auto',
 			'container' => 'div', /* container class */
 			'container_class' => 'market_nav_elements  navbar-collapse',
-			'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-			'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+			'fallback_cb'     => 'WP_Bootstrap_Mega_Navwalker::fallback',
+			'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 			'walker' => new WP_Bootstrap_Mega_Navwalker()
 		)
 	);
@@ -957,8 +957,8 @@ function snf_markets_construction_nav($depth) {
  * Locations Menu Modal Breakdown
  */
 function snf_locations_dropdown($depth) {
-    // display the wp3 menu if available
-    require_once get_template_directory() . '/resources/inc/wp_bootstrap_navwalker.php';
+    // display the wp2 menu if available
+    require_once get_template_directory() . '/resources/inc/WP_Bootstrap_Mega_Navwalker.php';
     wp_nav_menu( array(
         'theme_location' => 'snf_locations_dropdown',
         'menu_class' => 'form-control',
@@ -967,7 +967,7 @@ function snf_locations_dropdown($depth) {
         'container_id' => 'snf_locations_dropdown',
         'fallback_cb' => 'wp_bootstrap_main_nav_fallback', /* menu fallback */
         'depth' => "{$depth}",  //suppress lower levels for now
-        'walker' => new wp_bootstrap_navwalker()
+        'walker' => new WP_Bootstrap_Mega_Navwalker()
     ) );
 
 
